@@ -115,7 +115,7 @@ author:
   xing             :
   youtube          : # "https://youtube.com/c/MichaelRoseDesign"
   links            :
-    - lable        : "AAE"
+    - label        : "AAE"
       icon         : "fas fa-fw fa-link"
       url          : "https://aae.wisc.edu/grad-students/saikai/"
 
