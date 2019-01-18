@@ -88,10 +88,6 @@ author:
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "an introverted nerdy foodie"
   location         : "Madison, WI"
-  links:           :
-    -label         : "AAE"
-      icon         : "fas fa-fw fa-link"
-      url          : "https://aae.wisc.edu/grad-students/saikai/"
   email            :
   uri              :
   home             : # null (default), "absolute or relative url to link to author home"
