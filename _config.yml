@@ -97,7 +97,7 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           :
+  github           : "ysaikai"
   gitlab           :
   google_plus      :
   keybase          :
@@ -118,6 +118,12 @@ author:
     - lable        : "AAE"
       icon         : "fas fa-fw fa-link"
       url          : "https://aae.wisc.edu/grad-students/saikai/"
+
+
+# Custom siebar
+sidebar:
+  - title: "Another sidebar content"
+    text: "Some text here."
 
 
 # Reading Files
