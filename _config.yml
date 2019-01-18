@@ -54,6 +54,9 @@ atom_feed:
 search                   : true # true, false (default)
 search_full_content      : true # true, false (default)
 
+header:
+  image: "/images/shore.jpg"
+
 # SEO Related
 google_site_verification :
 bing_site_verification   :
