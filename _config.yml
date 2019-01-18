@@ -105,8 +105,8 @@ author:
 
 # Custom siebar
 sidebar:
-  title: "Another sidebar content"
-  text: "Some text here."
+  - title: "Another sidebar content"
+    text: "Some text here."
 
 
 # Reading Files
@@ -247,10 +247,10 @@ defaults:
       share: true
       related: true
 
-  # _pages
-  - scope:
-      path: ""
-      type: pages
-    values:
-      layout: single
-      author_profile: true
+#   # _pages
+#   - scope:
+#       path: ""
+#       type: pages
+#     values:
+#       layout: single
+#       author_profile: true
