@@ -85,7 +85,7 @@ analytics:
 # Site Author
 author:
   name             : "Yuji Saikai"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/images/bio_photo.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "an introverted nerdy foodie"
   location         : "Madison, WI"
   links:           :
