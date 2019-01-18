@@ -105,8 +105,12 @@ author:
 
 # Custom siebar
 sidebar:
-  - title: "Another sidebar content"
+  - title: "Sidebar content"
+    image: http://placehold.it/350x250
+    image_alt: "image"
     text: "Some text here."
+  - title: "Another"
+    text: "More text."
 
 
 # Reading Files
