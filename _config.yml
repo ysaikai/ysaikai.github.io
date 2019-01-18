@@ -103,7 +103,7 @@ author:
   youtube          : # "https://youtube.com/c/MichaelRoseDesign"
 
 
-# Custom siebar
+# Custom sidebar
 sidebar:
   - title: "Sidebar content"
     image: http://placehold.it/350x250
@@ -246,7 +246,6 @@ defaults:
     values:
       layout: single
       author_profile: true
-      sidebar: true
       read_time: true
       comments: # true
       share: true
@@ -259,4 +258,3 @@ defaults:
     values:
       layout: single
       author_profile: true
-      sidebar: true
