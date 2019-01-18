@@ -1,6 +1,6 @@
 ---
 title: "About"
-permalink: /about/
+permalink: /about/about.html
 <!-- header:
   image: "/images/zakim.jpg" -->
 ---
