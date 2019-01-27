@@ -1,8 +1,6 @@
 ---
 title: "About"
 permalink: /about/
-header:
-  image: "/images/shore.jpg"
 ---
 
 I am an idealistic, risk-taking, introverted, nerdy foodie, studying computational approaches for agriculture. In particular, my research focuses on applications of novel methods to agriculture, including machine learning, Bayesian optimization and complex systems, in order to answer the key questions better.
