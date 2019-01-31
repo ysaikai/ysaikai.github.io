@@ -3,7 +3,7 @@ title: "Research"
 permalink: /research/
 ---
 
-I am interested in computational approaches for agricultural & food systems. In particular, my research focuses on applications of novel methods, including machine learning, Bayesian optimization and agent-based modeling, in order to address key questions better.
+I am interested in computational approaches for agricultural & food systems. The methods include reinforcement learning, Bayesian optimization and agent-based modeling. Recently, my focus has been on on-farm research in precision agriculture. It seems that on-farm research is a key feature in modern agriculture, where farmers maximize profits by systematically adapting to heterogeneous conditions within a field.
 
 * Bayesian optimization for precision agriculture
   - Yuji Saikai
