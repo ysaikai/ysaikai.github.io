@@ -11,3 +11,5 @@ I am interested in computational approaches for agriculture. In particular, my r
   - Yuji Saikai and Paul D. Mitchell
 * [An agent-based model for promoting modest technologies](https://github.com/ysaikai/TechAdoption)
   - Yuji Saikai
+* [An impure public good model of local food systems: Aggregative games of four locals](https://github.com/ysaikai/LFSGames)
+  - Yuji Saikai
