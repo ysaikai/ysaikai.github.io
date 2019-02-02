@@ -14,7 +14,7 @@ permalink: /teaching/
 
 <table>
   <tbody>
-    <tr>
+    <tr style="border: 1px solid black">
       <th>Date</th>
       <th>Contents</th>
       <th>Notes</th>
