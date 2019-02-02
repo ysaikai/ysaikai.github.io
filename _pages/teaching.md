@@ -13,7 +13,8 @@ permalink: /teaching/
 
 | Date | Contents | Notes |
 | :---: | --- | :---: |
-| Feb 1 | * Probability mass/density function
+| Feb 1 |
+* Probability mass/density function
 * Cumulative distribution function
 * Normal distribution
 * Standardization of a random variable
