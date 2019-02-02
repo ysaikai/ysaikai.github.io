@@ -11,4 +11,4 @@ permalink: /teaching/
 
 | Date | Notes |
 | --- | :---: |
-| Feb 1 | [link](/aae706_disc_20190201.pdf) |
+| Feb 1 | [aae706_disc_20190201.pdf](/images/aae706_disc_20190201.pdf) |
