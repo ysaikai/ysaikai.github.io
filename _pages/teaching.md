@@ -29,6 +29,6 @@ permalink: /teaching/
         <li>Expectation: mean, variance, covariance</li>
       </ul>
     </td>
-    <td><a href="/images/aae706_disc_20190201.pdf">[pdf]</a></td>
+    <td>[<a href="/images/aae706_disc_20190201.pdf">pdf</a>]</td>
   </tr>
 </table>
