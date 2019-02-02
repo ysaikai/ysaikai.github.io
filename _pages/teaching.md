@@ -13,11 +13,4 @@ permalink: /teaching/
 
 | Date | Contents | Notes |
 | :---: | --- | :---: |
-| Feb 1 |
-* Probability mass/density function
-* Cumulative distribution function
-* Normal distribution
-* Standardization of a random variable
-* Joint, marginal, conditional distribution, Bayes' rule
-* Expectation: mean, variance, covariance
- | [aae706_disc_20190201.pdf](/images/aae706_disc_20190201.pdf) |
+| Feb 1 | | [aae706_disc_20190201.pdf](/images/aae706_disc_20190201.pdf) |
