@@ -30,7 +30,7 @@ permalink: /teaching/
           <li>Expectation: mean, variance, covariance</li>
         </ul>
       </td>
-      <td>[aae706_disc_20190201.pdf](/images/aae706_disc_20190201.pdf)</td>
+      <td><a href="/images/aae706_disc_20190201.pdf">aae706_disc_20190201.pdf</a></td>
     </tr>
   </tbody>
 </table>
