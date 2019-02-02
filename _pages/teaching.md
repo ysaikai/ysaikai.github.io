@@ -10,5 +10,5 @@ permalink: /teaching/
 * Discussion session
 
 | Date | Notes |
-| --- | :---: |
+| :---: | :---: |
 | Feb 1 | [aae706_disc_20190201.pdf](/images/aae706_disc_20190201.pdf) |
