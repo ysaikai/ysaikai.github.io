@@ -12,25 +12,23 @@ permalink: /teaching/
 (It is my responsibility to decide the contents.)
 
 <table>
-  <tbody>
-    <tr>
-      <th>Date</th>
-      <th>Contents</th>
-      <th>Notes</th>
-    </tr>
-    <tr>
-      <td>Feb 1</td>
-      <td>
-        <ul>
-          <li>Probability mass/density function</li>
-          <li>Cumulative distribution function</li>
-          <li>Normal distribution</li>
-          <li>Standardization of a random variable</li>
-          <li>Joint, marginal, conditional distribution, Bayes' rule</li>
-          <li>Expectation: mean, variance, covariance</li>
-        </ul>
-      </td>
-      <td><a href="/images/aae706_disc_20190201.pdf">aae706_disc_20190201.pdf</a></td>
-    </tr>
-  </tbody>
+  <tr>
+    <th>Date</th>
+    <th>Contents</th>
+    <th>Notes</th>
+  </tr>
+  <tr>
+    <td>Feb 1</td>
+    <td>
+      <ul>
+        <li>Probability mass/density function</li>
+        <li>Cumulative distribution function</li>
+        <li>Normal distribution</li>
+        <li>Standardization of a random variable</li>
+        <li>Joint, marginal, conditional distribution, Bayes' rule</li>
+        <li>Expectation: mean, variance, covariance</li>
+      </ul>
+    </td>
+    <td><a href="/images/aae706_disc_20190201.pdf">aae706_disc_20190201.pdf</a></td>
+  </tr>
 </table>
