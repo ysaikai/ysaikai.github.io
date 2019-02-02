@@ -8,7 +8,7 @@ permalink: /teaching/
 * Instructor: [Dr. Jean-Paul Chavas](https://aae.wisc.edu/faculty/jchavas/)
 * Course website: <https://aae.wisc.edu/aae706/>
 
-### Discussion session**
+### Discussion session
 (It is my responsibility to decide the contents.)
 
 | Date | Contents | Notes |
