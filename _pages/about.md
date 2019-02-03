@@ -13,10 +13,9 @@ I enjoy cooking, playing pool, and a simple life in general. [Kanan](https://ksa
 
 
 ## Training
-Training
 The following is a list of courses taken for graduate training at UW-Madison. I am basically trained in economics and machine learning at a graduate level and mathematics at an undergraduate level.
 
-Economics
+**Economics**
 * ECON 711: Economic Theory - Microeconomics Sequence
 * ECON 713: Economic Theory - Microeconomics Sequence
 * ECON 712: Economic Theory - Macroeconomics Sequence
@@ -28,7 +27,7 @@ Economics
 * AAE 641: Foundations of Agricultural Economics
 * AAE 731: Frontiers in Development Economics 2
 
-Mathematics
+**Mathematics**
 * MATH 521: Analysis I
 * MATH 531: Probability Theory
 * MATH 541: Modern Algebra
@@ -37,11 +36,11 @@ Mathematics
 * CS 524: Introduction to Optimization
 * CS 723: Dynamic Programming and Associated Topics
 
-Machine learning
+**Machine learning**
 * CS 540: Introduction to Artificial Intelligence
 * CS 532: Theory and Applications of Pattern Recognition
 * CS 761: Mathematical Foundations of Machine Learning
 * CS 861: Theoretical Foundations of Machine Learning
 
-Other social science
+**Other social science**
 * SOC 901: Topics in Current Sociology - Social Network Analysis
