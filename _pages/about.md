@@ -85,7 +85,7 @@ The following is a list of courses taken at UW-Madison. I am basically trained i
   </tr>
 </table>
 
-<--
+<!--
 **Economics**
 * ECON 711: Economic Theory - Microeconomics Sequence
 * ECON 713: Economic Theory - Microeconomics Sequence
