@@ -13,7 +13,7 @@ I enjoy cooking, playing pool, and a simple life in general. [Kanan](https://ksa
 
 
 ## Training
-The following is a list of courses taken at UW-Madison. I am basically trained in economics and machine learning at a graduate level and mathematics at an undergraduate level.
+Due to the professional background, I am competent in software design and coding. In addition, the following is a list of courses taken at UW-Madison. I am basically trained in economics and machine learning at a graduate level and mathematics at an undergraduate level.
 
 <table>
   <tr>
