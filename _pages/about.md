@@ -16,7 +16,7 @@ I enjoy cooking, playing pool, and a simple life in general. [Kanan](https://ksa
 The following is a list of courses taken at UW-Madison. I am basically trained in economics and machine learning at a graduate level and mathematics at an undergraduate level.
 
 <table>
-  <tr style="border-bottom:1pt solid black">
+  <tr>
     <th>Economics</th>
   </tr>
   <tr>
@@ -35,7 +35,7 @@ The following is a list of courses taken at UW-Madison. I am basically trained i
       </ul>
     </td>
   </tr>
-  <tr style="border-bottom:1pt solid black">
+  <tr>
     <th>Mathematics</th>
   </tr>
   <tr>
@@ -49,7 +49,7 @@ The following is a list of courses taken at UW-Madison. I am basically trained i
       </ul>
     </td>
   </tr>
-  <tr style="border-bottom:1pt solid black">
+  <tr>
     <th>Machine learning</th>
   </tr>
   <tr>
@@ -62,7 +62,7 @@ The following is a list of courses taken at UW-Madison. I am basically trained i
       </ul>
     </td>
   </tr>
-  <tr style="border-bottom:1pt solid black">
+  <tr>
     <th>Optimization</th>
   </tr>
   <tr>
@@ -73,7 +73,7 @@ The following is a list of courses taken at UW-Madison. I am basically trained i
       </ul>
     </td>
   </tr>
-  <tr style="border-bottom:1pt solid black">
+  <tr>
     <th>Other social science</th>
   </tr>
   <tr>
