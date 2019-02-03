@@ -13,8 +13,79 @@ I enjoy cooking, playing pool, and a simple life in general. [Kanan](https://ksa
 
 
 ## Training
-The following is a list of courses taken for graduate training at UW-Madison. I am basically trained in economics and machine learning at a graduate level and mathematics at an undergraduate level.
+The following is a list of courses taken at UW-Madison. I am basically trained in economics and machine learning at a graduate level and mathematics at an undergraduate level.
 
+<table>
+  <tr style="border-bottom:1pt solid black">
+    <th>Economics</th>
+  </tr>
+  <tr>
+    <td>
+      <ul>
+        <li>ECON 711: Economic Theory - Microeconomics Sequence</li>
+        <li>ECON 713: Economic Theory - Microeconomics Sequence</li>
+        <li>ECON 712: Economic Theory - Macroeconomics Sequence</li>
+        <li>ECON 709: Economic Statistics and Econometrics I</li>
+        <li>ECON 710: Economic Statistics and Econometrics II</li>
+        <li>REAL EST 720: Urban Economics</li>
+        <li>AAE 520: Community Economic Analysis</li>
+        <li>AAE 706: Applied Risk Analysis</li>
+        <li>AAE 641: Foundations of Agricultural Economics</li>
+        <li>AAE 731: Frontiers in Development Economics 2</li>
+      </ul>
+    </td>
+  </tr>
+  <tr style="border-bottom:1pt solid black">
+    <th>Mathematics</th>
+  </tr>
+  <tr>
+    <td>
+      <ul>
+        <li>MATH 521: Analysis I</li>
+        <li>MATH 531: Probability Theory</li>
+        <li>MATH 541: Modern Algebra</li>
+        <li>MATH 629: Introduction to Measure and Integration</li>
+        <li>MATH 632: Introduction to Stochastic Processes</li>
+      </ul>
+    </td>
+  </tr>
+  <tr style="border-bottom:1pt solid black">
+    <th>Machine learning</th>
+  </tr>
+  <tr>
+    <td>
+      <ul>
+        <li>CS 540: Introduction to Artificial Intelligence</li>
+        <li>CS 532: Theory and Applications of Pattern Recognition</li>
+        <li>CS 761: Mathematical Foundations of Machine Learning</li>
+        <li>CS 861: Theoretical Foundations of Machine Learning</li>
+      </ul>
+    </td>
+  </tr>
+  <tr style="border-bottom:1pt solid black">
+    <th>Optimization</th>
+  </tr>
+  <tr>
+    <td>
+      <ul>
+        <li>CS 524: Introduction to Optimization</li>
+        <li>CS 723: Dynamic Programming and Associated Topics</li>
+      </ul>
+    </td>
+  </tr>
+  <tr style="border-bottom:1pt solid black">
+    <th>Other social science</th>
+  </tr>
+  <tr>
+    <td>
+      <ul>
+        <li>SOC 901: Topics in Current Sociology - Social Network Analysis</li>
+      </ul>
+    </td>
+  </tr>
+</table>
+
+<--
 **Economics**
 * ECON 711: Economic Theory - Microeconomics Sequence
 * ECON 713: Economic Theory - Microeconomics Sequence
@@ -44,3 +115,4 @@ The following is a list of courses taken for graduate training at UW-Madison. I 
 
 **Other social science**
 * SOC 901: Topics in Current Sociology - Social Network Analysis
+-->
