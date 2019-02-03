@@ -67,9 +67,9 @@ Due to the professional background, I am competent in software design and coding
   </tr>
   <tr>
     <td>
-      <strong>Other social science</strong>
+      <strong>Sociology</strong>
       <ul>
-        <li>SOC 901: Topics in Current Sociology - Social Network Analysis</li>
+        <li>SOC 901: Social Network Analysis</li>
       </ul>
     </td>
   </tr>
