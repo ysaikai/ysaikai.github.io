@@ -9,11 +9,11 @@ permalink: /teaching/
 * Course website: <https://aae.wisc.edu/aae706/>
 
 ### Discussion session
-(It is my responsibility to decide the contents.)
+(It is my responsibility to decide on the contents.)
 
 <table>
   <tbody>
-    <tr style="border-bottom:1pt solid black">
+    <tr style="border-bottom:1pt solid black; text-align: center">
       <th>Date</th>
       <th>Contents</th>
       <th>Notes</th>
