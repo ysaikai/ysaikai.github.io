@@ -25,11 +25,11 @@ Due to the professional background, I am competent in software design and coding
         <li>ECON 712: Economic Theory - Macroeconomics Sequence</li>
         <li>ECON 709: Economic Statistics and Econometrics I</li>
         <li>ECON 710: Economic Statistics and Econometrics II</li>
-        <li>REAL EST 720: Urban Economics</li>
-        <li>AAE 520: Community Economic Analysis</li>
-        <li>AAE 706: Applied Risk Analysis</li>
         <li>AAE 641: Foundations of Agricultural Economics</li>
+        <li>AAE 706: Applied Risk Analysis</li>
         <li>AAE 731: Frontiers in Development Economics 2</li>
+        <li>AAE 520: Community Economic Analysis</li>
+        <li>REAL EST 720: Urban Economics</li>
       </ul>
     </td>
   </tr>
