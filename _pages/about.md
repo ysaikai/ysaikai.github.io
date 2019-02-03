@@ -17,10 +17,8 @@ Due to the professional background, I am competent in software design and coding
 
 <table>
   <tr>
-    <th>Economics</th>
-  </tr>
-  <tr>
     <td>
+      <strong>Economics</strong>
       <ul>
         <li>ECON 711: Economic Theory - Microeconomics Sequence</li>
         <li>ECON 713: Economic Theory - Microeconomics Sequence</li>
@@ -36,10 +34,8 @@ Due to the professional background, I am competent in software design and coding
     </td>
   </tr>
   <tr>
-    <th>Mathematics</th>
-  </tr>
-  <tr>
     <td>
+      <strong>Mathematics</strong>
       <ul>
         <li>MATH 521: Analysis I</li>
         <li>MATH 531: Probability Theory</li>
@@ -50,10 +46,8 @@ Due to the professional background, I am competent in software design and coding
     </td>
   </tr>
   <tr>
-    <th>Machine learning</th>
-  </tr>
-  <tr>
     <td>
+      <strong>Machine learning</strong>
       <ul>
         <li>CS 540: Introduction to Artificial Intelligence</li>
         <li>CS 532: Theory and Applications of Pattern Recognition</li>
@@ -63,10 +57,8 @@ Due to the professional background, I am competent in software design and coding
     </td>
   </tr>
   <tr>
-    <th>Optimization</th>
-  </tr>
-  <tr>
     <td>
+      <strong>Optimization</strong>
       <ul>
         <li>CS 524: Introduction to Optimization</li>
         <li>CS 723: Dynamic Programming and Associated Topics</li>
@@ -74,10 +66,8 @@ Due to the professional background, I am competent in software design and coding
     </td>
   </tr>
   <tr>
-    <th>Other social science</th>
-  </tr>
-  <tr>
     <td>
+      <strong>Other social science</strong>
       <ul>
         <li>SOC 901: Topics in Current Sociology - Social Network Analysis</li>
       </ul>
