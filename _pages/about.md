@@ -13,7 +13,7 @@ I enjoy cooking, playing pool, and a simple life in general. [Kanan](https://ksa
 
 
 ## Training
-Due to the professional background, I am competent in software design and coding. In 2017, to widen the research toolkit, I attended [Complex Systems Summer School](https://www.santafe.edu/engage/learn/schools/sfi-complex-systems-summer-school) at Santa Fe Institute. Finally, the following is a list of courses taken at UW-Madison. I am basically trained in economics and machine learning at a graduate level and mathematics at an undergraduate level.
+Because of the professional background, I am competent in software design and coding. In 2017, to widen the research toolkit, I attended [Complex Systems Summer School](https://www.santafe.edu/engage/learn/schools/sfi-complex-systems-summer-school) at Santa Fe Institute. Finally, the following is a list of courses taken at UW-Madison. I am basically trained in economics and machine learning at a graduate level and mathematics at an undergraduate level.
 
 <table>
   <tr>
@@ -74,35 +74,3 @@ Due to the professional background, I am competent in software design and coding
     </td>
   </tr>
 </table>
-
-<!--
-**Economics**
-* ECON 711: Economic Theory - Microeconomics Sequence
-* ECON 713: Economic Theory - Microeconomics Sequence
-* ECON 712: Economic Theory - Macroeconomics Sequence
-* ECON 709: Economic Statistics and Econometrics I
-* ECON 710: Economic Statistics and Econometrics II
-* REAL EST 720: Urban Economics
-* AAE 520: Community Economic Analysis
-* AAE 706: Applied Risk Analysis
-* AAE 641: Foundations of Agricultural Economics
-* AAE 731: Frontiers in Development Economics 2
-
-**Mathematics**
-* MATH 521: Analysis I
-* MATH 531: Probability Theory
-* MATH 541: Modern Algebra
-* MATH 629: Introduction to Measure and Integration
-* MATH 632: Introduction to Stochastic Processes
-* CS 524: Introduction to Optimization
-* CS 723: Dynamic Programming and Associated Topics
-
-**Machine learning**
-* CS 540: Introduction to Artificial Intelligence
-* CS 532: Theory and Applications of Pattern Recognition
-* CS 761: Mathematical Foundations of Machine Learning
-* CS 861: Theoretical Foundations of Machine Learning
-
-**Other social science**
-* SOC 901: Topics in Current Sociology - Social Network Analysis
--->
