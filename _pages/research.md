@@ -14,6 +14,7 @@ Bayesian optimization is still a novel technique in most scientific disciplines.
 <iframe width="560" height="315" src="https://www.youtube.com/embed/WkZueBgKFYM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <br>
+
 [Nando de Freitas, Machine learning - Bayesian optimization and multi-armed bandits](https://www.youtube.com/watch?v=vz3D36VXefI)<br>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/vz3D36VXefI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
