@@ -10,7 +10,7 @@ An optimization technique with two appealing features: sample efficiency and fle
 
 Bayesian optimization is still a novel technique in most scientific disciplines. The following videos may give you some idea.<br>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/WkZueBgKFYM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<br><br>
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/vz3D36VXefI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
