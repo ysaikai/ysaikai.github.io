@@ -9,7 +9,7 @@ I am interested in computational approaches for agricultural & food systems. The
 An optimization technique with two appealing features: sample efficiency and flexibility for complex objective functions. It has a lot of potential for applications to agricultural production, which usually takes time due to the seasonal production cycle. In other words, evaluating an agricultural production function or input response function is expensive, and therefore Bayesian optimizaton is a cost-efficient technique to identify good input combinations for profitability.
 
 Bayesian optimization is still a novel technique in most scientific disciplines. The following videos may give you some idea.<br>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/WkZueBgKFYM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/WkZueBgKFYM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> <br>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/vz3D36VXefI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
