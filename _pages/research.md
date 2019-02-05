@@ -11,11 +11,11 @@ An optimization technique with two appealing features: sample efficiency and fle
 Bayesian optimization is still a novel technique in most scientific disciplines. The following videos may give you some idea.
 
 [Yuki Koyama, Basics of Bayesian Optimization (Supplementary Video for SIGGRAPH 2017)](https://www.youtube.com/watch?v=WkZueBgKFYM)
-<iframe width="360" src="https://www.youtube.com/embed/WkZueBgKFYM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/WkZueBgKFYM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 [Nando de Freitas, Machine learning - Bayesian optimization and multi-armed bandits](https://www.youtube.com/watch?v=vz3D36VXefI)
-<iframe width="360" src="https://www.youtube.com/embed/vz3D36VXefI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vz3D36VXefI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 ## Papers
