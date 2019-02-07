@@ -13,7 +13,7 @@ I enjoy cooking, playing pool, and a simple life in general. [Kanan](https://ksa
 
 
 ## Training
-Because of the professional background, I am competent in software design and coding. In 2017, to widen the research toolkit, I attended [Complex Systems Summer School](https://www.santafe.edu/engage/learn/schools/sfi-complex-systems-summer-school) at Santa Fe Institute. Finally, the following is a list of courses taken at UW-Madison. I am basically trained in economics and machine learning at a graduate level and mathematics at an undergraduate level.
+Because of the professional background, I am competent in software design and coding. In 2017, to broaden the research toolkit, I attended [Complex Systems Summer School](https://www.santafe.edu/engage/learn/schools/sfi-complex-systems-summer-school) at Santa Fe Institute. Finally, at UW-Madison, I took classes that closely reflect my interest. I am basically trained in economics and machine learning at a graduate level and mathematics at an undergraduate level.
 
 <table>
   <tr>
