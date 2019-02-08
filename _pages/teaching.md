@@ -30,7 +30,7 @@ permalink: /teaching/
           <li>Expectation: mean, variance, covariance</li>
         </ul>
       </td>
-      <td>[<a href="aae706_disc_20190201.pdf">notes</a>]</td>
+      <td>[<a href="/files/aae706_disc_20190201.pdf">notes</a>]</td>
     </tr>
     <tr>
       <td>Feb 8</td>
@@ -45,8 +45,8 @@ permalink: /teaching/
         </ul>
       </td>
       <td>
-        [<a href="aae706_disc_20190208.pdf">notes</a>]<br>
-        [<a href="solver_tutorial.xlsx">Solver demo</a>]
+        [<a href="/files/aae706_disc_20190208.pdf">notes</a>]<br>
+        [<a href="/files/solver_tutorial.xlsx">Solver demo</a>]
       </td>
     </tr>
   </tbody>
