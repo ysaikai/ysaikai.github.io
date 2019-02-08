@@ -4,7 +4,7 @@ permalink: /teaching/
 ---
 
 ## Applied risk analysis (Spring 2019)
-* AAE706, University of Wisconsin-Madison
+* AAE 706, University of Wisconsin-Madison
 * Instructor: [Dr. Jean-Paul Chavas](https://aae.wisc.edu/faculty/jchavas/)
 * Course website: <https://aae.wisc.edu/aae706/>
 
@@ -16,7 +16,7 @@ permalink: /teaching/
     <tr style="border-bottom:1pt solid black">
       <th>Date</th>
       <th align="center">Contents</th>
-      <th>Notes</th>
+      <th>Files</th>
     </tr>
     <tr>
       <td>Feb 1</td>
@@ -30,7 +30,24 @@ permalink: /teaching/
           <li>Expectation: mean, variance, covariance</li>
         </ul>
       </td>
-      <td>[<a href="/images/aae706_disc_20190201.pdf">pdf</a>]</td>
+      <td>[<a href="aae706_disc_20190201.pdf">notes</a>]</td>
+    </tr>
+    <tr>
+      <td>Feb 8</td>
+      <td>
+        <ul>
+          <li>The expected utility hypothesis</li>
+          <li>The existence of probability distribution</li>
+          <li>Elicitation of probabilities</li>
+          <li>The existence of utility function</li>
+          <li>Elicitation of preferences</li>
+          <li>Solver in Excel</li>
+        </ul>
+      </td>
+      <td>
+        [<a href="aae706_disc_20190208.pdf">notes</a>]<br>
+        [<a href="solver_tutorial.xlsx">Solver demo</a>]
+      </td>
     </tr>
   </tbody>
 </table>
