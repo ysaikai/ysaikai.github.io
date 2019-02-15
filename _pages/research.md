@@ -5,6 +5,13 @@ permalink: /research/
 
 I am interested in computational approaches for agricultural & food systems. The methods include reinforcement learning, Bayesian optimization and agent-based modeling. Recently, my focus has been on on-farm research in precision agriculture. It seems that on-farm research is a key feature in modern agriculture, where farmers maximize profits by systematically adapting to heterogeneous conditions within a field.
 
+
+## Advisors
+I have been very fortunate to receive supportive and constructive advice from two distinct academics at UW-Madison:
+* [Paul D. Mitchell](https://aae.wisc.edu/faculty/pdmitchell/), Agricultural economist & Extension specialist
+* [Vivak Patel](http://vivakpatel.org/), Statistician
+
+
 ## Bayesian optimization
 An optimization technique with two appealing features: sample efficiency and flexibility for complex objective functions. It has a lot of potential for applications to agricultural production, which usually takes time due to the seasonal production cycle. In other words, evaluating an agricultural production function or input response function is expensive, and therefore Bayesian optimizaton is a cost-efficient technique to identify good input combinations for profitability.
 

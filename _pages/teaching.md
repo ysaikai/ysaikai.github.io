@@ -49,5 +49,18 @@ permalink: /teaching/
         [<a href="/files/solver_tutorial.xlsx">Solver demo</a>]
       </td>
     </tr>
+    <tr>
+      <td>Feb 15</td>
+      <td>
+        <ul>
+          <li>Risk premium</li>
+          <li>Risk aversion</li>
+          <li>CARA and DARA</li>
+        </ul>
+      </td>
+      <td>
+        [<a href="/files/aae706_disc_20190215.pdf">notes</a>]
+      </td>
+    </tr>
   </tbody>
 </table>
