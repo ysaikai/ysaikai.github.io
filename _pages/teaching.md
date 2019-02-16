@@ -30,7 +30,8 @@ permalink: /teaching/
           <li>Expectation: mean, variance, covariance</li>
         </ul>
       </td>
-      <td>[<a href="/files/aae706_disc_20190201.pdf">notes</a>]</td>
+      <!-- <td>[<a href="/files/aae706_disc_20190201.pdf">notes</a>]</td> -->
+      <td></td>
     </tr>
     <tr>
       <td>Feb 8</td>

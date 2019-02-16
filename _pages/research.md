@@ -8,7 +8,7 @@ I am interested in computational approaches for agricultural & food systems. The
 
 ## Advisors
 I have been very fortunate to receive supportive and constructive advice from two distinct academics at UW-Madison:
-* [Paul D. Mitchell](https://aae.wisc.edu/faculty/pdmitchell/), Agricultural economist & Extension specialist
+* [Paul Mitchell](https://aae.wisc.edu/faculty/pdmitchell/), Agricultural economist & Extension specialist
 * [Vivak Patel](http://vivakpatel.org/), Statistician
 
 
