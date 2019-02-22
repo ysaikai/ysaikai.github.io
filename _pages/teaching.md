@@ -22,12 +22,7 @@ permalink: /teaching/
       <td>Feb 1</td>
       <td>
         <ul>
-          <li>Probability mass/density function</li>
-          <li>Cumulative distribution function</li>
-          <li>Normal distribution</li>
-          <li>Standardization of a random variable</li>
-          <li>Joint, marginal, conditional distribution, Bayes' rule</li>
-          <li>Expectation: mean, variance, covariance</li>
+          <li>Review of probability theory</li>
         </ul>
       </td>
       <!-- <td>[<a href="/files/aae706_disc_20190201.pdf">notes</a>]</td> -->
@@ -61,6 +56,17 @@ permalink: /teaching/
       </td>
       <td>
         [<a href="/files/aae706_disc_20190215.pdf">notes</a>]
+      </td>
+    </tr>
+    <tr>
+      <td>Feb 22</td>
+      <td>
+        <ul>
+          <li>Stochastic dominance</li>
+        </ul>
+      </td>
+      <td>
+        [<a href="/files/aae706_disc_20190222.pdf">notes</a>]
       </td>
     </tr>
   </tbody>
