@@ -9,7 +9,7 @@ permalink: /teaching/
 * Course website: <https://aae.wisc.edu/aae706/>
 
 ### Discussion session
-(It is my responsibility to decide on the contents.)
+(It is my responsibility to decide on contents and prepare materials.)
 
 <table>
   <tbody>
