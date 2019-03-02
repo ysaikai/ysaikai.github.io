@@ -9,7 +9,6 @@ permalink: /teaching/
 * Course website: <https://aae.wisc.edu/aae706/>
 
 ### Discussion session
-(It is my responsibility to decide on contents and prepare materials.)
 
 <table>
   <tbody>
@@ -32,11 +31,7 @@ permalink: /teaching/
       <td>Feb 8</td>
       <td>
         <ul>
-          <li>The expected utility hypothesis</li>
-          <li>The existence of probability distribution</li>
-          <li>Elicitation of probabilities</li>
-          <li>The existence of utility function</li>
-          <li>Elicitation of preferences</li>
+          <li>Expected utility hypothesis</li>
           <li>Solver in Excel</li>
         </ul>
       </td>
@@ -51,7 +46,6 @@ permalink: /teaching/
         <ul>
           <li>Risk premium</li>
           <li>Risk aversion</li>
-          <li>CARA and DARA</li>
         </ul>
       </td>
       <td>
@@ -67,6 +61,16 @@ permalink: /teaching/
       </td>
       <td>
         [<a href="/files/aae706_disc_20190222.pdf">notes</a>]
+      </td>
+    </tr>
+    <tr>
+      <td>March 1</td>
+      <td>
+        <ul>
+          <li>Mean-variance analysis</li>
+        </ul>
+      </td>
+      <td>
       </td>
     </tr>
   </tbody>
