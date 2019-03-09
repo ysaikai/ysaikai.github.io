@@ -64,13 +64,25 @@ permalink: /teaching/
       </td>
     </tr>
     <tr>
-      <td>March 1</td>
+      <td>Mar 1</td>
       <td>
         <ul>
           <li>Mean-variance analysis</li>
         </ul>
       </td>
       <td>
+      </td>
+    </tr>
+    <tr>
+      <td>Mar 8</td>
+      <td>
+        <ul>
+          <li>Linearity in probability and independence assumption</li>
+          <li>State preference approach</li>
+        </ul>
+      </td>
+      <td>
+        [<a href="/files/aae706_disc_20190308.pdf">notes</a>]
       </td>
     </tr>
   </tbody>
