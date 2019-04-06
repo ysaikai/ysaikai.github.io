@@ -24,7 +24,7 @@ permalink: /teaching/
           <li>Review of probability theory</li>
         </ul>
       </td>
-      <!-- <td>[<a href="/files/aae706_disc_20190201.pdf">notes</a>]</td> -->
+      <!-- <td><a href="/files/aae706_disc_20190201.pdf">notes</a></td> -->
       <td></td>
     </tr>
     <tr>
@@ -36,8 +36,8 @@ permalink: /teaching/
         </ul>
       </td>
       <td>
-        [<a href="/files/aae706_disc_20190208.pdf">notes</a>]<br>
-        [<a href="/files/solver_tutorial.xlsx">Solver demo</a>]
+        <a href="/files/aae706_disc_20190208.pdf">notes</a><br>
+        <a href="/files/solver_tutorial.xlsx">Solver demo</a>
       </td>
     </tr>
     <tr>
@@ -49,7 +49,7 @@ permalink: /teaching/
         </ul>
       </td>
       <td>
-        [<a href="/files/aae706_disc_20190215.pdf">notes</a>]
+        <a href="/files/aae706_disc_20190215.pdf">notes</a>
       </td>
     </tr>
     <tr>
@@ -60,7 +60,7 @@ permalink: /teaching/
         </ul>
       </td>
       <td>
-        [<a href="/files/aae706_disc_20190222.pdf">notes</a>]
+        <a href="/files/aae706_disc_20190222.pdf">notes</a>
       </td>
     </tr>
     <tr>
@@ -82,7 +82,7 @@ permalink: /teaching/
         </ul>
       </td>
       <td>
-        [<a href="/files/aae706_disc_20190308.pdf">notes</a>]
+        <a href="/files/aae706_disc_20190308.pdf">notes</a>
       </td>
     </tr>
     <tr>
@@ -95,18 +95,18 @@ permalink: /teaching/
         </ul>
       </td>
       <td>
-        [<a href="/files/aae706_disc_20190329.pdf">notes</a>]
+        <a href="/files/aae706_disc_20190329.pdf">notes</a>
       </td>
     </tr>
     <tr>
-      <td>Mar 29</td>
+      <td>Apr 5</td>
       <td>
         <ul>
           <li>Dynamic optimization</li>
         </ul>
       </td>
       <td>
-        [<a href="/files/aae706_disc_20190405.pdf">notes</a>]
+        <a href="/files/aae706_disc_20190405.pdf">notes</a>
       </td>
     </tr>
   </tbody>
