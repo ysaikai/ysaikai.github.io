@@ -98,5 +98,16 @@ permalink: /teaching/
         [<a href="/files/aae706_disc_20190329.pdf">notes</a>]
       </td>
     </tr>
+    <tr>
+      <td>Mar 29</td>
+      <td>
+        <ul>
+          <li>Dynamic optimization</li>
+        </ul>
+      </td>
+      <td>
+        [<a href="/files/aae706_disc_20190405.pdf">notes</a>]
+      </td>
+    </tr>
   </tbody>
 </table>
