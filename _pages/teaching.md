@@ -14,7 +14,7 @@ permalink: /teaching/
   <tbody>
     <tr style="border-bottom:1pt solid black">
       <th>Date</th>
-      <th align="center">Contents</th>
+      <th align="center">Topics</th>
       <th>Files</th>
     </tr>
     <tr>
@@ -107,6 +107,17 @@ permalink: /teaching/
       </td>
       <td>
         <a href="/files/aae706_disc_20190405.pdf">notes</a>
+      </td>
+    </tr>
+    <tr>
+      <td>Apr 12</td>
+      <td>
+        <ul>
+          <li>Dynamic optimization under risk</li>
+        </ul>
+      </td>
+      <td>
+        <a href="/files/aae706_disc_20190412.pdf">notes</a>
       </td>
     </tr>
   </tbody>
