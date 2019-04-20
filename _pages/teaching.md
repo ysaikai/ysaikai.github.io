@@ -120,5 +120,16 @@ permalink: /teaching/
         <a href="/files/aae706_disc_20190412.pdf">notes</a>
       </td>
     </tr>
+    <tr>
+      <td>Apr 19</td>
+      <td>
+        <ul>
+          <li>Contract and policy design under risk</li>
+        </ul>
+      </td>
+      <td>
+        <a href="/files/aae706_disc_20190412.pdf">notes</a>
+      </td>
+    </tr>
   </tbody>
 </table>
