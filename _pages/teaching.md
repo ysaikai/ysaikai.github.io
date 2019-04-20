@@ -128,7 +128,7 @@ permalink: /teaching/
         </ul>
       </td>
       <td>
-        <a href="/files/aae706_disc_20190412.pdf">notes</a>
+        <a href="/files/aae706_disc_20190419.pdf">notes</a>
       </td>
     </tr>
   </tbody>
