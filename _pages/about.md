@@ -5,7 +5,7 @@ permalink: /about/
 
 [CV](/files/cv.pdf)
 
-I am an idealistic, risk-taking, introverted, nerdy foodie, studying computational approaches for agriculture. In particular, my research focuses on applications of novel methods to agriculture, including machine learning, Bayesian optimization and complex systems, in order to answer the key questions better.
+I am an idealistic, risk-taking, introverted, nerdy foodie, studying computational approaches for agriculture. In particular, my research focuses on applications of novel methods to agriculture systems, including machine learning, Bayesian optimization, and agent-based modeling, in order to answer the key questions better.
 
 I grew up digital in Japan. While turning to physics and mathematics in high school and (first) college, computers had never ceased to fascinate me. Circa 2000, when starting tech businesses was ever so cool, as a natural course of action, I dropped out, became a software engineer, and eventually started my own business. While developing resource management software for small-scale farmers and interacting with them, I found growing plants fascinating and much room for improving food systems. The idea of local food system began to dawn on me. To test my hunch, I developed an online service that delivered fresh produce to local people and facilitated interactions among them. I grew most vegetable by myself and directly communicate with a number of consumers—a firsthand experience of local food.
 
@@ -15,7 +15,7 @@ I enjoy cooking, playing pool, and a simple life in general. [Kanan](https://ksa
 
 
 ## Training
-Because of the professional background, I am competent in software design and coding. In 2017, to broaden the research toolkit, I attended [Complex Systems Summer School](https://www.santafe.edu/engage/learn/schools/sfi-complex-systems-summer-school) at Santa Fe Institute. Finally, at UW-Madison, I took classes that closely reflect my interest. I am basically trained in economics and machine learning at a graduate level and mathematics at an undergraduate level.
+Because of the professional background, I am competent in software design and coding. In 2017, to broaden the research toolkit, I attended [Complex Systems Summer School](https://www.santafe.edu/engage/learn/schools/sfi-complex-systems-summer-school) at Santa Fe Institute. Finally, at UW–Madison, I took classes that closely reflect my interest. I am basically trained in economics and machine learning at a graduate level and mathematics at an undergraduate level.
 
 <table>
   <tr>
