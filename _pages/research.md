@@ -3,8 +3,7 @@ title: "Research"
 permalink: /research/
 ---
 
-I am interested in computational approaches for agricultural & food systems. The methods include reinforcement learning, Bayesian optimization and agent-based modeling. Recently, my focus has been on on-farm research in precision agriculture. It seems that on-farm research is a key feature in modern agriculture, where farmers maximize profits by systematically adapting to heterogeneous conditions within a field.
-
+I am interested in computational modeling and its applications to agricultural systems. The methods include machine learning, Bayesian optimization, and agent-based modeling. Recently, my focus has been on on-farm research in precision agriculture. It seems that on-farm research is a key feature in modern agriculture, where farmers maximize profits by systematically adapting to heterogeneous conditions within fields.
 
 ## Advisors
 I have been very fortunate to receive supportive and constructive advice from two distinct academics at UW-Madison:
