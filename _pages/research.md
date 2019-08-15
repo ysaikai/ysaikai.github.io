@@ -38,4 +38,4 @@ Bayesian optimization is still a novel technique in most scientific disciplines.
   - Based on the course project (AAE731 "Frontiers in Development Economics 2", Spring 2016) at UWMadison
 * [An impure public good model of local food systems: Aggregative games of four locals](https://github.com/ysaikai/LFSGames)
   - Yuji Saikai
-  - Based on the honours thesis (2014) at The Australian National University
+  - Based on the honours thesis (2014) at the Australian National University
