@@ -35,7 +35,7 @@ Bayesian optimization is still a novel technique in most scientific disciplines.
   - Presented at [2017](https://www.aaea.org/meetings/2017-aaea-annual-meeting),[2019](https://www.aaea.org/meetings/2019-aaea-annual-meeting) AAEA Annual Meeting
 * [An agent-based model for promoting modest technologies](https://github.com/ysaikai/TechAdoption)
   - Yuji Saikai
-  - Based on the course project (AAE731 "Frontiers in Development Economics 2", Spring 2016) at UW-Madison
+  - Based on the course project (AAE731 "Frontiers in Development Economics 2", Spring 2016) at UWMadison
 * [An impure public good model of local food systems: Aggregative games of four locals](https://github.com/ysaikai/LFSGames)
   - Yuji Saikai
-  - Based on the honours thesis (2014) at ANU
+  - Based on the honours thesis (2014) at The Australian National University
