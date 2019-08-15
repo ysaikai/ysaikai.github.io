@@ -22,9 +22,10 @@ Bayesian optimization is still a novel technique in most scientific disciplines.
 
 
 ## Papers
-* Bayesian optimization for precision agriculture
+* Efficient learning of site-specific management in precision agriculture
   - Yuji Saikai
-  - Job market paper
+* Adaptive experimental design using Bayesian optimization to improve the cost efficiency of small plot field trials
+  - Yuji Saikai, Vivak Patel, Lucía Gutiérrez, Brian Luck, Jed Colquhoun, Shawn Conley, and Paul Mitchell
 * [A bandit algorithm for efficient on-farm research](https://github.com/ysaikai/MABPS)
   - Yuji Saikai and Paul D. Mitchell
   - Presented at [2018 AAEA Annual Meeting](https://www.aaea.org/meetings/2018-aaea-annual-meeting)
