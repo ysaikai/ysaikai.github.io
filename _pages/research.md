@@ -26,6 +26,7 @@ Bayesian optimization is still a novel technique in most scientific disciplines.
   - Yuji Saikai, Vivak Patel, Lucía Gutiérrez, Brian Luck, Jed Colquhoun, Shawn Conley, and Paul Mitchell
 * Adaptive experimental design using Bayesian optimization to improve the cost efficiency of small plot field trials
   - Yuji Saikai, Vivak Patel, Lucía Gutiérrez, Brian Luck, Jed Colquhoun, Shawn Conley, and Paul Mitchell
+  - Presented at [2019 ASA-CSSA-SSSA International Annual Meeting](https://www.acsmeetings.org)
 * [A bandit algorithm for efficient on-farm research](https://github.com/ysaikai/MABPS)
   - Yuji Saikai and Paul D. Mitchell
   - Presented at [2018 AAEA Annual Meeting](https://www.aaea.org/meetings/2018-aaea-annual-meeting)
