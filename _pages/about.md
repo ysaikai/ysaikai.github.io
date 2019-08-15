@@ -3,7 +3,7 @@ title: "About"
 permalink: /about/
 ---
 
-[CV](/files/cv.pdf)
+[Curriculum Vitae](/files/cv.pdf)
 
 I am an idealistic, risk-taking, introverted, nerdy foodie, studying computational approaches for agriculture. In particular, my research focuses on applications of novel methods to agriculture systems, including machine learning, Bayesian optimization, and agent-based modeling, in order to answer the key questions better.
 
