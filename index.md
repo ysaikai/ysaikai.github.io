@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Welcome!"
+title: "Yuji Saikai"
 author_profile: true
 header:
   image: "/images/shore.jpg"
