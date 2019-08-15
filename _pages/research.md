@@ -23,7 +23,7 @@ Bayesian optimization is still a novel technique in most scientific disciplines.
 
 ## Papers
 * Efficient learning of site-specific management in precision agriculture
-  - Yuji Saikai
+  - Yuji Saikai, Vivak Patel, Lucía Gutiérrez, Brian Luck, Jed Colquhoun, Shawn Conley, and Paul Mitchell
 * Adaptive experimental design using Bayesian optimization to improve the cost efficiency of small plot field trials
   - Yuji Saikai, Vivak Patel, Lucía Gutiérrez, Brian Luck, Jed Colquhoun, Shawn Conley, and Paul Mitchell
 * [A bandit algorithm for efficient on-farm research](https://github.com/ysaikai/MABPS)
@@ -31,7 +31,7 @@ Bayesian optimization is still a novel technique in most scientific disciplines.
   - Presented at [2018 AAEA Annual Meeting](https://www.aaea.org/meetings/2018-aaea-annual-meeting)
 * [An agent-based model of insect resistance management and mitigation for Bt maize: A social science perspective](https://github.com/ysaikai/BTABM)
   - Yuji Saikai and Paul D. Mitchell
-  - Presented at [2017 AAEA Annual Meeting](https://www.aaea.org/meetings/2017-aaea-annual-meeting)
+  - Presented at [2017](https://www.aaea.org/meetings/2017-aaea-annual-meeting),[2019](https://www.aaea.org/meetings/2019-aaea-annual-meeting) AAEA Annual Meeting
 * [An agent-based model for promoting modest technologies](https://github.com/ysaikai/TechAdoption)
   - Yuji Saikai
   - Based on the course project (AAE731 "Frontiers in Development Economics 2", Spring 2016) at UW-Madison
