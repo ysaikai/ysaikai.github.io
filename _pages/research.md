@@ -8,7 +8,7 @@ I am interested in computational modeling and its applications to agricultural s
 ## Advisors
 I have been very fortunate to receive supportive and constructive advice from two distinct academics at UW-Madison:
 * [Paul Mitchell](https://aae.wisc.edu/faculty/pdmitchell/), Agricultural economist & Extension specialist
-* [Vivak Patel](http://vivakpatel.org/), Statistician
+* [Vivak Patel](http://pages.stat.wisc.edu/~vrpatel6/), Statistician
 
 
 ## Bayesian optimization
@@ -27,19 +27,17 @@ Agent-based modeling has become one of the standard approaches for studying comp
 
 ## Papers
 * Efficient learning of site-specific management in precision agriculture
-  - Yuji Saikai, Vivak Patel, Lucía Gutiérrez, Brian Luck, Jed Colquhoun, Shawn Conley, and Paul Mitchell
+  - with [Vivak Patel](http://pages.stat.wisc.edu/~vrpatel6/), Lucía Gutiérrez, Brian Luck, Jed Colquhoun, Shawn Conley, and Paul Mitchell
 * Adaptive experimental design using Bayesian optimization to improve the cost efficiency of small plot field trials
-  - Yuji Saikai, Vivak Patel, Lucía Gutiérrez, Brian Luck, Jed Colquhoun, Shawn Conley, and Paul Mitchell
+  - with [Vivak Patel](http://pages.stat.wisc.edu/~vrpatel6/), Lucía Gutiérrez, Brian Luck, Jed Colquhoun, Shawn Conley, and Paul Mitchell
   - Presented at [2019 ASA-CSSA-SSSA International Annual Meeting](https://www.acsmeetings.org)
 * [An agent-based model of insect resistance management and mitigation for Bt maize: A social science perspective](https://github.com/ysaikai/BTABM)
-  - Yuji Saikai, [Paul Mitchell](https://aae.wisc.edu/faculty/pdmitchell/), and [Terrance Hurley](https://www.apec.umn.edu/people/terrance-hurley)
+  - with [Paul Mitchell](https://aae.wisc.edu/faculty/pdmitchell/), and [Terrance Hurley](https://www.apec.umn.edu/people/terrance-hurley)
   - Presented at [2017](https://www.aaea.org/meetings/2017-aaea-annual-meeting),[2019](https://www.aaea.org/meetings/2019-aaea-annual-meeting) AAEA Annual Meeting
 * [A bandit algorithm for efficient on-farm research](https://github.com/ysaikai/MABPS)
-  - Yuji Saikai and [Paul Mitchell](https://aae.wisc.edu/faculty/pdmitchell/)
+  - with [Paul Mitchell](https://aae.wisc.edu/faculty/pdmitchell/)
   - Presented at [2018 AAEA Annual Meeting](https://www.aaea.org/meetings/2018-aaea-annual-meeting)
 * [An agent-based model for promoting modest technologies](https://github.com/ysaikai/TechAdoption)
-  - Yuji Saikai
   - Based on the course project (AAE731 "Frontiers in Development Economics 2", Spring 2016) at UWMadison
 * [An impure public good model of local food systems: Aggregative games of four locals](https://github.com/ysaikai/LFSGames)
-  - Yuji Saikai
   - Based on the honours thesis (2014) at the Australian National University
