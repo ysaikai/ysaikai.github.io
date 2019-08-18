@@ -3,7 +3,7 @@ title: "Teaching"
 permalink: /teaching/
 ---
 
-## Machine Learning in Applied Economic Analysis (Summer 2019)
+## Machine learning in applied economic analysis (Summer 2019)
 * AAE 722, University of Wisconsin-Madison
 * Instructor: [Dr. Sheldon Du](https://aae.wisc.edu/faculty/xdu23/)
 * [Syllabus](https://api.aae.wisc.edu/instruction/syllabus/download/364.pdf)
@@ -23,7 +23,10 @@ permalink: /teaching/
           <li>Deep learning</li>
         </ul>
       </td>
-      <td>Link</td>
+      <td>
+        Link<br>
+        Data
+      </td>
     </tr>
   </tbody>
 </table>
