@@ -1,7 +1,33 @@
 ---
-title: "Teaching assistant"
+title: "Teaching"
 permalink: /teaching/
 ---
+
+## Machine Learning in Applied Economic Analysis (Summer 2019)
+* AAE 722, University of Wisconsin-Madison
+* Instructor: [Dr. Sheldon (Xiaodong) Du](https://aae.wisc.edu/faculty/xdu23/)
+* [Syllabus](https://api.aae.wisc.edu/instruction/syllabus/download/364.pdf)
+
+### Guest lecture
+<table>
+  <tbody>
+    <tr style="border-bottom:1pt solid black">
+      <th>Date</th>
+      <th align="center">Topics</th>
+      <th>Files</th>
+    </tr>
+    <tr>
+      <td>Aug 21</td>
+      <td>
+        <ul>
+          <li>Deep learning</li>
+        </ul>
+      </td>
+      <td>Link</td>
+    </tr>
+  </tbody>
+</table>
+
 
 ## Applied risk analysis (Spring 2019)
 * AAE 706, University of Wisconsin-Madison
