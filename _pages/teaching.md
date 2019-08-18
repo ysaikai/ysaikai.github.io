@@ -5,7 +5,7 @@ permalink: /teaching/
 
 ## Machine Learning in Applied Economic Analysis (Summer 2019)
 * AAE 722, University of Wisconsin-Madison
-* Instructor: [Dr. Sheldon (Xiaodong) Du](https://aae.wisc.edu/faculty/xdu23/)
+* Instructor: [Dr. Sheldon Du](https://aae.wisc.edu/faculty/xdu23/)
 * [Syllabus](https://api.aae.wisc.edu/instruction/syllabus/download/364.pdf)
 
 ### Guest lecture
