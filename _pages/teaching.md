@@ -26,7 +26,8 @@ permalink: /teaching/
       <td>
         <a href="/files/AAE722DL.pdf">slides</a><br>
         <a href="https://colab.research.google.com/drive/1b-4tMdbJCuPylJZH3gbliDJWhORvgjmj">exercise 1</a><br>
-        <a href="https://colab.research.google.com/drive/1WRnpuaSOXbJ17WoWW2aWg9qevCLrgIWH">exercise 2</a>
+        <a href="https://colab.research.google.com/drive/1WRnpuaSOXbJ17WoWW2aWg9qevCLrgIWH">exercise 2</a><br>
+        <a href="https://colab.research.google.com/drive/1OqQIFswr8X3Gl2FQfOotTPLXRvCU2bPM">exercise 3</a>
       </td>
     </tr>
   </tbody>
