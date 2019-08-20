@@ -24,8 +24,8 @@ permalink: /teaching/
         </ul>
       </td>
       <td>
-        Link<br>
-        Data
+        <a href="/files/AAE722DL.pdf">slides</a><br>
+        <a href="https://colab.research.google.com/drive/1b-4tMdbJCuPylJZH3gbliDJWhORvgjmj">Exercise 1</a><br>
       </td>
     </tr>
   </tbody>
