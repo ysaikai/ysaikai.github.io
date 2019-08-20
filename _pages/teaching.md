@@ -8,7 +8,7 @@ permalink: /teaching/
 * Instructor: [Dr. Sheldon Du](https://aae.wisc.edu/faculty/xdu23/)
 * [Syllabus](https://api.aae.wisc.edu/instruction/syllabus/download/364.pdf)
 
-### Guest lecture
+### Lecture
 <table>
   <tbody>
     <tr style="border-bottom:1pt solid black">
