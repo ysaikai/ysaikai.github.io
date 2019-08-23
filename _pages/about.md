@@ -19,7 +19,7 @@ I enjoy cooking, playing pool, and a simple life in general. [Kanan](https://ksa
 * Ph.D. in Agricultural and Applied Economics with minor in Computer Science, [University of Wisconsin-Madison](https://aae.wisc.edu), 2020 (expected)
 
 
-Because of the professional background, I am competent in software design and coding. In 2017, to broaden the research toolkit, I attended Complex Systems Summer School at Santa Fe Institute. Finally, at UW-Madison, I took classes that closely reflect my interest. I am basically trained in economics and machine learning at a graduate level and mathematics at an undergraduate level.
+Because of the professional background, I am competent in software design and coding. In 2017, to broaden the research toolkit, I attended Complex Systems Summer School at Santa Fe Institute. Finally, at UW-Madison, I took classes that closely reflect my interest. I am basically trained in economics and machine learning at graduate levels and mathematics at an undergraduate level.
 
 <table>
   <tr>
