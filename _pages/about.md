@@ -13,13 +13,13 @@ I enjoy cooking, playing pool, and a simple life in general. [Kanan](https://ksa
 
 
 ## Education
-* Bachelor of AgriCommerce, Massey University, New Zealand, 2013
-* Bachelor of Economics (Honours), Australian National University, Australia, 2014
-* Santa Fe Institute Complex Systems Summer School, 2017
-* Ph.D. in Agricultural and Applied Economics with minor in Computer Science, University of Wisconsin-Madison, 2020 (expected)
+* Bachelor of AgriCommerce, [Massey University](https://www.massey.ac.nz), New Zealand, 2013
+* Bachelor of Economics (Honours), [the Australian National University](https://www.rse.anu.edu.au), Australia, 2014
+* Santa Fe Institute [Complex Systems Summer School](https://www.santafe.edu/engage/learn/schools/sfi-complex-systems-summer-school), 2017
+* Ph.D. in Agricultural and Applied Economics with minor in Computer Science, [University of Wisconsin-Madison](https://aae.wisc.edu), 2020 (expected)
 
 
-Because of the professional background, I am competent in software design and coding. In 2017, to broaden the research toolkit, I attended [Complex Systems Summer School](https://www.santafe.edu/engage/learn/schools/sfi-complex-systems-summer-school) at Santa Fe Institute. Finally, at UW–Madison, I took classes that closely reflect my interest. I am basically trained in economics and machine learning at a graduate level and mathematics at an undergraduate level.
+Because of the professional background, I am competent in software design and coding. In 2017, to broaden the research toolkit, I attended Complex Systems Summer School at Santa Fe Institute. Finally, at UW-Madison, I took classes that closely reflect my interest. I am basically trained in economics and machine learning at a graduate level and mathematics at an undergraduate level.
 
 <table>
   <tr>
