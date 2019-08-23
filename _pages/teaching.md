@@ -3,7 +3,7 @@ title: "Teaching"
 permalink: /teaching/
 ---
 
-## Machine learning in applied economic analysis (Summer 2019)
+## Machine Learning in Applied Economic Analysis (Summer 2019)
 * AAE 722, University of Wisconsin-Madison
 * Instructor: [Dr. Sheldon Du](https://aae.wisc.edu/faculty/xdu23/)
 * [Syllabus](https://api.aae.wisc.edu/instruction/syllabus/download/364.pdf)
@@ -34,7 +34,7 @@ permalink: /teaching/
 </table>
 
 
-## Applied risk analysis (Spring 2019)
+## Applied Risk Analysis (Spring 2019)
 * AAE 706, University of Wisconsin-Madison
 * Instructor: [Dr. Jean-Paul Chavas](https://aae.wisc.edu/faculty/jchavas/)
 * Course website: <https://aae.wisc.edu/aae706/>
