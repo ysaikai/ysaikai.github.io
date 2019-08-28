@@ -88,7 +88,7 @@ author:
   avatar           : "/images/bio_photo.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "an introverted nerdy foodie"
   location         : "Madison, WI"
-  email            :
+  email            : "yuji.saikai@gmail.com"
   uri              : "https://aae.wisc.edu/grad-students/saikai/"
   home             : # null (default), "absolute or relative url to link to author home"
   facebook         :
