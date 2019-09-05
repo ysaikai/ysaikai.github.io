@@ -5,7 +5,7 @@ header:
   image: "/images/shore.jpg"
 ---
 
-**Welcome to my personal website!**
+**Welcome to Yuji Saikai's personal website!**
 
 I am a Ph.D. candidate in Agricultural and Applied Economics, University of Wisconsin–Madison. My research interest is in computational modeling and its applications to agricultural systems.
 
