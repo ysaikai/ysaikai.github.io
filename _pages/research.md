@@ -3,7 +3,7 @@ title: "Research"
 permalink: /research/
 ---
 
-The central thesis that drives my research is “agriculture as socio-ecological complex systems.” To help address challenging problems such as economically & environmentally sustainable agricultue, I train myself as a computational modeler in economics, machine learning and mathematics in general. Recently, I focus on leveraging the emerging data streams in precision agriculture (PA). To date, on-farm research is the most feasible way to make use of PA, where farmers maximize profits by systematically adapting to heterogeneous conditions within fields.
+The central thesis that drives my research is “agriculture as socio-ecological complex systems.” To help address challenging problems such as economically & environmentally sustainable agricultue, I train myself as a computational modeler in economics, machine learning and mathematics in general. Recently, I focus on leveraging the emerging data streams in precision agriculture for optimizing site-specific management.
 
 ## Advisors
 I have been very fortunate to receive supportive and constructive advice from two distinct academics at UW-Madison:
