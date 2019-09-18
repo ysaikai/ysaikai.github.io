@@ -3,7 +3,7 @@ title: "Research"
 permalink: /research/
 ---
 
-The central thesis that drives my research is “agriculture as socio-ecological complex systems.” To help address challenging problems such as economically & environmentally sustainable agricultue, I train myself as a computational modeler in economics, machine learning and mathematics in general. Recently, I focus on leveraging the emerging data streams in precision agriculture for optimizing site-specific management.
+The central thesis that drives my research is “agriculture as socio-ecological complex systems.” To help address challenging problems such as food security and economically & environmentally sustainable agricultue, I train myself as a computational modeler in economics, machine learning and mathematics in general. Recently, I focus on leveraging the emerging data streams in precision agriculture for optimizing site-specific management.
 
 ## Advisors
 I have been very fortunate to receive supportive and constructive advice from two distinct academics at UW-Madison:
@@ -26,8 +26,8 @@ Agent-based modeling has become one of the standard approaches for studying comp
 
 
 ## Papers
-* Efficient learning of site-specific management in high-dimensional precision agriculture
-  - with [Vivak Patel](http://pages.stat.wisc.edu/~vrpatel6/), Lucía Gutiérrez, Brian Luck, Jed Colquhoun, Shawn Conley, and [Paul Mitchell](https://aae.wisc.edu/faculty/pdmitchell/)
+* An efficient algorithm for learning site-specific management in high-dimensional precision agriculture
+  - with [Vivak Patel](http://pages.stat.wisc.edu/~vrpatel6/), and [Paul Mitchell](https://aae.wisc.edu/faculty/pdmitchell/)
 * Adaptive experimental design using Bayesian optimization to improve the cost efficiency of small plot field trials
   - with [Vivak Patel](http://pages.stat.wisc.edu/~vrpatel6/), Lucía Gutiérrez, Brian Luck, Jed Colquhoun, Shawn Conley, and [Paul Mitchell](https://aae.wisc.edu/faculty/pdmitchell/)
   - Presented at [2019 ASA-CSSA-SSSA International Annual Meeting](https://www.acsmeetings.org)
