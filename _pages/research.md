@@ -27,12 +27,12 @@ Agent-based modeling has become one of the standard approaches for studying comp
 
 ## Papers
 * An efficient algorithm for learning site-specific management in high-dimensional precision agriculture
-  - with [Vivak Patel](http://pages.stat.wisc.edu/~vrpatel6/), and [Paul Mitchell](https://aae.wisc.edu/faculty/pdmitchell/)
+  - with [Vivak Patel](http://pages.stat.wisc.edu/~vrpatel6/) and [Paul Mitchell](https://aae.wisc.edu/faculty/pdmitchell/)
 * Adaptive experimental design using Bayesian optimization to improve the cost efficiency of small plot field trials
   - with [Vivak Patel](http://pages.stat.wisc.edu/~vrpatel6/), Lucía Gutiérrez, Brian Luck, Jed Colquhoun, Shawn Conley, and [Paul Mitchell](https://aae.wisc.edu/faculty/pdmitchell/)
   - Presented at [2019 ASA-CSSA-SSSA International Annual Meeting](https://www.acsmeetings.org)
 * [An agent-based model of insect resistance management and mitigation for Bt maize: A social science perspective](https://github.com/ysaikai/BTABM)
-  - with [Paul Mitchell](https://aae.wisc.edu/faculty/pdmitchell/), and [Terrance Hurley](https://www.apec.umn.edu/people/terrance-hurley)
+  - with [Paul Mitchell](https://aae.wisc.edu/faculty/pdmitchell/) and [Terrance Hurley](https://www.apec.umn.edu/people/terrance-hurley)
   - Presented at [2017](https://www.aaea.org/meetings/2017-aaea-annual-meeting),[2019](https://www.aaea.org/meetings/2019-aaea-annual-meeting) AAEA Annual Meeting
 * [A bandit algorithm for efficient on-farm research](https://github.com/ysaikai/MABPS)
   - with [Paul Mitchell](https://aae.wisc.edu/faculty/pdmitchell/)
