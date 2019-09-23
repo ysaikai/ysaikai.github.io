@@ -27,7 +27,7 @@ Agent-based modeling has become one of the standard approaches for studying comp
 
 ## Papers
 - *An efficient algorithm for learning site-specific management in high-dimensional precision agriculture*
-  - with [Vivak Patel](http://pages.stat.wisc.edu/~vrpatel6/) and [Paul Mitchell](https://aae.wisc.edu/faculty/pdmitchell/)
+  - (in progress)
 - *Adaptive experimental design using Bayesian optimization to improve the cost efficiency of small-plot field trials*
   - with [Vivak Patel](http://pages.stat.wisc.edu/~vrpatel6/), Lucía Gutiérrez, Brian Luck, Jed Colquhoun, Shawn Conley, and [Paul Mitchell](https://aae.wisc.edu/faculty/pdmitchell/)
   - Presented at [2019 ASA-CSSA-SSSA International Annual Meeting](https://www.acsmeetings.org)
