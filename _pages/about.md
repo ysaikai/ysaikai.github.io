@@ -18,7 +18,7 @@ I enjoy cooking, playing pool, and a simple life in general. [Kanan](https://ksa
 * Bachelor of Economics (Honours), [the Australian National University](https://www.rse.anu.edu.au), Australia, 2014
 * Bachelor of AgriCommerce, [Massey University](https://www.massey.ac.nz), New Zealand, 2013
 
-Because of the professional background, I am competent in software design and coding. In 2017, to broaden the research toolkit, I attended Complex Systems Summer School at Santa Fe Institute. Finally, at UW-Madison, I took classes that closely reflect my interest. I am basically trained in economics and machine learning at graduate levels and mathematics at an undergraduate level.
+Because of the professional background, I am competent in software design and coding. In 2017, to broaden the modeling toolkit, I attended Complex Systems Summer School at Santa Fe Institute. Finally, at UW-Madison, I take classes that closely reflect my interest. I am basically trained in economics and machine learning at graduate levels and mathematics at an undergraduate level.
 
 <table>
   <tr>
@@ -42,7 +42,7 @@ Because of the professional background, I am competent in software design and co
     <td>
       <strong>Mathematics</strong>
       <ul>
-        <li>MATH 415: Applied Dynamical Systems, Chaos and Modeling</li>
+        <li>MATH 415: Applied Dynamical Systems, Chaos, and Modeling</li>
         <li>MATH 521: Analysis I</li>
         <li>MATH 531: Probability Theory</li>
         <li>MATH 541: Modern Algebra</li>
