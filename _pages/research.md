@@ -27,7 +27,7 @@ Agent-based modeling has become one of the standard approaches for studying comp
 
 ## Papers
 - *[Machine learning for optimizing complex site-specific management](https://github.com/ysaikai/BOPA)*
-  - Job Market Paper
+  - with [Vivak Patel](http://pages.stat.wisc.edu/~vrpatel6/) and [Paul Mitchell](https://aae.wisc.edu/faculty/pdmitchell/)
 - *[Adaptive experimental design using Bayesian optimization to improve the cost efficiency of small-plot field trials](https://github.com/ysaikai/AEDBO)*
   - with [Vivak Patel](http://pages.stat.wisc.edu/~vrpatel6/), Shawn Conley, and [Paul Mitchell](https://aae.wisc.edu/faculty/pdmitchell/)
   - Presented at [2019 ASA-CSSA-SSSA International Annual Meeting](https://www.acsmeetings.org)
