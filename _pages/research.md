@@ -7,7 +7,7 @@ The central thesis that drives my research is “agriculture as socio-ecological
 
 ## Advisors
 I have been very fortunate to receive supportive and constructive advice from two distinct academics at UW-Madison:
-* [Paul Mitchell](https://aae.wisc.edu/faculty/pdmitchell/), Agricultural economist & Extension specialist
+* [Paul Mitchell](https://aae.wisc.edu/faculty/pdmitchell/), Agricultural economist
 * [Vivak Patel](http://pages.stat.wisc.edu/~vrpatel6/), Statistician
 
 
