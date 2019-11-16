@@ -25,11 +25,11 @@ Because of the professional background, I am competent in software design and co
     <td>
       <strong>Economics</strong>
       <ul>
-        <li>ECON 711: Economic Theory - Microeconomics Sequence</li>
-        <li>ECON 713: Economic Theory - Microeconomics Sequence</li>
-        <li>ECON 712: Economic Theory - Macroeconomics Sequence</li>
         <li>ECON 709: Economic Statistics and Econometrics I</li>
         <li>ECON 710: Economic Statistics and Econometrics II</li>
+        <li>ECON 711: Economic Theory - Microeconomics Sequence</li>
+        <li>ECON 712: Economic Theory - Macroeconomics Sequence</li>
+        <li>ECON 713: Economic Theory - Microeconomics Sequence</li>
         <li>AAE 641: Foundations of Agricultural Economics</li>
         <li>AAE 706: Applied Risk Analysis</li>
         <li>AAE 731: Frontiers in Development Economics 2</li>
@@ -55,8 +55,8 @@ Because of the professional background, I am competent in software design and co
     <td>
       <strong>Machine learning</strong>
       <ul>
-        <li>CS 540: Introduction to Artificial Intelligence</li>
         <li>CS 532: Theory and Applications of Pattern Recognition</li>
+        <li>CS 540: Introduction to Artificial Intelligence</li>
         <li>CS 761: Mathematical Foundations of Machine Learning</li>
         <li>CS 861: Theoretical Foundations of Machine Learning</li>
       </ul>
