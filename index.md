@@ -12,6 +12,8 @@ I am a Ph.D. candidate at the Department of Agricultural and Applied Economics, 
 - [Teaching](/teaching/)
 - [Research](/research/)
 
+<!--
 I will be at:
 - [ASA-CSSA-SSSA Annual Meeting](https://scisoc.confex.com/scisoc/2019am/meetingapp.cgi/Paper/122496) in San Antonio, TX, November 10-13, 2019
 - [ASSA Annual Meeting](https://www.aeaweb.org/conference/) in San Diego, CA, January 3-5, 2020
+-->
