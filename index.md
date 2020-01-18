@@ -12,9 +12,8 @@ I am a Ph.D. candidate in the Department of Agricultural and Applied Economics, 
 - [Teaching](/teaching/)
 - [Research](/research/)
 
-I will be presenting a paper “[_Machine learning for optimizing complex site-specific management_](https://github.com/ysaikai/BOPA)” at:
-- [Annual Conference of the Australasian Agricultural and Resource Economics Society (AARES)](https://www.aares2020.org) in Perth, Western Australia, February 11-14, 2020
+\ nbsp;
 
-<!--
-- [ASSA Annual Meeting](https://www.aeaweb.org/conference/) in San Diego, CA, January 3-5, 2020
--->
+I will be giving a talk at
+- [Data Science Research Bazaar](https://hub.datascience.wisc.edu/research-bazaar-madison-wi-january-24-25-2020/) in Madison, WI, January 24-25, 2020
+- [Annual Conference of the Australasian Agricultural and Resource Economics Society (AARES)](https://www.aares2020.org) in Perth, Western Australia, February 11-14, 2020
