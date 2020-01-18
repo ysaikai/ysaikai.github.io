@@ -12,7 +12,7 @@ I am a Ph.D. candidate in the Department of Agricultural and Applied Economics, 
 - [Teaching](/teaching/)
 - [Research](/research/)
 
-\ nbsp;
+\ &nbsp;
 
 I will be giving a talk at
 - [Data Science Research Bazaar](https://hub.datascience.wisc.edu/research-bazaar-madison-wi-january-24-25-2020/) in Madison, WI, January 24-25, 2020
