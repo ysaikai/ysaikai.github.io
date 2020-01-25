@@ -13,6 +13,6 @@ I am a Ph.D. candidate in the Department of Agricultural and Applied Economics, 
 - [Research](/research/)
 
 
-I will be giving a talk at
+I am going to give a talk at
 - [Data Science Research Bazaar](https://hub.datascience.wisc.edu/research-bazaar-madison-wi-january-24-25-2020/) in Madison, WI, January 24-25, 2020
 - [Annual Conference of the Australasian Agricultural and Resource Economics Society (AARES)](http://fleximeets.com/aares2020/?p=programme) in Perth, Western Australia, February 11-14, 2020
