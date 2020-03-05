@@ -7,7 +7,7 @@ header:
 
 **Welcome to Yuji Saikai's website!**
 
-I am a PhD candidate in the Department of Agricultural and Applied Economics, University of Wisconsin–Madison. My research interest is in computational modeling and its applications to agricultural systems. I am going to join [the School of Mathematics and Statistics at the University of Melbourne](https://ms.unimelb.edu.au) in June. In this website, you can find the following:
+I am a PhD candidate in the Department of Agricultural and Applied Economics, University of Wisconsin–Madison. My research interest is in computational modeling and its applications to agricultural systems. I am going to join [the School of Mathematics and Statistics](https://ms.unimelb.edu.au), University of Melbourne in June. In this website, you can find the following:
 - [About me](/about/)
 - [Teaching](/teaching/)
 - [Research](/research/)
