@@ -14,4 +14,4 @@ I am a PhD candidate in the Department of Agricultural and Applied Economics, Un
 
 
 I am going to give a talk at:
-- [Conference on Applied Statistics in Agriculture and Natural Resources](https://conference.ifas.ufl.edu/applied-stats/) in Gainesville, FL, ~~April 26-28, 2020~~ rescheduled for April 25-27, 2021
+- [Conference on Applied Statistics in Agriculture and Natural Resources](https://conference.ifas.ufl.edu/applied-stats/) in Gainesville, FL, ~~April 26-28, 2020~~ April 25-27, 2021 (rescheduled)
