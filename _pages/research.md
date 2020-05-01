@@ -28,7 +28,7 @@ Agent-based modeling has become one of the standard approaches to studying compl
 ## Papers
 - *[Machine learning for optimizing complex site-specific management](https://github.com/ysaikai/BOPA)*
   - with [Vivak Patel](http://pages.stat.wisc.edu/~vrpatel6/) and [Paul Mitchell](https://aae.wisc.edu/faculty/pdmitchell/)
-  - Accepted at [Computers and Electronics in Agriculture](https://www.sciencedirect.com/journal/computers-and-electronics-in-agriculture)
+  - Published at [Computers and Electronics in Agriculture](https://www.sciencedirect.com/science/article/pii/S0168169919325943)
 - *[Adaptive experimental design using Bayesian optimization to improve the cost efficiency of field trials](https://github.com/ysaikai/AEDBO)*
   - with [Vivak Patel](http://pages.stat.wisc.edu/~vrpatel6/), Shawn Conley, and [Paul Mitchell](https://aae.wisc.edu/faculty/pdmitchell/)
   - Presented at [2019 ASA-CSSA-SSSA International Annual Meeting](https://scisoc.confex.com/scisoc/2019am/meetingapp.cgi/Paper/122496)
