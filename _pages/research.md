@@ -36,6 +36,7 @@ Agent-based modeling has become one of the standard approaches to studying compl
 - *[An agent-based model of insect resistance management and mitigation for Bt maize: A social science perspective](https://github.com/ysaikai/BTABM)*
   - with [Paul Mitchell](https://aae.wisc.edu/faculty/pdmitchell/) and [Terrance Hurley](https://www.apec.umn.edu/people/terrance-hurley)
   - Presented at [2017](https://www.aaea.org/meetings/2017-aaea-annual-meeting), [2019](https://www.aaea.org/meetings/2019-aaea-annual-meeting) AAEA Annual Meeting
+  - Under review at [Pest Management Science](https://onlinelibrary.wiley.com/journal/15264998)
 - *[A bandit algorithm for efficient on-farm research](https://github.com/ysaikai/MABPS)*
   - with [Paul Mitchell](https://aae.wisc.edu/faculty/pdmitchell/)
   - Presented at [2018 AAEA Annual Meeting](https://www.aaea.org/meetings/2018-aaea-annual-meeting)
