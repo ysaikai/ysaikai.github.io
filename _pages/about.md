@@ -18,7 +18,7 @@ I enjoy cooking, playing pool, and a simple life in general. [Kanan](https://ksa
 * Bachelor of Economics (Honours), [the Australian National University](https://www.rse.anu.edu.au), Australia, 2014
 * Bachelor of AgriCommerce, [Massey University](https://www.massey.ac.nz), New Zealand, 2013
 
-Because of the professional background, I am competent in software design and coding. I like Python but also feel comfortable with others (e.g. R, Julia, Matlab, and Java). Aside from software engineering, I am trained in economics, machine learning, statistics at graduate levels and mathematics at an undergraduate level. Being a PhD student was luxury in my life, and I enjoyed myself in the following classes at UW-Madison.
+Because of the professional background, I am competent in software design and coding. I like Python but also feel comfortable with others (e.g. R, Julia, Matlab, and Java). Aside from software engineering, I am trained in economics, machine learning, and statistics at graduate levels, and mathematics at an undergraduate level. Being a PhD student was luxury in my life, and I enjoyed myself in the following classes at UW-Madison.
 
 <table>
   <tr>
