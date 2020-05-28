@@ -5,20 +5,20 @@ permalink: /about/
 
 [Curriculum Vitae](/files/cv.pdf)
 
-I am an idealistic, risk-taking, introverted, nerdy foodie, studying computational approaches for agriculture. I grew up digital in Japan. While turning to physics and mathematics in high school and (first) college, computers had never ceased to fascinate me. Circa 2000, when starting tech businesses was ever so cool, as a natural course of action, I dropped out, became a software engineer, and eventually started my own business. While developing resource management software for small-scale farmers and interacting with them, I found growing plants fascinating and much room for improving food systems. The idea of local food system began to dawn on me. To test my hunch, I developed an online service that delivered fresh produce to local people and facilitated interactions among them. I grew most vegetable by myself and directly communicate with a number of consumers -- a firsthand experience of local food.
+I grew up digital in Japan. While turning to physics and mathematics in high school and college, computers had never ceased to fascinate me. Circa 2000, when starting tech businesses was ever so cool, as a natural course of action, I dropped out, became a software engineer, and eventually started my own business. As I developed resource management software for small-scale farmers and interacted with them, I found growing plants fascinating and much room for improving food systems. The idea of local food system began to dawn on me. To test my hunch, I developed an online service that delivered fresh produce to local people and facilitated interactions among them. I grew most vegetable by myself and directly communicate with a number of consumers -- a firsthand experience of local food.
 
-In 2010, being convinced of its potential and seeking systematic knowledge, I went to New Zealand to study agribusiness at Massey University. However, as my interests drifted from entrepreneurship to research, I decided to pursue an academic career that, I believed, could make me more useful for the society. In 2015, I came to Madison for PhD.
+In 2010, being convinced of its potential and seeking systematic knowledge, I went to New Zealand to study agribusiness. However, as my interests drifted from entrepreneurship to research, I decided to pursue an academic career that, I believed, could make me more useful for society. In 2015, I came to Madison for PhD.
 
 I enjoy cooking, playing pool, and a simple life in general. [Kanan](https://ksaikai.github.io), a beloved nematologist, keeps my life not-so-simple yet full of bliss.
 
 
-## Education
-* Ph.D. in Agricultural and Applied Economics with minor in Computer Science, [University of Wisconsin-Madison](https://aae.wisc.edu), 2020 (expected)
+## Training
+* PhD in Agricultural and Applied Economics with minor in Computer Science, [University of Wisconsin-Madison](https://aae.wisc.edu), 2020
 * Santa Fe Institute [Complex Systems Summer School](https://www.santafe.edu/engage/learn/schools/sfi-complex-systems-summer-school), 2017
 * Bachelor of Economics (Honours), [the Australian National University](https://www.rse.anu.edu.au), Australia, 2014
 * Bachelor of AgriCommerce, [Massey University](https://www.massey.ac.nz), New Zealand, 2013
 
-Because of the professional background, I am competent in software design and coding. I like Python but sometimes use others (e.g. R, Julia, Matlab, and Java). To deepen my appreciation of agricultural systems, in 2017, I attended Complex Systems Summer School at Santa Fe Institute. Finally, at UW-Madison, I take classes that closely reflect my interest. I am basically trained in economics and machine learning at graduate levels and mathematics at an undergraduate level.
+Because of the professional background, I am competent in software design and coding. I like Python but also feel comfortable with others (e.g. R, Julia, Matlab, and Java). Aside from software engineering, I am trained in economics, machine learning, statistics at graduate levels and mathematics at an undergraduate level. Being a PhD student was luxury in my life, and I enjoyed myself in the following classes at UW-Madison.
 
 <table>
   <tr>
