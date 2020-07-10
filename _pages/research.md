@@ -5,10 +5,13 @@ permalink: /research/
 
 The central thesis that drives my research is “agriculture as socio-ecological complex systems.” To help address challenging problems such as food security and economically & environmentally sustainable agricultue, I train myself as a computational modeler in economics, machine learning and mathematics in general. Recently, I focus on leveraging the emerging data streams in precision agriculture for optimizing site-specific management.
 
+
+<!--
 ## Advisors
 I have been very fortunate to receive supportive and constructive advice from two distinct academics at UW-Madison:
-* [Paul Mitchell](https://aae.wisc.edu/faculty/pdmitchell/), Agricultural economist
-* [Vivak Patel](http://pages.stat.wisc.edu/~vrpatel6/), Statistician
+- [Paul Mitchell](https://aae.wisc.edu/faculty/pdmitchell/), Agricultural economist
+- [Vivak Patel](http://pages.stat.wisc.edu/~vrpatel6/), Statistician
+-->
 
 
 ## Bayesian optimization
