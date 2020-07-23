@@ -29,6 +29,9 @@ Agent-based modeling has become one of the standard approaches to studying compl
 
 
 ## Papers
+- *[An agent-based model of insect resistance management and mitigation for Bt maize: A social science perspective](https://github.com/ysaikai/BTABM)*
+  - with [Paul Mitchell](https://aae.wisc.edu/faculty/pdmitchell/) and [Terrance Hurley](https://www.apec.umn.edu/people/terrance-hurley)
+  - Published at [Pest Management Science](https://doi.org/10.1002/ps.6016)
 - *[Machine learning for optimizing complex site-specific management](https://github.com/ysaikai/BOPA)*
   - with [Vivak Patel](http://pages.stat.wisc.edu/~vrpatel6/) and [Paul Mitchell](https://aae.wisc.edu/faculty/pdmitchell/)
   - Published at [Computers and Electronics in Agriculture](https://doi.org/10.1016/j.compag.2020.105381)
@@ -36,10 +39,6 @@ Agent-based modeling has become one of the standard approaches to studying compl
   - with [Vivak Patel](http://pages.stat.wisc.edu/~vrpatel6/), Shawn Conley, and [Paul Mitchell](https://aae.wisc.edu/faculty/pdmitchell/)
   - Presented at [2019 ASA-CSSA-SSSA International Annual Meeting](https://scisoc.confex.com/scisoc/2019am/meetingapp.cgi/Paper/122496)
   - Under review at [PLOS ONE](https://journals.plos.org/plosone/)
-- *[An agent-based model of insect resistance management and mitigation for Bt maize: A social science perspective](https://github.com/ysaikai/BTABM)*
-  - with [Paul Mitchell](https://aae.wisc.edu/faculty/pdmitchell/) and [Terrance Hurley](https://www.apec.umn.edu/people/terrance-hurley)
-  - Presented at [2017](https://www.aaea.org/meetings/2017-aaea-annual-meeting), [2019](https://www.aaea.org/meetings/2019-aaea-annual-meeting) AAEA Annual Meeting
-  - Under review at [Pest Management Science](https://onlinelibrary.wiley.com/journal/15264998)
 - *[A bandit algorithm for efficient on-farm research](https://github.com/ysaikai/MABPS)*
   - with [Paul Mitchell](https://aae.wisc.edu/faculty/pdmitchell/)
   - Presented at [2018 AAEA Annual Meeting](https://www.aaea.org/meetings/2018-aaea-annual-meeting)
