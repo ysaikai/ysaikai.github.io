@@ -13,12 +13,12 @@ I enjoy cooking, playing pool, and a simple life in general. [Kanan](https://ksa
 
 
 ## Training
-* PhD in Agricultural and Applied Economics with minor in Computer Science, [University of Wisconsin-Madison](https://aae.wisc.edu), 2020
+* PhD in Agricultural and Applied Economics with minor in Computer Science, [the University of Wisconsin-Madison](https://aae.wisc.edu), 2020
 * Santa Fe Institute [Complex Systems Summer School](https://www.santafe.edu/engage/learn/schools/sfi-complex-systems-summer-school), 2017
 * Bachelor of Economics (Honours), [the Australian National University](https://www.rse.anu.edu.au), Australia, 2014
 * Bachelor of AgriCommerce, [Massey University](https://www.massey.ac.nz), New Zealand, 2013
 
-Because of the professional background, I am competent in software design and coding. I like Python but also feel comfortable with others (e.g. R, Julia, Matlab, and Java). Aside from software engineering, I am trained in economics, machine learning, and statistics at graduate levels, and mathematics at an undergraduate level. Being a PhD student was luxury in my life, and I enjoyed myself in the following classes at UW-Madison.
+Because of the professional background, I am competent in software design and coding. I like Python but also feel comfortable with others (e.g. R, Julia and C#). Aside from software engineering, I am trained in economics, machine learning, and statistics at graduate levels, and mathematics at an undergraduate level. Being a PhD student was luxury in my life, and I enjoyed myself in the following classes at UW-Madison.
 
 <table>
   <tr>
