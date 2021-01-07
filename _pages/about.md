@@ -20,7 +20,7 @@ I enjoy cooking, playing pool, and a simple life in general. [Kanan](https://ksa
 
 Because of the professional background, I am competent in software design and coding. I like Python but also feel comfortable with others (e.g. R, Julia and C#). Aside from software engineering, I am trained in economics, machine learning, and statistics at graduate levels, and mathematics at an undergraduate level.
 
-<---
+<!---
 Being a PhD student was luxury in my life, and I enjoyed myself in the following classes at UW-Madison.
 <table>
   <tr>
