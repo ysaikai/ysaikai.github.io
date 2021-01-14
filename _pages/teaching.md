@@ -4,6 +4,11 @@ permalink: /teaching/
 ---
 Teaching makes me both humble and thrilled. In the classroom, watching students taking notes of what I just say creates a strong sense of responsibility. At the same time, witnessing students absorbing what I believe is important and useful is a joy. Teaching takes time yet immensely fulfilling.
 
+## Systems Modelling and Simulation (Semester 1, 2021)
+* MAST90045, The University of Melbourne
+
+<br/>
+
 ## Machine Learning in Applied Economic Analysis (Summer 2019)
 * AAE 722, University of Wisconsin-Madison
 * Instructor: [Dr. Sheldon Du](https://aae.wisc.edu/faculty/xdu23/)
