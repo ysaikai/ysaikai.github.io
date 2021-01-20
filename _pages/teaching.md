@@ -6,7 +6,7 @@ Teaching makes me both humble and thrilled. In the classroom, watching students 
 
 ## Systems Modelling and Simulation (Semester 1, 2021)
 - MAST90045, The University of Melbourne
-- [Handboo](https://handbook.unimelb.edu.au/2021/subjects/mast90045)
+- [Handbook](https://handbook.unimelb.edu.au/2021/subjects/mast90045)
 
 <br/>
 
