@@ -12,8 +12,10 @@ Teaching makes me both humble and thrilled. In the classroom, watching students 
 - N.B. Despite the heavy use of R, the subject is **NOT** for statistics or data science!
 
 ### Tentative lecture schedule
+The topics are subject to change. Some topics are heavier than others, taking more than a week.
+
 | Week | Topic |
-| ---: | ---: |
+| :--- | :--- |
 | 1 | Introduction |
 | 2 | R, RStudio and R Markdown |
 | 3 | Root finding |
