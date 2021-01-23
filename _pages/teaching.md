@@ -7,6 +7,10 @@ Teaching makes me both humble and thrilled. In the classroom, watching students 
 ## Systems Modelling and Simulation (Semester 1, 2021)
 - MAST90045, The University of Melbourne
 - [Handbook](https://handbook.unimelb.edu.au/2021/subjects/mast90045)
+- Prerequisite: [Calculus 2](https://handbook.unimelb.edu.au/subjects/mast10006/print)
+  - esp. [sequences](https://tutorial.math.lamar.edu/classes/calcii/sequences.aspx), [multivariate calculus](https://tutorial.math.lamar.edu/classes/calciii/calciii.aspx), [ODEs](https://tutorial.math.lamar.edu/classes/de/de.aspx)
+- N.B. Despite the heavy use of R, the subject is **NOT** for statistics or data science!
+
 
 <br/>
 
