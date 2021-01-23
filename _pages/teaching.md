@@ -11,6 +11,22 @@ Teaching makes me both humble and thrilled. In the classroom, watching students 
   - esp. [sequences](https://tutorial.math.lamar.edu/classes/calcii/sequences.aspx), [multivariate calculus](https://tutorial.math.lamar.edu/classes/calciii/calciii.aspx), [ODEs](https://tutorial.math.lamar.edu/classes/de/de.aspx)
 - N.B. Despite the heavy use of R, the subject is **NOT** for statistics or data science!
 
+### Tentative lecture schedule
+| Week | Topic |
+| ---: | ---: |
+| 1 | Introduction |
+| 2 | R, RStudio and R Markdown |
+| 3 | Root finding |
+| 4 | Optimisation |
+| 5 | Numerical integration |
+| 6 | Ordinary differential equations |
+| 7 | Probability theory |
+| 8 | Named probability distributions |
+| 9 | Stochastic simulation |
+| 10 | Monte Carlo integration |
+| 11 | Variance reduction techniques |
+| 12 | Exam reviews |
+
 
 <br/>
 
