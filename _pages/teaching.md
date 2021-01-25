@@ -5,10 +5,10 @@ permalink: /teaching/
 Teaching makes me both humble and thrilled. In the classroom, watching students taking notes of what I just say creates a strong sense of responsibility. At the same time, witnessing students absorbing what I believe is important and useful is a joy. Teaching takes time yet immensely fulfilling.
 
 ## Systems Modelling and Simulation (Semester 1, 2021)
-- MAST90045, The University of Melbourne
-- [Handbook](https://handbook.unimelb.edu.au/2021/subjects/mast90045)
+- [MAST90045](https://handbook.unimelb.edu.au/2021/subjects/mast90045), The University of Melbourne
 - Prerequisite: [Calculus 2](https://handbook.unimelb.edu.au/subjects/mast10006/print)
   - esp. [sequences](https://tutorial.math.lamar.edu/classes/calcii/sequences.aspx), [multivariate calculus](https://tutorial.math.lamar.edu/classes/calciii/calciii.aspx), [ODE](https://tutorial.math.lamar.edu/classes/de/de.aspx)
+- Text: [Jones, O., Maillardet, R., & Robinson, A. (2009). Introduction to scientific programming and simulation using R. CRC Press.](http://cat.lib.unimelb.edu.au/search/?searchtype=X&SORT=D&searcharg=Introduction+to+scientific+programming+and+simulation+using+R&searchscope=15)
 - The subject is **computational science** including:
   - R (tool),
   - numerical analysis and stochastic simulation (contents),
