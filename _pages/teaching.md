@@ -8,7 +8,7 @@ Teaching makes me both humble and thrilled. In the classroom, watching students 
 - [MAST90045](https://handbook.unimelb.edu.au/2021/subjects/mast90045), The University of Melbourne
 - Prerequisite: [Calculus 2](https://handbook.unimelb.edu.au/subjects/mast10006/print)
   - Strictly enforced, and no revision provided. You will be in trouble if your understanding is rusty.
-  - Paul Dawkins shares an [impressive collection of notes](https://tutorial.math.lamar.edu), including [sequences](https://tutorial.math.lamar.edu/classes/calcii/sequences.aspx), [multivariate calculus](https://tutorial.math.lamar.edu/classes/calciii/calciii.aspx), [ODE](https://tutorial.math.lamar.edu/classes/de/de.aspx)
+  - Paul Dawkins shares an [impressive collection of notes](https://tutorial.math.lamar.edu), including [sequences](https://tutorial.math.lamar.edu/classes/calcii/sequences.aspx), [multivariate calculus](https://tutorial.math.lamar.edu/classes/calciii/calciii.aspx), and [ODE](https://tutorial.math.lamar.edu/classes/de/de.aspx)
 - Text: [Available](http://cat.lib.unimelb.edu.au:80/record=b5904690~S15) for UniMelb students.
   - Jones, O., Maillardet, R., & Robinson, A. (2009). Introduction to scientific programming and simulation using R. CRC Press.
 - The subject is **computational science** including:
