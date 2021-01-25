@@ -15,7 +15,7 @@ Teaching makes me both humble and thrilled. In the classroom, watching students 
   - numerical analysis and stochastic simulation (contents)
   - R & RStudio (tool)
   - R Markdown (communication)
-- Despite the use of R, it is NOT for statistics or data science.
+- Despite the use of R, it is NOT statistics or data science.
 
 ### Tentative lecture schedule
 The topics are subject to change. Some topics are heavier than others, taking more than a week.
