@@ -18,7 +18,7 @@ Teaching makes me both humble and thrilled. In the classroom, watching students 
 - Despite the use of R, it is NOT statistics or data science.
 
 ### Tentative lecture schedule
-The topics are subject to change. Some topics are heavier than others, taking more than a week.
+The topics are subject to change. Some topics are heavier than others, taking more than a week. Class materials will be similar to web pages found in the link under each topic.
 
 | Week | Topic |
 | :--- | :--- |
