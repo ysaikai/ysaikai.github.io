@@ -25,7 +25,7 @@ The topics are subject to change. Some topics are heavier than others, taking mo
 | 1 | Introduction |
 | 2 | R, RStudio and R Markdown |
 | 3 | Root finding |
-| 4 | Optimisation |
+| 4 | [Optimisation](/files/optimisation.html) |
 | 5 | Numerical integration |
 | 6 | Ordinary differential equations |
 | 7 | Probability theory |
