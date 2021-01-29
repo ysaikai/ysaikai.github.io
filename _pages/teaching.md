@@ -25,9 +25,9 @@ The topics are subject to change. Some topics are heavier than others, taking mo
 | 1 | Introduction |
 | 2 | R, RStudio and R Markdown |
 | 3 | [Root finding](/files/root_finding.html){:target="_blank" rel="noopener"} |
-| 4 | [Optimisation](/files/optimisation.html) |
-| 5 | [Numerical integration](/files/numerical_integration.html) |
-| 6 | [Ordinary differential equations](/files/differential_equation.html) |
+| 4 | [Optimisation](/files/optimisation.html){:target="_blank" rel="noopener"} |
+| 5 | [Numerical integration](/files/numerical_integration.html){:target="_blank" rel="noopener"} |
+| 6 | [Ordinary differential equations](/files/differential_equation.html){:target="_blank" rel="noopener"} |
 | 7 | Probability theory |
 | 8 | Named probability distributions |
 | 9 | Stochastic simulation |
