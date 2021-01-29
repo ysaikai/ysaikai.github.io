@@ -258,3 +258,5 @@ defaults:
     values:
       layout: single
       author_profile: true
+
+markdown: kramdown
