@@ -22,15 +22,15 @@ The topics are subject to change. Some topics are heavier than others, taking mo
 
 | Week | Topic |
 | :--- | :--- |
-| 1 | Introduction |
-| 2 | R, RStudio and R Markdown |
-| 3 | [Root finding](/files/root_finding.html){:target="_blank" rel="noopener"} |
-| 4 | [Optimisation](/files/optimisation.html){:target="_blank" rel="noopener"} |
-| 5 | [Numerical integration](/files/numerical_integration.html){:target="_blank" rel="noopener"} |
-| 6 | [Ordinary differential equations](/files/differential_equation.html){:target="_blank" rel="noopener"} |
-| 7 | Probability theory |
-| 8 | Named probability distributions |
-| 9 | Stochastic simulation |
+| 1 | R, RStudio and R Markdown |
+| 2 | [Root finding](/files/root_finding.html){:target="_blank" rel="noopener"} |
+| 3 | [Optimisation](/files/optimisation.html){:target="_blank" rel="noopener"} |
+| 4 | [Numerical integration](/files/numerical_integration.html){:target="_blank" rel="noopener"} |
+| 5 | [Ordinary differential equations](/files/differential_equation.html){:target="_blank" rel="noopener"} |
+| 6 | [Probability theory](/files/probability_theory.html){:target="_blank" rel="noopener"} |
+| 7 | [Named probability distributions](/files/named_distributions.html.html){:target="_blank" rel="noopener"} |
+| 9 | Stochastic simulation 1 |
+| 9 | Stochastic simulation 2 |
 | 10 | Monte Carlo integration |
 | 11 | Variance reduction techniques |
 | 12 | Exam revision |
