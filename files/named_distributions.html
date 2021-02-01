@@ -2184,14 +2184,14 @@ $$\mathbb{E}X = \mathbb{E}(\mathbb{E}(X|Y)).$$
                     &amp;= n\operatorname{Var}Y_i + n^2(\mathbb{E}Y_i)^2
 \end{align}\]</span></p>
 <p>Then, <span class="math display">\[\begin{align}
-\mathbb{E}(S^2) &amp;= \sum_{n=0}^\infty \mathbb{E}(S^2|N=n)\\
-                &amp;= \sum_{n=0}^\infty \left[n\operatorname{Var}Y_i + n^2(\mathbb{E}Y_i)^2\right] \cdot P(N=n)\\
-                &amp;= \mathbb{E}N\cdot\operatorname{Var}Y_i + \mathbb{E}N^2\cdot(\mathbb{E}Y_i)^2
+\mathbb{E}S^2 &amp;= \sum_{n=0}^\infty \mathbb{E}(S^2|N=n)\\
+              &amp;= \sum_{n=0}^\infty \left[n\operatorname{Var}Y_i + n^2(\mathbb{E}Y_i)^2\right] \cdot P(N=n)\\
+              &amp;= \mathbb{E}N\cdot\operatorname{Var}Y_i + \mathbb{E}N^2\cdot(\mathbb{E}Y_i)^2
 \end{align}\]</span></p>
 <p>As a result, <span class="math display">\[\begin{align}
-\mathbb{E}(S^2) &amp;= \mathbb{E}(S^2) - (\mathbb{E}S)^2\\
-                &amp;= \mathbb{E}N\cdot\operatorname{Var}Y_i + \mathbb{E}N^2\cdot(\mathbb{E}Y_i)^2 - (\mathbb{E}N \cdot \mathbb{E}Y_i)^2\\
-                &amp;= \mathbb{E}N\cdot\operatorname{Var}Y_i + \operatorname{Var}N \cdot (\mathbb{E}Y_i)^2
+\operatorname{Var}S &amp;= \mathbb{E}S^2 - (\mathbb{E}S)^2\\
+                    &amp;= \mathbb{E}N\cdot\operatorname{Var}Y_i + \mathbb{E}N^2\cdot(\mathbb{E}Y_i)^2 - (\mathbb{E}N \cdot \mathbb{E}Y_i)^2\\
+                    &amp;= \mathbb{E}N\cdot\operatorname{Var}Y_i + \operatorname{Var}N \cdot (\mathbb{E}Y_i)^2
 \end{align}\]</span></p>
 <p>Proof for (iii). <span class="math inline">\(N\sim\text{pois}(\lambda)\)</span> implies <span class="math inline">\(\mathbb{E}N = \lambda\)</span> and <span class="math inline">\(\operatorname{Var}N = \lambda\)</span>. Now, the result follows.</p>
 <blockquote>
