@@ -28,9 +28,9 @@ The topics are subject to change. Some topics are heavier than others, taking mo
 | 4 | [Numerical integration](/files/numerical_integration.html){:target="_blank" rel="noopener"} |
 | 5 | [Ordinary differential equations](/files/differential_equation.html){:target="_blank" rel="noopener"} |
 | 6 | [Probability theory](/files/probability_theory.html){:target="_blank" rel="noopener"} |
-| 7 | [Named probability distributions](/files/named_distributions.html){:target="_blank" rel="noopener"} |
-| 8 | Stochastic simulation 1 |
-| 9 | Stochastic simulation 2 |
+| 7 | [Discrete distributions](/files/named_distributions.html#discrete-distributions){:target="_blank" rel="noopener"} |
+| 8 | [Continuous distributions](/files/named_distributions.html#continuous-distributions){:target="_blank" rel="noopener"} |
+| 9 | Stochastic simulation |
 | 10 | Monte Carlo integration |
 | 11 | Variance reduction techniques |
 | 12 | Exam revision |
