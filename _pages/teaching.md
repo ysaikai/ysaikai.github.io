@@ -41,13 +41,13 @@ The topics are subject to change. Some topics are heavier than others, taking mo
 
 ## Machine Learning in Applied Economic Analysis (Summer 2019)
 
-* AAE 722, University of Wisconsin-Madison
+* AAE 722, The University of Wisconsin-Madison
 * Instructor: [Dr. Sheldon Du](https://aae.wisc.edu/faculty/xdu23/)
 
 ### Lecture
 
 | Date | Topic |
-| --- | --- |
+| :--- | :--- |
 | Aug 21 | [Deep learning](/files/AAE722DL.pdf) |
 
 <!--
@@ -61,13 +61,13 @@ The topics are subject to change. Some topics are heavier than others, taking mo
 
 ## Applied Risk Analysis (Spring 2019)
 
-- [AAE 706](https://aae.wisc.edu/aae706/), The University of Wisconsin-Madison
-- Instructor: [Dr. Jean-Paul Chavas](https://aae.wisc.edu/faculty/jchavas/)
+* [AAE 706](https://aae.wisc.edu/aae706/), The University of Wisconsin-Madison
+* Instructor: [Dr. Jean-Paul Chavas](https://aae.wisc.edu/faculty/jchavas/)
 
 ### Discussion session
 
 | Date | Topic |
-| --- | --- |
+| :--- | :--- |
 | Feb 1 | Review of probability theory |
 | Feb 8 | [Expected utility hypothesis](/files/aae706_disc_20190208.pdf) |
 | Feb 15 | [Risk premium](/files/aae706_disc_20190215.pdf)<br/>Risk aversion |
