@@ -48,30 +48,11 @@ The topics are subject to change. Some topics are heavier than others, taking mo
 | Date | Topic |
 | --- | --- |
 | Aug 21 | [Deep learning](/files/AAE722DL.pdf) |
+
 <!--
-<table>
-  <tbody>
-    <tr style="border-bottom:1pt solid black">
-      <th>Date</th>
-      <th align="center">Topics</th>
-      <th>Files</th>
-    </tr>
-    <tr>
-      <td>Aug 21</td>
-      <td>
-        <ul>
-          <li>Deep learning</li>
-        </ul>
-      </td>
-      <td>
-        <a href="/files/AAE722DL.pdf">slides</a><br>
-        <a href="https://colab.research.google.com/drive/1b-4tMdbJCuPylJZH3gbliDJWhORvgjmj">exercise 1</a><br>
-        <a href="https://colab.research.google.com/drive/1WRnpuaSOXbJ17WoWW2aWg9qevCLrgIWH">exercise 2</a><br>
-        <a href="https://colab.research.google.com/drive/1OqQIFswr8X3Gl2FQfOotTPLXRvCU2bPM">exercise 3</a>
-      </td>
-    </tr>
-  </tbody>
-</table>
+<a href="https://colab.research.google.com/drive/1b-4tMdbJCuPylJZH3gbliDJWhORvgjmj">exercise 1</a><br>
+<a href="https://colab.research.google.com/drive/1WRnpuaSOXbJ17WoWW2aWg9qevCLrgIWH">exercise 2</a><br>
+<a href="https://colab.research.google.com/drive/1OqQIFswr8X3Gl2FQfOotTPLXRvCU2bPM">exercise 3</a>
 -->
 
 <br/>
@@ -90,4 +71,15 @@ The topics are subject to change. Some topics are heavier than others, taking mo
 | Feb 1 | Review of probability theory |
 | Feb 8 | [Expected utility hypothesis](/files/aae706_disc_20190208.pdf) |
 | Feb 15 | [Risk premium](/files/aae706_disc_20190215.pdf)<br/>Risk aversion |
+| Feb 22 | [Stochastic dominance](/files/aae706_disc_20190222.pdf) |
+| Mar 1 | [Mean-variance analysis]() |
+| Mar 8 | [Linearity in probability and independence assumption](/files/aae706_disc_20190308.pdf)<br/>State preference approach |
+| Mar 29 | [Multi-product firm under uncertainty](/files/aae706_disc_20190329.pdf)<br/>E-V frontier<br/>Diversification |
+| Apr 5 | [Dynamic optimization](/files/aae706_disc_20190405.pdf) |
+| Apr 12 | [Dynamic optimization under risk](/files/aae706_disc_20190412.pdf) |
+| Apr 19 | [Contract and policy design under risk](/files/aae706_disc_20190419.pdf) |
 
+<!--
+<a href="/files/solver_tutorial.xlsx">Solver demo</a>
+<a href="/files/aae706_disc_20190201.pdf">notes</a>
+-->
