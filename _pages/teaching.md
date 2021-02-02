@@ -72,7 +72,7 @@ The topics are subject to change. Some topics are heavier than others, taking mo
 | Feb 8 | [Expected utility hypothesis](/files/aae706_disc_20190208.pdf) |
 | Feb 15 | [Risk premium](/files/aae706_disc_20190215.pdf)<br/>Risk aversion |
 | Feb 22 | [Stochastic dominance](/files/aae706_disc_20190222.pdf) |
-| Mar 1 | [Mean-variance analysis]() |
+| Mar 1 | Mean-variance analysis|
 | Mar 8 | [Linearity in probability and independence assumption](/files/aae706_disc_20190308.pdf)<br/>State preference approach |
 | Mar 29 | [Multi-product firm under uncertainty](/files/aae706_disc_20190329.pdf)<br/>E-V frontier<br/>Diversification |
 | Apr 5 | [Dynamic optimization](/files/aae706_disc_20190405.pdf) |
