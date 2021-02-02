@@ -15,7 +15,7 @@ Teaching makes me both humble and thrilled. In the classroom, watching students 
   - numerical analysis and stochastic simulation (contents)
   - R & RStudio (tool)
   - R Markdown (communication)
-- Despite the use of R, it is NOT statistics or data science.
+- Although the subject is not per se statistics or machine learning, many of the techniques covered here are widely used in those areas.
 
 ### Tentative lecture schedule
 The topics are subject to change. Some topics are heavier than others, taking more than a week. Class materials will be similar to web pages found in the link under each topic.
@@ -30,8 +30,8 @@ The topics are subject to change. Some topics are heavier than others, taking mo
 | 6 | [Probability theory](/files/probability_theory.html){:target="_blank" rel="noopener"} |
 | 7 | [Discrete distributions](/files/named_distributions.html#discrete-distributions){:target="_blank" rel="noopener"} |
 | 8 | [Continuous distributions](/files/named_distributions.html#continuous-distributions){:target="_blank" rel="noopener"} |
-| 9 | Stochastic simulation |
-| 10 | Monte Carlo integration |
+| 9 | Monte Carlo simulation |
+| 10 | Sampling methods |
 | 11 | Variance reduction techniques |
 | 12 | Exam revision |
 
