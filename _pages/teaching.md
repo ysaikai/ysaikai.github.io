@@ -45,6 +45,7 @@ The topics are subject to change. Some topics are heavier than others, taking mo
 * Instructor: [Dr. Sheldon Du](https://aae.wisc.edu/faculty/xdu23/)
 
 ### Lecture
+
 | Date | Topic |
 | --- | --- |
 | Aug 21 | [Deep learning](/files/AAE722DL.pdf) |
@@ -64,6 +65,7 @@ The topics are subject to change. Some topics are heavier than others, taking mo
 - Instructor: [Dr. Jean-Paul Chavas](https://aae.wisc.edu/faculty/jchavas/)
 
 ### Discussion session
+
 | Date | Topic |
 | --- | --- |
 | Feb 1 | Review of probability theory |
