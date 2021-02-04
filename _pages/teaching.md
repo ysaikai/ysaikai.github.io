@@ -30,7 +30,7 @@ The topics are subject to change. Some topics are heavier than others, taking mo
 | 6 | [Probability theory](/files/probability_theory.html){:target="_blank" rel="noopener"} |
 | 7 | [Discrete distributions](/files/named_distributions.html#discrete-distributions){:target="_blank" rel="noopener"} |
 | 8 | [Continuous distributions](/files/named_distributions.html#continuous-distributions){:target="_blank" rel="noopener"} |
-| 9 | Monte Carlo simulation |
+| 9 | [Monte Carlo integration](/files/mc_integration.html){:target="_blank" rel="noopener"} |
 | 10 | Sampling methods |
 | 11 | Variance reduction techniques |
 | 12 | Exam revision |
