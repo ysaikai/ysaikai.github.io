@@ -31,7 +31,7 @@ The topics are subject to change. Some topics are heavier than others, taking mo
 | 7 | [Discrete distributions](/files/named_distributions.html#discrete-distributions){:target="_blank" rel="noopener"} |
 | 8 | [Continuous distributions](/files/named_distributions.html#continuous-distributions){:target="_blank" rel="noopener"} |
 | 9 | [Monte Carlo integration](/files/mc_integration.html){:target="_blank" rel="noopener"} |
-| 10 | Sampling methods |
+| 10 | [Sampling methods](/files/sampling_methods.html){:target="_blank" rel="noopener"} |
 | 11 | Variance reduction techniques |
 | 12 | Exam revision |
 
