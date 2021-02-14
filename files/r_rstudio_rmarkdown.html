@@ -1642,14 +1642,13 @@ These notes are based on Chapter 3-5 of JMR — <em>Jones, O., Maillardet, R., &
 <div id="jmr-3.9.2" class="section level3">
 <h3>JMR 3.9.2</h3>
 <p>Let <span class="math inline">\(h(x,n) = 1 + x + x^2+\dots+ x^n = \sum_{i=0}^n x^i\)</span>. Write an R program to calculate <span class="math inline">\(h(x,n)\)</span> using <code>for</code> loop.</p>
-<pre class="r"><code>h &lt;- function(x, n) {
+<pre class="r"><code>h &lt;- function(x,n) {
   sum &lt;- 0
   for (i in 0:n) {
     sum &lt;- sum + x^i
   }
   return(sum)
 }</code></pre>
-<!-- Try shiny! -->
 </div>
 <div id="jmr-3.9.3" class="section level3">
 <h3>JMR 3.9.3</h3>
@@ -1660,25 +1659,27 @@ These notes are based on Chapter 3-5 of JMR — <em>Jones, O., Maillardet, R., &
 <th align="right"><span class="math inline">\(x\)</span></th>
 <th align="right"><span class="math inline">\(n\)</span></th>
 <th align="right"><span class="math inline">\(h(x,n)\)</span></th>
+<th align="right"><span class="math inline">\(\frac{1-x^{n+1}}{1-x}\)</span></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td align="right">0.3</td>
 <td align="right">55</td>
-<td align="right">1.428571</td>
+<td align="right">1.4285714</td>
+<td align="right">1.4285714</td>
 </tr>
 <tr class="even">
 <td align="right">6.6</td>
 <td align="right">8</td>
-<td align="right">4243335.538178</td>
+<td align="right">4.243335510^{6}</td>
+<td align="right">4.243335510^{6}</td>
 </tr>
 </tbody>
 </table>
-<pre class="r"><code>x &lt;- 6.6
-n &lt;- 8
-h(x,n)</code></pre>
-<pre><code>## [1] 4243336</code></pre>
+<blockquote>
+<p>You may use <code>format(h(6.6,8), scientific=FALSE)</code> for a nice looking.</p>
+</blockquote>
 </div>
 </div>
 <div id="while-loop" class="section level2">
@@ -1686,7 +1687,7 @@ h(x,n)</code></pre>
 <div id="jmr-3.9.4" class="section level3">
 <h3>JMR 3.9.4</h3>
 <p>First write a program that achieves the same result as in <a href="#jmr-3.9.2">JMR 3.9.2</a> but using a <code>while</code> loop. Then write a program that does this using vector operations (and no loops).</p>
-<pre class="r"><code>h2 &lt;- function(x, n) {
+<pre class="r"><code>h2 &lt;- function(x,n) {
   sum &lt;- 0
   i &lt;- 0
   while (i &lt;= n) {
@@ -1694,9 +1695,13 @@ h(x,n)</code></pre>
     i &lt;- i + 1
   }
   return(sum)
-}
+}</code></pre>
+<pre class="r"><code>x &lt;- 6.6
+n &lt;- 8
 h2(x,n)</code></pre>
 <pre><code>## [1] 4243336</code></pre>
+<pre class="r"><code>sum(x^(1:n))</code></pre>
+<pre><code>## [1] 4243335</code></pre>
 </div>
 </div>
 <div id="if-statement" class="section level2">
@@ -1829,7 +1834,7 @@ toc()</code></pre>
 <pre class="r"><code>tic()
 r2 = primesieve2(c(), 2:n)
 toc()</code></pre>
-<pre><code>## 0.009 sec elapsed</code></pre>
+<pre><code>## 0.008 sec elapsed</code></pre>
 <pre class="r"><code>if (identical(r1,r2)) {
   cat(&quot;Both produce the same set containing&quot;, length(r2), &quot;primes.&quot; )
 } else {
@@ -1937,8 +1942,13 @@ y &lt;- x^2 # 2nd line of your R code.
 <p>Conveniently, we can run the code without leaving the Markdown script. Just put the cursor somewhere in the chunk and press <code>Cmd + Shift + Return</code> (<code>Ctrl + Shift + Enter</code> on Linux and Windows).</p>
 <p>We can provide many parameters inside <code>{r}</code> to specify how the code behaves and is itself displayed in the generated document. For example, <code>{r, include=FALSE}</code> means that the code is run but nothing shows up in the document.</p>
 <p>Besides code chunks, we can also insert values of R objects and one-line computation as an inline text. A consequence is that we need not and indeed should not separately copy and paste results of our analysis. For example, a sentence “It predicts the score equal to 97.” should be written as:</p>
-<pre class="markdown"><code>It predicts the score equal to `r x`.</code></pre>
+<pre><code>It predicts the score equal to `r x`.</code></pre>
 <p>where the value <code>97</code> is stored in <code>x</code>. If we update the analysis thereby the value of <code>x</code> (e.g., <code>x=97</code> to <code>x=88</code>), then the value in the output document will be automatically updated. This is a key feature of R Markdown for “reproducibility”, an idea much advocated in scientific communities. (See <a href="https://www.vox.com/future-perfect/21504366/science-replication-crisis-peer-review-statistics">replication crisis</a>.)</p>
+<p>We use this feature in <a href="#jmr-3.9.3">JMR 3.9.3</a> above. To render the table, the source has</p>
+<pre><code>| $x$ | $n$ | $h(x,n)$ | $\frac{1-x^{n+1}}{1-x}$ |
+| ---: | ---: | ---: | ---: |
+| 0.3 | 55 | h(.3,55) | (1-.3^56)/(1-.3) |
+| 6.6 | 8 | h(6.6,8) | (1-6.6^9)/(1-6.6) |</code></pre>
 <p>Much more detais are found <a href="https://bookdown.org/yihui/rmarkdown/r-code.html">here</a>.</p>
 </div>
 </div>
