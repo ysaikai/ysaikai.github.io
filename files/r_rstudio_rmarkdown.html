@@ -1827,21 +1827,21 @@ factorial(5)</code></pre>
   }
 }</code></pre>
 <p>Let’s see how faster the recursive algorithm performs for the same result.</p>
-<pre class="r"><code>n = 10^3
+<pre class="r"><code>n = 1e5
 tic()
 r1 = primesieve1(n)
 toc()</code></pre>
-<pre><code>## 0.013 sec elapsed</code></pre>
+<pre><code>## 25.031 sec elapsed</code></pre>
 <pre class="r"><code>tic()
 r2 = primesieve2(c(), 2:n)
 toc()</code></pre>
-<pre><code>## 0.011 sec elapsed</code></pre>
+<pre><code>## 0.023 sec elapsed</code></pre>
 <pre class="r"><code>if (identical(r1,r2)) {
   cat(&quot;Both produce the same set containing&quot;, length(r2), &quot;primes.&quot; )
 } else {
   cat(&quot;Well, something went wrong...&quot;)
 }</code></pre>
-<pre><code>## Both produce the same set containing 168 primes.</code></pre>
+<pre><code>## Both produce the same set containing 9592 primes.</code></pre>
 <p>We will see another recursive function in <a href="numerical_integration.html#adaptive-quadrature">Numerical Integration</a></p>
 </div>
 </div>
