@@ -1678,7 +1678,7 @@ These notes are based on Chapter 3-5 of JMR — <em>Jones, O., Maillardet, R., &
 </tbody>
 </table>
 <blockquote>
-<p>You may use <code>format(h(6.6,8), scientific=FALSE)</code> for a nice looking.</p>
+<p>You may use <code>format(h(6.6,8), scientific=FALSE)</code> for a nicer look.</p>
 </blockquote>
 </div>
 </div>
@@ -1700,8 +1700,9 @@ These notes are based on Chapter 3-5 of JMR — <em>Jones, O., Maillardet, R., &
 n &lt;- 8
 h2(x,n)</code></pre>
 <pre><code>## [1] 4243336</code></pre>
-<pre class="r"><code>sum(x^(1:n))</code></pre>
+<pre class="r"><code>sum(x^(1:n)) # Just one line!</code></pre>
 <pre><code>## [1] 4243335</code></pre>
+<p>Vector operations are faster and cool. We should use them when performance is required (e.g., <a href="mc_integration.html#size-of-the-mandelbrot-set">Size of the Mandelbrot set</a>). But, if they run for a second or two, I recommend using loops to be explicit about what you are doing.</p>
 </div>
 </div>
 <div id="if-statement" class="section level2">
@@ -1830,11 +1831,11 @@ factorial(5)</code></pre>
 tic()
 r1 = primesieve1(n)
 toc()</code></pre>
-<pre><code>## 0.017 sec elapsed</code></pre>
+<pre><code>## 0.013 sec elapsed</code></pre>
 <pre class="r"><code>tic()
 r2 = primesieve2(c(), 2:n)
 toc()</code></pre>
-<pre><code>## 0.009 sec elapsed</code></pre>
+<pre><code>## 0.011 sec elapsed</code></pre>
 <pre class="r"><code>if (identical(r1,r2)) {
   cat(&quot;Both produce the same set containing&quot;, length(r2), &quot;primes.&quot; )
 } else {
