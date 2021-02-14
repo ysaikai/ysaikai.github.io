@@ -1830,11 +1830,11 @@ factorial(5)</code></pre>
 tic()
 r1 = primesieve1(n)
 toc()</code></pre>
-<pre><code>## 0.016 sec elapsed</code></pre>
+<pre><code>## 0.017 sec elapsed</code></pre>
 <pre class="r"><code>tic()
 r2 = primesieve2(c(), 2:n)
 toc()</code></pre>
-<pre><code>## 0.008 sec elapsed</code></pre>
+<pre><code>## 0.009 sec elapsed</code></pre>
 <pre class="r"><code>if (identical(r1,r2)) {
   cat(&quot;Both produce the same set containing&quot;, length(r2), &quot;primes.&quot; )
 } else {
@@ -1947,8 +1947,8 @@ y &lt;- x^2 # 2nd line of your R code.
 <p>We use this feature in <a href="#jmr-3.9.3">JMR 3.9.3</a> above. To render the table, the source has</p>
 <pre><code>| $x$ | $n$ | $h(x,n)$ | $\frac{1-x^{n+1}}{1-x}$ |
 | ---: | ---: | ---: | ---: |
-| 0.3 | 55 | h(.3,55) | (1-.3^56)/(1-.3) |
-| 6.6 | 8 | h(6.6,8) | (1-6.6^9)/(1-6.6) |</code></pre>
+| 0.3 | 55 | `r h(.3,55)` | `r (1-.3^56)/(1-.3)` |
+| 6.6 | 8 | `r h(6.6,8)` | `r (1-6.6^9)/(1-6.6)` |</code></pre>
 <p>Much more detais are found <a href="https://bookdown.org/yihui/rmarkdown/r-code.html">here</a>.</p>
 </div>
 </div>
