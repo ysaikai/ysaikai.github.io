@@ -10,7 +10,7 @@ Teaching makes me both humble and thrilled. In the classroom, watching students 
   - Strictly enforced, and no revision provided. You will be in trouble if your understanding is rusty.
   - Paul Dawkins shares an [impressive collection of notes](https://tutorial.math.lamar.edu), including [sequences](https://tutorial.math.lamar.edu/classes/calcii/sequences.aspx), [multivariate calculus](https://tutorial.math.lamar.edu/classes/calciii/calciii.aspx), and [ODE](https://tutorial.math.lamar.edu/classes/de/de.aspx)
 - Text: [Available](http://cat.lib.unimelb.edu.au:80/record=b5904690~S15) for UniMelb students.
-  - Jones, O., Maillardet, R., & Robinson, A. (2009). Introduction to scientific programming and simulation using R. CRC Press.
+  - Jones, O., Maillardet, R., & Robinson, A. (2009). *Introduction to scientific programming and simulation using R*. CRC Press.
 - The subject is, broadly speaking, **computational science**:
   - numerical analysis and stochastic simulation (contents)
   - R & RStudio (tool)
@@ -32,7 +32,7 @@ The topics are subject to change. Some topics are heavier than others, taking mo
 | 8 | [Continuous distributions](/files/named_distributions.html#continuous-distributions){:target="_blank" rel="noopener"} |
 | 9 | [Monte Carlo integration](/files/mc_integration.html){:target="_blank" rel="noopener"} |
 | 10 | [Sampling methods](/files/sampling_methods.html){:target="_blank" rel="noopener"} |
-| 11 | Variance reduction techniques |
+| 11 | TBD |
 | 12 | Exam revision |
 
 
