@@ -1782,7 +1782,7 @@ roots</code></pre>
 <p>Notice the recursion for <span class="math inline">\(n\geq1\)</span>, <span class="math display">\[f(n) = n\cdot(n-1)\cdots1 = n\cdot f(n-1) .\]</span> That is, to return a value for an argument <span class="math inline">\(n\)</span>, the factorial function calls itself with another argument <span class="math inline">\(n-1\)</span>.</p>
 <p>Let’s implement this simple recursive function.</p>
 <pre class="r"><code>factorial &lt;- function(n) {
-  if (n&gt;=1) {
+  if (n &gt;= 1) {
     return(n*factorial(n-1)) # calling itself!
   } else {
     return(1)
@@ -1831,11 +1831,11 @@ factorial(5)</code></pre>
 tic()
 r1 = primesieve1(n)
 toc()</code></pre>
-<pre><code>## 25.031 sec elapsed</code></pre>
+<pre><code>## 26.131 sec elapsed</code></pre>
 <pre class="r"><code>tic()
 r2 = primesieve2(c(), 2:n)
 toc()</code></pre>
-<pre><code>## 0.023 sec elapsed</code></pre>
+<pre><code>## 0.021 sec elapsed</code></pre>
 <pre class="r"><code>if (identical(r1,r2)) {
   cat(&quot;Both produce the same set containing&quot;, length(r2), &quot;primes.&quot; )
 } else {
