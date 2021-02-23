@@ -1404,33 +1404,34 @@ font-size: 15px;
 font-size: 15px;
 color: DimGrey;
 }
-pre {
-font-size: 16px
-}
-body {
-font-size: 16pt;
-}
 h1.title {
 font-size: 48px;
 color: DarkRed;
 }
 h1 {
-
 font-size: 32px;
 color: DarkBlue;
 padding-top: 40px;
 }
 h2 {
-
 font-size: 26px;
 color: DarkBlue;
-padding-top: 10px;
+padding-top: 15px;
 }
 h3 {
-
 font-size: 20px;
 color: DarkBlue;
-padding-top: 5px;
+padding-top: 8px;
+}
+body {
+font-size: 16pt;
+}
+blockquote {
+font-size: 18px;
+}
+
+pre {
+font-size: 16px
 }
 </style>
 
@@ -1637,13 +1638,11 @@ The University of Melbourne</div></h4>
 
 <p><br /></p>
 <p id="acknowledgement">
-These notes are based on Chapter 10 of <em>Jones, O., Maillardet, R., &amp; Robinson, A. (2009). Introduction to scientific programming and simulation using R. CRC Press.</em>
+These notes are based on Chapter 10 of Jones, O., Maillardet, R., &amp; Robinson, A. (2009). <em>Introduction to scientific programming and simulation using R</em>. CRC Press.
 </p>
 <div id="introduction" class="section level1">
 <h1>Introduction</h1>
-<p>Let <span class="math inline">\(f\)</span> be a continuous function. Then, a <strong>root</strong> is a solution of <span class="math inline">\(f(x)=0\)</span>.</p>
-<p>Visually, a root is a point where the graph <span class="math inline">\(y=f(x)\)</span> crosses the x-axis.</p>
-<p>For example, in the interval <span class="math inline">\([0,10]\)</span>, there are two roots of <span class="math inline">\(f\)</span> defined below:</p>
+<p>Let <span class="math inline">\(f\)</span> be a continuous function. Then, a <strong>root</strong> is a solution of <span class="math inline">\(f(x)=0\)</span>. Visually, a root is a point where the graph <span class="math inline">\(y=f(x)\)</span> crosses the x-axis. For example, in the interval <span class="math inline">\([0,10]\)</span>, there are two roots of the following <span class="math inline">\(f\)</span>:</p>
 <pre class="r"><code>plot(c(1,7), c(0,0), pch = 19,
      xlim=c(0,10), ylim=c(-1050,1050),
      xlab=&quot;x&quot;, ylab=&quot;y&quot;,
@@ -1671,9 +1670,8 @@ text(7, -100, &quot;root at x = 7&quot;, pos=4)</code></pre>
 <li><span class="math inline">\(A\)</span> : Monthly repayment amount</li>
 <li><span class="math inline">\(r\)</span> : Monthly interest rate</li>
 </ul>
-<p>Given <span class="math inline">\(P_{n-1}\)</span>, we know: <span class="math display">\[P_n = (1+r)P_{n-1} - A\]</span> That is, each month, interest based on <span class="math inline">\(P_{n-1}\)</span> is added and then you repay <span class="math inline">\(A\)</span>.</p>
-<p>The solution of the difference equation (i.e., the expression of <span class="math inline">\(P_n\)</span> as a function of <span class="math inline">\(n\)</span>) is:</p>
-<p><span class="math display">\[ P_n = (1+r)^nP - \frac{A}{r}\left((1+r)^n-1\right) \]</span></p>
+<p>Given <span class="math inline">\(P_{n-1}\)</span>, we know: <span class="math display">\[P_n = (1+r)P_{n-1} - A\]</span> That is, each month, interest based on <span class="math inline">\(P_{n-1}\)</span> is added and then you repay <span class="math inline">\(A\)</span>. The solution of the difference equation (i.e., the expression of <span class="math inline">\(P_n\)</span> as a function of <span class="math inline">\(n\)</span>) is:</p>
+<p><span class="math display">\[ P_n = (1+r)^nP - \frac{A}{r}\left((1+r)^n-1\right) .\]</span></p>
 <blockquote>
 <p>To see this, for each <span class="math inline">\(k\in\{1,\dots,n\}\)</span>, multiply both sides of <span class="math inline">\(P_k = (1+r)P_{k-1} - A\)</span> by <span class="math inline">\((1+r)^{n-k}\)</span> and get a telescoping sum.</p>
 </blockquote>
@@ -1690,9 +1688,7 @@ text(7, -100, &quot;root at x = 7&quot;, pos=4)</code></pre>
 <h1>Fixed-point iteration</h1>
 <div id="fixed-point" class="section level2">
 <h2>Fixed point</h2>
-<p>Let <span class="math inline">\(g: \mathbb{R}\to\mathbb{R}\)</span> be a continuous function. Then, a <strong>fixed point</strong> of <span class="math inline">\(g\)</span> is a solution of <span class="math inline">\(g(x)=x\)</span>.</p>
-<p>Visually, a fixed point is a point where the graph <span class="math inline">\(y=g(x)\)</span> crosses the 45-degree line.</p>
-<p>For example, a hyperbolic tangent <span class="math display">\[g(x) = 2\tanh(x) = 2\frac{e^{x}-e^{-x}}{e^{x}+e^{-x}}\]</span> has three fixed points: <span class="math inline">\(x = -1.915, 0, 1.915\)</span>.</p>
+<p>Let <span class="math inline">\(g: \mathbb{R}\to\mathbb{R}\)</span> be a continuous function. Then, a <strong>fixed point</strong> of <span class="math inline">\(g\)</span> is a solution of <span class="math inline">\(g(x)=x\)</span>. Visually, a fixed point is a point where the graph <span class="math inline">\(y=g(x)\)</span> crosses the 45-degree line. For example, a hyperbolic tangent <span class="math display">\[g(x) = 2\tanh(x) = 2\frac{e^{x}-e^{-x}}{e^{x}+e^{-x}}\]</span> has three fixed points: <span class="math inline">\(x = -1.915, 0, 1.915\)</span>.</p>
 <pre class="r"><code>x &lt;- c(-1.915,0,1.915)
 y &lt;- c(-1.915,0,1.915)
 plot(x, y, pch = 19, xlim=c(-2,2), ylim=c(-2,2))
@@ -1823,7 +1819,7 @@ a2 &lt;- fixedpoint(g2, 1.5)</code></pre>
 <div id="newton-raphson-method" class="section level1">
 <h1>Newton-Raphson method</h1>
 <p>The Newton-Raphson method uses linear approximation of <span class="math inline">\(f(x)\)</span> to generate a sequence of guesses at a root (<span class="math inline">\(a\)</span>).</p>
-<p>Remember that linear approximation (i.e., the 1st-degree Taylor approximation) of <span class="math inline">\(f(x)\)</span> at <span class="math inline">\(x_n\)</span> is <span class="math display">\[f(x) \approx f(x_n)+f&#39;(x_n)(x-x_n) .\]</span> Thanks to the linearity, it is easy to find a root (<span class="math inline">\(\hat{a}\)</span>) of the approximated function: <span class="math display">\[\begin{align}
+<p>Remember that linear approximation (i.e., the 1st-order Taylor approximation) of <span class="math inline">\(f(x)\)</span> at <span class="math inline">\(x_n\)</span> is <span class="math display">\[f(x) \approx f(x_n)+f&#39;(x_n)(x-x_n) .\]</span> Thanks to the linearity, it is easy to find a root (<span class="math inline">\(\hat{a}\)</span>) of the approximated function: <span class="math display">\[\begin{align}
   &amp; f(x_n)+f&#39;(x_n)(\hat{a}-x_n) = 0\\
   \Leftrightarrow\quad &amp; \hat{a} = x_n - \frac{f(x_n)}{f&#39;(x_n)}
 \end{align}\]</span></p>
@@ -1891,23 +1887,21 @@ text(1.17, .9, expression(paste(x[n+1],&quot; by NR&quot;)))</code></pre>
 </div>
 <div id="bisection-method" class="section level1">
 <h1>Bisection method</h1>
-<p>While convergence is not guaranteed in none of the above methods, for the price of slowness, it is guaranteed in the bisection method.</p>
-<p>The bisection method belongs to a class of root-finding algorithms called “bracketing”, which successively isolates smaller intervals (brackets) that contain a root. In the bisection method, a bracket is always halved at each iteration.</p>
-<p>As always, we assume <span class="math inline">\(f\)</span> to be a continuous function. Now, start with some interval <span class="math inline">\((x_l,x_r)\)</span> such that <span class="math inline">\(f(x_l)f(x_r)&lt;0\)</span>, i.e., the graph <span class="math inline">\(y=f(x)\)</span> crosses the x-axis at least once. In other words, choose an interval in which a root exists. Next, evaluate <span class="math inline">\(f\)</span> at the mid point <span class="math inline">\(x_m = (x_l+x_r)/2\)</span> and see the sign of <span class="math inline">\(f(x_m)\)</span>. Update the interval with one of two halved intervals <span class="math inline">\((x_l,x_m)\)</span> or <span class="math inline">\((x_m,x_r)\)</span> that contains the root. Continue until the stopping criteria are met.</p>
-<p>The following is a more precise algorithm that must start with <span class="math inline">\((x_l,x_r)\)</span> such that <span class="math inline">\(f(x_l)f(x_r)&lt;0\)</span>.</p>
+<p>While convergence is not guaranteed in none of the above methods, for the price of more iterations, it is guaranteed in the bisection method.</p>
+<p>The bisection method belongs to a class of root-finding algorithms called <strong>bracketing</strong>, which successively isolates smaller intervals (brackets) that contain a root. In the bisection method, a bracket is always halved at each iteration.</p>
+<p>First, find an interval <span class="math inline">\((x_l,x_r)\)</span> such that <span class="math inline">\(f(x_l)f(x_r)&lt;0\)</span>, i.e., the graph <span class="math inline">\(y=f(x)\)</span> crosses the x-axis at least once in the interval. Then, repeat the following.</p>
 <ol style="list-style-type: decimal">
 <li>Halt and return either <span class="math inline">\(x_l\)</span> or <span class="math inline">\(x_r\)</span> if <span class="math inline">\(x_l-x_r\leq\epsilon\)</span>.</li>
 <li>Set <span class="math inline">\(x_m = (x_l+x_r)/2\)</span>.</li>
 <li>Halt and return <span class="math inline">\(x_m\)</span> if <span class="math inline">\(f(x_m)=0\)</span>.</li>
 <li>Set <span class="math inline">\(x_r=x_m\)</span> if <span class="math inline">\(f(x_l)f(x_m)&lt;0\)</span>. Otherwise, set <span class="math inline">\(x_l=x_m\)</span>.</li>
-<li>Go back to 1.</li>
 </ol>
-<p>Let’s apply the bisection method to the same function to the same <span class="math inline">\(f(x)=\log(x)-\exp(-x)\)</span>. In contrast to an initial point to <code>fixedpoint</code> and <code>newtonraphson</code>, in this case, we supply to <code>bisection</code> two boundary points of an initial interval (<span class="math inline">\(x_l\)</span> and <span class="math inline">\(x_r\)</span>).</p>
+<p>Let’s apply the bisection method to the same function <span class="math inline">\(f(x)=\log(x)-\exp(-x)\)</span>. In contrast to an initial point to <code>fixedpoint</code> and <code>newtonraphson</code>, in this case, we supply to <code>bisection</code> two boundary points of an initial interval (<span class="math inline">\(x_l\)</span> and <span class="math inline">\(x_r\)</span>).</p>
 <pre class="r fold-show"><code>f &lt;- function(x){
   return(log(x) - exp(-x))
 }
 a &lt;- bisection(f, 1, 2)</code></pre>
-<p>As you will see, it finds the same root <span class="math inline">\((= 1.31)\)</span> after more iterations than the Newton-Raphson method needs.</p>
+<p>As you will see, it finds the same root <span class="math inline">\((= 1.31)\)</span> using more iterations than the Newton-Raphson method.</p>
 </div>
 
 
