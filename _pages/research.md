@@ -29,20 +29,21 @@ Agent-based modeling has become one of the standard approaches to studying compl
 
 
 ## Papers
-- *[An agent-based model of insect resistance management and mitigation for Bt maize: A social science perspective](https://github.com/ysaikai/BTABM)*
+- [APSIM meets TensorFlow: Optimising sequential management decisions via deep reinforcement learning](https://github.com/ysaikai/APSIMTF)
+- [An agent-based model of insect resistance management and mitigation for Bt maize: A social science perspective](https://github.com/ysaikai/BTABM)
   - with [Paul Mitchell](https://aae.wisc.edu/faculty/pdmitchell/) and [Terrance Hurley](https://www.apec.umn.edu/people/terrance-hurley)
   - Published at [Pest Management Science](https://doi.org/10.1002/ps.6016)
-- *[Machine learning for optimizing complex site-specific management](https://github.com/ysaikai/BOPA)*
+- [Machine learning for optimizing complex site-specific management](https://github.com/ysaikai/BOPA)
   - with [Vivak Patel](http://pages.stat.wisc.edu/~vrpatel6/) and [Paul Mitchell](https://aae.wisc.edu/faculty/pdmitchell/)
   - Published at [Computers and Electronics in Agriculture](https://doi.org/10.1016/j.compag.2020.105381)
-- *[Adaptive experimental design using Bayesian optimization to improve the cost efficiency of field trials](https://github.com/ysaikai/AEDBO)*
+- [Adaptive experimental design using Bayesian optimization to improve the cost efficiency of field trials](https://github.com/ysaikai/AEDBO)
   - with [Vivak Patel](http://pages.stat.wisc.edu/~vrpatel6/), Shawn Conley, and [Paul Mitchell](https://aae.wisc.edu/faculty/pdmitchell/)
   - Presented at [2019 ASA-CSSA-SSSA International Annual Meeting](https://scisoc.confex.com/scisoc/2019am/meetingapp.cgi/Paper/122496)
   - Under review at [PLOS ONE](https://journals.plos.org/plosone/)
-- *[A bandit algorithm for efficient on-farm research](https://github.com/ysaikai/MABPS)*
+- [A bandit algorithm for efficient on-farm research](https://github.com/ysaikai/MABPS)
   - with [Paul Mitchell](https://aae.wisc.edu/faculty/pdmitchell/)
   - Presented at [2018 AAEA Annual Meeting](https://www.aaea.org/meetings/2018-aaea-annual-meeting)
-- *[An agent-based model for promoting modest technologies](https://github.com/ysaikai/TechAdoption)*
+- [An agent-based model for promoting modest technologies](https://github.com/ysaikai/TechAdoption)
   - Based on the course project (AAE731 "Frontiers in Development Economics 2", Spring 2016) at UW-Madison
-- *[An impure public good model of local food systems: Aggregative games of four locals](https://github.com/ysaikai/LFSGames)*
+- [An impure public good model of local food systems: Aggregative games of four locals](https://github.com/ysaikai/LFSGames)
   - Based on the honours thesis (2014) at the Australian National University
