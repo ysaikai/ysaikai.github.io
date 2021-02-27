@@ -1727,7 +1727,7 @@ h2(x,n)</code></pre>
 <h3>Are you prime?</h3>
 <p>Write a function that returns whether an integer <span class="math inline">\(n\geq2\)</span> is prime. (Recall that <span class="math inline">\(n\geq2\)</span> is prime if it has only two factors: <span class="math inline">\(1\)</span> and <span class="math inline">\(n\)</span>.)</p>
 <pre class="r"><code>prime &lt;- function(n) {
-  if (n &gt; 2){
+  if (n &gt; 2) {
     for (m in 2:(n/2)) {
     # for (m in 2:(sqrt(n))) {
       if (n %% m == 0) {
@@ -1847,11 +1847,11 @@ factorial(5)</code></pre>
 tic()
 r1 = primesieve1(n)
 toc()</code></pre>
-<pre><code>## 24.954 sec elapsed</code></pre>
+<pre><code>## 27.942 sec elapsed</code></pre>
 <pre class="r"><code>tic()
 r2 = primesieve2(c(), 2:n)
 toc()</code></pre>
-<pre><code>## 0.024 sec elapsed</code></pre>
+<pre><code>## 0.022 sec elapsed</code></pre>
 <pre class="r"><code>if (identical(r1,r2)) {
   cat(&quot;Both produce the same set containing&quot;, length(r2), &quot;primes.&quot; )
 } else {
@@ -1887,7 +1887,7 @@ arrows(1.8, 1, 1.9, 1.8, length=0.1)</code></pre>
 <div id="r-markdown" class="section level1">
 <h1>R Markdown</h1>
 <p id="acknowledgement">
-These notes are based on <a href="https://bookdown.org/yihui/rmarkdown/">8Xie, Y., Allaire, J. J., &amp; Grolemund, G. (2018). <em>R markdown: The definitive guide</em>. CRC Press.</a>
+These notes are based on <a href="https://bookdown.org/yihui/rmarkdown/">Xie, Y., Allaire, J. J., &amp; Grolemund, G. (2018). <em>R markdown: The definitive guide</em>. CRC Press.</a>
 </p>
 <div id="markdown-syntax" class="section level2">
 <h2>Markdown syntax</h2>
