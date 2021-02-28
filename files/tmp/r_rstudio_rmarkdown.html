@@ -363,6 +363,9 @@ font-size: 26px;
 }
 blockquote {
 font-size: 26px;
+}
+blockquote p {
+line-height: 30px;
 }</style>
 
 
@@ -712,11 +715,11 @@ factorial(5)</code></pre>
 tic()
 r1 = primesieve1(n)
 toc()</code></pre>
-<pre><code>## 35.759 sec elapsed</code></pre>
+<pre><code>## 26.986 sec elapsed</code></pre>
 <pre class="r"><code>tic()
 r2 = primesieve2(c(), 2:n)
 toc()</code></pre>
-<pre><code>## 0.031 sec elapsed</code></pre>
+<pre><code>## 0.025 sec elapsed</code></pre>
 <pre class="r"><code>if (identical(r1,r2)) {
   cat(&quot;Both produce the same set containing&quot;, length(r2), &quot;primes.&quot; )
 } else {
