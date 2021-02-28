@@ -506,14 +506,17 @@ These notes are based on Chapter 3-5 of JMR — Jones, O., Maillardet, R., &amp;
 </p>
 <div id="function" class="section level2">
 <h2>Function</h2>
-<p>Just like functions in mathematics, R functions take arguments and return a value. For example, if you have a mathematical function: <span class="math display">\[f:x\mapsto \sin(x^2+1)\]</span> the corresponding R function can be written as <code>f &lt;- function(x) sin(x^2+1)</code>. To use multiple lines for the definition, use a pair of brackets <code>{ }</code> and <code>return</code> keyword as follows:</p>
-<pre><code>f &lt;- function(x) {
+<p>Just like functions in mathematics, functions in R take arguments and return a value. For example, if we have a mathematical function: <span class="math display">\[f:x\mapsto \sin(x^2+1)\]</span> the corresponding R function can be written as <code>f &lt;- function(x) sin(x^2+1)</code>. To use multiple lines for the definition, use a pair of brackets <code>{ }</code> and <code>return</code> keyword as follows:</p>
+<pre class="r"><code>f &lt;- function(x) {
   tmp &lt;- x^2 # tmp is a dummy name
   tmp &lt;- tmp + 1
   tmp &lt;- sin(tmp)
   return(tmp)
 }</code></pre>
 <p>Notice the use of <code>#</code> for comments.</p>
+<blockquote>
+<p>A returned <strong>value</strong> need not be a scalr number. It may be a vector, list, or even more complex R object.</p>
+</blockquote>
 </div>
 <div id="for-loop" class="section level2">
 <h2><code>for</code> loop</h2>
@@ -709,11 +712,11 @@ factorial(5)</code></pre>
 tic()
 r1 = primesieve1(n)
 toc()</code></pre>
-<pre><code>## 27.673 sec elapsed</code></pre>
+<pre><code>## 35.759 sec elapsed</code></pre>
 <pre class="r"><code>tic()
 r2 = primesieve2(c(), 2:n)
 toc()</code></pre>
-<pre><code>## 0.026 sec elapsed</code></pre>
+<pre><code>## 0.031 sec elapsed</code></pre>
 <pre class="r"><code>if (identical(r1,r2)) {
   cat(&quot;Both produce the same set containing&quot;, length(r2), &quot;primes.&quot; )
 } else {
