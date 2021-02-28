@@ -1850,11 +1850,11 @@ factorial(5)</code></pre>
 tic()
 r1 = primesieve1(n)
 toc()</code></pre>
-<pre><code>## 26.374 sec elapsed</code></pre>
+<pre><code>## 35.855 sec elapsed</code></pre>
 <pre class="r"><code>tic()
 r2 = primesieve2(c(), 2:n)
 toc()</code></pre>
-<pre><code>## 0.034 sec elapsed</code></pre>
+<pre><code>## 0.03 sec elapsed</code></pre>
 <pre class="r"><code>if (identical(r1,r2)) {
   cat(&quot;Both produce the same set containing&quot;, length(r2), &quot;primes.&quot; )
 } else {
@@ -1928,10 +1928,6 @@ These notes are based on <a href="https://bookdown.org/yihui/rmarkdown/">Xie, Y.
 <p>This is indented.</p>
 </blockquote>
 </div>
-<div id="code" class="section level3">
-<h3>Code</h3>
-<p><a href="https://bookdown.org/yihui/rmarkdown/markdown-syntax.html#inline-formatting">Inline code</a> is produced by putting code inside <code>` `</code> like <code>`code here`</code>.</p>
-</div>
 </div>
 <div id="yaml-meta-data" class="section level2">
 <h2>YAML meta data</h2>
@@ -1961,7 +1957,10 @@ y &lt;- x^2 # 2nd line of your R code.
 ```</code></pre>
 <p>Conveniently, we can run R code inside a R Markdown script. Just put the cursor somewhere in the chunk and press <code>Cmd + Shift + Return</code> (<code>Ctrl + Shift + Enter</code> on Linux and Windows).</p>
 <p>We can provide many parameters inside <code>{r}</code> to specify how the code output looks (e.g., plotting) and how the chunk itself is displayed in the generated document. For example, <code>{r, include=FALSE}</code> means that the code is run, but the chunk does not show up in the document.</p>
-<p>Besides code chunks, we can also insert values of R objects as an inline text. A consequence is that we need not and indeed should not separately copy and paste results of our analysis.</p>
+</div>
+<div id="inline-code" class="section level2">
+<h2>Inline code</h2>
+<p>Besides code chunks, we can also insert values of R objects as an <strong>inline text</strong>. A consequence is that we need not and indeed should not separately copy and paste results of our analysis.</p>
 <p>For example, suppose we have a result of computation equal to <code>97</code>. Then, a sentence “It predicts the score equal to 97.” should be written in R Markdown as:</p>
 <pre><code>It predicts the score equal to `r x`.</code></pre>
 <p>where the value <code>97</code> is stored in <code>x</code>.</p>
