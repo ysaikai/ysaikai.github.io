@@ -713,11 +713,11 @@ factorial(5)</code></pre>
 tic()
 r1 = primesieve1(n)
 toc()</code></pre>
-<pre><code>## 27.052 sec elapsed</code></pre>
+<pre><code>## 26.797 sec elapsed</code></pre>
 <pre class="r"><code>tic()
 r2 = primesieve2(c(), 2:n)
 toc()</code></pre>
-<pre><code>## 0.026 sec elapsed</code></pre>
+<pre><code>## 0.094 sec elapsed</code></pre>
 <pre class="r"><code>if (identical(r1,r2)) {
   cat(&quot;Both produce the same set containing&quot;, length(r2), &quot;primes.&quot; )
 } else {
@@ -807,12 +807,11 @@ author: |
   | ysaikai@unimelb.edu.au
   | School of Mathematics and Statistics
   | The University of Melbourne
+date: &quot;1 March 2021&quot;
 output:
   html_document:
-    toc: true
-    toc_float: true
     code_folding: show
-    css: styles.css
+    css: styles_lec.css
 ---</code></pre>
 </div>
 <div id="code-chunks" class="section level2">
