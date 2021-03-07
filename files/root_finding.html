@@ -1944,20 +1944,23 @@ text(1.17, .9, expression(paste(x[n+1],&quot; by NR&quot;)))</code></pre>
 </ol>
 <p>Here is an implementation of the algorithm.</p>
 <pre class="r fold-show"><code>bisection &lt;- function(f, x.l, x.r, tol=1e-9) {
-  # Error checking
+  # Exception
   if (x.l &gt;= x.r) {
     print(&quot;error: x.l &gt;= x.r&quot;)
     return(NULL)
   }
+  
   f.l &lt;- f(x.l)
   f.r &lt;- f(x.r)
-  if (f.l == 0) {
-    return(x.l)
-  } else if (f.r == 0) {
-    return(x.r)
-  } else if (f.l*f.r &gt; 0) {
+  
+  # Exception
+  if (f.l*f.r &gt; 0) {
     print(&quot;error: f(x.l)*f(x.r) &gt; 0&quot;)
     return(NULL)
+  } else if (abs(f.l) &lt; tol) {
+    return(x.l)
+  } else if (abs(f.r) &lt; tol) {
+    return(x.r)
   }
 
   # Beginning of the main part
