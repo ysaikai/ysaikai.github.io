@@ -710,7 +710,7 @@ a3 &lt;- fixedpoint(g3, 1.5)</code></pre>
   \Leftrightarrow\quad &amp; \hat{a} = x_n - \frac{f(x_n)}{f&#39;(x_n)}
 \end{align}\]</span></p>
 <p>Now, suppose that <span class="math inline">\(x_n\)</span> is the current guess at <span class="math inline">\(a\)</span>. Then, given the approximated function, it is natural to see the estimated root <span class="math inline">\((\hat{a})\)</span> as an improved guess. This is the idea behind the Newton-Raphson method: <span class="math display">\[ x_{n+1} = x_n - \frac{f(x_n)}{f&#39;(x_n)} .\]</span></p>
-<p>Similar to <a href="#fixed-point-iteration">the fixed-point iteration</a>, we cannot guarantee convergence of the Newton-Raphson method. But, If a sequence <span class="math inline">\(\{x_n\}\)</span> converges to some point <span class="math inline">\(a\)</span>, then <span class="math inline">\(a\)</span> is indeed a fixed point of <span class="math inline">\(f\)</span> under some conditions.</p>
+<p>Similar to <a href="#fixed-point-iteration">the fixed-point iteration</a>, we cannot guarantee convergence of the Newton-Raphson method. But, If a sequence <span class="math inline">\(\{x_n\}\)</span> converges to some point <span class="math inline">\(a\)</span>, then <span class="math inline">\(a\)</span> is indeed a root of <span class="math inline">\(f\)</span> under some conditions.</p>
 <p>Specifically, suppose that <span class="math inline">\(f\)</span> is continuously differentiable, and that <span class="math inline">\(f&#39;\)</span> is bounded. Then, <span class="math display">\[\begin{align}
   a &amp;= \lim_{n\to\infty}x_{n+1}\\
     &amp;= \lim_{n\to\infty} \left( x_n - \frac{f(x_n)}{f&#39;(x_n)} \right)\\
@@ -802,27 +802,30 @@ text(1.17, .9, expression(paste(x[n+1],&quot; by NR&quot;)))</code></pre>
 <p>The bisection method belongs to a class of root-finding algorithms called <strong>bracketing</strong>, which successively isolates smaller intervals (brackets) that contain a root. In the bisection method, a bracket is always halved at each iteration.</p>
 <p>First, find an interval <span class="math inline">\((x_l,x_r)\)</span> such that <span class="math inline">\(f(x_l)f(x_r)&lt;0\)</span>, i.e., the graph <span class="math inline">\(y=f(x)\)</span> crosses the x-axis at least once in the interval. Then, repeat the following.</p>
 <ol style="list-style-type: decimal">
-<li>Halt and return either <span class="math inline">\(x_l\)</span> or <span class="math inline">\(x_r\)</span> if <span class="math inline">\(x_l-x_r\leq\epsilon\)</span>.</li>
+<li>Halt and return either <span class="math inline">\(x_l\)</span> or <span class="math inline">\(x_r\)</span> if <span class="math inline">\(x_r-x_l\leq\epsilon\)</span>.</li>
 <li>Set <span class="math inline">\(x_m = (x_l+x_r)/2\)</span>.</li>
 <li>Halt and return <span class="math inline">\(x_m\)</span> if <span class="math inline">\(f(x_m)=0\)</span>.</li>
 <li>Set <span class="math inline">\(x_r=x_m\)</span> if <span class="math inline">\(f(x_l)f(x_m)&lt;0\)</span>. Otherwise, set <span class="math inline">\(x_l=x_m\)</span>.</li>
 </ol>
 <p>Here is an implementation of the algorithm.</p>
 <pre class="r fold-show"><code>bisection &lt;- function(f, x.l, x.r, tol=1e-9) {
-  # Error checking
+  # Exception
   if (x.l &gt;= x.r) {
     print(&quot;error: x.l &gt;= x.r&quot;)
     return(NULL)
   }
+  
   f.l &lt;- f(x.l)
   f.r &lt;- f(x.r)
-  if (f.l == 0) {
-    return(x.l)
-  } else if (f.r == 0) {
-    return(x.r)
-  } else if (f.l*f.r &gt; 0) {
+  
+  # Exception
+  if (f.l*f.r &gt; 0) {
     print(&quot;error: f(x.l)*f(x.r) &gt; 0&quot;)
     return(NULL)
+  } else if (abs(f.l) &lt; tol) {
+    return(x.l)
+  } else if (abs(f.r) &lt; tol) {
+    return(x.r)
   }
 
   # Beginning of the main part
