@@ -24,7 +24,7 @@ The topics are subject to change. Some topics are heavier than others, taking mo
 | :--- | :--- |
 | 1 | [R, RStudio and R Markdown](/files/r_rstudio_rmarkdown.html){:target="_blank" rel="noopener"} |
 | 2 | [Root finding](/files/root_finding.html){:target="_blank" rel="noopener"} |
-| 3 | [Optimisation](/files/optimisation.html){:target="_blank" rel="noopener"} |
+| 3 | [Optimisation](/files/optimisation.html){:target="_blank" rel="noopener"}<br /> [Backpropagation](/files/backprop.html){:target="_blank" rel="noopener"}|
 | 4 | [Numerical integration](/files/numerical_integration.html){:target="_blank" rel="noopener"} |
 | 5 | [Ordinary differential equations](/files/differential_equation.html){:target="_blank" rel="noopener"} |
 | 6 | [Probability theory](/files/probability_theory.html){:target="_blank" rel="noopener"} |
