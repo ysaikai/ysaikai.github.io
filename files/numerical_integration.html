@@ -1664,6 +1664,9 @@ These notes are based on Chapter 11 of Jones, O., Maillardet, R., &amp; Robinson
     &amp;= 18\pi\\
     &amp;\approx 56.5486677646
 \end{align}\]</span></p>
+<pre class="r"><code>test &lt;- function(x) return(x*sin(x)+5)
+integrate(test, 0, 3*pi) # R built-in function</code></pre>
+<pre><code>## 56.54867 with absolute error &lt; 8e-12</code></pre>
 </div>
 <div id="trapezoidal-rule" class="section level1">
 <h1>Trapezoidal rule</h1>
@@ -1704,8 +1707,7 @@ segments(from_x, from_y, to_x, to_y, lty=3)</code></pre>
   
   return(T)
 }</code></pre>
-<pre class="r"><code>f &lt;- function(x) return(x*sin(x)+5)
-trapezoid(f, 0, 3*pi)</code></pre>
+<pre class="r"><code>trapezoid(test, 0, 3*pi)</code></pre>
 <pre><code>## [1] 56.54169</code></pre>
 </div>
 <div id="simpsons-rule" class="section level1">
@@ -1741,7 +1743,7 @@ trapezoid(f, 0, 3*pi)</code></pre>
 \end{align}\]</span></p>
 <p>Notice that the function values for even points (except <span class="math inline">\(0\)</span> and <span class="math inline">\(n\)</span>) get <span class="math inline">\(2\)</span> as each of them is used for two adjacent subintervals.</p>
 <p>Let’s apply Simpson’s rule to the test problem.</p>
-<pre class="r fold-show"><code>simpson_n &lt;- function(f, a, b, n=100) {
+<pre class="r"><code>simpson_n &lt;- function(f, a, b, n=100) {
   # %/% (integer division) for making sure n is even and &gt;= 4
   n &lt;- max(c(2*(n%/%2), 4))
   
@@ -1754,8 +1756,7 @@ trapezoid(f, 0, 3*pi)</code></pre>
   
   return(S)
 }</code></pre>
-<pre class="r fold-show"><code>f &lt;- function(x) return(x*sin(x)+5)
-simpson_n(f, 0, 3*pi)</code></pre>
+<pre class="r"><code>simpson_n(test, 0, 3*pi)</code></pre>
 <pre><code>## [1] 56.54867</code></pre>
 <p>For <span class="math inline">\(n=100\)</span>, it seems to work better than the trapezoidal rule.</p>
 <div id="how-large-should-n-be" class="section level2">
@@ -1768,7 +1769,8 @@ simpson_n(f, 0, 3*pi)</code></pre>
                &amp;= |S(2n)-I|+|S(n)-I|\\
                &amp;\to 0
 \end{align}\]</span> Thus, given some small <span class="math inline">\(\epsilon\)</span>, we can use <span class="math inline">\(|S(2n)-S(n)|\leq\epsilon\)</span> as a stopping criterion as we increase <span class="math inline">\(n\)</span>.</p>
-<p>Now, modify the above Simpson’s rule so that, given <span class="math inline">\(\epsilon\)</span>, we can search for a large enough <span class="math inline">\(n\)</span>. Observe that we increase <span class="math inline">\(n\)</span> by a factor of <span class="math inline">\(2\)</span> each time, so that we can reuse previous function evaluations. In practice evaluating <span class="math inline">\(f\)</span> is the most expensive operation when doing numerical integration. If we increased <span class="math inline">\(n\)</span> by just <span class="math inline">\(2\)</span> (<span class="math inline">\(n\)</span> has to be even), then the points at which we evaluate <span class="math inline">\(f\)</span> would all change, except <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>, so we would be calculating <span class="math inline">\(f\)</span> at <span class="math inline">\(n−1\)</span> new points. If we double <span class="math inline">\(n\)</span> then we can reuse all our existing <span class="math inline">\(f\)</span> values, so we only need to calculate <span class="math inline">\(f\)</span> at <span class="math inline">\(n\)</span> new points.</p>
+<p>Now, modify the above Simpson’s rule so that, given <span class="math inline">\(\epsilon\)</span>, we can search for a large enough <span class="math inline">\(n\)</span>. Observe that we increase <span class="math inline">\(n\)</span> by a factor of <span class="math inline">\(2\)</span> each time, so that we can reuse the previous function evaluations.</p>
+<p>In practice evaluating <span class="math inline">\(f\)</span> is the most expensive operation when doing numerical integration. If we increased <span class="math inline">\(n\)</span> by just <span class="math inline">\(2\)</span> (<span class="math inline">\(n\)</span> has to be even), then the points at which we evaluate <span class="math inline">\(f\)</span> would all change, except <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>, so we would be calculating <span class="math inline">\(f\)</span> at <span class="math inline">\(n−1\)</span> new points. If we double <span class="math inline">\(n\)</span> then we can reuse all our existing <span class="math inline">\(f\)</span> values, so we only need to calculate <span class="math inline">\(f\)</span> at <span class="math inline">\(n\)</span> new points.</p>
 <pre class="r"><code>simpson &lt;- function(f, a, b, tol=1e-8) {
   n &lt;- 4
   h &lt;- (b-a)/n
@@ -1791,8 +1793,7 @@ simpson_n(f, 0, 3*pi)</code></pre>
 
   return(list(&quot;S&quot;=S, &quot;Number of intervals&quot;=n))
 }</code></pre>
-<pre class="r"><code>f &lt;- function(x) return(x*sin(x)+5)
-simpson(f, 0, 3*pi)</code></pre>
+<pre class="r"><code>simpson(test, 0, 3*pi)</code></pre>
 <pre><code>## $S
 ## [1] 56.54867
 ## 
@@ -1815,7 +1816,7 @@ simpson(f, 0, 3*pi)</code></pre>
 <p>See the <a href="r_rstudio_rmarkdown.html#recursive-function">recursion</a> when going back to #1 from #5, where each subinterval at #5 becomes the interval <span class="math inline">\([a,b]\)</span> at #1 and starts it over.</p>
 </blockquote>
 <p>This way, subdivision locally stops for each subinterval, resulting in varying lengths of subintervals. Let’s apply adaptive quadrature to integrate <span class="math inline">\(f(x) = 1.5\sqrt{x}\)</span> over <span class="math inline">\([0,1]\)</span>. Note that the graph is steep near the origin as <span class="math inline">\(f&#39;(x) = \frac{3}{4\sqrt{x}} \to \infty\)</span>.</p>
-<pre class="r fold-show"><code>q.recursion &lt;- function(f, a, b, c, fa, fb, fc, I.old, tol, level) {
+<pre class="r"><code>q.recursion &lt;- function(f, a, b, c, fa, fb, fc, I.old, tol, level) {
   level.max &lt;- 64
   if (level &gt; level.max) {
     cat(&quot;recursion limit reached: singularity likely\n&quot;)
@@ -1839,7 +1840,7 @@ simpson(f, 0, 3*pi)</code></pre>
     return(c(I, f.count))
   }
 }</code></pre>
-<pre class="r fold-show"><code>quadrature &lt;- function(f, a, b, tol=1e-8) {
+<pre class="r"><code>quadrature &lt;- function(f, a, b, tol=1e-8) {
   c = (a + b)/2
   fa &lt;- f(a)
   fb &lt;- f(b)
