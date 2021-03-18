@@ -1713,7 +1713,7 @@ segments(from_x, from_y, to_x, to_y, lty=3)</code></pre>
 <p>As implied by the use of trapezoids, the trapezoidal rule approximates <span class="math inline">\(f\)</span> by a <strong>piece-wise linear</strong> function. Simpson’s rule uses, instead, a <strong>piece-wise quadratic</strong> function for approximation of <span class="math inline">\(f\)</span>.</p>
 <p>Since a quadratic function <span class="math inline">\(p(x) = ax^2 + bx + c\)</span> has three parameters <span class="math inline">\((a,b,c)\)</span>, three non-collinear points <span class="math inline">\((u,f(u))\)</span>, <span class="math inline">\((v,f(v))\)</span>, and <span class="math inline">\((w,f(w))\)</span> pin down the function through a system of three linear equations. (Without loss of generality, assume <span class="math inline">\(u&lt;v&lt;w\)</span>.)</p>
 <blockquote>
-<p>Collinearity means <span class="math inline">\((v,f(v)) = t(u,f(u))+(1-t)(w,f(w))\)</span> for <span class="math inline">\(t\in(0,1)\)</span>. Can you see its implication?</p>
+<p>Collinearity means <span class="math inline">\((v,f(v)) = t(u,f(u))+(1-t)(w,f(w))\)</span> for <span class="math inline">\(t\in(0,1)\)</span>. Can you see its implication for <span class="math inline">\(p(x) = ax^2 + bx + c\)</span>?</p>
 </blockquote>
 <p><span class="math display">\[
 \begin{cases}
@@ -1859,10 +1859,10 @@ segments(from_x, from_y, to_x, to_y, lty=3)</code></pre>
 <pre class="r"><code>test2 &lt;- function(x) return(ifelse(x&gt;0, -4*x*log(x), 0))</code></pre>
 <pre class="r"><code>aq(test2, 0, 1, 1e-4)</code></pre>
 <pre><code>## [1]  0.9999983 57.0000000</code></pre>
-<p>Let’s see how large <span class="math inline">\(n\)</span> should be if we use Simpson’s method.</p>
+<p>Let’s see how large <span class="math inline">\(n\)</span> should be if we use Simpson’s rule.</p>
 <pre class="r"><code>simpson_n(test2, 0, 1, 420)</code></pre>
 <pre><code>## [1] 0.9999983</code></pre>
-<p>Compared to AQ’s 57 evaluations, Simpson’s method requires about 363 more evaluations to achieve the same level of accuracy.</p>
+<p>Compared to AQ’s 57 evaluations, Simpson’s rule requires about 363 more evaluations to achieve the same level of accuracy.</p>
 </div>
 
 
