@@ -1697,7 +1697,7 @@ title(main=expression(C == g*b*x - e*log(x) + b*y - a*log(y)), xlab=&quot;prey&q
 </blockquote>
 <p>Recall the technique used in <a href="numerical_integration.html">Numerical Integration</a>, where we approximate the complex function over each interval of length <span class="math inline">\(h\)</span> by simple functions so that we can carry out an integral with ease. Specifically, linear functions in the <a href="numerical_integration.html#trapezoidal-rule">trapezoidal rule</a> and quadratic functions in <a href="numerical_integration.html#simpsons-rule">Simpson’s rule</a>. Why not applying the same idea here — approximating the complex (indeed, unknown) function <span class="math inline">\(\mathbf{y}(t)\)</span>?</p>
 <blockquote>
-<p>Despite the similarity, also note the difference. In the standard numerical integration, we can evaluate the function wherever we like. In contrast, here, we can evaluate only the derivative <span class="math inline">\(\frac{d\mathbf{y}}{dt} = \mathbf{f}\)</span> and evaluation points <span class="math inline">\(\{\mathbf{y}(t)\}\)</span> themselves depend on our approximation.</p>
+<p>Besides the similarity, also note the difference. In the standard numerical integration, we can evaluate the function wherever we like. In contrast, here, we can evaluate only the derivative <span class="math inline">\(\frac{d\mathbf{y}}{dt} = \mathbf{f}\)</span> and evaluation points <span class="math inline">\(\{\mathbf{y}(t)\}\)</span> themselves depend on our <strong>successive approximation</strong></p>
 </blockquote>
 </div>
 </div>
@@ -1707,7 +1707,7 @@ title(main=expression(C == g*b*x - e*log(x) + b*y - a*log(y)), xlab=&quot;prey&q
   \hat{\mathbf{y}}(h) &amp;= \hat{\mathbf{y}}(0) + \int_0^h \mathbf{f}(0,\hat{\mathbf{y}}(0))dt\\
                       &amp;= \hat{\mathbf{y}}(0) + h\mathbf{f}(0,\hat{\mathbf{y}}(0))
 \end{align}\]</span></p>
-<p>If we are happy to make <strong>successive approximation</strong>, then we have Euler’s method for solving ODEs: <span class="math display">\[\begin{align}
+<p>If we are happy to make successive approximation, then we have Euler’s method for solving ODEs: <span class="math display">\[\begin{align}
   \hat{\mathbf{y}}(nh+h) &amp;= \hat{\mathbf{y}}(nh) + \int_{nh}^{nh+h} \mathbf{f}(nh,\hat{\mathbf{y}}(nh))dt\\
             &amp;= \hat{\mathbf{y}}(nh) + h\mathbf{f}(nh,\hat{\mathbf{y}}(nh))
 \end{align}\]</span> for <span class="math inline">\(n\in\{0,1,\dots\}\)</span>.</p>
