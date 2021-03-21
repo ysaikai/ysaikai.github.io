@@ -1723,7 +1723,7 @@ segments(from_x, from_y, to_x, to_y, lty=3)</code></pre>
 \end{cases}
 \]</span></p>
 <p>Solving the system of equations, we get <span class="math display">\[ p(x) = f(u)\frac{(x-v)(x-w)}{(u-v)(u-w)} +
-          f(v)\frac{(x-u)(x-w)}{(v-u)(v-w)} +
+          f(v)\frac{(x-u)(x-w)}{(v-u)(v-w)} \\+
           f(w)\frac{(x-u)(x-v)}{(w-u)(w-v)} .\]</span></p>
 <blockquote>
 <p>Plug in each of three points and see this make sense.</p>
@@ -1766,7 +1766,7 @@ segments(from_x, from_y, to_x, to_y, lty=3)</code></pre>
                &amp;\to 0
 \end{align}\]</span> Thus, given some small <span class="math inline">\(\epsilon\)</span>, we can use <span class="math inline">\(|S(2n)-S(n)|\leq\epsilon\)</span> as a stopping criterion as we increase <span class="math inline">\(n\)</span>.</p>
 <p>Now, modify the above Simpson’s rule so that, given <span class="math inline">\(\epsilon\)</span>, we can search for a large enough <span class="math inline">\(n\)</span>. Observe that we increase <span class="math inline">\(n\)</span> by a factor of <span class="math inline">\(2\)</span> each time, so that we can reuse the previous function evaluations.</p>
-<p>In practice, <strong>evaluating <span class="math inline">\(f\)</span> is the most expensive operation</strong> when doing numerical integration. If we increased <span class="math inline">\(n\)</span> by just <span class="math inline">\(2\)</span> (<span class="math inline">\(n\)</span> has to be even), then the points at which we evaluate <span class="math inline">\(f\)</span> would all change, except <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>, so we would be calculating <span class="math inline">\(f\)</span> at <span class="math inline">\(n−1\)</span> new points. If we double <span class="math inline">\(n\)</span> then we can reuse all our existing <span class="math inline">\(f\)</span> values, so we only need to calculate <span class="math inline">\(f\)</span> at <span class="math inline">\(n\)</span> new points.</p>
+<p>In practice, <strong>evaluating <span class="math inline">\(f\)</span> is the most expensive operation</strong> when doing numerical integration. If we increased <span class="math inline">\(n\)</span> by an arbitrary even number, then two sets of evaluation points before and after the increase will likely be misaligned (except <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>). So, we will have to re-calculate <span class="math inline">\(f\)</span> at all points. In contrast, if we double <span class="math inline">\(n\)</span>, we can reuse all the existing <span class="math inline">\(n\)</span> evaluations at the original set of points, and we will simply evaluate <span class="math inline">\(n\)</span> more points in each subinterval.</p>
 <pre class="r"><code>simpson &lt;- function(f, a, b, tol=1e-5) {
   # While this block is the same as `S &lt;- simpson_n(f,a,b,2)`,
   # we want y.a, y.b, and y to be computed here.
@@ -1807,7 +1807,7 @@ segments(from_x, from_y, to_x, to_y, lty=3)</code></pre>
 <p>Adaptive quadrature is Simpson’s rule with subinterval width <span class="math inline">\(h\)</span> locally adapted. The key idea is that:</p>
 <ul>
 <li>Divide subintervals only where needed.</li>
-<li>Need is determined <strong>locally</strong>. That is, for each subinterval, apply <code>simpson</code> until the accuracy gain becomes small.</li>
+<li>Need is determined <strong>locally</strong>. That is, for each subinterval, apply Simpson’s rule until the accuracy gain becomes small.</li>
 </ul>
 <p>Here is the algorithm.</p>
 <ol style="list-style-type: decimal">
