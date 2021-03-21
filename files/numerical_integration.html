@@ -1664,8 +1664,8 @@ These notes are based on Chapter 11 of Jones, O., Maillardet, R., &amp; Robinson
     &amp;= 18\pi\\
     &amp;\approx 56.5486677646
 \end{align}\]</span></p>
-<pre class="r"><code>test &lt;- function(x) return(x*sin(x)+5)
-integrate(test, 0, 3*pi) # R built-in function</code></pre>
+<pre class="r"><code>test1 &lt;- function(x) return(x*sin(x)+5)
+integrate(test1, 0, 3*pi) # R built-in function</code></pre>
 <pre><code>## 56.54867 with absolute error &lt; 8e-12</code></pre>
 </div>
 <div id="trapezoidal-rule" class="section level1">
@@ -1705,7 +1705,7 @@ segments(from_x, from_y, to_x, to_y, lty=3)</code></pre>
   
   return(T)
 }</code></pre>
-<pre class="r"><code>trapezoid(test, 0, 3*pi)</code></pre>
+<pre class="r"><code>trapezoid(test1, 0, 3*pi)</code></pre>
 <pre><code>## [1] 56.54169</code></pre>
 </div>
 <div id="simpsons-rule" class="section level1">
@@ -1752,7 +1752,7 @@ segments(from_x, from_y, to_x, to_y, lty=3)</code></pre>
 
   return(S)
 }</code></pre>
-<pre class="r"><code>simpson_n(test, 0, 3*pi, 50)</code></pre>
+<pre class="r"><code>simpson_n(test1, 0, 3*pi, 50)</code></pre>
 <pre><code>## [1] 56.54873</code></pre>
 <p>Simpson with <span class="math inline">\(n=50\)</span> works better than Trapezoid with <span class="math inline">\(n=100\)</span>.</p>
 <div id="how-large-should-n-be" class="section level2">
@@ -1793,7 +1793,7 @@ segments(from_x, from_y, to_x, to_y, lty=3)</code></pre>
 
   return(list(&quot;S&quot;=S, &quot;Number of intervals&quot;=n))
 }</code></pre>
-<pre class="r"><code>simpson(test, 0, 3*pi, 1e-4)</code></pre>
+<pre class="r"><code>simpson(test1, 0, 3*pi, 1e-4)</code></pre>
 <pre><code>## $S
 ## [1] 56.54867
 ## 
@@ -1837,10 +1837,10 @@ segments(from_x, from_y, to_x, to_y, lty=3)</code></pre>
   cnt.f &lt;- 2 # counter for function calls
 
   if (abs(I - I.old) &gt; tol) {
-    q.left &lt;- aq.recur(f, a, c, a+h, f.a, f.c, f1, I.left, tol/2)
-    q.right &lt;- aq.recur(f, c, b, b-h, f.c, f.b, f2, I.right, tol/2)
-    I &lt;- q.left[1] + q.right[1]
-    cnt.f &lt;-  cnt.f + q.left[2] + q.right[2]
+    aq.left &lt;- aq.recur(f, a, c, a+h, f.a, f.c, f1, I.left, tol/2)
+    aq.right &lt;- aq.recur(f, c, b, b-h, f.c, f.b, f2, I.right, tol/2)
+    I &lt;- aq.left[1] + aq.right[1]
+    cnt.f &lt;-  cnt.f + aq.left[2] + aq.right[2]
   }
 
   return(c(I, cnt.f))
