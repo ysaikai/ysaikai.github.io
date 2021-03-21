@@ -669,6 +669,7 @@ segments(from_x, from_y, to_x, to_y, lty=3)</code></pre>
 <div id="adaptive-quadrature" class="section level1">
 <h1>Adaptive quadrature</h1>
 <p>Evenly dividing the integration range is intuitive and will likely work well if we have computational capacity for large <span class="math inline">\(n\)</span>. If not, we can divide the range adaptively and achieve the same level of performance with smaller <span class="math inline">\(n\)</span>.</p>
+<p>A typical situation in which adaptivity makes difference is that the function to integrate has varying curvature, i.e., consisting of flat and steep parts. In steep portions, the function changes rapidly, so we need fine subdivision for good approximation.</p>
 <p>Adaptive quadrature is Simpson’s rule with subinterval width <span class="math inline">\(h\)</span> locally adapted. The key idea is that:</p>
 <ul>
 <li>Divide subintervals only where needed.</li>
