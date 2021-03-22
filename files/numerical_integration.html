@@ -1808,18 +1808,18 @@ segments(from_x, from_y, to_x, to_y, lty=3)</code></pre>
 <p>Adaptive quadrature is Simpson’s rule with subinterval length <span class="math inline">\(h\)</span> locally adapted. The key idea is that:</p>
 <ul>
 <li>Subinterval division occurs only where needed.</li>
-<li>Need is determined <strong>locally</strong> by examining whether an improvement <span class="math inline">\(|S(4)-S(2)|\)</span> is still large for <strong>each</strong> subinterval.</li>
+<li>Need is determined <strong>locally</strong> by examining whether an improvement <span class="math inline">\(|S(4)-S(2)|\)</span> is still large for <strong>each subinterval</strong>.</li>
 </ul>
 <!-- 1. Halve $[a,b]$ into subintervals $[a,c]$ and $[c,b]$. -->
 <!-- 2. Apply to each subinterval Simpson’s rule with $n=2$. -->
 <!-- 3. Get an integral over $[a,b]$ as the sum of integrals from both subintervals. -->
 <!-- 4. Stop if an improvement is less than $\epsilon$. -->
 <!-- 5. Go back to \#1 for **each** of $[a,c]$ and $[c,b]$. -->
-<p>Here is the algorithm. Do the following for <strong>each</strong> subinterval that is not yet marked “terminated”.</p>
+<p>Here is the algorithm. Do the following for <strong>each subinterval</strong> that is not yet marked “terminated”.</p>
 <ol style="list-style-type: decimal">
 <li>Compute <span class="math inline">\(S(2)\)</span> using Simpson’s rule with <span class="math inline">\(n=2\)</span>.</li>
 <li>Compute <span class="math inline">\(S(4)\)</span> using Simpson’s rule with <span class="math inline">\(n=4\)</span>.</li>
-<li>If an improvement <span class="math inline">\(|S(4)-S(2)|\)</span> is still large, subdivide it in half; otherwise, terminate subdivision of that subinterval.</li>
+<li>If an improvement <span class="math inline">\(|S(4)-S(2)|\)</span> is still large, subdivide it in half; otherwise, terminate subdivision of <strong>that subinterval</strong>.</li>
 </ol>
 <p>Continue until all subintervals are marked terminated.</p>
 <p>Since a size of improvement depends on the shape of the function over a subinterval, subdivision in one region where the function is steep may stop only for a short subinterval while subdivision in another region where the function is flat may stop even for a long subinterval. This results in varying lengths of subintervals.</p>
