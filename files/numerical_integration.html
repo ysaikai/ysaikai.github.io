@@ -1805,10 +1805,10 @@ segments(from_x, from_y, to_x, to_y, lty=3)</code></pre>
 <h1>Adaptive quadrature</h1>
 <p>Evenly dividing the integration range is intuitive and will likely work well if we have computational capacity for large <span class="math inline">\(n\)</span>. If not, we can divide the range adaptively and achieve the same level of performance with smaller <span class="math inline">\(n\)</span>.</p>
 <p>A typical situation in which adaptivity makes difference is that the function to integrate has varying curvature, i.e., consisting of flat and steep parts. In steep portions, the function changes rapidly, so we need fine subdivision for good approximation.</p>
-<p>Adaptive quadrature is Simpson’s rule with subinterval width <span class="math inline">\(h\)</span> locally adapted. The key idea is that:</p>
+<p>Adaptive quadrature is Simpson’s rule with subinterval length <span class="math inline">\(h\)</span> locally adapted. The key idea is that:</p>
 <ul>
 <li>Subinterval division occurs only where needed.</li>
-<li>Need is determined <strong>locally</strong> by examining whether <span class="math inline">\(|S(2n)-S(n)|\)</span> is still large for <strong>each</strong> subinterval.</li>
+<li>Need is determined <strong>locally</strong> by examining whether an improvement <span class="math inline">\(|S(4)-S(2)|\)</span> is still large for <strong>each</strong> subinterval.</li>
 </ul>
 <!-- 1. Halve $[a,b]$ into subintervals $[a,c]$ and $[c,b]$. -->
 <!-- 2. Apply to each subinterval Simpson’s rule with $n=2$. -->
