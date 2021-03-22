@@ -1848,7 +1848,7 @@ segments(from_x, from_y, to_x, to_y, lty=3)</code></pre>
 
   return(c(I, cnt.f))
 }</code></pre>
-<pre class="r"><code>aq &lt;- function(f, a, b, tol=1e-5) {
+<pre class="r"><code>aq &lt;- function(f, a, b, tol) {
   c = (a + b)/2
   f.a &lt;- f(a)
   f.b &lt;- f(b)
