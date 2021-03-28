@@ -760,7 +760,7 @@ run &lt;- function(j, col, epsilon) {
     h &lt;- h/2
     y &lt;- y.N(method(f, t0=0, y0=1, h=h, N=1/h))
   }
-  
+  # 1, 2, and 4 evaluations per step in method 1, 2, and 3 respectively.
   return(2^(j-1)/h)
 }
 
