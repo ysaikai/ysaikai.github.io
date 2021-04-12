@@ -1781,7 +1781,7 @@ These notes are based on Chapter 13 &amp; 14 of Jones, O., Maillardet, R., &amp;
 </ul>
 <div id="example-1" class="section level3">
 <h3>Example</h3>
-<p>Suppose we have a COVID-19 test that detects coronavirus <span class="math inline">\(96\%\)</span> of the time, but gives false positives <span class="math inline">\(2\%\)</span> of the time. Assume that <span class="math inline">\(5\%\)</span> of the population carries the virus. If a random person tests positive, what is the probability that they actually carry the virus?</p>
+<p>Suppose we have a COVID-19 test that detects coronavirus <span class="math inline">\(96\%\)</span> of the time, but gives false positives <span class="math inline">\(2\%\)</span> of the time. Assume that <span class="math inline">\(5\%\)</span> of the population carries the virus. If a random person tests positive, what is the probability that he/she actually carries the virus?</p>
 <p>First, define the following events.</p>
 <ul>
 <li><span class="math inline">\(A\)</span> : Person tests positive.</li>
@@ -1912,7 +1912,7 @@ title(expression(&quot;The CDF of X&quot;[3]))</code></pre>
     \int_{-\infty}^\infty h(x)f(x)dx, &amp; \text{if } X \text{ is continuous}
   \end{cases}
 \]</span></p>
-<p>Remember the <a href="#definition">definition</a> of random variable — a function mapping <span class="math inline">\(\omega\in\Omega\)</span> to <span class="math inline">\(x\in\mathbb{R}\)</span>. Since a function of a function is just another function, <span class="math inline">\(h(X)\)</span> can be seen as another random variable (say, <span class="math inline">\(Y=h(X)\)</span>). Finally, the probability of <span class="math inline">\(h(X)=y\)</span> is obtained by summing the probabilities of <span class="math inline">\(X=x_i\)</span> such that <span class="math inline">\(h(x_i)=y\)</span> for all <span class="math inline">\(i\)</span> because two sets <span class="math inline">\(\{\omega\in\Omega : X(\omega)=x_i\}\)</span> and <span class="math inline">\(\{\omega\in\Omega : X(\omega)=x_j\}\)</span> mutually exclusive.</p>
+<p>Remember the <a href="#definition">definition</a> of random variable — a function mapping <span class="math inline">\(\omega\in\Omega\)</span> to <span class="math inline">\(x\in\mathbb{R}\)</span>. Since a function of a function is just another function, <span class="math inline">\(h(X)\)</span> can be seen as another random variable (say, <span class="math inline">\(Y=h(X)\)</span>). Finally, the probability of <span class="math inline">\(h(X)=y\)</span> is obtained by summing the probabilities of <span class="math inline">\(X=x_i\)</span> such that <span class="math inline">\(h(x_i)=y\)</span> for all <span class="math inline">\(i\)</span> because two sets <span class="math inline">\(\{\omega\in\Omega : X(\omega)=x_i\}\)</span> and <span class="math inline">\(\{\omega\in\Omega : X(\omega)=x_j\}\)</span> are mutually exclusive.</p>
 <p>The last point is seen at the second equality in the following proof for a discrete random variable. <span class="math display">\[\begin{align}
   \mathbb{E}Y &amp;= \sum_y y P(Y=y)\\
               &amp;= \sum_y y \sum_{x:y=h(x)} p(x)\\
