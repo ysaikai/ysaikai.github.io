@@ -1641,7 +1641,7 @@ The University of Melbourne</div></h4>
 These notes are based on Chapter 15 &amp; 16 of Jones, O., Maillardet, R., &amp; Robinson, A. (2009). <em>Introduction to scientific programming and simulation using R</em>. CRC Press.
 </p>
 <p><br /></p>
-<p>Building upon <a href="probability_theory.html">probability theory</a>, we are going to study specific probability distributions in these notes. They are so common and/or important that each has got a name and dedicated R build-in functions. Although at some point we may need to create special distributions and write associated functions for our models, it is often sufficient to combine the existing ones as building blocks. So, let’s master them and get prepared for stochastic modelling.</p>
+<p>Building upon <a href="probability_theory.html">probability theory</a>, we are going to study specific probability distributions in these notes. They are so common and/or important that each has got a name and dedicated R built-in functions. Although at some point we may need to create special distributions and write associated functions for our models, it is often sufficient to combine the existing ones as building blocks. So, let’s master them and get prepared for stochastic modelling.</p>
 <div id="discrete-distributions" class="section level1">
 <h1>Discrete distributions</h1>
 <p>R recognises common distributions by short names and specifies them by parameters.</p>
@@ -1694,16 +1694,19 @@ These notes are based on Chapter 15 &amp; 16 of Jones, O., Maillardet, R., &amp;
 <ul>
 <li><code>dxyz(x, p1, p2, ...)</code> returns <span class="math inline">\(P(X=x)\)</span>, the value of <a href="probability_theory.html#discrete">PMF</a> at <span class="math inline">\(x\)</span>.</li>
 <li><code>pxyz(q, p1, p2, ...)</code> returns <span class="math inline">\(F(q)\)</span>, the value of <a href="probability_theory.html#cumulative-distribution-function">CDF</a> at <span class="math inline">\(q\)</span>.</li>
-<li><code>qxyz(p, p1, p2, ...)</code> returns <span class="math inline">\(\arg\min_x F(x)\geq p\)</span>, roughly equal to the value at the <span class="math inline">\(p\)</span>-th <a href="https://www.mathsisfun.com/data/percentiles.html">percentile</a>.</li>
+<li><code>qxyz(p, p1, p2, ...)</code> returns <span class="math inline">\(\arg\min_x F(x)\geq p\)</span>, i.e., the <a href="https://en.wikipedia.org/wiki/Quantile_function">quantile function</a>.</li>
 <li><code>rxyz(n, p1, p2, ...)</code> returns <span class="math inline">\(n\)</span> random samples.</li>
 </ul>
 <blockquote>
 <p>In these notes, I avoid using <span class="math inline">\(p(x)\)</span> for PMF but use <span class="math inline">\(P(X=x)\)</span> to describe the distribution of <span class="math inline">\(X\)</span> since we are going to use lots of <span class="math inline">\(p\)</span> below.</p>
 </blockquote>
+<blockquote>
+<p>The <a href="https://en.wikipedia.org/wiki/Support_(mathematics)#In_probability_and_measure_theory">support</a> of <span class="math inline">\(X\)</span> means the set <span class="math inline">\(\{x\in\mathbb{R} : P(X=x)&gt;0\}\)</span> for discrete <span class="math inline">\(X\)</span> or <span class="math inline">\(\{x\in\mathbb{R} : f(x)&gt;0\}\)</span> for continuous <span class="math inline">\(X\)</span> where <span class="math inline">\(f\)</span> is a PDF of <span class="math inline">\(X\)</span>.</p>
+</blockquote>
 <div id="bernoulli" class="section level2">
 <h2>Bernoulli</h2>
-<p>The support is <span class="math inline">\(\{0,1\}\)</span>, which is often interpreted as “failure” and “success” respectively. Naturally, it has a single “success” parameter <span class="math inline">\(p\in(0,1)\)</span> that specifies the probability of “success”, i.e. <span class="math inline">\(p = P(X=1)\)</span>.</p>
-<p>It serves as a fundamental building block and, as you will see below, many complex distributions can be modelled as a sequence of independent Bernoulli trials.</p>
+<p>The support is <span class="math inline">\(\{0,1\}\)</span>, which is often interpreted as “failure” and “success” respectively. Naturally, it has a single success parameter <span class="math inline">\(p\in(0,1)\)</span> that specifies the probability of “success”, i.e. <span class="math inline">\(p = P(X=1)\)</span>.</p>
+<p>Bernoulli distribution serves as a fundamental building block and, as you will see below, many complex distributions can be modelled as a sequence of independent Bernoulli trials.</p>
 <p><span class="math display">\[\begin{align}
   P(X=x) &amp;=
   \begin{cases}
@@ -1717,14 +1720,11 @@ These notes are based on Chapter 15 &amp; 16 of Jones, O., Maillardet, R., &amp;
                        &amp;= (0-p)^2\cdot(1-p) + (1-p)^2\cdot p\\
                        &amp;= p(1-p)
 \end{align}\]</span></p>
-<blockquote>
-<p>The <a href="https://en.wikipedia.org/wiki/Support_(mathematics)#In_probability_and_measure_theory">support</a> of <span class="math inline">\(X\)</span> means the set <span class="math inline">\(\{x\in\mathbb{R} : P(X=x)&gt;0\}\)</span> for discrete <span class="math inline">\(X\)</span> or <span class="math inline">\(\{x\in\mathbb{R} : f(x)&gt;0\}\)</span> for continuous <span class="math inline">\(X\)</span> where <span class="math inline">\(f\)</span> is the PDF of <span class="math inline">\(X\)</span>.</p>
-</blockquote>
 </div>
 <div id="binomial" class="section level2">
 <h2>Binomial</h2>
 <p>Imagine doing independent Bernoulli(<span class="math inline">\(p\)</span>) trials <span class="math inline">\(n\)</span> times. Let <span class="math inline">\(X\)</span> denote the number of <span class="math inline">\(1\)</span> out of <span class="math inline">\(n\)</span> trials. Then, <span class="math inline">\(X\sim \text{binom}(n,p)\)</span>.</p>
-<p>Formally, let <span class="math inline">\(B_1,\dots,B_n \sim \text{Bernoulli}(p)\)</span>. Then, <span class="math display">\[ X = B_1+\dots+B_n .\]</span> Given the <span class="math inline">\(n\)</span> Bernoulli trials, the support is <span class="math inline">\(\{0,1,\dots,n\}\)</span>.</p>
+<p>Formally, let <span class="math inline">\(B_1,\dots,B_n \sim \text{Bernoulli}(p)\)</span>. Then, <span class="math display">\[ X = B_1+\dots+B_n .\]</span> Due to the <span class="math inline">\(n\)</span> Bernoulli trials, the support is <span class="math inline">\(\{0,1,\dots,n\}\)</span>.</p>
 <p>In deriving the PMF, a key computation is to count the number of ways to choose <span class="math inline">\(x\)</span> trials that turn out <span class="math inline">\(1\)</span> from the total <span class="math inline">\(n\)</span> trials, commonly denoted by <span class="math inline">\(\binom{n}{x}\)</span>.</p>
 <p><span class="math display">\[\begin{align}
   P(X=x) &amp;= \binom{n}{x}p^x(1-p)^{n-x}\\\\
@@ -1757,20 +1757,20 @@ for (p in c(.2,.5,.7,.9)) {
 </div>
 <div id="poisson" class="section level2">
 <h2>Poisson</h2>
-<p>Imagine a large number of independent Bernoulli trials, in each of which success is very rare. For example, the number of car accidents in Melbourne in a single day, where each of thousands of drivers has a very small chance of accident.</p>
-<p>While we can use binom(<span class="math inline">\(n,p\)</span>) with large <span class="math inline">\(n\)</span> and small <span class="math inline">\(p\)</span>, we could be in trouble because computers cannot handle extremely large or small values very well. An alternative modelling option is pois(<span class="math inline">\(\lambda\)</span>) with <span class="math inline">\(\lambda\approx np\)</span>. Here is why.</p>
+<p>Imagine doing many independent Bernoulli(<span class="math inline">\(p\)</span>) trials, in each of which success is very rare. For example, the number of car accidents in Melbourne in a single day, where each of thousands of drivers has a very small chance of accident.</p>
+<p>While we may use <span class="math inline">\(\text{binom}(n,p)\)</span> with large <span class="math inline">\(n\)</span> and small <span class="math inline">\(p\)</span>, we could be in trouble because computers cannot handle extremely large or small values very well. An alternative modelling option is <span class="math inline">\(\text{pois}(\lambda)\)</span> with <span class="math inline">\(\lambda\approx np\)</span>. Here is why.</p>
 <p>Let <span class="math inline">\(Y_n \sim \text{binom}(n,p)\)</span> such that <span class="math inline">\(p=\lambda/n\)</span> for some <span class="math inline">\(\lambda&gt;0\)</span>. Then,</p>
 <p><span class="math display">\[\begin{align}
   P(Y_n=x) &amp;= \binom{n}{x}p^x(1-p)^{n-x}\\
-         &amp;= \frac{n\cdot(n-1)\dots(n-x+1)}{x!}\left(\frac{\lambda}{n}\right)^x\left(1-\frac{\lambda}{n}\right)^{n-x}\\
-         &amp;= 1\cdot\frac{n-1}{n}\dots\frac{n-x+1}{n}\frac{\lambda^x}{x!}\left(1-\frac{\lambda}{n}\right)^{n}\left(1-\frac{\lambda}{n}\right)^{-x}\\
-         &amp;\to 1\cdot 1\dots 1\frac{\lambda^x}{x!}e^{-\lambda}\cdot 1 \text{ as } n\to\infty\\
+         &amp;= \frac{n\cdot(n-1)\dotsm(n-x+1)}{x!}\left(\frac{\lambda}{n}\right)^x\left(1-\frac{\lambda}{n}\right)^{n-x}\\
+         &amp;= 1\cdot\frac{n-1}{n}\dotsm\frac{n-x+1}{n}\frac{\lambda^x}{x!}\left(1-\frac{\lambda}{n}\right)^{n}\left(1-\frac{\lambda}{n}\right)^{-x}\\
+         &amp;\to 1\cdot 1\dotsm 1\frac{\lambda^x}{x!}e^{-\lambda}1 \text{ as } n\to\infty\\
          &amp;= \frac{e^{-\lambda}\lambda^x}{x!}
 \end{align}\]</span></p>
-<p>which is the PMF of pois(<span class="math inline">\(\lambda\)</span>). The limit <span class="math display">\[ \lim_{n\to\infty} P(Y_n=x) = \frac{e^{-\lambda}\lambda^x}{x!} \]</span> is called the <em>law of rare events</em>.</p>
+<p>which is the PMF of <span class="math inline">\(\mathrm{pois}(\lambda)\)</span>. The limit <span class="math display">\[ \lim_{n\to\infty} P(Y_n=x) = \frac{e^{-\lambda}\lambda^x}{x!} \]</span> is called the <em>law of rare events</em>.</p>
 <p>As indicated by <span class="math inline">\(n\to\infty\)</span>, the support is <span class="math inline">\(\mathbb{Z}_{\geq0}=\{0,1,\dots\}\)</span>.</p>
 <p>Both mean and variance are equal to <span class="math inline">\(\lambda\)</span>.</p>
-<p>An important property of <span class="math inline">\(\text{pois}(\lambda)\)</span> is the following. If <span class="math inline">\(X_1,\dots,X_n\)</span> is an IID sequence of <span class="math inline">\(\text{pois}(\lambda)\)</span>, then <span class="math display">\[ X_1+\dots+X_n = \text{pois}(\lambda_1+\dots+\lambda_n) .\]</span> Here is a proof for <span class="math inline">\(n=2\)</span>, which lets us generalise to <span class="math inline">\(n&gt;2\)</span> by induction.</p>
+<p>An important property of <span class="math inline">\(\text{pois}(\lambda)\)</span> is the following. Suppose <span class="math inline">\(X_1,\dots,X_n\)</span> are independent Poisson random variables with the corresponding parameters <span class="math inline">\(\lambda_1,\dots\lambda_n\)</span>. Then, <span class="math display">\[ X_1+\dots+X_n = \text{pois}(\lambda_1+\dots+\lambda_n) .\]</span> Here is a proof for <span class="math inline">\(n=2\)</span>, which lets us generalise to <span class="math inline">\(n&gt;2\)</span> by induction.</p>
 <p><span class="math display">\[\begin{align}
   P(X_1+X_2=n) &amp;= \sum_{m=0}^n P(X_1=m)P(X_2=n-m)\\
                &amp;= \sum_{m=0}^n \frac{e^{-\lambda_1} \lambda_1^m}{m!}\cdot\frac{e^{-\lambda_2} \lambda_2^{n-m}}{(n-m)!}\\
@@ -1778,9 +1778,9 @@ for (p in c(.2,.5,.7,.9)) {
                &amp;= \frac{e^{-(\lambda_1+\lambda_2)} (\lambda_1+\lambda_2)^n}{n!}
 \end{align}\]</span></p>
 <p>because the summand is the PMF for <span class="math inline">\(\text{binom}\left(n,\frac{\lambda_1}{\lambda_1+\lambda_2}\right)\)</span>.</p>
-<p>Let’s compare <span class="math inline">\(X\sim \text{pois}(\lambda)\)</span> and <span class="math inline">\(Y\sim \text{binom}(n,p)\)</span> such that <span class="math inline">\(p=\lambda/n\)</span> with large <span class="math inline">\(n\)</span>. Suppose <span class="math inline">\(\lambda=1\)</span> for simplicity and <span class="math inline">\(n=10000\)</span>.</p>
+<p>Let’s compare <span class="math inline">\(X\sim \text{pois}(\lambda)\)</span> and <span class="math inline">\(Y\sim \text{binom}(n,p)\)</span> such that <span class="math inline">\(\lambda = np\)</span>. Suppose <span class="math inline">\(\lambda=1\)</span> for simplicity and <span class="math inline">\(n=10^4\)</span>.</p>
 <pre class="r fold-hide"><code>lambda &lt;- 1
-n &lt;- 10000
+n &lt;- 1e4
 x &lt;- c(0,2,5)</code></pre>
 <table>
 <thead>
@@ -1808,6 +1808,7 @@ x &lt;- c(0,2,5)</code></pre>
 </tr>
 </tbody>
 </table>
+<p>Even with a moderate <span class="math inline">\(n\)</span>, Poisson provides reasonable approximation of Binomial.</p>
 <p>Here are some of PMF plots with varying <span class="math inline">\(\lambda\)</span>.</p>
 <pre class="r fold-hide"><code>n &lt;- 12
 x &lt;- 0:n
@@ -1836,18 +1837,26 @@ for (l in c(.5,1,2,5)) {
 <p>We cannot really use <span class="math inline">\(\min\{ \}\)</span> because technically, albeit extremely unlikely, it may never happen.</p>
 </blockquote>
 <p>Given the definition, the support is <span class="math inline">\(\mathbb{Z}_{\geq0}=\{0,1,\dots\}\)</span>.</p>
-<p>The derivation of PMF is easier than binom(<span class="math inline">\(n,p\)</span>), as it simply continues to multiply the failure probability <span class="math inline">\(1-p\)</span> until the last success probability <span class="math inline">\(p\)</span>.</p>
+<p>The derivation of PMF is easier than <span class="math inline">\(\text{binom}(n,p)\)</span>, as it simply continues to multiply the failure probability <span class="math inline">\(1-p\)</span> until the last success probability <span class="math inline">\(p\)</span>.</p>
 <p><span class="math display">\[\begin{align}
-  P(X=x) &amp;= P(B_1=0,B_2=0,\dots,B_x=0,B_1=0))\\
-         &amp;= P(B_1=0)\dots P(B_x=0)P(B_1=0)\\
+  P(X=x) &amp;= P(B_1=0,B_2=0,\dots,B_x=0,B_{x+1}=1))\\
+         &amp;= P(B_1=0) \dotsm P(B_x=0)P(B_{x+1}=1)\\
          &amp;= (1-p)^xp\\\\
   \mathbb{E}X &amp;= \sum_{x=0}^\infty xP(X=x)\\
               &amp;= \sum_{x=0}^\infty x(1-p)^xp\\
+              &amp;= p(1-p)\sum_{x=0}^\infty x(1-p)^{x-1}\\
+              &amp;= p(1-p)\left(-\sum_{x=0}^\infty \frac{d}{dp}(1-p)^{x}\right)\\
+              &amp;= p(1-p)\frac{d}{dp}\left(-\sum_{x=0}^\infty (1-p)^{x}\right)\\
+              &amp;= p(1-p)\frac{d}{dp}\left(-\frac{1}{p}\right)\\
               &amp;= \frac{1-p}{p}\\\\
   \operatorname{Var} X &amp;= \mathbb{E}(X^2) - (\mathbb{E}X)^2\\
                        &amp;= \mathbb{E}(X(X-1))+\mathbb{E}X-(\mathbb{E}X)^2\\
                        &amp;= \frac{1-p}{p^2}
 \end{align}\]</span></p>
+<blockquote>
+<p>We may interchange the order of summation and differentiation in a geometric series.</p>
+</blockquote>
+<!-- https://online.stat.psu.edu/stat414/lesson/11/11.2 -->
 <p>Here are some of PMF plots with varying <span class="math inline">\(p\)</span>.</p>
 <pre class="r fold-hide"><code>n &lt;- 8
 x &lt;- 0:n
