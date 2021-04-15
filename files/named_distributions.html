@@ -2081,7 +2081,7 @@ f(x) =
 </div>
 <div id="poisson-process" class="section level1">
 <h1>Poisson process</h1>
-<p>The Poisson process is, in many ways, the continuous-time analogue of the Bernoulli process, namely a sequence of independent Bernoulli trials, which we use to motivate <a href="#binomial">Binomial</a>, <a href="#geometric">Geometric</a>, and <a href="#negative-binomial">Negative binomial</a>.</p>
+<p>The Poisson process is, in many ways, a continuous-time analogue of the Bernoulli process, namely a sequence of independent Bernoulli trials, which we use to motivate <a href="#binomial">Binomial</a>, <a href="#geometric">Geometric</a>, and <a href="#negative-binomial">Negative binomial</a>.</p>
 <p>Here is a summary of correspondences between discrete-time and continuous-time analogues in different modelling contexts.</p>
 <table>
 <thead>
@@ -2119,12 +2119,12 @@ f(x) =
 <h2>Discrete-time arrival process</h2>
 <p>Let <span class="math inline">\(\{B_i\}\)</span> be the Bernoulli process, where each of IID trials is <span class="math inline">\(B_i\sim\text{Bernoulli}(p)\)</span>. We may interpret the Bernoulli process in the following way:</p>
 <ul>
-<li>Each index <span class="math inline">\(i&gt;0\)</span> represents a time slot of equal length.</li>
+<li>Index <span class="math inline">\(i&gt;0\)</span> represents a time slot of equal length.</li>
 <li>At each slot, <span class="math inline">\(\text{Bernoulli}(p)\)</span> trial takes place.</li>
 <li><span class="math inline">\(B_i=1\)</span> represents “arrival” (previously, “success”).</li>
 </ul>
 <p>A discrete-time arrival process is a sequence <span class="math inline">\(S_1,S_2,\dots\)</span> of arrival time slots; that is, in <span class="math inline">\(S_j\)</span> time slot, the <span class="math inline">\(j\)</span>th arrival occurs (hence, <span class="math inline">\(S_j\geq j\)</span> and <span class="math inline">\(S_j=j\)</span> only if arrival happens in every slot up to <span class="math inline">\(j\)</span>).</p>
-<p>There is another associated counting process <span class="math inline">\(\{N(t) : t&gt;0\}\)</span>, where <span class="math inline">\(N(t)\)</span> gives the number of arrivals up to the time slot <span class="math inline">\(t\)</span> inclusive. Thus, for given <span class="math inline">\(t\)</span>, <span class="math inline">\(N(t) \sim \text{binom}(t,p)\)</span>. (<span class="math inline">\(t\)</span> here is a positive integer and plays a role of <span class="math inline">\(i\)</span>.)</p>
+<p>There is another associated counting process <span class="math inline">\(\{N(t) : t&gt;0\}\)</span>, where <span class="math inline">\(N(t)\)</span> gives the number of arrivals up to time slot <span class="math inline">\(t\)</span> inclusive. Thus, for given <span class="math inline">\(t\)</span>, <span class="math inline">\(N(t) \sim \text{binom}(t,p)\)</span>. (<span class="math inline">\(t\)</span> here is a positive integer and plays a role of <span class="math inline">\(i\)</span>.)</p>
 <p>Finally, there is also associated sequence <span class="math inline">\(X_1,X_2,\dots\)</span> of interarrival time slots, each of which follows <span class="math inline">\(\text{geom}(p)\)</span>. (N.B. This <span class="math inline">\(\text{geom}(p)\)</span> is the number of <em>trials</em> instead of <em>failure</em> as we define <a href="#geometric">above</a>.) It turns out that this last sequence of <span class="math inline">\(\text{geom}(p)\)</span> alone can fully specifies the Bernoulli process. That is, given <span class="math inline">\(\{X_j\}\)</span>, <span class="math inline">\(S_k = \sum_{j=1}^kX_j\)</span> for all <span class="math inline">\(k\geq1\)</span>, which in turn tells us when each arrival occurs.</p>
 <p>The reason for focusing on <span class="math inline">\(\{X_j\}\)</span> is because it is an IID process and much easier to define the joint distribution than <span class="math inline">\(\{S_j\}\)</span>.</p>
 <p>A mental picture may look like this:</p>
