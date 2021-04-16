@@ -1664,7 +1664,7 @@ These notes are based on Chapter 11 of Jones, O., Maillardet, R., &amp; Robinson
     &amp;= 18\pi\\
     &amp;\approx 56.5486677646
 \end{align}\]</span></p>
-<pre class="r"><code>test1 &lt;- function(x) return(x*sin(x)+5)
+<pre class="r"><code>test1 &lt;- function(x) x*sin(x)+5
 integrate(test1, 0, 3*pi) # R built-in function</code></pre>
 <pre><code>## 56.54867 with absolute error &lt; 8e-12</code></pre>
 </div>
@@ -1684,7 +1684,7 @@ axis(1, at=x, labels=letters)
 from_x &lt;- c(0, .5*pi, pi, 1.5*pi, 2*pi, 2.5*pi, 3*pi)
 from_y &lt;- rep(0,7)
 to_x &lt;- from_x
-to_y &lt;- sapply(from_x, function(x) return(x*sin(x)+5))
+to_y &lt;- sapply(from_x, function(x) x*sin(x)+5)
 segments(from_x, from_y, to_x, to_y, lty=3)
 
 from_x &lt;- from_x[-length(from_x)]
@@ -1859,7 +1859,7 @@ segments(from_x, from_y, to_x, to_y, lty=3)</code></pre>
   re[2] &lt;- re[2] + 3 # due to f.a, f.b, and f.c above
   return(re)
 }</code></pre>
-<pre class="r"><code>test2 &lt;- function(x) return(ifelse(x&gt;0, -4*x*log(x), 0))</code></pre>
+<pre class="r"><code>test2 &lt;- function(x) ifelse(x&gt;0, -4*x*log(x), 0)</code></pre>
 <pre class="r"><code>aq(test2, 0, 1, 1e-4)</code></pre>
 <pre><code>## [1]  0.9999983 57.0000000</code></pre>
 <p>Let’s see how large <span class="math inline">\(n\)</span> should be if we use Simpson’s rule.</p>
