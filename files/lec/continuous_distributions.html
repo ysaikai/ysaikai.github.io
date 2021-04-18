@@ -604,10 +604,17 @@ f(x) =
        &amp;= 1-e^{-\lambda x}
 \end{align}\]</span></p>
 <p>In practice, <span class="math inline">\(\mathrm{exp}(\lambda)\)</span> is often used to model <strong>waiting time</strong>. For given waiting time <span class="math inline">\(x\)</span>, large <span class="math inline">\(\lambda\)</span> implies fast arrival rate and high probability of arrival, indicated by <span class="math inline">\(F(x)\)</span> as an increasing function of <span class="math inline">\(\lambda\)</span>.</p>
-<p>In contrast, given any arrival rate <span class="math inline">\(\lambda\)</span>, if we wait forever (<span class="math inline">\(x\to\infty\)</span>), it almost surely arrives as indicated by <span class="math inline">\(F(x)\to 1\)</span>.</p>
+<p>In contrast, given any arrival rate <span class="math inline">\(\lambda\)</span>, if we wait forever <span class="math inline">\((x\to\infty)\)</span>, it almost surely arrives as indicated by <span class="math inline">\(F(x)\to 1\)</span>.</p>
 <div id="memoryless-property" class="section level3">
 <h3>Memoryless property</h3>
 <p>Unique to <span class="math inline">\(\mathrm{exp}(\lambda)\)</span> is the so-called momoryless property, which can be expressed as follows. <span class="math display">\[ P(X&gt;t+s | X&gt;t) = P(X&gt;s) \;\text{ for } s,t&gt;0 .\]</span></p>
+<p>A proof simple. <span class="math display">\[\begin{align}
+P(X&gt;t+s | X&gt;t) &amp;= \frac{P(X&gt;t+s, X&gt;t)}{P(X&gt;t)}\\
+               &amp;= \frac{P(X&gt;t+s)}{P(X&gt;t)}\\
+               &amp;= \frac{e^{-\lambda(t+s)}}{e^{-\lambda(t)}}\\
+               &amp;= e^{-\lambda s}\\
+               &amp;= P(X&gt;s)
+\end{align}\]</span></p>
 <p>To illustrate, let’s use <span class="math inline">\(\mathrm{exp}(\lambda)\)</span> to model the waiting time for an elevator. Suppose <span class="math inline">\(\lambda = 0.5\)</span>. Then, the probability that an elevator arrives within 4 minutes, is <span class="math inline">\(F(4) = 0.86\)</span>.</p>
 <p>Today is your bad day, and it has not come after waiting for 4 minutes. Now, you wonder “Since I already waited for so long and I know <span class="math inline">\(F(5) = 0.92\)</span> (nerd!), it will very likely come within a minute.”</p>
 <p>The memoryless property says “Not really. It will come only with <span class="math inline">\(F(1) = 0.39\)</span> chance.” In other words, if your mental model relies on <span class="math inline">\(\mathrm{exp}(\lambda)\)</span>, the fact that you have already waited for so long is totally irrelevant.</p>
