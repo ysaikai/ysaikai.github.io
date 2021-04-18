@@ -543,13 +543,13 @@ These notes are based on Chapter 16 of Jones, O., Maillardet, R., &amp; Robinson
 <td>Weibull</td>
 <td><code>weibull</code></td>
 <td><code>shape</code>, <code>scale</code></td>
-<td><span class="math inline">\(\mathrm{Weibull}(m,\lambda)\)</span></td>
+<td><span class="math inline">\(\mathrm{weibull}(m,\lambda)\)</span></td>
 </tr>
 <tr class="even">
 <td>Gamma</td>
 <td><code>gamma</code></td>
 <td><code>shape</code>, <code>rate</code></td>
-<td><span class="math inline">\(\text{Gamma}(m,\lambda)\)</span></td>
+<td><span class="math inline">\(\text{gamma}(m,\lambda)\)</span></td>
 </tr>
 <tr class="odd">
 <td>Normal</td>
@@ -616,7 +616,7 @@ f(x) =
 <div id="weibull" class="section level2">
 <h2>Weibull</h2>
 <p>When modelling arrival of bad things (e.g., mechanical failure or disaster), we often phrase it as <strong>survival</strong>, simply meaning the negation of arrival. In probabilistic terms, if <span class="math inline">\(F(x)\)</span> is the probability that a failure happens by the time <span class="math inline">\(x\)</span>, <span class="math inline">\(1-F(x)\)</span> is the probability of survival until the time <span class="math inline">\(x\)</span>.</p>
-<p>While <span class="math inline">\(\mathrm{exp}(\lambda)\)</span> can be used, <span class="math inline">\(\mathrm{Weibull}(m,\lambda)\)</span> provides a more general framework, which is often more suitable for survival analysis. The PDF <span class="math inline">\(f(x)\)</span> and CDF <span class="math inline">\(F(x)\)</span> are given below.</p>
+<p>While <span class="math inline">\(\mathrm{exp}(\lambda)\)</span> can be used, <span class="math inline">\(\mathrm{weibull}(m,\lambda)\)</span> provides a more general framework, which is often more suitable for survival analysis. The PDF <span class="math inline">\(f(x)\)</span> and CDF <span class="math inline">\(F(x)\)</span> are given below.</p>
 <p><span class="math display">\[\begin{align}
   f(x) &amp;= 
   \begin{cases}
@@ -638,24 +638,24 @@ f(x) =
        &amp;= \frac{d}{dx}\left[1-\exp\left(-\int_0^x \lambda(t)dt\right)\right]\\
        &amp;= \lambda(x)\exp\left(-\int_0^x \lambda(t)dt\right),
 \end{align}\]</span></p>
-<p>which is the PDF of <span class="math inline">\(\mathrm{Weibull}(m,\lambda)\)</span> if <span class="math inline">\(\lambda(x) = m\lambda x^{m-1}\)</span>.</p>
+<p>which is the PDF of <span class="math inline">\(\mathrm{weibull}(m,\lambda)\)</span> if <span class="math inline">\(\lambda(x) = m\lambda x^{m-1}\)</span>.</p>
 </div>
 <div id="r-parameterisation" class="section level3">
 <h3>R parameterisation</h3>
 <p>This is unfortunately confusing but important to note. The R parameterisation of the Weibull distribution differs from that presented here. <code>shape</code> parameter in R simply corresponds to <span class="math inline">\(m\)</span>. But, <code>scale</code> in R corresponds to <span class="math inline">\(\lambda^{-1/m}\)</span>.</p>
-<p>For example, to simulate <span class="math inline">\(\mathrm{Weibull}(m,\lambda)\)</span> with <span class="math inline">\(m=0.5\)</span> and <span class="math inline">\(\lambda=2\)</span>, give</p>
+<p>For example, to simulate <span class="math inline">\(\mathrm{weibull}(m,\lambda)\)</span> with <span class="math inline">\(m=0.5\)</span> and <span class="math inline">\(\lambda=2\)</span>, give</p>
 <ul>
 <li><code>shape=0.5</code></li>
 <li><code>scale=2^(-1/0.5)</code></li>
 </ul>
-<p>to each of <a href="#continuous-distributions">R built-in functions</a> for <span class="math inline">\(\mathrm{Weibull}(m,\lambda)\)</span>.</p>
+<p>to each of <a href="#continuous-distributions">R built-in functions</a> for <span class="math inline">\(\mathrm{weibull}(m,\lambda)\)</span>.</p>
 </div>
 </div>
 <div id="gamma" class="section level2">
 <h2>Gamma</h2>
 <p>As seen in <a href="#exponential">Exponential</a>, <span class="math inline">\(\text{exp}(\lambda)\)</span> is commonly used to model waiting time. Dividing the continuous time line into small intervals of equal length, we may model waiting-time problems using <span class="math inline">\(\text{geom}(p)\)</span>, which is a sequence of IID <span class="math inline">\(\text{Bernoulli}(p)\)</span>. That is, at each interval, <span class="math inline">\(\text{Bernoulli}(p)\)</span> represents an occurrence of arrival.</p>
-<p>Remember that if we add <span class="math inline">\(r\)</span> number of IID <span class="math inline">\(\text{geom}(p)\)</span>, we get <span class="math inline">\(\text{nbinom}(r,p)\)</span>. Therefore, it is natural to wonder what if we add <span class="math inline">\(m\)</span> number of IID <span class="math inline">\(\text{exp}(\lambda)\)</span>. The answer is <span class="math inline">\(\text{Gamma}(m,\lambda)\)</span>.</p>
-<p>Let <span class="math inline">\(X = Y_1+\dots+Y_m\)</span> such that <span class="math inline">\(Y_i\sim\text{exp}(\lambda)\)</span> for all <span class="math inline">\(i\in\{1,\dots,m\}\)</span>. Then, <span class="math inline">\(X\)</span> follows <span class="math inline">\(\text{Gamma}(m,\lambda)\)</span>.</p>
+<p>Remember that if we add <span class="math inline">\(r\)</span> number of IID <span class="math inline">\(\text{geom}(p)\)</span>, we get <span class="math inline">\(\text{nbinom}(r,p)\)</span>. Therefore, it is natural to wonder what if we add <span class="math inline">\(m\)</span> number of IID <span class="math inline">\(\text{exp}(\lambda)\)</span>. The answer is <span class="math inline">\(\text{gamma}(m,\lambda)\)</span>.</p>
+<p>Let <span class="math inline">\(X = Y_1+\dots+Y_m\)</span> such that <span class="math inline">\(Y_i\sim\text{exp}(\lambda)\)</span> for all <span class="math inline">\(i\in\{1,\dots,m\}\)</span>. Then, <span class="math inline">\(X\)</span> follows <span class="math inline">\(\text{gamma}(m,\lambda)\)</span>.</p>
 </div>
 <div id="normal" class="section level2">
 <h2>Normal</h2>
