@@ -741,7 +741,6 @@ for (l in c(.5,1,2,5)) {
 <blockquote>
 <p>We may interchange the order of summation and differentiation in geometric series.</p>
 </blockquote>
-<!-- https://online.stat.psu.edu/stat414/lesson/11/11.2 -->
 <p>Here are some of PMF plots with varying <span class="math inline">\(p\)</span>.</p>
 <pre class="r fold-hide"><code>n &lt;- 8
 x &lt;- 0:n
@@ -761,7 +760,7 @@ for (p in c(.2,.4,.6,.8)) {
 </div>
 <div id="negative-binomial" class="section level2">
 <h2>Negative binomial</h2>
-<p>Despite the possibly confusing name, this is simply a generalised version of the geometric distribution: instead of the first success, we wait until <span class="math inline">\(r\)</span> successes.</p>
+<p>Despite the possibly confusing name, this is simply a generalised version of geometric distribution: instead of the first success, we wait until <span class="math inline">\(r\)</span> successes.</p>
 <p>Imagine doing independent <span class="math inline">\(\mathrm{Bernoulli}(p)\)</span> trials indefinitely until we see <span class="math inline">\(r\)</span> successes. Let <span class="math inline">\(X\)</span> denote the number of <span class="math inline">\(0\)</span> before getting <span class="math inline">\(r\)</span> number of <span class="math inline">\(1\)</span>s. Then, <span class="math inline">\(X\sim \text{nbinom}(r,p)\)</span>.</p>
 <p>Conveniently, we may see <span class="math inline">\(X\sim \text{nbinom}(r,p)\)</span> as the sum of <span class="math inline">\(r\)</span> independent <span class="math inline">\(\text{geom}(p)\)</span> random variables. Thus, the mean and variance are particularly easy to compute:</p>
 <p><span class="math display">\[\begin{align}
