@@ -595,7 +595,7 @@ These notes are based on Chapter 15 of Jones, O., Maillardet, R., &amp; Robinson
 </div>
 <div id="binomial" class="section level2">
 <h2>Binomial</h2>
-<p>Imagine doing independent <span class="math inline">\(\mathrm{Bernoulli}(p)\)</span> trials <span class="math inline">\(n\)</span> times. Let <span class="math inline">\(X\)</span> denote the number of <span class="math inline">\(1\)</span> out of <span class="math inline">\(n\)</span> trials. Then, <span class="math inline">\(X\sim \text{binom}(n,p)\)</span>.</p>
+<p>Imagine doing independent <span class="math inline">\(\mathrm{Bernoulli}(p)\)</span> trials <span class="math inline">\(n\)</span> times. Let <span class="math inline">\(X\)</span> denote the number of <span class="math inline">\(1\)</span>s from <span class="math inline">\(n\)</span> trials. Then, <span class="math inline">\(X\sim \text{binom}(n,p)\)</span>.</p>
 <p>Formally, let <span class="math inline">\(B_1,\dots,B_n \sim \text{Bernoulli}(p)\)</span>. Then, <span class="math display">\[ X = B_1+\dots+B_n .\]</span> Due to the <span class="math inline">\(n\)</span> Bernoulli trials, the support is <span class="math inline">\(\{0,1,\dots,n\}\)</span>.</p>
 <p>In deriving the PMF, key computation is to count the number of ways to choose <span class="math inline">\(x\)</span> trials that turn out <span class="math inline">\(1\)</span> from the total <span class="math inline">\(n\)</span> trials, commonly denoted by <span class="math inline">\(\binom{n}{x}\)</span>.</p>
 <p><span class="math display">\[\begin{align}
@@ -741,6 +741,7 @@ for (l in c(.5,1,2,5)) {
 <blockquote>
 <p>We may interchange the order of summation and differentiation in geometric series.</p>
 </blockquote>
+<!-- https://online.stat.psu.edu/stat414/lesson/11/11.2 -->
 <p>Here are some of PMF plots with varying <span class="math inline">\(p\)</span>.</p>
 <pre class="r fold-hide"><code>n &lt;- 8
 x &lt;- 0:n
