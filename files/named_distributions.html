@@ -1723,7 +1723,7 @@ These notes are based on Chapter 15 &amp; 16 of Jones, O., Maillardet, R., &amp;
 </div>
 <div id="binomial" class="section level2">
 <h2>Binomial</h2>
-<p>Imagine doing independent <span class="math inline">\(\mathrm{Bernoulli}(p)\)</span> trials <span class="math inline">\(n\)</span> times. Let <span class="math inline">\(X\)</span> denote the number of <span class="math inline">\(1\)</span> out of <span class="math inline">\(n\)</span> trials. Then, <span class="math inline">\(X\sim \text{binom}(n,p)\)</span>.</p>
+<p>Imagine doing independent <span class="math inline">\(\mathrm{Bernoulli}(p)\)</span> trials <span class="math inline">\(n\)</span> times. Let <span class="math inline">\(X\)</span> denote the number of <span class="math inline">\(1\)</span>s from <span class="math inline">\(n\)</span> trials. Then, <span class="math inline">\(X\sim \text{binom}(n,p)\)</span>.</p>
 <p>Formally, let <span class="math inline">\(B_1,\dots,B_n \sim \text{Bernoulli}(p)\)</span>. Then, <span class="math display">\[ X = B_1+\dots+B_n .\]</span> Due to the <span class="math inline">\(n\)</span> Bernoulli trials, the support is <span class="math inline">\(\{0,1,\dots,n\}\)</span>.</p>
 <p>In deriving the PMF, key computation is to count the number of ways to choose <span class="math inline">\(x\)</span> trials that turn out <span class="math inline">\(1\)</span> from the total <span class="math inline">\(n\)</span> trials, commonly denoted by <span class="math inline">\(\binom{n}{x}\)</span>.</p>
 <p><span class="math display">\[\begin{align}
@@ -1889,7 +1889,7 @@ for (p in c(.2,.4,.6,.8)) {
 </div>
 <div id="negative-binomial" class="section level2">
 <h2>Negative binomial</h2>
-<p>Despite the possibly confusing name, this is simply a generalised version of the geometric distribution: instead of the first success, we wait until <span class="math inline">\(r\)</span> successes.</p>
+<p>Despite the possibly confusing name, this is simply a generalised version of geometric distribution: instead of the first success, we wait until <span class="math inline">\(r\)</span> successes.</p>
 <p>Imagine doing independent <span class="math inline">\(\mathrm{Bernoulli}(p)\)</span> trials indefinitely until we see <span class="math inline">\(r\)</span> successes. Let <span class="math inline">\(X\)</span> denote the number of <span class="math inline">\(0\)</span> before getting <span class="math inline">\(r\)</span> number of <span class="math inline">\(1\)</span>s. Then, <span class="math inline">\(X\sim \text{nbinom}(r,p)\)</span>.</p>
 <p>Conveniently, we may see <span class="math inline">\(X\sim \text{nbinom}(r,p)\)</span> as the sum of <span class="math inline">\(r\)</span> independent <span class="math inline">\(\text{geom}(p)\)</span> random variables. Thus, the mean and variance are particularly easy to compute:</p>
 <p><span class="math display">\[\begin{align}
@@ -1944,13 +1944,13 @@ for (p in c(.2,.4,.6,.8)) {
 <td>Weibull</td>
 <td><code>weibull</code></td>
 <td><code>shape</code>, <code>scale</code></td>
-<td><span class="math inline">\(\mathrm{Weibull}(m,\lambda)\)</span></td>
+<td><span class="math inline">\(\mathrm{weibull}(m,\lambda)\)</span></td>
 </tr>
 <tr class="even">
 <td>Gamma</td>
 <td><code>gamma</code></td>
 <td><code>shape</code>, <code>rate</code></td>
-<td><span class="math inline">\(\text{Gamma}(m,\lambda)\)</span></td>
+<td><span class="math inline">\(\text{gamma}(m,\lambda)\)</span></td>
 </tr>
 <tr class="odd">
 <td>Normal</td>
@@ -1970,7 +1970,7 @@ for (p in c(.2,.4,.6,.8)) {
 <div id="uniform" class="section level2">
 <h2>Uniform</h2>
 <p><span class="math inline">\(X\sim \mathrm{U}(a,b)\)</span> if the support of <span class="math inline">\(X\)</span> is an interval <span class="math inline">\([a,b]\)</span> and the density is independent of location <span class="math inline">\(x\)</span>.</p>
-<p>Deriving the PDF of <span class="math inline">\(X\)</span> highlights key ideas common in many continuous distributions, let’s do it explicitly here. The ideas to recall are:</p>
+<p>Deriving the PDF of <span class="math inline">\(X\)</span> highlights key ideas common in many continuous distributions. The ideas to recall are:</p>
 <ul>
 <li><span class="math inline">\(f(x)\)</span> is equal to <span class="math inline">\(0\)</span> for <span class="math inline">\(x\)</span> outside the support,</li>
 <li><span class="math inline">\(f(x)\)</span> integrates to <span class="math inline">\(1\)</span> over the real line.</li>
@@ -2004,11 +2004,18 @@ f(x) =
        &amp;= \int_0^x \lambda e^{-\lambda t} dt\\
        &amp;= 1-e^{-\lambda x}
 \end{align}\]</span></p>
-<p>In practice, <span class="math inline">\(\mathrm{exp}(\lambda)\)</span> is often used to model <strong>waiting time</strong>. For given waiting time <span class="math inline">\(x\)</span>, a larger <span class="math inline">\(\lambda\)</span> is used for a faster arriving rate, with which <span class="math inline">\(F(x)\)</span> implies a higher probability of arrival.</p>
+<p>In practice, <span class="math inline">\(\mathrm{exp}(\lambda)\)</span> is often used to model <strong>waiting time</strong>. For given waiting time <span class="math inline">\(x\)</span>, large <span class="math inline">\(\lambda\)</span> implies fast arrival rate and high probability of arrival, indicated by <span class="math inline">\(F(x)\)</span> as an increasing function of <span class="math inline">\(\lambda\)</span>.</p>
 <p>In contrast, given any arrival rate <span class="math inline">\(\lambda\)</span>, if we wait forever (<span class="math inline">\(x\to\infty\)</span>), it almost surely arrives as indicated by <span class="math inline">\(F(x)\to 1\)</span>.</p>
 <div id="memoryless-property" class="section level3">
 <h3>Memoryless property</h3>
 <p>Unique to <span class="math inline">\(\mathrm{exp}(\lambda)\)</span> is the so-called momoryless property, which can be expressed as follows. <span class="math display">\[ P(X&gt;t+s | X&gt;t) = P(X&gt;s) \;\text{ for } s,t&gt;0 .\]</span></p>
+<p>A proof simple. <span class="math display">\[\begin{align}
+P(X&gt;t+s | X&gt;t) &amp;= \frac{P(X&gt;t+s, X&gt;t)}{P(X&gt;t)}\\
+               &amp;= \frac{P(X&gt;t+s)}{P(X&gt;t)}\\
+               &amp;= \frac{e^{-\lambda(t+s)}}{e^{-\lambda(t)}}\\
+               &amp;= e^{-\lambda s}\\
+               &amp;= P(X&gt;s)
+\end{align}\]</span></p>
 <p>To illustrate, let’s use <span class="math inline">\(\mathrm{exp}(\lambda)\)</span> to model the waiting time for an elevator. Suppose <span class="math inline">\(\lambda = 0.5\)</span>. Then, the probability that an elevator arrives within 4 minutes, is <span class="math inline">\(F(4) = 0.86\)</span>.</p>
 <p>Today is your bad day, and it has not come after waiting for 4 minutes. Now, you wonder “Since I already waited for so long and I know <span class="math inline">\(F(5) = 0.92\)</span> (nerd!), it will very likely come within a minute.”</p>
 <p>The memoryless property says “Not really. It will come only with <span class="math inline">\(F(1) = 0.39\)</span> chance.” In other words, if your mental model relies on <span class="math inline">\(\mathrm{exp}(\lambda)\)</span>, the fact that you have already waited for so long is totally irrelevant.</p>
@@ -2017,7 +2024,7 @@ f(x) =
 <div id="weibull" class="section level2">
 <h2>Weibull</h2>
 <p>When modelling arrival of bad things (e.g., mechanical failure or disaster), we often phrase it as <strong>survival</strong>, simply meaning the negation of arrival. In probabilistic terms, if <span class="math inline">\(F(x)\)</span> is the probability that a failure happens by the time <span class="math inline">\(x\)</span>, <span class="math inline">\(1-F(x)\)</span> is the probability of survival until the time <span class="math inline">\(x\)</span>.</p>
-<p>While <span class="math inline">\(\mathrm{exp}(\lambda)\)</span> can be used, <span class="math inline">\(\mathrm{Weibull}(m,\lambda)\)</span> provides a more general framework, which is often more suitable for survival analysis. The PDF <span class="math inline">\(f(x)\)</span> and CDF <span class="math inline">\(F(x)\)</span> are given below.</p>
+<p>While <span class="math inline">\(\mathrm{exp}(\lambda)\)</span> can be used, <span class="math inline">\(\mathrm{weibull}(m,\lambda)\)</span> provides a more general framework, which is often more suitable for survival analysis. The PDF <span class="math inline">\(f(x)\)</span> and CDF <span class="math inline">\(F(x)\)</span> are given below.</p>
 <p><span class="math display">\[\begin{align}
   f(x) &amp;= 
   \begin{cases}
@@ -2039,24 +2046,24 @@ f(x) =
        &amp;= \frac{d}{dx}\left[1-\exp\left(-\int_0^x \lambda(t)dt\right)\right]\\
        &amp;= \lambda(x)\exp\left(-\int_0^x \lambda(t)dt\right),
 \end{align}\]</span></p>
-<p>which is the PDF of <span class="math inline">\(\mathrm{Weibull}(m,\lambda)\)</span> if <span class="math inline">\(\lambda(x) = m\lambda x^{m-1}\)</span>.</p>
+<p>which is the PDF of <span class="math inline">\(\mathrm{weibull}(m,\lambda)\)</span> if <span class="math inline">\(\lambda(x) = m\lambda x^{m-1}\)</span>.</p>
 </div>
 <div id="r-parameterisation" class="section level3">
 <h3>R parameterisation</h3>
 <p>This is unfortunately confusing but important to note. The R parameterisation of the Weibull distribution differs from that presented here. <code>shape</code> parameter in R simply corresponds to <span class="math inline">\(m\)</span>. But, <code>scale</code> in R corresponds to <span class="math inline">\(\lambda^{-1/m}\)</span>.</p>
-<p>For example, to simulate <span class="math inline">\(\mathrm{Weibull}(m,\lambda)\)</span> with <span class="math inline">\(m=0.5\)</span> and <span class="math inline">\(\lambda=2\)</span>, give</p>
+<p>For example, to simulate <span class="math inline">\(\mathrm{weibull}(m,\lambda)\)</span> with <span class="math inline">\(m=0.5\)</span> and <span class="math inline">\(\lambda=2\)</span>, give</p>
 <ul>
 <li><code>shape=0.5</code></li>
 <li><code>scale=2^(-1/0.5)</code></li>
 </ul>
-<p>to each of <a href="#continuous-distributions">R built-in functions</a> for <span class="math inline">\(\mathrm{Weibull}(m,\lambda)\)</span>.</p>
+<p>to each of <a href="#continuous-distributions">R built-in functions</a> for <span class="math inline">\(\mathrm{weibull}(m,\lambda)\)</span>.</p>
 </div>
 </div>
 <div id="gamma" class="section level2">
 <h2>Gamma</h2>
 <p>As seen in <a href="#exponential">Exponential</a>, <span class="math inline">\(\text{exp}(\lambda)\)</span> is commonly used to model waiting time. Dividing the continuous time line into small intervals of equal length, we may model waiting-time problems using <span class="math inline">\(\text{geom}(p)\)</span>, which is a sequence of IID <span class="math inline">\(\text{Bernoulli}(p)\)</span>. That is, at each interval, <span class="math inline">\(\text{Bernoulli}(p)\)</span> represents an occurrence of arrival.</p>
-<p>Remember that if we add <span class="math inline">\(r\)</span> number of IID <span class="math inline">\(\text{geom}(p)\)</span>, we get <span class="math inline">\(\text{nbinom}(r,p)\)</span>. Therefore, it is natural to wonder what if we add <span class="math inline">\(m\)</span> number of IID <span class="math inline">\(\text{exp}(\lambda)\)</span>. The answer is <span class="math inline">\(\text{Gamma}(m,\lambda)\)</span>.</p>
-<p>Let <span class="math inline">\(X = Y_1+\dots+Y_m\)</span> such that <span class="math inline">\(Y_i\sim\text{exp}(\lambda)\)</span> for all <span class="math inline">\(i\in\{1,\dots,m\}\)</span>. Then, <span class="math inline">\(X\)</span> follows <span class="math inline">\(\text{Gamma}(m,\lambda)\)</span>.</p>
+<p>Remember that if we add <span class="math inline">\(r\)</span> number of IID <span class="math inline">\(\text{geom}(p)\)</span>, we get <span class="math inline">\(\text{nbinom}(r,p)\)</span>. Therefore, it is natural to wonder what if we add <span class="math inline">\(m\)</span> number of IID <span class="math inline">\(\text{exp}(\lambda)\)</span>. The answer is <span class="math inline">\(\text{gamma}(m,\lambda)\)</span>.</p>
+<p>Let <span class="math inline">\(X = Y_1+\dots+Y_m\)</span> such that <span class="math inline">\(Y_i\sim\text{exp}(\lambda)\)</span> for all <span class="math inline">\(i\in\{1,\dots,m\}\)</span>. Then, <span class="math inline">\(X\)</span> follows <span class="math inline">\(\text{gamma}(m,\lambda)\)</span>.</p>
 </div>
 <div id="normal" class="section level2">
 <h2>Normal</h2>
