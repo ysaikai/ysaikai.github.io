@@ -578,7 +578,7 @@ These notes are based on Chapter 15 of Jones, O., Maillardet, R., &amp; Robinson
 <div id="bernoulli" class="section level2">
 <h2>Bernoulli</h2>
 <p>The support is <span class="math inline">\(\{0,1\}\)</span>, which is often interpreted as “failure” and “success” respectively. Naturally, it has a single success parameter <span class="math inline">\(p\in(0,1)\)</span> that specifies the probability of “success”, i.e. <span class="math inline">\(p = P(X=1)\)</span>.</p>
-<p>Bernoulli distribution serves as a fundamental building block and, as you will see below, many complex distributions can be modelled as a sequence of independent Bernoulli trials.</p>
+<p>Bernoulli distribution serves as a building block and, as you will see below, many complex distributions are modelled as a sequence of independent Bernoulli trials.</p>
 <p><span class="math display">\[\begin{align}
   P(X=x) &amp;=
   \begin{cases}
@@ -597,7 +597,7 @@ These notes are based on Chapter 15 of Jones, O., Maillardet, R., &amp; Robinson
 <h2>Binomial</h2>
 <p>Imagine doing independent <span class="math inline">\(\mathrm{Bernoulli}(p)\)</span> trials <span class="math inline">\(n\)</span> times. Let <span class="math inline">\(X\)</span> denote the number of <span class="math inline">\(1\)</span> out of <span class="math inline">\(n\)</span> trials. Then, <span class="math inline">\(X\sim \text{binom}(n,p)\)</span>.</p>
 <p>Formally, let <span class="math inline">\(B_1,\dots,B_n \sim \text{Bernoulli}(p)\)</span>. Then, <span class="math display">\[ X = B_1+\dots+B_n .\]</span> Due to the <span class="math inline">\(n\)</span> Bernoulli trials, the support is <span class="math inline">\(\{0,1,\dots,n\}\)</span>.</p>
-<p>In deriving the PMF, a key computation is to count the number of ways to choose <span class="math inline">\(x\)</span> trials that turn out <span class="math inline">\(1\)</span> from the total <span class="math inline">\(n\)</span> trials, commonly denoted by <span class="math inline">\(\binom{n}{x}\)</span>.</p>
+<p>In deriving the PMF, key computation is to count the number of ways to choose <span class="math inline">\(x\)</span> trials that turn out <span class="math inline">\(1\)</span> from the total <span class="math inline">\(n\)</span> trials, commonly denoted by <span class="math inline">\(\binom{n}{x}\)</span>.</p>
 <p><span class="math display">\[\begin{align}
   P(X=x) &amp;= \binom{n}{x}p^x(1-p)^{n-x}\\\\
   \mathbb{E}X &amp;= \mathbb{E}(B_1+\dots+B_n)\\
@@ -720,15 +720,27 @@ for (l in c(.5,1,2,5)) {
               &amp;= p(1-p)\left(-\sum_{x=0}^\infty \frac{d}{dp}(1-p)^{x}\right)\\
               &amp;= p(1-p)\frac{d}{dp}\left(-\sum_{x=0}^\infty (1-p)^{x}\right)\\
               &amp;= p(1-p)\frac{d}{dp}\left(-\frac{1}{p}\right)\\
-              &amp;= \frac{1-p}{p}\\\\
-  \operatorname{Var} X &amp;= \mathbb{E}(X^2) - (\mathbb{E}X)^2\\
-                       &amp;= \mathbb{E}(X(X-1))+\mathbb{E}X-(\mathbb{E}X)^2\\
-                       &amp;= \frac{1-p}{p^2}
+              &amp;= \frac{1-p}{p}
+\end{align}\]</span></p>
+<p>For the variance, let’s first compute <span class="math inline">\(\mathbb{E}[X(X-1)]\)</span>. <span class="math display">\[\begin{align}
+\mathbb{E}[X(X-1)]
+  &amp;= \sum_{x=0}^\infty x(x-1)(1-p)^xp\\
+  &amp;= \sum_{x=2}^\infty p(1-p)^2x(x-1)(1-p)^{x-2}\\
+  &amp;= p(1-p)^2 \sum_{x=2}^\infty \frac{d^2}{dp^2}(1-p)^{x-2}\\
+  &amp;= p(1-p)^2 \frac{d^2}{dp^2}\sum_{x=2}^\infty (1-p)^{x-2}\\
+  &amp;= p(1-p)^2 \frac{d^2}{dp^2}\frac{1}{p}\\
+  &amp;= \frac{2(1-p)^2}{p^2}\\
+\end{align}\]</span></p>
+<p>Now, <span class="math display">\[\begin{align}
+\operatorname{Var} X
+  &amp;= \mathbb{E}X^2 - (\mathbb{E}X)^2\\
+  &amp;= \mathbb{E}[X(X-1)] + \mathbb{E}X - (\mathbb{E}X)^2\\
+  &amp;= \frac{2(1-p)^2}{p^2} + \frac{1-p}{p} - \frac{(1-p)^2}{p^2}\\
+  &amp;= \frac{1-p}{p^2}
 \end{align}\]</span></p>
 <blockquote>
-<p>We may interchange the order of summation and differentiation in a geometric series.</p>
+<p>We may interchange the order of summation and differentiation in geometric series.</p>
 </blockquote>
-<!-- https://online.stat.psu.edu/stat414/lesson/11/11.2 -->
 <p>Here are some of PMF plots with varying <span class="math inline">\(p\)</span>.</p>
 <pre class="r fold-hide"><code>n &lt;- 8
 x &lt;- 0:n
