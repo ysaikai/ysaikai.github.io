@@ -28,11 +28,11 @@ The topics are subject to change. Some topics are heavier than others, taking mo
 | 4 | [Numerical integration](/files/numerical_integration.html){:target="_blank" rel="noopener"} |
 | 5 | [Ordinary differential equations](/files/differential_equation.html){:target="_blank" rel="noopener"} |
 | 6 | [Probability theory](/files/probability_theory.html){:target="_blank" rel="noopener"} |
-| 7 | [Discrete distributions](/files/named_distributions.html#discrete-distributions){:target="_blank" rel="noopener"} |
-| 8 | [Continuous distributions](/files/named_distributions.html#continuous-distributions){:target="_blank" rel="noopener"} |
+| 7 | [Named distributions](/files/named_distributions.html){:target="_blank" rel="noopener"} |
+| 8 | [Poisson process](/files/poisson_process.html){:target="_blank" rel="noopener"} |
 | 9 | [Monte Carlo integration](/files/mc_integration.html){:target="_blank" rel="noopener"} |
 | 10 | [Sampling methods](/files/sampling_methods.html){:target="_blank" rel="noopener"} |
-| 11 | TBD |
+| 11 | Bayesian optimisation |
 | 12 | Exam revision |
 
 
