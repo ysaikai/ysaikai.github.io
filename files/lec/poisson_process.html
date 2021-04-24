@@ -600,7 +600,7 @@ These notes are based on Chapter 2 of Robert G. Gallager (2013). <em>Stochastic 
 </blockquote>
 <div id="property-1" class="section level2">
 <h2>Property 1</h2>
-<p>In the Poisson counting process <span class="math inline">\(\{N(t) : t\geq0\}\)</span>, the number of arrivals over <span class="math inline">\((0,t]\)</span> for some <span class="math inline">\(t\)</span> follows <span class="math inline">\(\text{pois}(\lambda t)\)</span> with the PMF of <span class="math display">\[P(N(t)=n) = \frac{e^{-\lambda t}(\lambda t)^n}{n!} .\]</span></p>
+<p>In the Poisson counting process <span class="math inline">\(\{N(t) : t&gt;0\}\)</span>, the number of arrivals over <span class="math inline">\((0,t]\)</span> for some <span class="math inline">\(t\)</span> follows <span class="math inline">\(\text{pois}(\lambda t)\)</span> with the PMF of <span class="math display">\[P(N(t)=n) = \frac{e^{-\lambda t}(\lambda t)^n}{n!} .\]</span></p>
 <p><strong><em>Proof</em></strong>. A key observation is that <span class="math inline">\(N(t)=n\)</span> if and only if <span class="math inline">\(S_n \leq t &lt; S_{n+1}\)</span> because the <span class="math inline">\(n\)</span>th arrival occurs before time <span class="math inline">\(t\)</span> but the <span class="math inline">\((n+1)\)</span>th occurs after <span class="math inline">\(t\)</span>. Also remember that, by definition, <span class="math inline">\(X_{n+1}\)</span> is independent of <span class="math inline">\(X_1,\dots,X_n\)</span> and therefore independent of <span class="math inline">\(S_n\)</span>.</p>
 <p><span class="math display">\[\begin{align}
 P(N(t)=n)
@@ -625,12 +625,17 @@ P(N(t)=n)
 </div>
 <div id="property-3" class="section level2">
 <h2>Property 3</h2>
-<p><span class="math inline">\(N(t)\)</span> has independent increments; i.e., for <span class="math inline">\(t_0&lt;t_1&lt;\dots&lt;t_n\)</span>, <span class="math display">\[ N(t_1)-N(t_0), N(t_2)-N(t_1),\dots,N(t_n)-N(t_{n-1})\]</span> are independent.</p>
+<p><span class="math inline">\(N(t)\)</span> has independent increments; i.e., for <span class="math inline">\(t_0&lt;t_1&lt;\dots&lt;t_n\)</span>, <span class="math display">\[N(t_n)-N(t_{n-1}), N(t_{n-1})-N(t_{n-2}), \dots, N(t_1)-N(t_0)\]</span> are independent.</p>
 <p><strong><em>Proof</em></strong>. Property 2 implies that <span class="math inline">\(N(t_n)-N(t_{n-1})\)</span> is independent of <span class="math inline">\(N(s)\)</span> for <span class="math inline">\(s\leq t_{n-1}\)</span> and therefore independent of <span class="math inline">\(N(t_{n-1})-N(t_{n-2}), \dots, N(t_1)-N(t_0).\)</span></p>
+<blockquote>
+<p>As is often the case in mathematics, we have a choice of definitions from which the other properties are derived. So, we can use the above peoperties as a definition of Poisson process and derive the IID exponential interarrival times.</p>
+</blockquote>
 </div>
 </div>
-<div id="application" class="section level1">
-<h1>Application</h1>
+<div id="applications" class="section level1">
+<h1>Applications</h1>
+<div id="compounding" class="section level2">
+<h2>Compounding</h2>
 <p>If you run a tech company to provide online services (e.g., shopping and banking), you need computer servers to respond to customers’ requests. These days, it has become quite popular to rent, rather than buy, computing infrastructure in the cloud. Just like your mobile phone contracts, you want to rent a right amount of the infrastructure. To figure out the right amount, you need models of customers’ requests.</p>
 <p>Let’s take one step at a time.</p>
 <ol style="list-style-type: decimal">
@@ -676,6 +681,26 @@ $$\mathbb{E}X = \mathbb{E}(\mathbb{E}(X|Y)).$$
                     &amp;= \mathbb{E}N\cdot\operatorname{Var}Y_n + \operatorname{Var}N \cdot (\mathbb{E}Y_n)^2
 \end{align}\]</span></p>
 <p><strong><em>Proof for (iii)</em></strong>. We are interested in the Poisson counting process for <span class="math inline">\(t=1\)</span>. Thus, we have <span class="math inline">\(N \sim \text{pois}(\lambda)\)</span>, which implies <span class="math inline">\(\mathbb{E}N = \lambda\)</span> and <span class="math inline">\(\operatorname{Var}N = \lambda\)</span>. Now, the result follows from (ii).</p>
+</div>
+<div id="splitting" class="section level2">
+<h2>Splitting</h2>
+<p>Suppose you use a Poisson process with rate <span class="math inline">\(\lambda\)</span> per hour to model an arrival process of customers during the happy hour (4-5pm). You also know roughly <span class="math inline">\(100\times p\)</span>% of customers are women. Now, you wonder what arrival processes will emerge from the following simulations:</p>
+<ol style="list-style-type: decimal">
+<li>Simulate the overall customer arrival process using the original Poisson process,</li>
+<li>Randomly assign to each arrival female with probability <span class="math inline">\(p\)</span> and male with probability <span class="math inline">\(1-p\)</span>.</li>
+</ol>
+<p>Interestingly, both female and male arrival processes are again Poisson processes with rate <span class="math inline">\(p\lambda\)</span> and <span class="math inline">\((1-p)\lambda\)</span> respectively, and they are independent. Notice, if the splitting were conditioned on <span class="math inline">\(N(t)=n\)</span>, it would be simply <span class="math inline">\(\text{binom}(n,p)\)</span>. Doesn’t this come as a surprise?</p>
+<p>Let’s examine both counting processes <span class="math inline">\(\{N_f(t)\}\)</span> and <span class="math inline">\(\{N_m(t)\}\)</span>. Here, we use three properties to show they are Poisson processes.</p>
+<p>First, the independent increments property implies that pairs of increments <span class="math display">\[(N_f(t_i)-N_f(t_{i-1}),\; N_m(t_i)-N_m(t_{i-1})),\quad 1\leq i\leq n\]</span> are independent of each other. Second, by definition, <span class="math inline">\(N_f(0) = N_m(0) = 0\)</span>. Hence, we only need to show that <span class="math inline">\(X_f = N_f(s+t)-N_f(t)\)</span> and <span class="math inline">\(X_m = N_m(s+t)-N_m(t)\)</span> both follow correct Poisson distributions and are independent of each other.</p>
+<p>Let <span class="math inline">\(n\)</span> be the number of arrivals between epoch <span class="math inline">\(t\)</span> and <span class="math inline">\(s+t\)</span>, i.e. <span class="math inline">\(N(s+t)-N(t) = n\)</span>. Also let <span class="math inline">\(k\)</span> be the number of female customers over the same period, i.e. <span class="math inline">\(X_f = k\)</span> and <span class="math inline">\(X_m = n-k\)</span>. Finally, let <span class="math inline">\(Y = N(s+t)-N(t)\)</span>. Then, <span class="math display">\[\begin{align}
+P(X_f=k, X_m=n-k)
+  &amp;= P(X_f=k, X_m=n-k, Y = n)\\
+  &amp;= P(X_f=k, X_m=n-k | Y = n)P(Y = n)\\
+  &amp;= \binom{n}{k}p^k(1-p)^{n-k}\cdot \frac{e^{-\lambda s}(\lambda s)^n}{n!}\\
+  &amp;= \frac{n!}{k!(n-k)!}p^k(1-p)^{n-k}\cdot \frac{e^{-\lambda s}(\lambda s)^n}{n!}\\
+  &amp;= \frac{e^{-p\lambda s}(p\lambda s)^k}{k!} \frac{e^{-(1-p)\lambda s} ((1-p)\lambda s)^{(n-k)}}{(n-k)!} ,
+\end{align}\]</span> which implies that independent <span class="math inline">\(X_f \sim \text{pois}(p\lambda)\)</span> and <span class="math inline">\(X_m \sim \text{pois}((1-p)\lambda)\)</span>.</p>
+</div>
 </div>
 
 
