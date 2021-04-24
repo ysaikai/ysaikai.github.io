@@ -1705,12 +1705,12 @@ These notes are based on Chapter 2 of Robert G. Gallager (2013). <em>Stochastic 
 <li>At each slot, <span class="math inline">\(\text{Bernoulli}(p)\)</span> trial takes place.</li>
 <li><span class="math inline">\(B_t=1\)</span> represents “arrival” (previously, “success”).</li>
 </ul>
-<p>The Bernoulli process is a discrete-time arrival process <span class="math inline">\(S_1,S_2,\dots\)</span>, where arrival epoch <span class="math inline">\(S_n\)</span> is the time slot for <span class="math inline">\(n\)</span>th arrival.</p>
-<blockquote>
-<p>An implication is <span class="math inline">\(S_n\geq n\)</span> and <span class="math inline">\(S_n=n\)</span> only if arrival happens in every slot up to <span class="math inline">\(n\)</span>.</p>
-</blockquote>
+<p>The Bernoulli process is a discrete-time arrival process <span class="math inline">\(S_1,S_2,\dots\)</span>, where arrival epoch <span class="math inline">\(S_n\)</span> is the time slot for <span class="math inline">\(n\)</span>th arrival. An implication is <span class="math inline">\(S_n\geq n\)</span> and <span class="math inline">\(S_n=n\)</span> only if arrival happens in every slot up to <span class="math inline">\(n\)</span>.</p>
 <p>In the counting process <span class="math inline">\(\{N(t) : t\in\mathbb{Z}_{&gt;0}\}\)</span>, for given <span class="math inline">\(t\)</span>, <span class="math inline">\(N(t) \sim \text{binom}(t,p)\)</span>.</p>
-<p>The interarrival times <span class="math inline">\(X_1,X_2,\dots\)</span> follows <span class="math inline">\(\text{geom}(p)\)</span>. (N.B. <span class="math inline">\(\text{geom}(p)\)</span> here is the number of <em>trials</em> instead of <em>failure</em>.)</p>
+<p>The interarrival times <span class="math inline">\(X_1,X_2,\dots\)</span> follows IID <span class="math inline">\(\text{geom}(p)\)</span>. (N.B. <span class="math inline">\(\text{geom}(p)\)</span> here is the number of <em>trials</em> instead of <em>failure</em>.)</p>
+<blockquote>
+<p>When the interarrival sequence is IID, an arrival process is often called <strong>renewal process</strong>. Hence, the Bernoulli process and Poisson process are special types of renewal process.</p>
+</blockquote>
 <p>The reason for focusing on <span class="math inline">\(\{X_n\}\)</span> is because it is an IID process and much easier to define the joint distribution than <span class="math inline">\(\{S_n\}\)</span>.</p>
 <blockquote>
 <p>Remember <span class="math inline">\(S_m = \sum_{n=1}^m X_n \sim \text{nbinom}(m,p)\)</span>.</p>
