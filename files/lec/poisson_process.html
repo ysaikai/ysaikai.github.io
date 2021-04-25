@@ -655,11 +655,6 @@ P(N(t)=n)
 <li><span class="math inline">\(\operatorname{Var} S = \mathbb{E}N \cdot \operatorname{Var} Y_n + \operatorname{Var} N \cdot (\mathbb{E}Y_n)^2\)</span> provided <span class="math inline">\(\mathbb{E}N^2, \mathbb{E}Y_n^2 &lt; \infty\)</span>.</li>
 <li>If the customer arrival process follows the Poisson process with rate <span class="math inline">\(\lambda\)</span>, then <span class="math inline">\(\operatorname{Var} S = \lambda\mathbb{E}(Y_n)^2\)</span>.</li>
 </ol>
-<!--
-In proving (i) and (ii), we use [the law of iterated expectations](https://en.wikipedia.org/wiki/Law_of_total_expectation)
-$$\mathbb{E}X = \mathbb{E}(\mathbb{E}(X|Y)).$$
-\(i) is a straightforward application of the law.
--->
 <p><strong><em>Proof for (i).</em></strong> <span class="math display">\[\begin{align}
   \mathbb{E}S &amp;= \sum_{n=0}^\infty \mathbb{E}[S|N=n]\cdot P(N=n)\\
               &amp;= \sum_{n=0}^\infty \mathbb{E}[Y_1+\dots+Y_n|N=n]\cdot P(N=n)\\
@@ -671,7 +666,7 @@ $$\mathbb{E}X = \mathbb{E}(\mathbb{E}(X|Y)).$$
                     &amp;= n\operatorname{Var}Y_n + n^2(\mathbb{E}Y_n)^2
 \end{align}\]</span></p>
 <p>Then, <span class="math display">\[\begin{align}
-\mathbb{E}S^2 &amp;= \sum_{n=0}^\infty \mathbb{E}[S^2|N=n]\\
+\mathbb{E}S^2 &amp;= \sum_{n=0}^\infty \mathbb{E}[S^2|N=n] \cdot P(N=n)\\
               &amp;= \sum_{n=0}^\infty \left[n\operatorname{Var}Y_n + n^2(\mathbb{E}Y_n)^2\right] \cdot P(N=n)\\
               &amp;= \mathbb{E}N\cdot\operatorname{Var}Y_n + \mathbb{E}N^2\cdot(\mathbb{E}Y_n)^2
 \end{align}\]</span></p>

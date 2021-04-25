@@ -1797,7 +1797,7 @@ $$\mathbb{E}X = \mathbb{E}(\mathbb{E}(X|Y)).$$
                     &amp;= n\operatorname{Var}Y_n + n^2(\mathbb{E}Y_n)^2
 \end{align}\]</span></p>
 <p>Then, <span class="math display">\[\begin{align}
-\mathbb{E}S^2 &amp;= \sum_{n=0}^\infty \mathbb{E}[S^2|N=n]\\
+\mathbb{E}S^2 &amp;= \sum_{n=0}^\infty \mathbb{E}[S^2|N=n] \cdot P(N=n)\\
               &amp;= \sum_{n=0}^\infty \left[n\operatorname{Var}Y_n + n^2(\mathbb{E}Y_n)^2\right] \cdot P(N=n)\\
               &amp;= \mathbb{E}N\cdot\operatorname{Var}Y_n + \mathbb{E}N^2\cdot(\mathbb{E}Y_n)^2
 \end{align}\]</span></p>
