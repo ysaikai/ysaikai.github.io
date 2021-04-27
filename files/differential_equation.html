@@ -1718,19 +1718,17 @@ title(expression(C == g*b*y[1] - e*log(y[1]) + b*y[2] - a*log(y[2])))</code></pr
 <p>Approximation errors <span class="math inline">\(\|\hat{\mathbf{y}}(nh) - \mathbf{y}(nh)\|\)</span> are accumulated over time.</p>
 <p>Let’s illustrate it using the predator–prey model. Each process starts at <span class="math inline">\(\mathbf{y}_0=(150, 804)\)</span>, which is a point on the orbit.</p>
 <pre class="r"><code>LV &lt;- function(y) c(a*y[1] - b*y[1]*y[2], g*b*y[1]*y[2] - e*y[2])</code></pre>
-<pre class="r"><code>euler &lt;- function(f, t0, y0, h, N) {
+<pre class="r"><code>euler &lt;- function(f, y0, h, N) {
   Y &lt;- matrix(nrow=N+1, ncol=length(y0)) # empty matrix
   Y[1,] &lt;- y0 # R has 1-base indexing. Y[1,] for y0.
-  t &lt;- t0
   for (n in 1:N) {
     Y[n+1,] &lt;- Y[n,] + h*f(Y[n,])
-    t &lt;- t + h
   }
   return(Y) # returned value is a matrix
 }</code></pre>
 <pre class="r"><code>for (h in c(1, 0.1)) {
   N &lt;- 880/h
-  Y &lt;- euler(LV, 0, y0, h, N)
+  Y &lt;- euler(LV, y0, h, N)
   plot(Y[,1], Y[,2], type=&#39;l&#39;, xlab=&quot;prey&quot;, ylab=&quot;predator&quot;)
   points(Y[1,1], Y[1,2])
   text(Y[1,1]+10, Y[1,2], expression(y[0]), pos=1)
@@ -1770,20 +1768,18 @@ text(x[3],y[3]+.03,expression(y(nh+h)),pos=4)</code></pre>
 <li>Computed by Euler’s method.</li>
 </ol>
 <p>Here is the idea in action.</p>
-<pre class="r"><code>midpoint &lt;- function(f, t0, y0, h, N) {
+<pre class="r"><code>midpoint &lt;- function(f, y0, h, N) {
   Y &lt;- matrix(0, nrow=N+1, ncol=length(y0))
   Y[1,] &lt;- y0
-  t &lt;- t0
   for (n in 1:N) {
     y.m &lt;- Y[n,] + h/2*f(Y[n,]) # Euler for the midpoint
     Y[n+1,] &lt;- Y[n,] + h*f(y.m)
-    t &lt;- t + h
   }
   return(Y)
 }</code></pre>
 <pre class="r fold-hide"><code>for (h in c(10, 2)) {
   N &lt;- 880/h
-  Y &lt;- midpoint(LV, 0, y0, h, N)
+  Y &lt;- midpoint(LV, y0, h, N)
   plot(Y[,1], Y[,2], type=&#39;l&#39;, xlab=&quot;prey&quot;, ylab=&quot;predator&quot;)
   points(Y[1,1], Y[1,2])
   text(Y[1,1]+10, Y[1,2], expression(y[0]), pos=1)
@@ -1808,23 +1804,21 @@ text(x[3],y[3]+.03,expression(y(nh+h)),pos=4)</code></pre>
 </blockquote>
 <p>The fourth-order Runge–Kutta (RK4) computes <span class="math inline">\(\hat{\mathbf{y}}(nh+h)\)</span> as follows: <span class="math display">\[ \hat{\mathbf{y}}(nh+h) = \hat{\mathbf{y}}(nh) + h\left( \frac{1}{6}\mathbf{k}_1 + \frac{1}{3}\mathbf{k}_2 + \frac{1}{3}\mathbf{k}_3 + \frac{1}{6}\mathbf{k}_4 \right) .\]</span></p>
 <p>Here is the idea in action.</p>
-<pre class="r"><code>RK4 &lt;- function(f, t0, y0, h, N) {
+<pre class="r"><code>RK4 &lt;- function(f, y0, h, N) {
   Y &lt;- matrix(0, nrow=N+1, ncol=length(y0))
   Y[1,] &lt;- y0
-  t &lt;- t0
   for (n in 1:N) {
     k1 &lt;- f(Y[n,])
     k2 &lt;- f(Y[n,] + h/2*k1)
     k3 &lt;- f(Y[n,] + h/2*k2)
     k4 &lt;- f(Y[n,] + h*k3)
     Y[n+1,] &lt;- Y[n,] + h*(k1/6 + k2/3 + k3/3 + k4/6)
-    t &lt;- t + h
   }
   return(Y)
 }</code></pre>
 <pre class="r fold-hide"><code>for (h in c(10, 3)) {
   N &lt;- 880/h
-  Y &lt;- RK4(LV, 0, y0, h, N)
+  Y &lt;- RK4(LV, y0, h, N)
   plot(Y[,1], Y[,2], type=&#39;l&#39;, xlab=&quot;prey&quot;, ylab=&quot;predator&quot;)
   points(Y[1,1], Y[1,2])
   text(Y[1,1]+10, Y[1,2], expression(y[0]), pos=1)
@@ -1887,10 +1881,10 @@ y.N &lt;- function(Y) Y[length(Y)] # pick up the last row of the matrix Y
 run &lt;- function(j, col, epsilon) {
   h &lt;- 1
   method &lt;- methods[[j]]
-  y &lt;- y.N(method(f, t0=0, y0=1, h=h, N=1/h))
+  y &lt;- y.N(method(f, y0=1, h=h, N=1/h))
   while (abs(y - y1.true) &gt; epsilon) {
     h &lt;- h/2
-    y &lt;- y.N(method(f, t0=0, y0=1, h=h, N=1/h))
+    y &lt;- y.N(method(f, y0=1, h=h, N=1/h))
   }
   # 1, 2, and 4 evaluations per step in method 1, 2, and 3 respectively.
   return(2^(j-1)/h)
