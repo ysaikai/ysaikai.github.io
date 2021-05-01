@@ -18,7 +18,7 @@ Teaching makes me both humble and thrilled. In the classroom, watching students 
 - Although the subject is not per se statistics or machine learning, many of the techniques covered here are widely used in those areas.
 
 ### Lecture schedule
-The topics are subject to change. Some topics are heavier than others, taking more than a week. Class materials will be similar to web pages found in the link under each topic.
+Some topics are heavier than others, taking more than a week. Class materials will be similar to web pages found in the link under each topic.
 
 | Week | Topic |
 | :--- | :--- |
