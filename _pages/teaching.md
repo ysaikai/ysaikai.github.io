@@ -17,7 +17,7 @@ Teaching makes me both humble and thrilled. In the classroom, watching students 
   - R Markdown (communication)
 - Although the subject is not per se statistics or machine learning, many of the techniques covered here are widely used in those areas.
 
-### Tentative lecture schedule
+### Lecture schedule
 The topics are subject to change. Some topics are heavier than others, taking more than a week. Class materials will be similar to web pages found in the link under each topic.
 
 | Week | Topic |
@@ -32,7 +32,7 @@ The topics are subject to change. Some topics are heavier than others, taking mo
 | 8 | [Poisson process](/files/poisson_process.html){:target="_blank" rel="noopener"} |
 | 9 | [Monte Carlo integration](/files/mc_integration.html){:target="_blank" rel="noopener"} |
 | 10 | [Sampling methods](/files/sampling_methods.html){:target="_blank" rel="noopener"} |
-| 11 | Bayesian optimisation |
+| 11 | [Bayesian optimisation](/files/bo.html){:target="_blank" rel="noopener"} |
 | 12 | Exam revision |
 
 
