@@ -29,7 +29,7 @@ Agent-based modeling has become one of the standard approaches to studying compl
 
 
 ## Papers
-- [APSIM meets TensorFlow: Optimising sequential management decisions via deep reinforcement learning](https://github.com/ysaikai/APSIMTF)
+- APSIM meets TensorFlow: Optimising sequential management decisions via deep reinforcement learning
 - [An agent-based model of insect resistance management and mitigation for Bt maize: A social science perspective](https://github.com/ysaikai/BTABM)
   - with [Paul Mitchell](https://aae.wisc.edu/faculty/pdmitchell/) and [Terrance Hurley](https://www.apec.umn.edu/people/terrance-hurley)
   - Published at [Pest Management Science](https://doi.org/10.1002/ps.6016)
