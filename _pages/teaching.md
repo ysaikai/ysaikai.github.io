@@ -4,16 +4,16 @@ permalink: /teaching/
 ---
 Teaching makes me both humble and thrilled. In the classroom, watching students taking notes of what I just say creates a strong sense of responsibility. At the same time, witnessing students absorbing what I believe is important and useful is a joy. Teaching takes time yet immensely fulfilling.
 
-Instructor
-- [Systems Modelling and Simulation](#systems-modelling-and-simulation-semester-1-2021)
+**Instructor**
+- [Systems Modelling and Simulation](#systems-modelling-and-simulation)
 
-Tutor
+**Tutor**
 - [Vector Calculus](https://handbook.unimelb.edu.au/2021/subjects/mast20009)
 - [Engineering Mathematics](https://handbook.unimelb.edu.au/2021/subjects/mast20029)
 - [Linear Statistical Models](https://handbook.unimelb.edu.au/2021/subjects/mast30025)
 
 
-## Systems Modelling and Simulation (Semester 1, 2021)
+## Systems Modelling and Simulation
 - [MAST90045](https://handbook.unimelb.edu.au/2021/subjects/mast90045), The University of Melbourne
 - Prerequisite: [Calculus 2](https://handbook.unimelb.edu.au/subjects/mast10006/print)
   - Strictly enforced, and no revision provided. You will be in trouble if your understanding is rusty.
