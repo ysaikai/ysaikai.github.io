@@ -11,11 +11,15 @@ Teaching makes me both humble and thrilled. In the classroom, watching students 
 - [Vector Calculus](https://handbook.unimelb.edu.au/2021/subjects/mast20009)
 - [Engineering Mathematics](https://handbook.unimelb.edu.au/2021/subjects/mast20029)
 - [Linear Statistical Models](https://handbook.unimelb.edu.au/2021/subjects/mast30025)
+- [Applied Risk Analysis](#applied-risk-analysis-spring-2019)
+
+**Guest lecturer**
+- [Machine Learning in Applied Economic Analysis](#machine-learning-in-applied-economic-analysis-summer-2019)
 
 <br/>
 
 
-# Systems Modelling and Simulation
+## Systems Modelling and Simulation
 - [MAST90045](https://handbook.unimelb.edu.au/2021/subjects/mast90045), The University of Melbourne
 - Prerequisites
   - [Calculus 2](https://handbook.unimelb.edu.au/subjects/mast10006/print)
@@ -30,7 +34,7 @@ Teaching makes me both humble and thrilled. In the classroom, watching students 
   - Communication is significantly emphasised—cogent arguments and clear explanation of models, solutions, and code in plain English.
 - Many of the techniques covered in the subject are widely used in statistics or machine learning.
 
-## Lecture schedule
+### Lecture schedule
 Some topics are heavier than others, taking more than a week. Class materials will be similar to web pages found in the link under each topic.
 
 | Week | Topic |
@@ -52,12 +56,12 @@ Some topics are heavier than others, taking more than a week. Class materials wi
 <br/>
 
 
-# Machine Learning in Applied Economic Analysis (Summer 2019)
+## Machine Learning in Applied Economic Analysis (Summer 2019)
 
 * AAE 722, The University of Wisconsin-Madison
 * Instructor: [Dr. Sheldon Du](https://aae.wisc.edu/faculty/xdu23/)
 
-## Lecture
+### Lecture
 
 | Date | Topic |
 | :--- | :--- |
@@ -72,12 +76,12 @@ Some topics are heavier than others, taking more than a week. Class materials wi
 <br/>
 
 
-# Applied Risk Analysis (Spring 2019)
+## Applied Risk Analysis (Spring 2019)
 
 * [AAE 706](https://aae.wisc.edu/aae706/), The University of Wisconsin-Madison
 * Instructor: [Dr. Jean-Paul Chavas](https://aae.wisc.edu/faculty/jchavas/)
 
-## Discussion session
+### Discussion session
 
 | Date | Topic |
 | :--- | :--- |
