@@ -19,13 +19,14 @@ Teaching makes me both humble and thrilled. In the classroom, watching students 
   - [Calculus 2](https://handbook.unimelb.edu.au/subjects/mast10006/print)
   - Not required, but basic understanding of probability is very helpful.
   - Some exposure to Bayesian statistics is also helpful.
-- Text: [Available](http://cat.lib.unimelb.edu.au:80/record=b5904690~S15) for UniMelb students.
+- Textbook
   - Jones, O., Maillardet, R., & Robinson, A. (2009). *Introduction to scientific programming and simulation using R*. CRC Press.
+  - [Available](http://cat.lib.unimelb.edu.au:80/record=b5904690~S15) for UniMelb students
 - The subject is, broadly speaking, **computational science**:
-  - numerical analysis and stochastic simulation (contents)
-  - R & RStudio (tool)
-  - R Markdown (communication)
-- Although the subject is not per se statistics or machine learning, many of the techniques covered here are widely used in those areas.
+  - *numerical analysis* and *stochastic simulation*
+  - Large amounts of coding using R, RStudio, and R Markdown
+  - Communication is significantly emphasised---cogent arguments and clear explanation of models, solutions, and code in plain English.
+- Many of the techniques covered in the subject are widely used in statistics or machine learning.
 
 ### Lecture schedule
 Some topics are heavier than others, taking more than a week. Class materials will be similar to web pages found in the link under each topic.
