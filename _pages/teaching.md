@@ -25,7 +25,7 @@ Teaching makes me both humble and thrilled. In the classroom, watching students 
 - The subject is, broadly speaking, **computational science**:
   - *numerical analysis* and *stochastic simulation*
   - Large amounts of coding using R, RStudio, and R Markdown
-  - Communication is significantly emphasised---cogent arguments and clear explanation of models, solutions, and code in plain English.
+  - Communication is significantly emphasised—cogent arguments and clear explanation of models, solutions, and code in plain English.
 - Many of the techniques covered in the subject are widely used in statistics or machine learning.
 
 ### Lecture schedule
