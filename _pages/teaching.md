@@ -28,11 +28,11 @@ Teaching makes me both humble and thrilled. In the classroom, watching students 
 - Textbook
   - Jones, O., Maillardet, R., & Robinson, A. (2009). *Introduction to scientific programming and simulation using R*. CRC Press.
   - [Available](http://cat.lib.unimelb.edu.au:80/record=b5904690~S15) for UniMelb students
-- The subject is, broadly speaking, **computational science**:
-  - *numerical analysis* and *stochastic simulation*
+- The subject is, broadly speaking, **computational science**.
+  - *Numerical analysis* and *stochastic simulation*
   - Large amounts of coding using R, RStudio, and R Markdown
   - Communication is significantly emphasised—cogent arguments and clear explanation of models, solutions, and code in plain English.
-- Many of the techniques covered in the subject are widely used in statistics or machine learning.
+- Many of the techniques covered in the subject are widely used in statistics and machine learning.
 
 ### Lecture schedule
 Some topics are heavier than others, taking more than a week. Class materials will be similar to web pages found in the link under each topic.
