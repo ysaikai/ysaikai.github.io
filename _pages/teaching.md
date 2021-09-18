@@ -34,10 +34,10 @@ Teaching makes me both humble and thrilled. In the classroom, watching students 
   - Communication is significantly emphasised—cogent arguments and clear explanation of models, solutions, and code in plain English.
 - Many of the techniques covered in the subject are widely used in statistics and machine learning.
 
-### Lecture schedule
-Some topics are heavier than others, taking more than a week. Class materials will be similar to web pages found in the link under each topic.
+### Topics
+Some topics are heavier than others, taking more than a week.
 
-| Week | Topic |
+| | Topic |
 | :--- | :--- |
 | 1 | [R, RStudio and R Markdown](/files/r_rstudio_rmarkdown.html){:target="_blank" rel="noopener"} |
 | 2 | [Root finding](/files/root_finding.html){:target="_blank" rel="noopener"} |
@@ -50,7 +50,6 @@ Some topics are heavier than others, taking more than a week. Class materials wi
 | 9 | [Monte Carlo integration](/files/mc_integration.html){:target="_blank" rel="noopener"} |
 | 10 | [Sampling methods](/files/sampling_methods.html){:target="_blank" rel="noopener"} |
 | 11 | [Bayesian optimisation](/files/bo.html){:target="_blank" rel="noopener"} |
-| 12 | Exam revision |
 
 
 <br/>
