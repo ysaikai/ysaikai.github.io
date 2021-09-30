@@ -5,7 +5,7 @@ permalink: /research/
 
 As a data-driven control method, reinforcement learning (RL) has tremendous potential to optimise a wide variety of real-world systems that were previously unamenable to mathematical optimisation due to the lack of explicit models of dynamics. Among the key challenges of real-world RL, I am interested in **sample efficient learning** and **offline learning**.
 
-Precision agriculture exploits advanced farming technologies for increased productivity. Modern sensor devices and actuators provide high spatiotemporal granularity of management units. To fully exploit the technologies and achieve right management at a right place at right time, it is necessary to discover good policies that process high-dimensional sensor feedback and prescribe right management for each parcel of a field at each decision making. I tackle this challenging spatiotemporal control problem using RL and Bayesian optimisation.
+Precision agriculture exploits advanced farming technologies for increased productivity. Modern sensor devices and actuators provide high spatiotemporal granularity of management units. To fully exploit the technologies and achieve right management at a right place at right time, it is necessary to discover good policies that process high-dimensional sensor feedback and prescribe right management for each parcel of a field anytime farmers make decisions. I tackle this challenging spatiotemporal control problem using RL and Bayesian optimisation.
 
 <!--
 ## Advisors
