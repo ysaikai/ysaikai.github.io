@@ -20,11 +20,10 @@ Teaching makes me both humble and thrilled. In the classroom, watching students 
 
 
 ## Systems Modelling and Simulation
-- [MAST90045](https://handbook.unimelb.edu.au/2021/subjects/mast90045), The University of Melbourne
+- [MAST90045](https://handbook.unimelb.edu.au/subjects/mast90045/print), The University of Melbourne
 - Prerequisites
   - [Calculus 2](https://handbook.unimelb.edu.au/subjects/mast10006/print)
   - Not required, but basic understanding of probability is very helpful.
-  - Some exposure to Bayesian statistics is also helpful.
 - Textbook
   - Jones, O., Maillardet, R., & Robinson, A. (2009). *Introduction to scientific programming and simulation using R*. CRC Press.
   - [Available](http://cat.lib.unimelb.edu.au:80/record=b5904690~S15) for UniMelb students
