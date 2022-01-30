@@ -142,7 +142,7 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 
 
 
-<link rel="stylesheet" href="data:text/css,h1%2Etitle%20%7B%0Afont%2Dsize%3A%20300%25%3B%0A%7D%0Ah1%20%7B%0Apadding%2Dtop%3A%2040px%3B%0A%7D%0Ah2%20%7B%0Apadding%2Dtop%3A%2015px%3B%0A%7D%0Ah3%20%7B%0Apadding%2Dtop%3A%208px%3B%0A%7D%0Ablockquote%20%7B%0Afont%2Dsize%3A%20100%25%3B%0A%7D%0A" type="text/css" />
+<link rel="stylesheet" href="data:text/css,%0A%23TOC%20%7B%0Afont%2Dsize%3A%2014px%3B%0A%7D%0Ah1%2Etitle%20%7B%0Afont%2Dsize%3A%2042px%3B%0A%7D%0Ah1%20%7B%0Afont%2Dsize%3A%2032px%3B%0Apadding%2Dtop%3A%2040px%3B%0A%7D%0Ah2%20%7B%0Afont%2Dsize%3A%2026px%3B%0Apadding%2Dtop%3A%2015px%3B%0A%7D%0Ah3%20%7B%0Afont%2Dsize%3A%2020px%3B%0Apadding%2Dtop%3A%208px%3B%0A%7D%0Abody%20%7B%0Afont%2Dsize%3A%2013pt%3B%0A%7D%0Ablockquote%20%7B%0Afont%2Dsize%3A%2015px%3B%0A%7D%0A%0Apre%20%7B%0Afont%2Dsize%3A%2014px%0A%7D%0A" type="text/css" />
 
 
 
@@ -587,11 +587,11 @@ f(x_1,x_2) = x_1^2 - 2x_1x_2^2,
 <div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tic</span>()</span>
 <span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>re1 <span class="ot">=</span> <span class="fu">primesieve1</span>(n)</span>
 <span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a><span class="fu">toc</span>()</span></code></pre></div>
-<pre><code>## 0.502 sec elapsed</code></pre>
+<pre><code>## 0.585 sec elapsed</code></pre>
 <div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tic</span>()</span>
 <span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>re2 <span class="ot">=</span> <span class="fu">primesieve2</span>(<span class="fu">c</span>(), <span class="dv">2</span><span class="sc">:</span>n)</span>
 <span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a><span class="fu">toc</span>()</span></code></pre></div>
-<pre><code>## 0.008 sec elapsed</code></pre>
+<pre><code>## 0.009 sec elapsed</code></pre>
 <div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="fu">identical</span>(re1, re2)) {</span>
 <span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cat</span>(<span class="st">&quot;Both found the same set containing&quot;</span>, <span class="fu">length</span>(re1), <span class="st">&quot;primes.&quot;</span> )</span>
 <span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
