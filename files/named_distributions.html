@@ -354,10 +354,10 @@ The University of Melbourne</div></h4>
 
 
 <div style="padding: 30px 0px 0px 0px;">
-<p>These notes are based on Chapter 15 &amp; 16 of Jones, O., Maillardet, R., &amp; Robinson, A. (2009). <em>Introduction to scientific programming and simulation using R</em>. CRC Press.</p>
+<p>These notes are based on Chapter 15 &amp; 16 of JMR — Jones, O., Maillardet, R., &amp; Robinson, A. (2009). <em>Introduction to scientific programming and simulation using R</em>. CRC Press.</p>
 </div>
 <p><br /></p>
-<p>Building upon <a href="probability_theory.html">probability theory</a>, we are going to study specific probability distributions in these notes. They are so common and/or important that each has got a name and dedicated R built-in functions. Although at some point we may need to create special distributions and write associated functions for our models, it is often sufficient to combine the existing ones as building blocks. So, let’s master them and get prepared for stochastic modelling.</p>
+<p>Building upon <a href="probability_theory.html">probability theory</a>, we are going to study specific probability distributions in these notes. They are so common and/or important that each has got a name and dedicated R built-in functions. Although at some point we may need to create special distributions and write associated functions for our models, it is often sufficient to combine the existing ones as building blocks.</p>
 <div id="discrete-distributions" class="section level1">
 <h1>Discrete distributions</h1>
 <p>R recognises common distributions by short names and specifies them by parameters.</p>
@@ -404,7 +404,7 @@ The University of Melbourne</div></h4>
 </tbody>
 </table>
 <blockquote>
-<p>As you see below, <span class="math inline">\(\mathrm{Bernoulli}(p)\)</span> is equivalent to <span class="math inline">\(\mathrm{binom}(1,p)\)</span>.</p>
+<p><span class="math inline">\(\mathrm{Bernoulli}(p)\)</span> is equivalent to <span class="math inline">\(\mathrm{binom}(1,p)\)</span>.</p>
 </blockquote>
 <p>R built-in functions for common distributions follow a certain pattern. Suppose that a distribution is recognised by name <code>xyz</code> and specified by parameters <code>p1</code> and <code>p2</code>, then R provides the following four functions to help you work with the distribution.</p>
 <ul>
@@ -417,12 +417,11 @@ The University of Melbourne</div></h4>
 <p>In these notes, I avoid using <span class="math inline">\(p(x)\)</span> for PMF but use <span class="math inline">\(P(X=x)\)</span> to describe the distribution of <span class="math inline">\(X\)</span> since we are going to use lots of <span class="math inline">\(p\)</span> below.</p>
 </blockquote>
 <blockquote>
-<p>The <a href="https://en.wikipedia.org/wiki/Support_(mathematics)#In_probability_and_measure_theory">support</a> of <span class="math inline">\(X\)</span> means the set <span class="math inline">\(\{x\in\mathbb{R} : P(X=x)&gt;0\}\)</span> for discrete <span class="math inline">\(X\)</span> or <span class="math inline">\(\{x\in\mathbb{R} : f(x)&gt;0\}\)</span> for continuous <span class="math inline">\(X\)</span> where <span class="math inline">\(f\)</span> is a PDF of <span class="math inline">\(X\)</span>.</p>
+<p>The <a href="https://en.wikipedia.org/wiki/Support_(mathematics)#In_probability_and_measure_theory">support</a> of <span class="math inline">\(X\)</span> means the set <span class="math inline">\(\{x\in\mathbb{R} : P(X=x)&gt;0\}\)</span> for discrete <span class="math inline">\(X\)</span> or <span class="math inline">\(\{x\in\mathbb{R} : f(x)&gt;0\}\)</span> for continuous <span class="math inline">\(X\)</span> where <span class="math inline">\(f\)</span> is the PDF for <span class="math inline">\(X\)</span>.</p>
 </blockquote>
 <div id="bernoulli" class="section level2">
 <h2>Bernoulli</h2>
-<p>The support is <span class="math inline">\(\{0,1\}\)</span>, which is often interpreted as “failure” and “success” respectively. Naturally, it has a single success parameter <span class="math inline">\(p\in(0,1)\)</span> that specifies the probability of “success”, i.e. <span class="math inline">\(p = P(X=1)\)</span>.</p>
-<p>Bernoulli distribution serves as a building block and, as you will see below, many complex distributions are modelled as a sequence of independent Bernoulli trials.</p>
+<p>The support is <span class="math inline">\(\{0,1\}\)</span>, which is often interpreted as “failure” and “success” respectively. Naturally, it has a single parameter <span class="math inline">\(p\in[0,1]\)</span> that specifies the probability of success <span class="math inline">\(p = P(X=1)\)</span>. Bernoulli distribution serves as a building block and, as you will see below, many complex distributions are modelled as a sequence of independent Bernoulli trials.</p>
 <p><span class="math display">\[\begin{align}
   P(X=x) &amp;=
   \begin{cases}
@@ -439,9 +438,9 @@ The University of Melbourne</div></h4>
 </div>
 <div id="binomial" class="section level2">
 <h2>Binomial</h2>
-<p>Imagine doing independent <span class="math inline">\(\mathrm{Bernoulli}(p)\)</span> trials <span class="math inline">\(n\)</span> times. Let <span class="math inline">\(X\)</span> denote the number of <span class="math inline">\(1\)</span>s from <span class="math inline">\(n\)</span> trials. Then, <span class="math inline">\(X\sim \text{binom}(n,p)\)</span>.</p>
-<p>Formally, let <span class="math inline">\(B_1,\dots,B_n \sim \text{Bernoulli}(p)\)</span>. Then, <span class="math display">\[ X = B_1+\dots+B_n .\]</span> Due to the <span class="math inline">\(n\)</span> Bernoulli trials, the support is <span class="math inline">\(\{0,1,\dots,n\}\)</span>.</p>
-<p>In deriving the PMF, key computation is to count the number of ways to choose <span class="math inline">\(x\)</span> trials that turn out <span class="math inline">\(1\)</span> from the total <span class="math inline">\(n\)</span> trials, commonly denoted by <span class="math inline">\(\binom{n}{x}\)</span>.</p>
+<p>Imagine doing independent <span class="math inline">\(\mathrm{Bernoulli}(p)\)</span> trials <span class="math inline">\(n\)</span> times. Let <span class="math inline">\(X\)</span> denote the number of <span class="math inline">\(1\)</span>s from <span class="math inline">\(n\)</span> trials. Then, <span class="math inline">\(X\sim \text{binom}(n,p)\)</span>. Formally, let <span class="math inline">\(B_1,\dots,B_n \sim \text{Bernoulli}(p)\)</span>. Then, <span class="math display">\[
+X = B_1+\dots+B_n,
+\]</span> with the support <span class="math inline">\(\{0,1,\dots,n\}\)</span>. In deriving the PMF, key computation is to count the number of ways to choose <span class="math inline">\(x\)</span> trials that turn out <span class="math inline">\(1\)</span> from the total <span class="math inline">\(n\)</span> trials, called the <a href="https://en.wikipedia.org/wiki/Binomial_coefficient">binomial coefficient</a> and commonly denoted by <span class="math inline">\(\binom{n}{x}\)</span>.</p>
 <p><span class="math display">\[\begin{align}
   P(X=x) &amp;= \binom{n}{x}p^x(1-p)^{n-x}\\\\
   \mathbb{E}X &amp;= \mathbb{E}(B_1+\dots+B_n)\\
@@ -473,28 +472,27 @@ The University of Melbourne</div></h4>
 </div>
 <div id="poisson" class="section level2">
 <h2>Poisson</h2>
-<p>Imagine doing many independent <span class="math inline">\(\mathrm{Bernoulli}(p)\)</span> trials, in each of which success is very rare. For example, the number of car accidents in Melbourne in a single day, where each of thousands of drivers has a very small chance of accident.</p>
-<p>While we may use <span class="math inline">\(\text{binom}(n,p)\)</span> with large <span class="math inline">\(n\)</span> and small <span class="math inline">\(p\)</span>, we could be in trouble because computers cannot handle extremely large or small values very well. An alternative modelling option is <span class="math inline">\(\text{pois}(\lambda)\)</span> with <span class="math inline">\(\lambda\approx np\)</span>. Here is why.</p>
+<p>Imagine doing <strong>many</strong> independent <span class="math inline">\(\mathrm{Bernoulli}(p)\)</span> trials, in each of which success is very rare. For example, the number of car accidents in Melbourne in a single day, where each of thousands of drivers has a very small chance of accident. While we may use <span class="math inline">\(\text{binom}(n,p)\)</span> with large <span class="math inline">\(n\)</span> and small <span class="math inline">\(p\)</span>, we could be in trouble because computers cannot handle extremely large or small numbers very well. An alternative modelling option is <span class="math inline">\(\text{pois}(\lambda)\)</span> with <span class="math inline">\(\lambda\approx np\)</span>. Here is why.</p>
 <p>Let <span class="math inline">\(Y_n \sim \text{binom}(n,p)\)</span> such that <span class="math inline">\(p=\lambda/n\)</span> for some <span class="math inline">\(\lambda&gt;0\)</span>. Then,</p>
 <p><span class="math display">\[\begin{align}
   P(Y_n=x) &amp;= \binom{n}{x}p^x(1-p)^{n-x}\\
          &amp;= \frac{n\cdot(n-1)\dotsm(n-x+1)}{x!}\left(\frac{\lambda}{n}\right)^x\left(1-\frac{\lambda}{n}\right)^{n-x}\\
          &amp;= 1\cdot\frac{n-1}{n}\dotsm\frac{n-x+1}{n}\frac{\lambda^x}{x!}\left(1-\frac{\lambda}{n}\right)^{n}\left(1-\frac{\lambda}{n}\right)^{-x}\\
-         &amp;\to 1\cdot 1\dotsm 1\frac{\lambda^x}{x!}e^{-\lambda}1 \text{ as } n\to\infty\\
-         &amp;= \frac{e^{-\lambda}\lambda^x}{x!}
+         &amp;\to 1\cdot 1\dotsm 1\cdot\frac{\lambda^x}{x!}\cdot e^{-\lambda}\cdot 1 \quad\text{as}\quad n\to\infty\\
+         &amp;= \frac{e^{-\lambda}\lambda^x}{x!},
 \end{align}\]</span></p>
-<p>which is the PMF of <span class="math inline">\(\mathrm{pois}(\lambda)\)</span>. The limit <span class="math display">\[ \lim_{n\to\infty} P(Y_n=x) = \frac{e^{-\lambda}\lambda^x}{x!} \]</span> is called the <em>law of rare events</em>.</p>
-<p>As indicated by <span class="math inline">\(n\to\infty\)</span>, the support is <span class="math inline">\(\mathbb{Z}_{\geq0}=\{0,1,\dots\}\)</span>.</p>
-<p>Both mean and variance are equal to <span class="math inline">\(\lambda\)</span>.</p>
-<p>An important property of <span class="math inline">\(\text{pois}(\lambda)\)</span> is the following. Suppose <span class="math inline">\(X_1,\dots,X_n\)</span> are independent Poisson random variables with the corresponding parameters <span class="math inline">\(\lambda_1,\dots\lambda_n\)</span>. Then, <span class="math display">\[ X_1+\dots+X_n = \text{pois}(\lambda_1+\dots+\lambda_n) .\]</span> Here is a proof for <span class="math inline">\(n=2\)</span>, which lets us generalise to <span class="math inline">\(n&gt;2\)</span> by induction.</p>
+<p>which is the PMF of <span class="math inline">\(\mathrm{pois}(\lambda)\)</span>. The limit <span class="math display">\[ \lim_{n\to\infty} P(Y_n=x) = \frac{e^{-\lambda}\lambda^x}{x!} \]</span> is called the <em>law of rare events</em>. As indicated by <span class="math inline">\(n\to\infty\)</span>, the support is <span class="math inline">\(\mathbb{Z}_{\geq0}=\{0,1,\dots\}\)</span>. Both mean and variance are equal to <span class="math inline">\(\lambda\)</span>.</p>
+<p>An important property of <span class="math inline">\(\text{pois}(\lambda)\)</span> is the following. Suppose <span class="math inline">\(X_1,\dots,X_n\)</span> are independent Poisson random variables with the corresponding parameters <span class="math inline">\(\lambda_1,\dots\lambda_n\)</span>. Then, <span class="math display">\[
+X_1+\dots+X_n \sim \text{pois}(\lambda_1+\dots+\lambda_n).
+\]</span> Here is a proof for <span class="math inline">\(n=2\)</span>, which lets us generalise to <span class="math inline">\(n&gt;2\)</span> by induction.</p>
 <p><span class="math display">\[\begin{align}
-  P(X_1+X_2=n) &amp;= \sum_{m=0}^n P(X_1=m)P(X_2=n-m)\\
-               &amp;= \sum_{m=0}^n \frac{e^{-\lambda_1} \lambda_1^m}{m!}\cdot\frac{e^{-\lambda_2} \lambda_2^{n-m}}{(n-m)!}\\
-               &amp;= \frac{e^{-(\lambda_1+\lambda_2)} (\lambda_1+\lambda_2)^n}{n!} \cdot \sum_{m=0}^n\binom{n}{m}\left(\frac{\lambda_1}{\lambda_1+\lambda_2}\right)^m\left(\frac{\lambda_2}{\lambda_1+\lambda_2}\right)^{n-m}\\
-               &amp;= \frac{e^{-(\lambda_1+\lambda_2)} (\lambda_1+\lambda_2)^n}{n!}
+P(X_1+X_2=x) &amp;= \sum_{y=0}^x P(X_1=y)P(X_2=x-y)\\
+&amp;= \sum_{y=0}^x \frac{e^{-\lambda_1} \lambda_1^y}{y!}\cdot\frac{e^{-\lambda_2} \lambda_2^{x-y}}{(x-y)!}\\
+&amp;= \frac{e^{-(\lambda_1+\lambda_2)} (\lambda_1+\lambda_2)^x}{x!} \cdot \sum_{y=0}^x\binom{x}{y}\left(\frac{\lambda_1}{\lambda_1+\lambda_2}\right)^y\left(\frac{\lambda_2}{\lambda_1+\lambda_2}\right)^{x-y}\\
+&amp;= \frac{e^{-(\lambda_1+\lambda_2)} (\lambda_1+\lambda_2)^x}{x!}
 \end{align}\]</span></p>
-<p>because the summand is the PMF for <span class="math inline">\(\text{binom}\left(n,\frac{\lambda_1}{\lambda_1+\lambda_2}\right)\)</span>.</p>
-<p>Let’s compare <span class="math inline">\(X\sim \text{pois}(\lambda)\)</span> and <span class="math inline">\(Y\sim \text{binom}(n,p)\)</span> such that <span class="math inline">\(\lambda = np\)</span>. Suppose <span class="math inline">\(\lambda=1\)</span> for simplicity and <span class="math inline">\(n=10^4\)</span>.</p>
+<p>The last equality follows because the summand is the PMF for <span class="math inline">\(\text{binom}\left(x,\frac{\lambda_1}{\lambda_1+\lambda_2}\right)\)</span>.</p>
+<p>Let’s compare <span class="math inline">\(X\sim \text{pois}(\lambda)\)</span> and <span class="math inline">\(Y\sim \text{binom}(n,p)\)</span> such that <span class="math inline">\(\lambda = np\)</span> where <span class="math inline">\(\lambda=1\)</span> and <span class="math inline">\(n=10^4\)</span>.</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r fold-hide"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>lambda <span class="ot">&lt;-</span> <span class="dv">1</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="fl">1e4</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">2</span>,<span class="dv">5</span>)</span></code></pre></div>
@@ -524,8 +522,7 @@ The University of Melbourne</div></h4>
 </tr>
 </tbody>
 </table>
-<p>Even with a moderate <span class="math inline">\(n\)</span>, Poisson provides reasonable approximation of Binomial.</p>
-<p>Here are some of PMF plots with varying <span class="math inline">\(\lambda\)</span>.</p>
+<p>Even with a moderate <span class="math inline">\(n\)</span>, Poisson provides reasonable approximation of Binomial. Here are some of PMF plots with varying <span class="math inline">\(\lambda\)</span>.</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r fold-hide"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="dv">12</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">0</span><span class="sc">:</span>n</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>myplot <span class="ot">&lt;-</span> <span class="cf">function</span>(l) {</span>
@@ -546,14 +543,9 @@ The University of Melbourne</div></h4>
 <h2>Geometric</h2>
 <p>Imagine doing independent <span class="math inline">\(\mathrm{Bernoulli}(p)\)</span> trials <strong>indefinitely</strong> until we see the first success. Let <span class="math inline">\(X\)</span> denote the number of <span class="math inline">\(0\)</span> before getting the first <span class="math inline">\(1\)</span>. Then, <span class="math inline">\(X\sim \text{geom}(p)\)</span>.</p>
 <blockquote>
-<p>N.B. Some authors define <span class="math inline">\(X\)</span> to be the number of trials, and we also do so in <a href="poisson_process.html">Poisson process</a> below.</p>
+<p>Some authors define <span class="math inline">\(X\)</span> to be the number of trials, and we also do so in <a href="poisson_process.html">Poisson process</a>.</p>
 </blockquote>
-<p>Formally, let <span class="math inline">\(B_1,B_2\dots \sim \text{Bernoulli}(p)\)</span>. Then, <span class="math display">\[ X = \inf\{n\in\mathbb{Z}_{&gt;0} : B_n=1\}-1 .\]</span></p>
-<blockquote>
-<p>We cannot really use <span class="math inline">\(\min\{ \}\)</span> because technically, albeit extremely unlikely, it may never happen.</p>
-</blockquote>
-<p>Given the definition, the support is <span class="math inline">\(\mathbb{Z}_{\geq0}=\{0,1,\dots\}\)</span>.</p>
-<p>The derivation of PMF is easier than <span class="math inline">\(\text{binom}(n,p)\)</span>, as it simply continues to multiply the failure probability <span class="math inline">\(1-p\)</span> until the last success probability <span class="math inline">\(p\)</span>.</p>
+<p>Formally, let <span class="math inline">\(B_1,B_2\dots \sim \text{Bernoulli}(p)\)</span>. Then, <span class="math display">\[ X = \inf\{n\in\mathbb{Z}_{&gt;0} : B_n=1\}-1 .\]</span> with the support <span class="math inline">\(\mathbb{Z}_{\geq0}=\{0,1,\dots\}\)</span>. The derivation of PMF is easier than <span class="math inline">\(\text{binom}(n,p)\)</span>, as it simply continues to multiply the failure probability <span class="math inline">\(1-p\)</span> until the last success probability <span class="math inline">\(p\)</span>.</p>
 <p><span class="math display">\[\begin{align}
   P(X=x) &amp;= P(B_1=0,B_2=0,\dots,B_x=0,B_{x+1}=1))\\
          &amp;= P(B_1=0) \dotsm P(B_x=0)P(B_{x+1}=1)\\
@@ -605,14 +597,13 @@ The University of Melbourne</div></h4>
 </div>
 <div id="negative-binomial" class="section level2">
 <h2>Negative binomial</h2>
-<p>Despite the possibly confusing name, this is simply a generalised version of geometric distribution: instead of the first success, we wait until <span class="math inline">\(r\)</span> successes.</p>
-<p>Imagine doing independent <span class="math inline">\(\mathrm{Bernoulli}(p)\)</span> trials indefinitely until we see <span class="math inline">\(r\)</span> successes. Let <span class="math inline">\(X\)</span> denote the number of <span class="math inline">\(0\)</span> before getting <span class="math inline">\(r\)</span> number of <span class="math inline">\(1\)</span>s. Then, <span class="math inline">\(X\sim \text{nbinom}(r,p)\)</span>.</p>
+<p>Despite the possibly confusing name, it is simply a generalised version of geometric distribution — instead of the first success, we wait until <span class="math inline">\(r\)</span> successes. Imagine doing independent <span class="math inline">\(\mathrm{Bernoulli}(p)\)</span> trials indefinitely until we see <span class="math inline">\(r\)</span> successes. Let <span class="math inline">\(X\)</span> denote the number of <span class="math inline">\(0\)</span> before getting <span class="math inline">\(r\)</span> number of <span class="math inline">\(1\)</span>s. Then, <span class="math inline">\(X\sim \text{nbinom}(r,p)\)</span>.</p>
 <p>Conveniently, we may see <span class="math inline">\(X\sim \text{nbinom}(r,p)\)</span> as the sum of <span class="math inline">\(r\)</span> independent <span class="math inline">\(\text{geom}(p)\)</span> random variables. Thus, the mean and variance are particularly easy to compute:</p>
 <p><span class="math display">\[\begin{align}
   \mathbb{E}X &amp;= r\frac{1-p}{p}\\
   \operatorname{Var} X &amp;= r\frac{1-p}{p^2}
 \end{align}\]</span></p>
-<p>To derive the PMF, notice first the following. If the <span class="math inline">\(r\)</span>-th success is on trial <span class="math inline">\(y\)</span>, then the previous <span class="math inline">\(r-1\)</span> successes can occur anywhere in the previous <span class="math inline">\(y−1\)</span> trials. Thus, there are <span class="math inline">\(\binom{y-1}{r-1}\)</span> ways we can get the <span class="math inline">\(r\)</span>-th success on the <span class="math inline">\(y\)</span>-th trial. Each of these ways has probability <span class="math inline">\((1-p)^{y-r}p^r\)</span>, so putting <span class="math inline">\(x=y-r\)</span>, we get: <span class="math display">\[P(X=x) = \binom{r+x-1}{r-1}(1-p)^{x}p^r .\]</span></p>
+<p>To derive the PMF, note the following reasoning. If the <span class="math inline">\(r\)</span>-th success is on trial <span class="math inline">\(y\)</span>, then the previous <span class="math inline">\(r-1\)</span> successes can occur anywhere in the previous <span class="math inline">\(y−1\)</span> trials. Thus, there are <span class="math inline">\(\binom{y-1}{r-1}\)</span> ways we can get the <span class="math inline">\(r\)</span>-th success on the <span class="math inline">\(y\)</span>-th trial. Each of these ways has probability <span class="math inline">\((1-p)^{y-r}p^r\)</span>, so putting <span class="math inline">\(x=y-r\)</span>, we get: <span class="math display">\[P(X=x) = \binom{r+x-1}{r-1}(1-p)^{x}p^r .\]</span></p>
 <p>Here are some of PMF plots with varying <span class="math inline">\(p\)</span>.</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r fold-hide"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="dv">8</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">0</span><span class="sc">:</span>n</span>
@@ -685,8 +676,7 @@ The University of Melbourne</div></h4>
 </ul>
 <div id="uniform" class="section level2">
 <h2>Uniform</h2>
-<p><span class="math inline">\(X\sim \mathrm{U}(a,b)\)</span> if the support of <span class="math inline">\(X\)</span> is an interval <span class="math inline">\([a,b]\)</span> and the density is independent of location <span class="math inline">\(x\)</span>.</p>
-<p>Deriving the PDF of <span class="math inline">\(X\)</span> highlights key ideas common in many continuous distributions. The ideas to recall are:</p>
+<p><span class="math inline">\(X\sim \mathrm{U}(a,b)\)</span> if the support of <span class="math inline">\(X\)</span> is an interval <span class="math inline">\([a,b]\)</span> and the PDF is independent of location <span class="math inline">\(x\in[a,b]\)</span>. Deriving the PDF of <span class="math inline">\(X\)</span> highlights key ideas common in many continuous distributions. The ideas to recall are:</p>
 <ul>
 <li><span class="math inline">\(f(x)\)</span> is equal to <span class="math inline">\(0\)</span> for <span class="math inline">\(x\)</span> outside the support,</li>
 <li><span class="math inline">\(f(x)\)</span> integrates to <span class="math inline">\(1\)</span> over the real line.</li>
@@ -704,7 +694,7 @@ f(x) =
   &amp;\Leftrightarrow\quad &amp; c(b-a) &amp;= 1\\
   &amp;\Leftrightarrow\quad &amp; c &amp;= \frac{1}{b-a}
 \end{alignat}\]</span></p>
-<p>Just like the role <span class="math inline">\(\mathrm{Bernoulli}(p)\)</span> plays in constructing discrete distributions, as you will see in <a href="sampling_methods.html">Sampling Methods</a>, <span class="math inline">\(\mathrm{U}(0,1)\)</span> is a fundamental device for sampling from pretty much any distribution <em>in silico</em>.</p>
+<p>Just like the role <span class="math inline">\(\mathrm{Bernoulli}(p)\)</span> plays in constructing discrete distributions, as you will see in <a href="sampling_methods.html">Sampling Methods</a>, <span class="math inline">\(\mathrm{U}(0,1)\)</span> is a fundamental device for sampling from pretty much any distribution.</p>
 </div>
 <div id="exponential" class="section level2">
 <h2>Exponential</h2>
@@ -714,33 +704,29 @@ f(x) =
   \lambda e^{-\lambda x} &amp; \text{if } x\geq0\\
   0 &amp; \text{otherwise}
 \end{cases}
-\]</span> with <strong>rate</strong> parameter <span class="math inline">\(\lambda&gt;0\)</span>.</p>
-<p>The CDF is equal to <span class="math inline">\(0\)</span> for <span class="math inline">\(x&lt;0\)</span> and, for <span class="math inline">\(x\geq0\)</span>, <span class="math display">\[\begin{align}
+\]</span> with <strong>rate</strong> parameter <span class="math inline">\(\lambda&gt;0\)</span>. The CDF is equal to <span class="math inline">\(0\)</span> for <span class="math inline">\(x&lt;0\)</span> and, for <span class="math inline">\(x\geq0\)</span>, <span class="math display">\[\begin{align}
   F(x) &amp;= \int_{-\infty}^x f(t)dt\\
        &amp;= \int_0^x \lambda e^{-\lambda t} dt\\
        &amp;= 1-e^{-\lambda x}
 \end{align}\]</span></p>
-<p>In practice, <span class="math inline">\(\mathrm{exp}(\lambda)\)</span> is often used to model <strong>waiting time</strong>. For given waiting time <span class="math inline">\(x\)</span>, large <span class="math inline">\(\lambda\)</span> implies fast arrival rate and high probability of arrival, indicated by <span class="math inline">\(F(x)\)</span> as an increasing function of <span class="math inline">\(\lambda\)</span>.</p>
-<p>In contrast, given any arrival rate <span class="math inline">\(\lambda\)</span>, if we wait forever (<span class="math inline">\(x\to\infty\)</span>), it almost surely arrives as indicated by <span class="math inline">\(F(x)\to 1\)</span>.</p>
+<p>In practice, <span class="math inline">\(\mathrm{exp}(\lambda)\)</span> is often used to model <strong>waiting time</strong>. For given waiting time <span class="math inline">\(x\)</span>, large <span class="math inline">\(\lambda\)</span> implies fast arrival rate and high probability of arrival, indicated by <span class="math inline">\(F(x)\)</span> as an increasing function of <span class="math inline">\(\lambda\)</span>. In contrast, given any arrival rate <span class="math inline">\(\lambda\)</span>, if we wait forever (<span class="math inline">\(x\to\infty\)</span>), it almost surely arrives as indicated by <span class="math inline">\(F(x)\to 1\)</span>.</p>
 <div id="memoryless-property" class="section level3">
 <h3>Memoryless property</h3>
 <p>Unique to <span class="math inline">\(\mathrm{exp}(\lambda)\)</span> is the so-called momoryless property, which can be expressed as follows. <span class="math display">\[ P(X&gt;t+s | X&gt;t) = P(X&gt;s) \;\text{ for } s,t&gt;0 .\]</span></p>
-<p>A proof simple. <span class="math display">\[\begin{align}
+<p>A simple proof. <span class="math display">\[\begin{align}
 P(X&gt;t+s | X&gt;t) &amp;= \frac{P(X&gt;t+s, X&gt;t)}{P(X&gt;t)}\\
                &amp;= \frac{P(X&gt;t+s)}{P(X&gt;t)}\\
                &amp;= \frac{e^{-\lambda(t+s)}}{e^{-\lambda(t)}}\\
                &amp;= e^{-\lambda s}\\
                &amp;= P(X&gt;s)
 \end{align}\]</span></p>
-<p>To illustrate, let’s use <span class="math inline">\(\mathrm{exp}(\lambda)\)</span> to model the waiting time for an elevator. Suppose <span class="math inline">\(\lambda = 0.5\)</span>. Then, the probability that an elevator arrives within 4 minutes, is <span class="math inline">\(F(4) = 0.86\)</span>.</p>
-<p>Today is your bad day, and it has not come after waiting for 4 minutes. Now, you wonder “Since I already waited for so long and I know <span class="math inline">\(F(5) = 0.92\)</span> (nerd!), it will very likely come within a minute.”</p>
-<p>The memoryless property says “Not really. It will come only with <span class="math inline">\(F(1) = 0.39\)</span> chance.” In other words, if your mental model relies on <span class="math inline">\(\mathrm{exp}(\lambda)\)</span>, the fact that you have already waited for so long is totally irrelevant.</p>
+<p>To illustrate, let’s use <span class="math inline">\(\mathrm{exp}(\lambda)\)</span> to model the waiting time for an elevator. Suppose <span class="math inline">\(\lambda = 0.5\)</span>. Then, the probability that an elevator arrives within 4 minutes, is <span class="math inline">\(F(4) = 0.86\)</span>. Today is your bad day, and it has not come after waiting for 4 minutes. Now, you wonder “Since I already waited for so long and I know <span class="math inline">\(F(5) = 0.92\)</span>, it will very likely come within a minute.” The memoryless property says “Not really. It will come only with <span class="math inline">\(F(1) = 0.39\)</span> chance.” In other words, if your mental model relies on <span class="math inline">\(\mathrm{exp}(\lambda)\)</span>, the fact that you have already waited for so long is totally irrelevant.</p>
 </div>
 </div>
 <div id="weibull" class="section level2">
 <h2>Weibull</h2>
 <p>When modelling arrival of bad things (e.g., mechanical failure or disaster), we often phrase it as <strong>survival</strong>, simply meaning the negation of arrival. In probabilistic terms, if <span class="math inline">\(F(x)\)</span> is the probability that a failure happens by the time <span class="math inline">\(x\)</span>, <span class="math inline">\(1-F(x)\)</span> is the probability of survival until the time <span class="math inline">\(x\)</span>.</p>
-<p>While <span class="math inline">\(\mathrm{exp}(\lambda)\)</span> can be used, <span class="math inline">\(\mathrm{weibull}(m,\lambda)\)</span> provides a more general framework, which is often more suitable for survival analysis. The PDF <span class="math inline">\(f(x)\)</span> and CDF <span class="math inline">\(F(x)\)</span> are given below.</p>
+<p>While use of <span class="math inline">\(\mathrm{exp}(\lambda)\)</span> can be sufficient, <span class="math inline">\(\mathrm{weibull}(m,\lambda)\)</span> provides more general models, which are often more suitable for survival analysis. The PDF <span class="math inline">\(f(x)\)</span> and CDF <span class="math inline">\(F(x)\)</span> are given below.</p>
 <p><span class="math display">\[\begin{align}
   f(x) &amp;= 
   \begin{cases}
@@ -757,20 +743,23 @@ P(X&gt;t+s | X&gt;t) &amp;= \frac{P(X&gt;t+s, X&gt;t)}{P(X&gt;t)}\\
 <p><span class="math inline">\(\mathrm{weibull}(m,\lambda)\)</span> generalises the <strong>constant</strong> rate <span class="math inline">\(\lambda\)</span> used in <span class="math inline">\(\mathrm{exp}(\lambda)\)</span> to a <strong>function</strong> <span class="math inline">\(\lambda(x) = m\lambda x^{m-1}\)</span>, which covers the constant case at <span class="math inline">\(m=1\)</span>. This time-varying rate <span class="math inline">\(\lambda(x)\)</span> is commonly referred to as a <strong>hazard function</strong>.</p>
 <div id="hazard-function" class="section level3">
 <h3>Hazard function</h3>
-<p>For <span class="math inline">\(\mathrm{exp}(\lambda)\)</span>, the rate parameter <span class="math inline">\(\lambda\)</span> is assumed to be constant. What if our real-world problems suggest that the arrival/survival rate is not constant but depends on <span class="math inline">\(x\)</span>?</p>
-<p>We begin with the CDF of <span class="math inline">\(\mathrm{exp}(\lambda)\)</span>: <span class="math display">\[ F(x) = 1-e^{-\lambda x} .\]</span> Recall that <span class="math inline">\(\lambda\)</span> captures a <strong>rate</strong> (e.g., a derivative or a change for an infinitesimal time), and <span class="math inline">\(F(x)\)</span> is the probability of occurrence by the time <span class="math inline">\(x\)</span>, which goes to <span class="math inline">\(1\)</span> as <span class="math inline">\(x\to\infty\)</span>. This observation suggests that <span class="math inline">\(\lambda x\)</span> is the result of integration, <span class="math inline">\(\lambda x = \int_0^x \lambda dt\)</span>.</p>
-<p>Now, let’s explicitly write <span class="math inline">\(\lambda(x)\)</span> as a function of <span class="math inline">\(x\)</span>. As long as we make sure <span class="math inline">\(\int_0^x \lambda(t) dt\)</span> is an increasing function of <span class="math inline">\(x\)</span>, we have a legitimate <span class="math inline">\(F(x)\)</span> such that <span class="math display">\[ \lim_{x\to\infty}F(x) = \lim_{x\to\infty}\left[1-\exp\left(-\int_0^x \lambda(t)dt\right)\right] = 1 .\]</span></p>
+<p>To familiarise ourselves with the hazard function and Weibull distribution, let’s make an explicit connection with <span class="math inline">\(\mathrm{exp}(\lambda)\)</span>. For <span class="math inline">\(\mathrm{exp}(\lambda)\)</span>, the rate parameter <span class="math inline">\(\lambda\)</span> is assumed to be constant. What if our experience suggests that the arrival/survival rate in a specific problem is not constant but depends on <span class="math inline">\(x\)</span>? We begin with the CDF of <span class="math inline">\(\mathrm{exp}(\lambda)\)</span>: <span class="math display">\[
+F(x) = 1-e^{-\lambda x}.
+\]</span> Recall that <span class="math inline">\(\lambda\)</span> captures a <strong>rate</strong> (e.g., a derivative or a change over infinitesimal time), and <span class="math inline">\(F(x)\)</span> is the probability of occurrence by the time <span class="math inline">\(x\)</span>, which goes to <span class="math inline">\(1\)</span> as <span class="math inline">\(x\to\infty\)</span>. This observation suggests that <span class="math inline">\(\lambda x\)</span> may be seen as the result of integration, <span class="math display">\[
+\lambda x = \int_0^x \lambda dt.
+\]</span></p>
+<p>Now, let’s explicitly write <span class="math inline">\(\lambda(x)\)</span> as a function of <span class="math inline">\(x\)</span>. As long as we ensure that <span class="math inline">\(\int_0^x \lambda(t) dt\)</span> is an increasing function of <span class="math inline">\(x\)</span>, we have a legitimate <span class="math inline">\(F(x)\)</span> such that <span class="math display">\[ \lim_{x\to\infty}F(x) = \lim_{x\to\infty}\left[1-\exp\left(-\int_0^x \lambda(t)dt\right)\right] = 1 .\]</span></p>
 <p>With this CDF, the PDF can be derived using the chain rule and the fundamental theorem of calculus.</p>
 <p><span class="math display">\[\begin{align}
   f(x) &amp;= F&#39;(x)\\
        &amp;= \frac{d}{dx}\left[1-\exp\left(-\int_0^x \lambda(t)dt\right)\right]\\
        &amp;= \lambda(x)\exp\left(-\int_0^x \lambda(t)dt\right),
 \end{align}\]</span></p>
-<p>which is the PDF of <span class="math inline">\(\mathrm{weibull}(m,\lambda)\)</span> if <span class="math inline">\(\lambda(x) = m\lambda x^{m-1}\)</span>.</p>
+<p>which is the PDF of <span class="math inline">\(\mathrm{weibull}(m,\lambda)\)</span> if the hazard function is in the form of <span class="math inline">\(\lambda(x) = m\lambda x^{m-1}\)</span>.</p>
 </div>
 <div id="r-parameterisation" class="section level3">
 <h3>R parameterisation</h3>
-<p>This is unfortunately confusing but important to note. The R parameterisation of the Weibull distribution differs from that presented here. <code>shape</code> parameter in R simply corresponds to <span class="math inline">\(m\)</span>. But, <code>scale</code> in R corresponds to <span class="math inline">\(\lambda^{-1/m}\)</span>.</p>
+<p>R parameterisation of the Weibull distribution differs from that presented here. <code>shape</code> parameter in R simply corresponds to <span class="math inline">\(m\)</span>. But, <code>scale</code> in R corresponds to <span class="math inline">\(\lambda^{-1/m}\)</span>.</p>
 <p>For example, to simulate <span class="math inline">\(\mathrm{weibull}(m,\lambda)\)</span> with <span class="math inline">\(m=0.5\)</span> and <span class="math inline">\(\lambda=2\)</span>, give</p>
 <ul>
 <li><code>shape=0.5</code></li>
