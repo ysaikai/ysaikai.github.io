@@ -358,10 +358,9 @@ The University of Melbourne</div></h4>
 </div>
 <div id="probability" class="section level1">
 <h1>Probability</h1>
-<p>Probability is an essential tool for developing and interpreting stochastic simulations, which are very useful for gaining insight about situations that are too complex to analyse theoretically.</p>
-<p>Probability theory starts with the axioms of mathematical structure that allows us to model experiments with random outcomes and quantify the likelihood of each result of the experiments.</p>
+<p>Probability is an essential tool for developing and interpreting stochastic simulations, which are very useful for gaining insight about situations that are too complex to analyse theoretically. Probability theory starts with the axioms of mathematical structure that allows us to model experiments with random outcomes and quantify the likelihood of each result of the experiments.</p>
 <blockquote>
-<p>In these notes, to minimise distractions, I try to avoid measure-theoretic notions, which are fundamental to the rigorous probability theory. I believe, for our purpose, benefits are much bigger than costs. For example, technically speaking, not all subsets of the unit interval <span class="math inline">\([0,1]\)</span> qualify as events, because the power set is too large or its elements are too many to handle. The most common collection, which is somewhat smaller but not too small to be useful, is called the Borel <span class="math inline">\(\sigma\)</span>-algebra.</p>
+<p>In these notes, to minimise distractions, I try to avoid measure-theoretic notions, which are fundamental to the rigorous probability theory. For our purpose, benefits are much bigger than costs. For example, technically speaking, not all subsets of the unit interval <span class="math inline">\([0,1]\)</span> qualify as events, because the power set is too large to assign a probability to each element. The most common collection, which is somewhat smaller but not too small to be useful, is called the Borel <span class="math inline">\(\sigma\)</span>-algebra.</p>
 </blockquote>
 <div id="sample-space-events" class="section level2">
 <h2>Sample space &amp; events</h2>
@@ -370,8 +369,7 @@ The University of Melbourne</div></h4>
 <li>Sample point : an element of sample space</li>
 <li>Event : a subset of sample space</li>
 </ul>
-<p>For example, imagine an experiment in which we roll a die. The sample space is <span class="math inline">\(\{1,2,3,4,5,6\}\)</span>. Any combination of six numbers (or lack thereof) such as <span class="math inline">\(\{2,4,6\}\)</span> and <span class="math inline">\(\{1\}\)</span> is an event. In this case, therefore, a collection of all events is a <a href="https://en.wikipedia.org/wiki/Power_set">power set</a> of size <span class="math inline">\(2^6=64\)</span>.</p>
-<p>While this is a simple case, how we define sample space is often important. For example, if we roll a die twice (or roll two dice at once), we have two reasonable choices: ordered or unordered pairs. The choice probably depends on how we model problems of interest.</p>
+<p>For example, imagine an experiment in which we roll a die. The sample space is <span class="math inline">\(\{1,2,3,4,5,6\}\)</span>. Any combination of six numbers (or lack thereof) such as <span class="math inline">\(\{2,4,6\}\)</span> and <span class="math inline">\(\{1\}\)</span> is an event. In this case, therefore, a collection of all events is a <a href="https://en.wikipedia.org/wiki/Power_set">power set</a> of size <span class="math inline">\(2^6=64\)</span>. While this is a straightforward case, how we define sample space is often important. For example, if we roll a die twice (or roll two dice at once), we have two reasonable choices: ordered or unordered pairs. The choice probably depends on how we model problems of interest.</p>
 </div>
 <div id="notaitons-set-operations" class="section level2">
 <h2>Notaitons &amp; set operations</h2>
@@ -397,8 +395,7 @@ The University of Melbourne</div></h4>
 </div>
 <div id="probability-function" class="section level2">
 <h2>Probability function</h2>
-<p>A probability function <span class="math inline">\(P\)</span> assigns a value in <span class="math inline">\([0,1]\)</span> to an event <span class="math inline">\(A\subseteq\Omega\)</span>. Intuitively, <span class="math inline">\(P(A)\)</span> is the answer to the question of “How likely is event <span class="math inline">\(A\)</span>?”</p>
-<p>A probability function <span class="math inline">\(P\)</span> must be <strong>constructed</strong> to satisfy the following three properties:</p>
+<p>A probability function <span class="math inline">\(P\)</span> assigns a value in <span class="math inline">\([0,1]\)</span> to an event <span class="math inline">\(A\subseteq\Omega\)</span>. Intuitively, <span class="math inline">\(P(A)\)</span> is the answer to the question of <em>How likely is event <span class="math inline">\(A\)</span>?</em> A probability function <span class="math inline">\(P\)</span> must be <strong>constructed</strong> to satisfy the following three properties:</p>
 <ul>
 <li><span class="math inline">\(0\leq P(A)\leq 1\)</span> for <span class="math inline">\(A\subseteq\Omega\)</span></li>
 <li><span class="math inline">\(P(\emptyset) = 0\)</span> and <span class="math inline">\(P(\Omega) = 1\)</span></li>
@@ -409,7 +406,7 @@ The University of Melbourne</div></h4>
 </blockquote>
 <div id="examples" class="section level3">
 <h3>Examples</h3>
-<p>Suppose <span class="math inline">\(\Omega\)</span> is a finite set of size <span class="math inline">\(|\Omega|=n\)</span> and each element is equally likely. Then, <span class="math display">\[ P(A) = \frac{|A|}{n} ,\]</span> and we just need to count the elements of <span class="math inline">\(A\)</span> to compute <span class="math inline">\(P(A)\)</span>.</p>
+<p>Suppose <span class="math inline">\(\Omega\)</span> is a finite set of size <span class="math inline">\(|\Omega|=n\)</span>. If our model is that each element is equally likely, then, <span class="math display">\[ P(A) = \frac{|A|}{n} .\]</span> In other words, we just need to count the elements of <span class="math inline">\(A\)</span> to compute <span class="math inline">\(P(A)\)</span>.</p>
 <p>In contrast, in an experiment of rolling an unfair die with <span class="math inline">\(6\)</span> twice more likely than the others, we have the following probability function:</p>
 <table>
 <thead>
@@ -451,8 +448,7 @@ The University of Melbourne</div></h4>
 <blockquote>
 <p>Note <span class="math inline">\(A\cap B = A\)</span> because <span class="math inline">\(A\subset B\)</span>.</p>
 </blockquote>
-<p>Perhaps, it makes more sense if we write <span class="math inline">\(P(A\cap B) = P(A|B)P(B)\)</span>. The probability that both <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> happen is equal to the probability that <span class="math inline">\(B\)</span> happens first and, treating <em><span class="math inline">\(B\)</span> as a new sample space</em>, <span class="math inline">\(A\)</span> happens next.</p>
-<p>In other words, provided <span class="math inline">\(P(B)&gt;0\)</span>, we can restrict the sample space <span class="math inline">\(\Omega\)</span> to <span class="math inline">\(B\)</span> and use <span class="math inline">\(P(\cdot|B)\)</span> as a legitimate probability function that takes a subset of <span class="math inline">\(B\)</span> and returns a value in <span class="math inline">\([0,1]\)</span>.</p>
+<p>Perhaps, it makes more sense if we write <span class="math inline">\(P(A\cap B) = P(A|B)P(B)\)</span>. The probability that both <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> happen is equal to the probability that <span class="math inline">\(B\)</span> happens first and, treating <em><span class="math inline">\(B\)</span> as a new sample space</em>, <span class="math inline">\(A\)</span> happens next. In other words, provided <span class="math inline">\(P(B)&gt;0\)</span>, we can restrict the sample space <span class="math inline">\(\Omega\)</span> to <span class="math inline">\(B\)</span> and use <span class="math inline">\(P(\cdot|B)\)</span> as a legitimate probability function that takes a subset of <span class="math inline">\(B\)</span> and returns a value in <span class="math inline">\([0,1]\)</span>.</p>
 </div>
 <div id="independence" class="section level2">
 <h2>Independence</h2>
@@ -463,8 +459,7 @@ The University of Melbourne</div></h4>
 \end{alignat}\]</span> which we may read as <em>Restricting the sample space to <span class="math inline">\(B\)</span> or knowing <span class="math inline">\(B\)</span> happened first does not change the probability of <span class="math inline">\(A\)</span>.</em></p>
 <div id="example" class="section level3">
 <h3>Example</h3>
-<p>To get some intuition, think of rolling two dice, one in red and the other in blue. <span class="math inline">\(\Omega\)</span> is the collection of all the ordered pairs: <span class="math display">\[\Omega = \{\omega=(\omega_r,\omega_b) : \omega_r,\omega_b\in\{1,2,\dots,6\}\} .\]</span> Now, suppose: <span class="math display">\[A = \{\omega=(\omega_r,\omega_b) : \omega_r = 1\}\]</span> and <span class="math display">\[B = \{\omega=(\omega_r,\omega_b) : \omega_b = 6\} .\]</span> If you roll the red die first and see <span class="math inline">\(1\)</span> up (i.e., <span class="math inline">\(A\)</span> happened), is the probability that the blue die turns with <span class="math inline">\(6\)</span> up different from <span class="math inline">\(1/6\)</span>? No, it should not be.</p>
-<p>Concretely, when the sample space is <span class="math inline">\(\Omega\)</span>, the size of <span class="math inline">\(B\)</span> is <span class="math display">\[|B| = |\{(1,6),(2,6),\dots,(6,6)\}| = 6 .\]</span> In contrast, when the sample space is <span class="math inline">\(A\)</span>, the size of <span class="math inline">\(B\)</span> is <span class="math display">\[|B \text{ given } A| = |\{(1,6)\}| = 1 .\]</span> Hence, <span class="math display">\[P(B) = \frac{|B|}{|\Omega|} = \frac{6}{36} = \frac{1}{6} = \frac{|B \text{ given } A|}{|A|} = P(B|A) .\]</span></p>
+<p>To get some intuition, think of rolling two dice, one in red and the other in blue. <span class="math inline">\(\Omega\)</span> is the collection of all the ordered pairs: <span class="math display">\[\Omega = \{\omega=(\omega_r,\omega_b) : \omega_r,\omega_b\in\{1,2,\dots,6\}\} .\]</span> Now, suppose: <span class="math display">\[A = \{\omega=(\omega_r,\omega_b) : \omega_r = 1\}\]</span> and <span class="math display">\[B = \{\omega=(\omega_r,\omega_b) : \omega_b = 6\} .\]</span> If you roll the red die first and see <span class="math inline">\(1\)</span> up (i.e., <span class="math inline">\(A\)</span> happened), is the probability that the blue die turns with <span class="math inline">\(6\)</span> up different from <span class="math inline">\(1/6\)</span>? No, it should not be. Concretely, when the sample space is <span class="math inline">\(\Omega\)</span>, the size of <span class="math inline">\(B\)</span> is <span class="math display">\[|B| = |\{(1,6),(2,6),\dots,(6,6)\}| = 6 .\]</span> In contrast, when the sample space is <span class="math inline">\(A\)</span>, the size of <span class="math inline">\(B\)</span> is <span class="math display">\[|B \text{ given } A| = |\{(1,6)\}| = 1 .\]</span> Hence, <span class="math display">\[P(B) = \frac{|B|}{|\Omega|} = \frac{6}{36} = \frac{1}{6} = \frac{|B \text{ given } A|}{|A|} = P(B|A) .\]</span></p>
 </div>
 </div>
 <div id="law-of-total-probability" class="section level2">
@@ -486,7 +481,9 @@ The University of Melbourne</div></h4>
 <li><span class="math inline">\(P(A\cap B) = P(B|A)P(A)\)</span></li>
 <li><span class="math inline">\(P(A\cap B) = P(A|B)P(B)\)</span></li>
 </ul>
-<p>Equating them, we have <span class="math inline">\(P(A|B)P(B) = P(B|A)P(A)\)</span>. Or, using a partition <span class="math inline">\(\Omega = E_1\cup\dots\cup E_K\)</span> and setting <span class="math inline">\(B=E_k\)</span> for some <span class="math inline">\(k\in\{1,2,\dots,K\}\)</span>, <span class="math display">\[\begin{align}
+<p>Equating them, we can get <span class="math display">\[
+P(B|A) = \frac{P(A|B)P(B)}{P(A)}.
+\]</span> Or, using a partition <span class="math inline">\(\Omega = E_1\cup\dots\cup E_K\)</span> and setting <span class="math inline">\(B=E_k\)</span> for some <span class="math inline">\(k\in\{1,2,\dots,K\}\)</span>, <span class="math display">\[\begin{align}
   P(E_k|A) &amp;= \frac{P(A|E_k)P(E_k)}{P(A)}\\
          &amp;= \frac{P(A|E_k)P(E_k)}{P(A|E_1)P(E_1)+\dots+P(A|E_K)P(E_K)}
 \end{align}\]</span> which is given a special name — Bayes’ formula (a.k.a. Bayes’ rule or theorem).</p>
@@ -517,7 +514,7 @@ The University of Melbourne</div></h4>
 <blockquote>
 <p>I know it’s weird. As opposed to lower case letters, a capital letter <span class="math inline">\(X\)</span> is used for a function yet called “variable”. Despite the name “random” variable, it is just a deterministic function. Unfortunately, this is the convention.</p>
 </blockquote>
-<p>Let <span class="math inline">\(A\)</span> be a subset of the real line, <span class="math inline">\(A\subset\mathbb{R}\)</span>. Then, to express the probability that “<span class="math inline">\(X\)</span> lies in <span class="math inline">\(A\)</span>”, we write <span class="math inline">\(P(X\in A)\)</span>, which is a shorthand for <span class="math inline">\(P(\{\omega\in\Omega : X(\omega)\in A\})\)</span>.</p>
+<p>Let <span class="math inline">\(A\)</span> be a subset of the real line. Then, to express the probability that “<span class="math inline">\(X\)</span> lies in <span class="math inline">\(A\)</span>”, we write <span class="math inline">\(P(X\in A)\)</span> as a shorthand for <span class="math inline">\(P(\{\omega\in\Omega : X(\omega)\in A\})\)</span>.</p>
 <div id="example-2" class="section level3">
 <h3>Example</h3>
 <p>Using the example of <a href="#example">rolling two dice</a>, we illustrate four random variables:</p>
@@ -573,16 +570,14 @@ The University of Melbourne</div></h4>
 <h2>Types of random variables</h2>
 <div id="discrete" class="section level3">
 <h3>Discrete</h3>
-<p>A random variable <span class="math inline">\(X\)</span> is <strong>discrete</strong> if there exists a finite or countably infinite set <span class="math inline">\(B\subset\mathbb{R}\)</span> such that <span class="math inline">\(P(X \in B) = 1\)</span>.</p>
-<p>The definition implies that the CDF of <span class="math inline">\(X\)</span> is a step function that jumps at each element of <span class="math inline">\(B\)</span>. For example, as seen in the above figure, the CDF of <span class="math inline">\(X_3\)</span> has 11 jumps and is flat for the rest.</p>
+<p>A random variable <span class="math inline">\(X\)</span> is said to be <strong>discrete</strong> if there exists a finite or countably infinite set <span class="math inline">\(B\subset\mathbb{R}\)</span> such that <span class="math inline">\(P(X \in B) = 1\)</span>. The definition implies that the CDF of <span class="math inline">\(X\)</span> is a step function that jumps at each element of <span class="math inline">\(B\)</span>. For example, as seen in the above figure, the CDF of <span class="math inline">\(X_3\)</span> has 11 jumps and is flat for the rest.</p>
 <p>The <strong>probability mass function</strong> (PMF) of a discrete random variable <span class="math inline">\(X\)</span> is the function <span class="math inline">\(p\)</span> defined by <span class="math display">\[p(x) = P(\{\omega\in\Omega : X(\omega)=x\})\]</span> for all <span class="math inline">\(x\in\mathbb{R}\)</span>. The PMF is related to the CDF as follow: <span class="math display">\[p(x) = F(x)-F(x-).\]</span> In other words, <span class="math inline">\(p(x)\)</span> is equal to the height of jump at <span class="math inline">\(x\)</span>.</p>
 </div>
 <div id="continuous" class="section level3">
 <h3>Continuous</h3>
-<p>If a non-negative function <span class="math inline">\(f\)</span> on <span class="math inline">\(\mathbb{R}\)</span> satisfies <span class="math display">\[P(X\leq b) = F(b) = \int_{-\infty}^b f(x)dx\]</span> for all <span class="math inline">\(b\in\mathbb{R}\)</span>, then <span class="math inline">\(f\)</span> is a <strong>probability density function</strong> (PDF) of <span class="math inline">\(X\)</span>.</p>
-<p>A random variable <span class="math inline">\(X\)</span> is said to be (absolutely) <strong>continuous</strong> if <span class="math inline">\(X\)</span> has a PDF.</p>
+<p>If a non-negative function <span class="math inline">\(f\)</span> on <span class="math inline">\(\mathbb{R}\)</span> satisfies <span class="math display">\[P(X\leq b) = F(b) = \int_{-\infty}^b f(x)dx\]</span> for all <span class="math inline">\(b\in\mathbb{R}\)</span>, then <span class="math inline">\(f\)</span> is a <strong>probability density function</strong> (PDF) for <span class="math inline">\(X\)</span>. A random variable <span class="math inline">\(X\)</span> is said to be (absolutely) <strong>continuous</strong> if <span class="math inline">\(X\)</span> has a PDF.</p>
 <blockquote>
-<p>A PDF of <span class="math inline">\(X\)</span> is not unique, because integral is insensitive to a countable set of points in the integration range. For example, <span class="math inline">\(f_1(x) = \mathbb{1}_{[0,1]}(x)\)</span> and <span class="math inline">\(f_2(x) = \mathbb{1}_{[0,1]\setminus\{0.5\}}(x)\)</span> are both legitimate PDFs for the uniform distribution over <span class="math inline">\([0,1]\)</span>.</p>
+<p>Technically speaking, a PDF for <span class="math inline">\(X\)</span> is not unique, because integral is insensitive to a countable set of points in the integration range. For example, <span class="math inline">\(f_1(x) = \mathbb{1}_{[0,1]}(x)\)</span> and <span class="math inline">\(f_2(x) = \mathbb{1}_{[0,1]\setminus\{0.5\}}(x)\)</span> are both legitimate PDFs for the uniform distribution over <span class="math inline">\([0,1]\)</span>. In practice, howeveer, we often say <strong>the PDF</strong> of <span class="math inline">\(X\)</span> to refer to the nicest continuous one.</p>
 </blockquote>
 <p>An implication is that the CDF of <span class="math inline">\(X\)</span> is a continuous function and <span class="math inline">\(F(b) = F(b-)\)</span> for all <span class="math inline">\(b\in\mathbb{R}\)</span>. Thus, <span class="math display">\[ P(X=b) = F(b)-F(b-) = 0 .\]</span></p>
 </div>
@@ -607,8 +602,7 @@ The University of Melbourne</div></h4>
 </div>
 <div id="expectation" class="section level2">
 <h2>Expectation</h2>
-<p>Let’s consider a discrete random variable <span class="math inline">\(X\)</span>, which takes a value <span class="math inline">\(x\)</span> with probability of <span class="math inline">\(p(x)\)</span>. It makes sense to think about what value to expect from this random event. One intuitive value to expect is the average of all possible values, isn’t it? Moreover, since each possible value has its own associated probability, it is more reasonable to use the <strong>weighted average</strong> with <span class="math inline">\(p(x)\)</span> as a weight for <span class="math inline">\(x\)</span>.</p>
-<p>Mathematical expectation formalises this intuition. For our purpose, it suffices to see expectation as a weighted average.</p>
+<p>Let’s consider a discrete random variable <span class="math inline">\(X\)</span>, which takes a value <span class="math inline">\(x\)</span> with probability of <span class="math inline">\(p(x)\)</span>. It makes sense to think about what value to expect from this random event. One intuitive value to expect is the average of all possible values, isn’t it? Moreover, since each possible value has its own associated probability, it is more reasonable to use the <strong>weighted average</strong> with <span class="math inline">\(p(x)\)</span> as a weight for <span class="math inline">\(x\)</span>. Mathematical expectation formalises this intuition. For our purpose, it suffices to see expectation as a weighted average.</p>
 <blockquote>
 <p>In these notes, when discussing expectation, we implicitly assume it exists.</p>
 </blockquote>
@@ -620,16 +614,14 @@ The University of Melbourne</div></h4>
 </div>
 <div id="transformation" class="section level3">
 <h3>Transformation</h3>
-<p>We are often interested in <span class="math inline">\(h(X)\)</span>, a transformation of <span class="math inline">\(X\)</span> using a deterministic function <span class="math inline">\(h\)</span>, and its expectation <span class="math inline">\(\mathbb{E}h(X)\)</span>.</p>
-<p>Here is the formula. <span class="math display">\[
+<p>We are often interested in <span class="math inline">\(h(X)\)</span>, a transformation of <span class="math inline">\(X\)</span> using a deterministic function <span class="math inline">\(h\)</span>, and its expectation <span class="math inline">\(\mathbb{E}h(X)\)</span>. Here is the formula. <span class="math display">\[
 \mathbb{E}h(X) =
   \begin{cases}
     \sum_x h(x)p(x), &amp; \text{if } X \text{ is discrete}\\
     \int_{-\infty}^\infty h(x)f(x)dx, &amp; \text{if } X \text{ is continuous}
   \end{cases}
 \]</span></p>
-<p>Remember the <a href="#definition">definition</a> of random variable — a function mapping <span class="math inline">\(\omega\in\Omega\)</span> to <span class="math inline">\(x\in\mathbb{R}\)</span>. Since a function of a function is just another function, <span class="math inline">\(h(X)\)</span> can be seen as another random variable (say, <span class="math inline">\(Y=h(X)\)</span>). Finally, the probability of <span class="math inline">\(h(X)=y\)</span> is obtained by summing the probabilities of <span class="math inline">\(X=x_i\)</span> such that <span class="math inline">\(h(x_i)=y\)</span> for all <span class="math inline">\(i\)</span> because two sets <span class="math inline">\(\{\omega\in\Omega : X(\omega)=x_i\}\)</span> and <span class="math inline">\(\{\omega\in\Omega : X(\omega)=x_j\}\)</span> are mutually exclusive.</p>
-<p>The last point is seen at the second equality in the following proof for a discrete random variable. <span class="math display">\[\begin{align}
+<p>Remember the <a href="#definition">definition</a> of random variable — a function mapping <span class="math inline">\(\omega\in\Omega\)</span> to <span class="math inline">\(x\in\mathbb{R}\)</span>. Since a function of a function is just another function, <span class="math inline">\(h(X)\)</span> can be seen as another random variable (say, <span class="math inline">\(Y=h(X)\)</span>). Finally, the probability of <span class="math inline">\(h(X)=y\)</span> is obtained by summing the probabilities of <span class="math inline">\(X=x_i\)</span> such that <span class="math inline">\(h(x_i)=y\)</span> for all <span class="math inline">\(i\)</span> because two sets <span class="math inline">\(\{\omega\in\Omega : X(\omega)=x_i\}\)</span> and <span class="math inline">\(\{\omega\in\Omega : X(\omega)=x_j\}\)</span> are mutually exclusive for distinct <span class="math inline">\(i\)</span> and <span class="math inline">\(j\)</span>. The last point is seen at the second equality in the following proof for the discrete case. <span class="math display">\[\begin{align}
   \mathbb{E}Y &amp;= \sum_y y P(Y=y)\\
               &amp;= \sum_y y \sum_{x:y=h(x)} p(x)\\
               &amp;= \sum_y \sum_{x:y=h(x)} h(x)p(x)\\
@@ -650,8 +642,7 @@ The University of Melbourne</div></h4>
 <blockquote>
 <p>N.B. <span class="math inline">\(\mathbb{E}X\)</span> is a constant value and no longer random.</p>
 </blockquote>
-<p>The square root of the variance is the <strong>standard deviation</strong>.</p>
-<p>Both variance and standard deviation are measures of spread. Variance is easier to calculate, while standard deviation is easier to interpret because it has the same unit of measurement as the random variable.</p>
+<p>The square root of the variance is the <strong>standard deviation</strong>. Both variance and standard deviation are measures of spread. Variance is easier to calculate, while standard deviation is easier to interpret because it has the same unit of measurement as the random variable.</p>
 <p>The covariance <span class="math inline">\(\operatorname{Cov}(X,Y)\)</span> of two random variables <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> is defined by <span class="math display">\[\operatorname{Cov}(X,Y) = \mathbb{E}(X-\mathbb{E}X)(Y-\mathbb{E}Y) .\]</span> The covariance is a measure of how <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> “co-vary” together.</p>
 <p>Although most formulas associated with variance and covariance are straightforward to derive from their definitions, here is an important one, which is worthy of our attention — independence between <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> implies <span class="math inline">\(\operatorname{Cov}(X,Y)=0\)</span>. <span class="math display">\[\begin{align}
   \operatorname{Cov}(X,Y) &amp;= \mathbb{E}(X-\mathbb{E}X)(Y-\mathbb{E}Y)\\
