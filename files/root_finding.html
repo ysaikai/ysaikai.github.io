@@ -152,7 +152,7 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 
 
 
-<link rel="stylesheet" href="data:text/css,h1%2Etitle%20%7B%0Afont%2Dsize%3A%20300%25%3B%0A%7D%0Ah1%20%7B%0Apadding%2Dtop%3A%2040px%3B%0A%7D%0Ah2%20%7B%0Apadding%2Dtop%3A%2015px%3B%0A%7D%0Ah3%20%7B%0Apadding%2Dtop%3A%208px%3B%0A%7D%0Ablockquote%20%7B%0Afont%2Dsize%3A%20100%25%3B%0A%7D%0A" type="text/css" />
+<link rel="stylesheet" href="data:text/css,%0A%23TOC%20%7B%0Afont%2Dsize%3A%2014px%3B%0A%7D%0Ah1%2Etitle%20%7B%0Afont%2Dsize%3A%2042px%3B%0A%7D%0Ah1%20%7B%0Afont%2Dsize%3A%2032px%3B%0Apadding%2Dtop%3A%2040px%3B%0A%7D%0Ah2%20%7B%0Afont%2Dsize%3A%2026px%3B%0Apadding%2Dtop%3A%2015px%3B%0A%7D%0Ah3%20%7B%0Afont%2Dsize%3A%2020px%3B%0Apadding%2Dtop%3A%208px%3B%0A%7D%0Abody%20%7B%0Afont%2Dsize%3A%2013pt%3B%0A%7D%0Ablockquote%20%7B%0Afont%2Dsize%3A%2015px%3B%0A%7D%0A%0Apre%20%7B%0Afont%2Dsize%3A%2014px%0A%7D%0A" type="text/css" />
 
 
 
@@ -597,23 +597,22 @@ a = \lim_{n\to\infty}x_{n+1}
 <p>Does the first criterion make sense to you?</p>
 </blockquote>
 <p>Here is an implementation of the algorithm.</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r fold-show"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>newtonraphson <span class="ot">&lt;-</span> <span class="cf">function</span>(fg, x0, <span class="at">tol=</span><span class="fl">1e-9</span>, <span class="at">n.max=</span><span class="dv">100</span>) {</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  x <span class="ot">&lt;-</span> x0</span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  fg.x <span class="ot">&lt;-</span> <span class="fu">fg</span>(x) <span class="co"># fg.x for fg evaluated at x</span></span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>  n <span class="ot">&lt;-</span> <span class="dv">0</span></span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>  <span class="cf">while</span> ((<span class="fu">abs</span>(fg.x[<span class="dv">1</span>]) <span class="sc">&gt;</span> tol) <span class="sc">&amp;&amp;</span> (n <span class="sc">&lt;</span> n.max)) {</span>
-<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>    x <span class="ot">&lt;-</span> x <span class="sc">-</span> fg.x[<span class="dv">1</span>]<span class="sc">/</span>fg.x[<span class="dv">2</span>]</span>
-<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>    fg.x <span class="ot">&lt;-</span> <span class="fu">fg</span>(x)</span>
-<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>    n <span class="ot">&lt;-</span> n <span class="sc">+</span> <span class="dv">1</span></span>
-<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">abs</span>(fg.x[<span class="dv">1</span>]) <span class="sc">&gt;</span> tol) {</span>
-<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(<span class="st">&quot;Failed to converge.&quot;</span>)</span>
-<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
-<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(<span class="fu">list</span>(<span class="st">&quot;a&quot;</span><span class="ot">=</span>x, <span class="st">&quot;n&quot;</span><span class="ot">=</span>n))</span>
-<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r fold-show"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>newtonraphson <span class="ot">&lt;-</span> <span class="cf">function</span>(fg, x, <span class="at">tol=</span><span class="fl">1e-9</span>, <span class="at">n.max=</span><span class="dv">100</span>) {</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  fg.x <span class="ot">&lt;-</span> <span class="fu">fg</span>(x) <span class="co"># fg.x for fg evaluated at x</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  n <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>  <span class="cf">while</span> ((<span class="fu">abs</span>(fg.x[<span class="dv">1</span>]) <span class="sc">&gt;</span> tol) <span class="sc">&amp;&amp;</span> (n <span class="sc">&lt;</span> n.max)) {</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>    x <span class="ot">&lt;-</span> x <span class="sc">-</span> fg.x[<span class="dv">1</span>]<span class="sc">/</span>fg.x[<span class="dv">2</span>]</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>    fg.x <span class="ot">&lt;-</span> <span class="fu">fg</span>(x)</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>    n <span class="ot">&lt;-</span> n <span class="sc">+</span> <span class="dv">1</span></span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">abs</span>(fg.x[<span class="dv">1</span>]) <span class="sc">&gt;</span> tol) {</span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(<span class="st">&quot;Failed to converge.&quot;</span>)</span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(<span class="fu">list</span>(<span class="st">&quot;a&quot;</span><span class="ot">=</span>x, <span class="st">&quot;n&quot;</span><span class="ot">=</span>n))</span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <div id="root-of-logx-exp-x-1" class="section level2">
 <h2>Root of <span class="math inline">\(\log(x)-\exp(-x)\)</span></h2>
 <p>Let’s apply the Newton-Raphson method to the same <span class="math inline">\(f(x)=\log(x)-\exp(-x)\)</span>. First, define the function that returns both a function value and a derivative.</p>
