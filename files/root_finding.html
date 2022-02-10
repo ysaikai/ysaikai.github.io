@@ -506,26 +506,25 @@ a = \lim_{n\to\infty}x_{n+1}
 <li><span class="math inline">\(n=n_{max}\)</span>, where <span class="math inline">\(n_{max}\)</span> is the maximum number of iterations allowed.</li>
 </ul>
 <p>Here is an implementation of the algorithm.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r fold-show"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>fixedpoint <span class="ot">&lt;-</span> <span class="cf">function</span>(g, x0, <span class="at">tol=</span><span class="fl">1e-9</span>, <span class="at">n.max=</span><span class="dv">100</span>) {</span>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r fold-show"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>fixedpoint <span class="ot">&lt;-</span> <span class="cf">function</span>(g, x_old, <span class="at">tol=</span><span class="fl">1e-9</span>, <span class="at">n.max=</span><span class="dv">100</span>) {</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Initialisation</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  x_old <span class="ot">&lt;-</span> x0</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  x <span class="ot">&lt;-</span> <span class="fu">g</span>(x_old)</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  n <span class="ot">&lt;-</span> <span class="dv">1</span></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Loop</span></span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  <span class="cf">while</span> ((<span class="fu">abs</span>(x<span class="sc">-</span>x_old) <span class="sc">&gt;</span> tol) <span class="sc">&amp;&amp;</span> (n <span class="sc">&lt;</span> n.max)) {</span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    x_old <span class="ot">&lt;-</span> x</span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    x <span class="ot">&lt;-</span> <span class="fu">g</span>(x_old)</span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>    n <span class="ot">&lt;-</span> n <span class="sc">+</span> <span class="dv">1</span></span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Result</span></span>
-<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">abs</span>(x<span class="sc">-</span>x_old) <span class="sc">&gt;</span> tol) {</span>
-<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(<span class="st">&quot;Failed to converge.&quot;</span>)</span>
-<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
-<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(<span class="fu">list</span>(<span class="st">&quot;a&quot;</span><span class="ot">=</span>x, <span class="st">&quot;n&quot;</span><span class="ot">=</span>n))</span>
-<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  x <span class="ot">&lt;-</span> <span class="fu">g</span>(x_old)</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  n <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Loop</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  <span class="cf">while</span> ((<span class="fu">abs</span>(x<span class="sc">-</span>x_old) <span class="sc">&gt;</span> tol) <span class="sc">&amp;&amp;</span> (n <span class="sc">&lt;</span> n.max)) {</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    x_old <span class="ot">&lt;-</span> x</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    x <span class="ot">&lt;-</span> <span class="fu">g</span>(x_old)</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    n <span class="ot">&lt;-</span> n <span class="sc">+</span> <span class="dv">1</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Result</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">abs</span>(x<span class="sc">-</span>x_old) <span class="sc">&gt;</span> tol) {</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(<span class="st">&quot;Failed to converge.&quot;</span>)</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(<span class="fu">list</span>(<span class="st">&quot;a&quot;</span><span class="ot">=</span>x, <span class="st">&quot;n&quot;</span><span class="ot">=</span>n))</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <blockquote>
 <p>Try to write the loop part using a <code>for</code> loop.</p>
 </blockquote>
@@ -700,7 +699,7 @@ a = \lim_{n\to\infty}x_{n+1}
 <span id="cb18-29"><a href="#cb18-29" aria-hidden="true" tabindex="-1"></a>  }</span>
 <span id="cb18-30"><a href="#cb18-30" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb18-31"><a href="#cb18-31" aria-hidden="true" tabindex="-1"></a>  x.m <span class="ot">&lt;-</span> (x.l <span class="sc">+</span> x.r)<span class="sc">/</span><span class="dv">2</span></span>
-<span id="cb18-32"><a href="#cb18-32" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(<span class="fu">list</span>(<span class="st">&quot;a&quot;</span><span class="ot">=</span>x, <span class="st">&quot;n&quot;</span><span class="ot">=</span>n))</span>
+<span id="cb18-32"><a href="#cb18-32" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(<span class="fu">list</span>(<span class="st">&quot;a&quot;</span><span class="ot">=</span>x.m, <span class="st">&quot;n&quot;</span><span class="ot">=</span>n))</span>
 <span id="cb18-33"><a href="#cb18-33" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <blockquote>
 <p>Can you what cases <em>Exception</em> handles?</p>
@@ -709,7 +708,7 @@ a = \lim_{n\to\infty}x_{n+1}
 <div class="sourceCode" id="cb19"><pre class="sourceCode r fold-show"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>f <span class="ot">&lt;-</span> <span class="cf">function</span>(x) <span class="fu">log</span>(x) <span class="sc">-</span> <span class="fu">exp</span>(<span class="sc">-</span>x)</span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="fu">bisection</span>(f, <span class="dv">1</span>, <span class="dv">2</span>)</span></code></pre></div>
 <pre><code>## $a
-## [1] 1.31
+## [1] 1.3098
 ## 
 ## $n
 ## [1] 30</code></pre>
