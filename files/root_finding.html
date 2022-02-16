@@ -701,9 +701,6 @@ a = \lim_{n\to\infty}x_{n+1}
 <span id="cb18-31"><a href="#cb18-31" aria-hidden="true" tabindex="-1"></a>  x.m <span class="ot">&lt;-</span> (x.l <span class="sc">+</span> x.r)<span class="sc">/</span><span class="dv">2</span></span>
 <span id="cb18-32"><a href="#cb18-32" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(<span class="fu">list</span>(<span class="st">&quot;a&quot;</span><span class="ot">=</span>x.m, <span class="st">&quot;n&quot;</span><span class="ot">=</span>n))</span>
 <span id="cb18-33"><a href="#cb18-33" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
-<blockquote>
-<p>Can you what cases <em>Exception</em> handles?</p>
-</blockquote>
 <p>Let’s apply the bisection method to the same function <span class="math inline">\(f(x)=\log(x)-\exp(-x)\)</span>. In contrast to an initial point to <code>fixedpoint</code> and <code>newtonraphson</code>, in this case, we supply to <code>bisection</code> two boundary points of an initial interval (<span class="math inline">\(x_l\)</span> and <span class="math inline">\(x_r\)</span>).</p>
 <div class="sourceCode" id="cb19"><pre class="sourceCode r fold-show"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>f <span class="ot">&lt;-</span> <span class="cf">function</span>(x) <span class="fu">log</span>(x) <span class="sc">-</span> <span class="fu">exp</span>(<span class="sc">-</span>x)</span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="fu">bisection</span>(f, <span class="dv">1</span>, <span class="dv">2</span>)</span></code></pre></div>
