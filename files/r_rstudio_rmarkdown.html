@@ -339,6 +339,19 @@ The University of Melbourne</div></h4>
 <li>Xie, Y., Allaire, J. J., &amp; Grolemund, G. (2018). <a href="https://bookdown.org/yihui/rmarkdown/"><em>R markdown: The definitive guide</em></a>. CRC Press.</li>
 </ul>
 </div>
+<div id="introduction" class="section level1">
+<h1>Introduction</h1>
+<p>For scientific computing, we do not really need sophisticated coding techniques. A real challenge is:</p>
+<ul>
+<li>problem identification,</li>
+<li>modelling, and</li>
+<li>solution algorithm.</li>
+</ul>
+<p>Coding is, for us, merely an implementation of algorithms.</p>
+<p>That said, coding may take a lot of time, much more time than we often expect. Even when we have a clear algorithm, expressing it in a specific programming language often surprises us with an amount of time it takes. This is just like English writing. The best way to minimise the chance of this surprise is to do practice over and over again. The more, the better.</p>
+<p>There seems to be two programming languages competing for the highest ROI (return on investment)—R and Python. Both are easy to learn, simple to use, and extremely popular. The popularity means a lot. Because so many people use them, we can find packages and code examples for pretty much any functionality we want to implement. This allows us to focus on problem solving, for which we code.</p>
+<p>If you ever have created web pages using HTML or PDF documents using LaTeX, you know how steep learning curves are. Markdown is a modern lightweight language for creating equally rich documents with ease. R Markdown takes it to the next level. From a single source file, we can generate many different types of rich documents including HTML, PDF, MS Word, and presentation slides. More importantly, we can interweave computational results via R with document writing via Markdown.</p>
+</div>
 <div id="coding-in-r" class="section level1">
 <h1>Coding in R</h1>
 <div id="function" class="section level2">
@@ -596,11 +609,11 @@ f(x_1,x_2) = x_1^2 - 2x_1x_2^2,
 <div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tic</span>()</span>
 <span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>re1 <span class="ot">=</span> <span class="fu">primesieve1</span>(n)</span>
 <span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a><span class="fu">toc</span>()</span></code></pre></div>
-<pre><code>## 0.526 sec elapsed</code></pre>
+<pre><code>## 0.54 sec elapsed</code></pre>
 <div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tic</span>()</span>
 <span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>re2 <span class="ot">=</span> <span class="fu">primesieve2</span>(<span class="fu">c</span>(), <span class="dv">2</span><span class="sc">:</span>n)</span>
 <span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a><span class="fu">toc</span>()</span></code></pre></div>
-<pre><code>## 0.009 sec elapsed</code></pre>
+<pre><code>## 0.01 sec elapsed</code></pre>
 <div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="fu">identical</span>(re1, re2)) {</span>
 <span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cat</span>(<span class="st">&quot;Both found the same set containing&quot;</span>, <span class="fu">length</span>(re1), <span class="st">&quot;primes.&quot;</span> )</span>
 <span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
