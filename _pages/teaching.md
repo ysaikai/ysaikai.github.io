@@ -8,9 +8,9 @@ Teaching makes me both humble and thrilled. In the classroom, watching students 
 - [Systems Modelling and Simulation](#systems-modelling-and-simulation)
 
 **Tutor**
-- [Vector Calculus](https://handbook.unimelb.edu.au/2021/subjects/mast20009)
-- [Engineering Mathematics](https://handbook.unimelb.edu.au/2021/subjects/mast20029)
-- [Linear Statistical Models](https://handbook.unimelb.edu.au/2021/subjects/mast30025)
+- [Vector Calculus](https://handbook.unimelb.edu.au/subjects/mast20009/print)
+- [Engineering Mathematics](https://handbook.unimelb.edu.au/subjects/mast20029/print)
+- [Linear Statistical Models](https://handbook.unimelb.edu.au/subjects/mast30025/print)
 - [Applied Risk Analysis](#applied-risk-analysis-spring-2019)
 
 **Guest lecturer**
