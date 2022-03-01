@@ -453,7 +453,7 @@ f(x_1,x_2) = x_1^2 - 2x_1x_2^2,
 <!-- > Notice the subtle difference in outputs. You will learn the hard way when to ignore subtlties and when to pay attention to as signals of bugs. -->
 <p>There are three key operations here:</p>
 <ol style="list-style-type: decimal">
-<li><code>1:n</code> internally creates a vector <code>c(1,2,...,n)</code>.</li>
+<li><code>0:n</code> internally creates a vector <code>c(0,1,...,n)</code>.</li>
 <li>Then, <code>x</code> is raised to the power of each element of the vector.</li>
 <li>Finally, <code>sum</code> adds them up.</li>
 </ol>
@@ -608,11 +608,11 @@ f(x_1,x_2) = x_1^2 - 2x_1x_2^2,
 <div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tic</span>()</span>
 <span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>re1 <span class="ot">=</span> <span class="fu">primesieve1</span>(n)</span>
 <span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a><span class="fu">toc</span>()</span></code></pre></div>
-<pre><code>## 0.395 sec elapsed</code></pre>
+<pre><code>## 0.204 sec elapsed</code></pre>
 <div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tic</span>()</span>
 <span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>re2 <span class="ot">=</span> <span class="fu">primesieve2</span>(<span class="fu">c</span>(), <span class="dv">2</span><span class="sc">:</span>n)</span>
 <span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a><span class="fu">toc</span>()</span></code></pre></div>
-<pre><code>## 0.008 sec elapsed</code></pre>
+<pre><code>## 0.004 sec elapsed</code></pre>
 <div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="fu">identical</span>(re1, re2)) {</span>
 <span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cat</span>(<span class="st">&quot;Both found the same set containing&quot;</span>, <span class="fu">length</span>(re1), <span class="st">&quot;primes.&quot;</span> )</span>
 <span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
