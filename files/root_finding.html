@@ -679,7 +679,7 @@ a = \lim_{n\to\infty}x_{n+1}
 <span id="cb18-16"><a href="#cb18-16" aria-hidden="true" tabindex="-1"></a>  <span class="cf">while</span> ((x.r <span class="sc">-</span> x.l) <span class="sc">&gt;</span> tol) {</span>
 <span id="cb18-17"><a href="#cb18-17" aria-hidden="true" tabindex="-1"></a>    x.m <span class="ot">&lt;-</span> (x.l <span class="sc">+</span> x.r)<span class="sc">/</span><span class="dv">2</span></span>
 <span id="cb18-18"><a href="#cb18-18" aria-hidden="true" tabindex="-1"></a>    f.m <span class="ot">&lt;-</span> <span class="fu">f</span>(x.m)</span>
-<span id="cb18-19"><a href="#cb18-19" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (f.m <span class="sc">==</span> <span class="dv">0</span>) {</span>
+<span id="cb18-19"><a href="#cb18-19" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (<span class="fu">abs</span>(f.m) <span class="sc">&lt;</span> tol) {</span>
 <span id="cb18-20"><a href="#cb18-20" aria-hidden="true" tabindex="-1"></a>      <span class="fu">return</span>(x.m)</span>
 <span id="cb18-21"><a href="#cb18-21" aria-hidden="true" tabindex="-1"></a>    } <span class="cf">else</span> <span class="cf">if</span> (f.l<span class="sc">*</span>f.m <span class="sc">&lt;</span> <span class="dv">0</span>) {</span>
 <span id="cb18-22"><a href="#cb18-22" aria-hidden="true" tabindex="-1"></a>      x.r <span class="ot">&lt;-</span> x.m</span>
@@ -697,11 +697,7 @@ a = \lim_{n\to\infty}x_{n+1}
 <p>Let’s apply the bisection method to the same function <span class="math inline">\(f(x)=\log(x)-\exp(-x)\)</span>. In contrast to an initial point to <code>fixedpoint</code> and <code>newtonraphson</code>, in this case, we supply to <code>bisection</code> two boundary points of an initial interval (<span class="math inline">\(x_l\)</span> and <span class="math inline">\(x_r\)</span>).</p>
 <div class="sourceCode" id="cb19"><pre class="sourceCode r fold-show"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>f <span class="ot">&lt;-</span> <span class="cf">function</span>(x) <span class="fu">log</span>(x) <span class="sc">-</span> <span class="fu">exp</span>(<span class="sc">-</span>x)</span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="fu">bisection</span>(f, <span class="dv">1</span>, <span class="dv">2</span>)</span></code></pre></div>
-<pre><code>## $a
-## [1] 1.3098
-## 
-## $n
-## [1] 30</code></pre>
+<pre><code>## [1] 1.3098</code></pre>
 <p>It finds the same root using more iterations than the Newton-Raphson method.</p>
 </div>
 
