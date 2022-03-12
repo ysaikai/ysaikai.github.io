@@ -661,7 +661,7 @@ P(B|A) = \frac{P(A|B)P(B)}{P(A)}.
 </div>
 <div id="weak-law-of-large-number" class="section level2">
 <h2>Weak law of large number</h2>
-<p>Let <span class="math inline">\(\{X_1,X_2,\dots,X_n\}\)</span> be IID random variables with finite mean <span class="math inline">\(\mu = \mathbb{E}X_k\)</span> and finite variance <span class="math inline">\(\operatorname{Var} X_k\)</span>. Also, let the sample average denoted by <span class="math inline">\(\overline{X} = (X_1+\dots+X_n)/n\)</span>. Then, for any fixed <span class="math inline">\(\epsilon&gt;0\)</span>, we have a theorem called the weak law of large number: <span class="math display">\[ \lim_{n\to\infty} P\left( \left| \overline{X} - \mu \right| &gt; \epsilon \right) = 0 .\]</span></p>
+<p>Let <span class="math inline">\(\{X_1,X_2,\dots,X_n\}\)</span> be IID random variables with finite mean <span class="math inline">\(\mu = \mathbb{E}X_k\)</span> and finite variance <span class="math inline">\(\operatorname{Var} X_k\)</span>. Also, let the sample average denoted by <span class="math inline">\(\overline{X}_n = (X_1+\dots+X_n)/n\)</span>. Then, for any fixed <span class="math inline">\(\epsilon&gt;0\)</span>, we have a theorem called the weak law of large number: <span class="math display">\[ \lim_{n\to\infty} P\left( \left| \overline{X}_n - \mu \right| &gt; \epsilon \right) = 0 .\]</span></p>
 <p>An interpretation is that the sample average, in some sense, converges to the population mean.</p>
 <blockquote>
 <p>It is “weak” because of the type of convergence, namely “convergence in probability”, which is silent on whether <span class="math inline">\(\overline{X}\)</span> itself converges to <span class="math inline">\(\mu\)</span>.</p>
