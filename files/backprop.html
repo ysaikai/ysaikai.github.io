@@ -300,7 +300,8 @@ Source: Efron &amp; Hastie (2016)
 <p>It looks complicated, but what is happening is simply applying the chain rule several times. We just need to keep track of indices, which is computers are good at and human beings are not…</p>
 <p><span class="math display">\[\begin{align}
 \frac{\partial c}{\partial w_{lj}^{(k-1)}}
-  &amp;= \sum_{i=1}^{P_{k+1}} \frac{\partial c}{\partial z_i^{(k+1)}} \frac{\partial z_i^{(k+1)}}{\partial w_{lj}^{(k-1)}}\\
+  &amp;= \left(\frac{\partial c}{\partial a_l^{(k)}} \frac{\partial a_l^{(k)}}{\partial z_l^{(k)}}\right) \frac{\partial z_l^{(k)}}{\partial w_{lj}^{(k-1)}}\\
+  &amp;= \sum_{i=1}^{P_{k+1}} \frac{\partial c}{\partial z_i^{(k+1)}} \frac{\partial z_i^{(k+1)}}{\partial a_l^{(k)}} \frac{\partial a_l^{(k)}}{\partial z_l^{(k)}} \frac{\partial z_l^{(k)}}{\partial w_{lj}^{(k-1)}}\\
   &amp;= \sum_{i=1}^{P_{k+1}} \delta_i^{(k+1)} \frac{\partial z_i^{(k+1)}}{\partial a_l^{(k)}} \frac{\partial a_l^{(k)}}{\partial z_l^{(k)}} \frac{\partial z_l^{(k)}}{\partial w_{lj}^{(k-1)}}\\
   &amp;= \sum_{i=1}^{P_{k+1}} \delta_i^{(k+1)} w_{il}^{(k)} \dot{g}^{(k)}(z_l^{(k)}) a_j^{(k-1)}\\
   &amp;= a_j^{(k-1)}\left(\sum_{i=1}^{P_{k+1}} w_{il}^{(k)} \delta_i^{(k+1)}\right) \dot{g}^{(k)}(z_l^{(k)})\\
