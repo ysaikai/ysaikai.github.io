@@ -435,19 +435,19 @@ The University of Melbourne</div></h4>
 T(n) &amp;= \frac{h}{2}(f(x_0)+f(x_1))+\frac{h}{2}(f(x_1)+f(x_2))+\dots+\frac{h}{2}(f(x_{n-1})+f(x_n))\\
      &amp;= \frac{h}{2}(f(x_0)+2f(x_1)+2f(x_2)+\dots+2f(x_{n-1})+f(x_n))
 \end{align}\]</span> Since it is a type of <a href="https://en.wikipedia.org/wiki/Riemann_sum">Riemann sum</a>, the approximation improves as <span class="math inline">\(n\)</span> increases.</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>trapezoid <span class="ot">&lt;-</span> <span class="cf">function</span>(f, a, b, <span class="at">n=</span><span class="dv">100</span>) {</span>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>trapezoid <span class="ot">&lt;-</span> <span class="cf">function</span>(f, a, b, n) {</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  h <span class="ot">&lt;-</span> (b<span class="sc">-</span>a)<span class="sc">/</span>n</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  x <span class="ot">&lt;-</span> <span class="fu">seq</span>(a<span class="sc">+</span>h, b<span class="sc">-</span>h, <span class="at">by=</span>h)</span>
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  T <span class="ot">&lt;-</span> h<span class="sc">/</span><span class="dv">2</span><span class="sc">*</span>(<span class="fu">f</span>(a) <span class="sc">+</span> <span class="dv">2</span><span class="sc">*</span><span class="fu">sum</span>(<span class="fu">f</span>(x)) <span class="sc">+</span> <span class="fu">f</span>(b))</span>
 <span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  </span>
 <span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(T)</span>
 <span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">trapezoid</span>(f, <span class="dv">0</span>, <span class="dv">3</span><span class="sc">*</span>pi)</span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">trapezoid</span>(f, <span class="dv">0</span>, <span class="dv">3</span><span class="sc">*</span>pi, <span class="dv">100</span>)</span></code></pre></div>
 <pre><code>## [1] 56.54169</code></pre>
 </div>
 <div id="simpsons-rule" class="section level1">
 <h1>Simpson’s rule</h1>
-<p>As implied by the use of trapezoids, the trapezoidal rule approximates <span class="math inline">\(f\)</span> by a <strong>piece-wise linear</strong> function. Simpson’s rule uses, instead, a <strong>piece-wise quadratic</strong> function for an approximation of <span class="math inline">\(f\)</span>. Since a quadratic function <span class="math inline">\(p(x) = ax^2 + bx + c\)</span> has three parameters <span class="math inline">\((a,b,c)\)</span>, three non-collinear points <span class="math inline">\((u,f(u))\)</span>, <span class="math inline">\((v,f(v))\)</span>, and <span class="math inline">\((w,f(w))\)</span> pin down the function through a system of three linear equations. (Without loss of generality, assume <span class="math inline">\(u&lt;v&lt;w\)</span>.)</p>
+<p>As implied by the use of trapezoids, the trapezoidal rule approximates <span class="math inline">\(f\)</span> by a <strong>piece-wise linear</strong> function. Simpson’s rule uses, instead, a <strong>piece-wise quadratic</strong> function for an approximation of <span class="math inline">\(f\)</span>. Since a quadratic function <span class="math inline">\(p(x) = ax^2 + bx + c\)</span> has three parameters <span class="math inline">\((a,b,c)\)</span>, three non-collinear points <span class="math inline">\((u,f(u))\)</span>, <span class="math inline">\((v,f(v))\)</span>, and <span class="math inline">\((w,f(w))\)</span> in <span class="math inline">\(\mathbb{R}^2\)</span> pin down the function through a system of three linear equations. (Without loss of generality, assume <span class="math inline">\(u&lt;v&lt;w\)</span>.)</p>
 <blockquote>
 <p>Collinearity means <span class="math inline">\((v,f(v)) = t(u,f(u))+(1-t)(w,f(w))\)</span> for <span class="math inline">\(t\in(0,1)\)</span>. Can you see its implication for <span class="math inline">\(p(x) = ax^2 + bx + c\)</span>?</p>
 </blockquote>
@@ -464,7 +464,27 @@ T(n) &amp;= \frac{h}{2}(f(x_0)+f(x_1))+\frac{h}{2}(f(x_1)+f(x_2))+\dots+\frac{h}
 <blockquote>
 <p>Plug in each of three points and see this make sense.</p>
 </blockquote>
-<p>If <span class="math inline">\(u=v-h\)</span> and <span class="math inline">\(w=v+h\)</span>, then we get the following integral <span class="math display">\[ \int_u^w p(x)dx = \frac{h}{3}(f(u)+4f(v)+f(w)) .\]</span></p>
+<p>If <span class="math inline">\(u=v-h\)</span> and <span class="math inline">\(w=v+h\)</span>, then <span class="math display">\[\begin{align}
+p(x) &amp;= f(u)\frac{(x-v)(x-w)}{(u-v)(u-w)} +
+        f(v)\frac{(x-u)(x-w)}{(v-u)(v-w)} +
+        f(w)\frac{(x-u)(x-v)}{(w-u)(w-v)}\\
+     &amp;= f(u)\frac{(x-v)(x-v-h)}{(-h)(-2h)} +
+        f(v)\frac{(x-v+h)(x-v-h)}{(h)(-h)} +
+        f(w)\frac{(x-v+h)(x-v)}{(2h)(h)}\\
+     &amp;= \frac{f(u)}{2h^2}(x-v)(x-v-h) - \frac{f(v)}{h^2}(x-v+h)(x-v-h) + \frac{f(w)}{2h^2}(x-v+h)(x-v)\\
+     &amp;= (x-v)^2\left(\frac{f(u)}{2h^2} - \frac{f(v)}{h^2} + \frac{f(w)}{2h^2}\right) +
+        (x-v)\left(\frac{f(u)}{2h^2}(-h) + \frac{f(w)}{2h^2}h\right) + \frac{f(v)}{h^2}h^2\\
+     &amp;= (x-v)^2\left(\frac{f(u)}{2h^2} - \frac{f(v)}{h^2} + \frac{f(w)}{2h^2}\right) +
+        (x-v)\left(-\frac{f(u)}{2h} + \frac{f(w)}{2h}\right) + f(v)
+\end{align}\]</span></p>
+<p>As a result, we get the following integral. <span class="math display">\[\begin{align}
+\int_u^w p(x)dx &amp;= \int_{v-h}^{v+h} \left[(x-v)^2\left(\frac{f(u)}{2h^2} - \frac{f(v)}{h^2} + \frac{f(w)}{2h^2}\right) +
+                                          (x-v)\left(-\frac{f(u)}{2h} + \frac{f(w)}{2h}\right) + f(v) \right]dx\\
+                &amp;= \Biggl\lvert\frac{(x-v)^3}{3}\left(\frac{f(u)}{2h^2} - \frac{f(v)}{h^2} + \frac{f(w)}{2h^2}\right) +
+                   \frac{(x-v)^2}{2}\left(\frac{f(u)}{2h^2}(-h)+\frac{f(w)}{2h^2}h\right) + xf(v) \Biggr\rvert_{v-h}^{v+h}\\
+                &amp;= \frac{2h^3}{3}\left(\frac{f(u)}{2h^2} - \frac{f(v)}{h^2} + \frac{f(w)}{2h^2}\right) + 2hf(v)\\
+                &amp;= \frac{h}{3}(f(u)+4f(v)+f(w))
+\end{align}\]</span></p>
 <p>This is an approximation of <span class="math inline">\(\int_u^w f(x)dx\)</span> using a single quadratic function. Now, we can divide the whole integration range into <span class="math inline">\(n\)</span> number of subintervals where <span class="math inline">\(n\)</span> is <strong>even</strong>, repeat the above integration <span class="math inline">\(n/2\)</span> times, and get an approximation <span class="math inline">\(S(n)\approx\int_a^b f(x)dx\)</span> as the sum of <span class="math inline">\(n/2\)</span> integrals.</p>
 <p><span class="math display">\[\begin{align}
 S(n) &amp;= \frac{h}{3}(f(x_0)+4f(x_1)+f(x_2)) + \frac{h}{3}(f(x_2)+4f(x_3)+f(x_4)) +
@@ -472,19 +492,20 @@ S(n) &amp;= \frac{h}{3}(f(x_0)+4f(x_1)+f(x_2)) + \frac{h}{3}(f(x_2)+4f(x_3)+f(x_
      &amp;\qquad + \frac{h}{3}(f(x_{n-2})+4f(x_{n-1})+f(x_{n}))\\
      &amp;= \frac{h}{3}(f(x_0)+4f(x_1)+2f(x_2)+4f(x_3)+\dots+4f(x_{n-1})+f(x_{n}))
 \end{align}\]</span></p>
-<p>Notice that the function values for even points (except <span class="math inline">\(0\)</span> and <span class="math inline">\(n\)</span>) get <span class="math inline">\(2\)</span> as each of them is used for two adjacent subintervals.</p>
+<p>Notice that the function values for even points (except <span class="math inline">\(n\)</span>) get <span class="math inline">\(2\)</span> as each of them is used for two adjacent subintervals.</p>
 <p>Let’s apply Simpson’s rule to the test problem.</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>simpson_n <span class="ot">&lt;-</span> <span class="cf">function</span>(f, a, b, <span class="at">n=</span><span class="dv">50</span>) {</span>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>simpson_n <span class="ot">&lt;-</span> <span class="cf">function</span>(f, a, b, n) {</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  n <span class="ot">&lt;-</span> <span class="fu">max</span>(<span class="dv">2</span><span class="sc">*</span>(n<span class="sc">%/%</span><span class="dv">2</span>), <span class="dv">2</span>) <span class="co"># %/% (integer division) for even n &gt;= 2</span></span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  h <span class="ot">&lt;-</span> (b<span class="sc">-</span>a)<span class="sc">/</span>n</span>
 <span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  y.a <span class="ot">&lt;-</span> <span class="fu">f</span>(a)</span>
 <span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>  y.b <span class="ot">&lt;-</span> <span class="fu">f</span>(b)</span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>  y <span class="ot">&lt;-</span> <span class="fu">f</span>(<span class="fu">seq</span>(a<span class="sc">+</span>h, b<span class="sc">-</span>h, <span class="at">by=</span>h))</span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>  coeff <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="fu">c</span>(<span class="dv">4</span>,<span class="dv">2</span>), n<span class="sc">/</span><span class="dv">2-1</span>), <span class="dv">4</span>) <span class="co"># coefficients 4,2,...,4,2,4</span></span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>  S <span class="ot">&lt;-</span> h<span class="sc">/</span><span class="dv">3</span><span class="sc">*</span>(y.a <span class="sc">+</span> <span class="fu">sum</span>(coeff<span class="sc">*</span>y) <span class="sc">+</span> y.b) <span class="co"># coeff*y: component-wise product</span></span>
-<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(S)</span>
-<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>  x <span class="ot">&lt;-</span> <span class="fu">seq</span>(a<span class="sc">+</span>h, b<span class="sc">-</span>h, <span class="at">by=</span>h)</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>  y <span class="ot">&lt;-</span> <span class="fu">f</span>(x)</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>  coeffs <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="fu">c</span>(<span class="dv">4</span>,<span class="dv">2</span>), n<span class="sc">/</span><span class="dv">2-1</span>), <span class="dv">4</span>) <span class="co"># coefficients 4,2,...,4,2,4</span></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>  S <span class="ot">&lt;-</span> h<span class="sc">/</span><span class="dv">3</span><span class="sc">*</span>(y.a <span class="sc">+</span> <span class="fu">sum</span>(coeffs<span class="sc">*</span>y) <span class="sc">+</span> y.b) <span class="co"># coeffs*y: component-wise product</span></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(S)</span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">simpson_n</span>(f, <span class="dv">0</span>, <span class="dv">3</span><span class="sc">*</span>pi, <span class="dv">30</span>)</span></code></pre></div>
 <pre><code>## [1] 56.54918</code></pre>
 <p>Simpson with <span class="math inline">\(n=30\)</span> works better than Trapezoid with <span class="math inline">\(n=100\)</span>.</p>
@@ -499,30 +520,30 @@ S(n) &amp;= \frac{h}{3}(f(x_0)+4f(x_1)+f(x_2)) + \frac{h}{3}(f(x_2)+4f(x_3)+f(x_
                &amp;= |S(2n)-I|+|S(n)-I|,
 \end{align}\]</span> which implies <span class="math display">\[
 \lim_{n\to\infty}|S(2n)-S(n)| = 0.
-\]</span> <span class="math inline">\(|S(2n)-S(n)|\)</span> can be seen as an improvement after doubling the number of subintervals. Thus, given some small <span class="math inline">\(\epsilon\)</span>, we can use <span class="math inline">\(|S(2n)-S(n)|\leq\epsilon\)</span> as a stopping criterion for doubling <span class="math inline">\(n\)</span>. Now, modify the above Simpson’s rule so that, given <span class="math inline">\(\epsilon\)</span>, we can search for a large enough <span class="math inline">\(n\)</span>.</p>
+\]</span> <span class="math inline">\(|S(2n)-S(n)|\)</span> can be seen as an improvement after doubling the number of subintervals. Thus, given some small <span class="math inline">\(\epsilon\)</span>, we can use <span class="math inline">\(|S(2n)-S(n)|\leq\epsilon\)</span> as a stopping criterion for doubling <span class="math inline">\(n\)</span>. Now, modify the above Simpson’s rule so that, given <span class="math inline">\(\epsilon\)</span>, we can determine a large enough <span class="math inline">\(n\)</span>.</p>
 <p>Observe that we increase <span class="math inline">\(n\)</span> by a factor of <span class="math inline">\(2\)</span> each time, so that we can reuse the previous <span class="math inline">\(n+1\)</span> function values. In practice, evaluation of <span class="math inline">\(f\)</span> is the most expensive operation when doing numerical integration. If we increased <span class="math inline">\(n\)</span> by an arbitrary even number, then two sets of evaluation points before and after the increase will likely be misaligned, so we will have to re-calculate <span class="math inline">\(f\)</span> at all points. In contrast, if we double <span class="math inline">\(n\)</span>, we can reuse all the existing <span class="math inline">\(n+1\)</span> values at the original set of points, and simply need to evaluate <span class="math inline">\(f\)</span> at <span class="math inline">\(n\)</span> in-between points.</p>
 <div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>simpson <span class="ot">&lt;-</span> <span class="cf">function</span>(f, a, b, <span class="at">tol=</span><span class="fl">1e-5</span>) {</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="co"># While this block is the same as `S &lt;- simpson_n(f,a,b,2)`,</span></span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="co"># we want y.a, y.b, and y to be computed here.</span></span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>  n <span class="ot">&lt;-</span> <span class="dv">2</span></span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>  h <span class="ot">&lt;-</span> (b <span class="sc">-</span> a)<span class="sc">/</span>n</span>
-<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>  y.a <span class="ot">&lt;-</span> <span class="fu">f</span>(a)</span>
-<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>  y.b <span class="ot">&lt;-</span> <span class="fu">f</span>(b)</span>
-<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>  y <span class="ot">&lt;-</span> <span class="fu">f</span>(<span class="fu">seq</span>(a<span class="sc">+</span>h, b<span class="sc">-</span>h, <span class="at">by=</span>h))</span>
-<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>  coeff <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="fu">c</span>(<span class="dv">4</span>,<span class="dv">2</span>), n<span class="sc">/</span><span class="dv">2-1</span>), <span class="dv">4</span>)</span>
-<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>  S <span class="ot">&lt;-</span> h<span class="sc">/</span><span class="dv">3</span><span class="sc">*</span>(y.a <span class="sc">+</span> <span class="fu">sum</span>(coeff<span class="sc">*</span>y) <span class="sc">+</span> y.b)</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  n <span class="ot">&lt;-</span> <span class="dv">2</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  h <span class="ot">&lt;-</span> (b<span class="sc">-</span>a)<span class="sc">/</span>n</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>  y.a <span class="ot">&lt;-</span> <span class="fu">f</span>(a)</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>  y.b <span class="ot">&lt;-</span> <span class="fu">f</span>(b)</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>  x <span class="ot">&lt;-</span> <span class="fu">seq</span>(a<span class="sc">+</span>h, b<span class="sc">-</span>h, <span class="at">by=</span>h)</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>  y <span class="ot">&lt;-</span> <span class="fu">f</span>(x)</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>  coeffs <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="fu">c</span>(<span class="dv">4</span>,<span class="dv">2</span>), n<span class="sc">/</span><span class="dv">2-1</span>), <span class="dv">4</span>)</span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>  S <span class="ot">&lt;-</span> h<span class="sc">/</span><span class="dv">3</span><span class="sc">*</span>(y.a <span class="sc">+</span> <span class="fu">sum</span>(coeffs<span class="sc">*</span>y) <span class="sc">+</span> y.b)</span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>  S.old <span class="ot">&lt;-</span> S <span class="sc">+</span> <span class="dv">2</span><span class="sc">*</span>tol <span class="co"># to ensure to loop at least once</span></span>
 <span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>  S.diff <span class="ot">&lt;-</span> <span class="dv">2</span><span class="sc">*</span>tol <span class="co"># to ensure to loop at least once</span></span>
-<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>  <span class="cf">while</span> (S.diff <span class="sc">&gt;</span> tol) {</span>
-<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>    S.old <span class="ot">&lt;-</span> S</span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>  <span class="cf">while</span> (<span class="fu">abs</span>(S <span class="sc">-</span> S.old) <span class="sc">&gt;</span> tol) {</span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>    S.old <span class="ot">&lt;-</span> S</span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>    y.old <span class="ot">&lt;-</span> y</span>
 <span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a>    n <span class="ot">&lt;-</span> <span class="dv">2</span><span class="sc">*</span>n</span>
 <span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a>    h <span class="ot">&lt;-</span> h<span class="sc">/</span><span class="dv">2</span></span>
-<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a>    y[<span class="fu">seq</span>(<span class="dv">2</span>, n<span class="dv">-2</span>, <span class="at">by=</span><span class="dv">2</span>)] <span class="ot">&lt;-</span> y <span class="co"># reuse</span></span>
-<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a>    y[<span class="fu">seq</span>(<span class="dv">1</span>, n<span class="dv">-1</span>, <span class="at">by=</span><span class="dv">2</span>)] <span class="ot">&lt;-</span> <span class="fu">f</span>(<span class="fu">seq</span>(a<span class="sc">+</span>h, b<span class="sc">-</span>h, <span class="at">by=</span><span class="dv">2</span><span class="sc">*</span>h)) <span class="co"># new values</span></span>
-<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a>    coeff <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="fu">c</span>(<span class="dv">4</span>,<span class="dv">2</span>), n<span class="sc">/</span><span class="dv">2-1</span>), <span class="dv">4</span>)</span>
-<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a>    S <span class="ot">&lt;-</span> h<span class="sc">/</span><span class="dv">3</span><span class="sc">*</span>(y.a <span class="sc">+</span> <span class="fu">sum</span>(coeff<span class="sc">*</span>y) <span class="sc">+</span> y.b)</span>
-<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a>    S.diff <span class="ot">&lt;-</span> <span class="fu">abs</span>(S <span class="sc">-</span> S.old)</span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a>    y <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="dv">0</span>, n<span class="dv">-1</span>) <span class="co"># initialisation</span></span>
+<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a>    y[<span class="fu">seq</span>(<span class="dv">2</span>, n<span class="dv">-2</span>, <span class="at">by=</span><span class="dv">2</span>)] <span class="ot">&lt;-</span> y.old <span class="co"># reused values</span></span>
+<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a>    x <span class="ot">&lt;-</span> <span class="fu">seq</span>(a<span class="sc">+</span>h, b<span class="sc">-</span>h, <span class="at">by=</span><span class="dv">2</span><span class="sc">*</span>h)</span>
+<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a>    y[<span class="fu">seq</span>(<span class="dv">1</span>, n<span class="dv">-1</span>, <span class="at">by=</span><span class="dv">2</span>)] <span class="ot">&lt;-</span> <span class="fu">f</span>(x) <span class="co"># new values</span></span>
+<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a>    coeffs <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="fu">c</span>(<span class="dv">4</span>,<span class="dv">2</span>), n<span class="sc">/</span><span class="dv">2-1</span>), <span class="dv">4</span>)</span>
+<span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a>    S <span class="ot">&lt;-</span> h<span class="sc">/</span><span class="dv">3</span><span class="sc">*</span>(y.a <span class="sc">+</span> <span class="fu">sum</span>(coeffs<span class="sc">*</span>y) <span class="sc">+</span> y.b)</span>
 <span id="cb13-23"><a href="#cb13-23" aria-hidden="true" tabindex="-1"></a>  }</span>
 <span id="cb13-24"><a href="#cb13-24" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb13-25"><a href="#cb13-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(<span class="fu">list</span>(<span class="st">&quot;S&quot;</span><span class="ot">=</span>S, <span class="st">&quot;Number of intervals&quot;</span><span class="ot">=</span>n))</span>
