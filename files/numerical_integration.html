@@ -363,7 +363,8 @@ The University of Melbourne</div></h4>
 \]</span> is commonly computed via numerical integration. R has a built-in <code>pnorm</code> for <span class="math inline">\(\Phi\)</span> and, for example, the following is a good approximation of <span class="math inline">\(\Phi(1.96)\)</span>.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pnorm</span>(<span class="fl">1.96</span>)</span></code></pre></div>
 <pre><code>## [1] 0.9750021</code></pre>
-<p>We cover three numerical integration techniques in ascending order of sophistication:</p>
+<p>A general strategy in both analytical and numerical mathematics is <strong><em>when a function is too complex to handle, we approximate it by simple functions</em></strong>. However, there is a key difference between two realms. In analytical integration, an integral is defined as a limit. So, it usually does not matter whether we approximate the integrand by functions or constant values. In numerical integration, on the other hand, we always have to settle for finite granularity, so the choice of simple functions affects the performance of approximation.</p>
+<p>In these notes, we consider linear and quadratic approximations. Specifically, the following are three methods in ascending order of sophistication:</p>
 <ul>
 <li>Trapezoidal rule</li>
 <li>Simpson’s rule</li>
