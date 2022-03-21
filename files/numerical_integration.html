@@ -486,7 +486,12 @@ p(x) &amp;= f(u)\frac{(x-v)(x-w)}{(u-v)(u-w)} +
                 &amp;= \frac{2h^3}{3}\left(\frac{f(u)}{2h^2} - \frac{f(v)}{h^2} + \frac{f(w)}{2h^2}\right) + 2hf(v)\\
                 &amp;= \frac{h}{3}(f(u)+4f(v)+f(w))
 \end{align}\]</span></p>
-<p>This is an approximation of <span class="math inline">\(\int_u^w f(x)dx\)</span> using a single quadratic function. Now, we can divide the whole integration range into <span class="math inline">\(n\)</span> number of subintervals where <span class="math inline">\(n\)</span> is <strong>even</strong>, repeat the above integration <span class="math inline">\(n/2\)</span> times, and get an approximation <span class="math inline">\(S(n)\approx\int_a^b f(x)dx\)</span> as the sum of <span class="math inline">\(n/2\)</span> integrals.</p>
+<p>This is an approximation of <span class="math inline">\(\int_u^w f(x)dx\)</span> using a single quadratic function. Now, we can</p>
+<ol style="list-style-type: decimal">
+<li>divide the whole integration range into <span class="math inline">\(n\)</span> number of subintervals where <span class="math inline">\(n\)</span> is <strong>even</strong>,</li>
+<li>repeat the above integration <span class="math inline">\(n/2\)</span> times, and</li>
+<li>get an approximation <span class="math inline">\(S(n)\approx\int_a^b f(x)dx\)</span> as the sum of <span class="math inline">\(n/2\)</span> integrals.</li>
+</ol>
 <p><span class="math display">\[\begin{align}
 S(n) &amp;= \frac{h}{3}(f(x_0)+4f(x_1)+f(x_2)) + \frac{h}{3}(f(x_2)+4f(x_3)+f(x_4)) +
      \dots \\
