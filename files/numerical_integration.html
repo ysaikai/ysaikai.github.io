@@ -624,7 +624,7 @@ S(n) &amp;= \frac{h}{3}(f(x_0)+4f(x_1)+f(x_2)) + \frac{h}{3}(f(x_2)+4f(x_3)+f(x_
 <p>The number of evaluations is <span class="math inline">\(49\)</span>, which is unevenly distributed over the range. As you can see, the function is evaluated more where the curvature changes rapidly. In addition, given the position of <code>X &lt;- c(X, a+h, b-h)</code> in <code>aq.recur</code>, does this order of evaluations make sense?</p>
 <p>In contrast, to achieve the same level of accuracy using Simpson’s rule, we need the following number of subintervals.</p>
 <div class="sourceCode" id="cb20"><pre class="sourceCode r fold-hide"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># To search for n that makes simpson_n comparable with aq</span></span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>bisection <span class="ot">&lt;-</span> <span class="cf">function</span>(method, n.l, <span class="at">n.r=</span><span class="fl">1e4</span>) {</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>bisec_int <span class="ot">&lt;-</span> <span class="cf">function</span>(method, n.l, <span class="at">n.r=</span><span class="fl">1e4</span>) {</span>
 <span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>  I <span class="ot">&lt;-</span> <span class="fu">simpson_n</span>(f, <span class="dv">0</span>, <span class="dv">1</span>, n.l)</span>
 <span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>  </span>
 <span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>  <span class="co"># n.r-n.l&lt;2 as a stopping criterion</span></span>
@@ -644,7 +644,7 @@ S(n) &amp;= \frac{h}{3}(f(x_0)+4f(x_1)+f(x_2)) + \frac{h}{3}(f(x_2)+4f(x_3)+f(x_
 <span id="cb20-19"><a href="#cb20-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(n.r)</span>
 <span id="cb20-20"><a href="#cb20-20" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb20-21"><a href="#cb20-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-22"><a href="#cb20-22" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="fu">bisection</span>(simpson_n, <span class="dv">2</span>)</span>
+<span id="cb20-22"><a href="#cb20-22" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="fu">bisec_int</span>(simpson_n, <span class="dv">2</span>)</span>
 <span id="cb20-23"><a href="#cb20-23" aria-hidden="true" tabindex="-1"></a>n</span></code></pre></div>
 <pre><code>## [1] 384</code></pre>
 <p>This is 336 more evaluations than that used by the adaptive quadrature.</p>
