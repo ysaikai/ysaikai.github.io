@@ -287,7 +287,7 @@ The University of Melbourne</div></h4>
 </tbody>
 </table>
 <blockquote>
-<p>For our purpose, it suffices to see stochastic process as a collection/sequence of random variables.</p>
+<p>Here, “process” implies a stochastic process. For our purpose, it suffices to see a stochastic process as a function that maps an index to a random variable. An index set (i.e., the domain of a stochastic process) is typically a subset of Euclidean space. In the above case, a point in time is an index and an index set is a set of either positive integers or reals.</p>
 </blockquote>
 <p>Let’s first define a couple of key concepts and review the Bernoulli process to motivate the Poisson process.</p>
 <div id="arrival-process" class="section level1">
@@ -302,7 +302,7 @@ X_1=S_1 \enspace\text{and}\enspace X_i=S_i-S_{i−1}, \enspace\forall i &gt; 1.
 S_n = \sum_{i=1}^n X_i.
 \]</span></p>
 <blockquote>
-<p>When the interarrival sequence is IID, an arrival process is often called <strong>renewal process</strong>. Hence, the Bernoulli process and the Poisson process are special types of renewal process.</p>
+<p>When the interarrival sequence is IID, an arrival process is often called <strong>renewal process</strong>. The Bernoulli process and the Poisson process are types of renewal process.</p>
 </blockquote>
 <p>The second alternative is the counting process <span class="math inline">\(\{N(t) : t&gt;0\}\)</span> where, for each <span class="math inline">\(t&gt;0\)</span>, the random variable <span class="math inline">\(N(t)\)</span> is the total number of arrivals over the time interval <span class="math inline">\((0,t]\)</span>.</p>
 <blockquote>
@@ -315,16 +315,14 @@ N(\tau) \geq N(t) \enspace\text{for}\enspace \tau&gt;t&gt;0.
 \]</span></p>
 <p>The second one, which is less obvious, is that the following events are equivalent: <span class="math display">\[
 \{S_n \leq t\} = \{N(t) \geq n\}
-\]</span> for <span class="math inline">\(n \geq 1\)</span> and <span class="math inline">\(t &gt; 0\)</span>. To see this, notice, on the one hand <span class="math inline">\(S_n \leq t\)</span> means that the <span class="math inline">\(n\)</span>th arrival occurs by the epoch <span class="math inline">\(t\)</span>. On the other hand, <span class="math inline">\(N(t) \geq n\)</span> means that at least <span class="math inline">\(n\)</span> arrivals occurs by the epoch <span class="math inline">\(t\)</span>.</p>
+\]</span> for <span class="math inline">\(n \geq 1\)</span> and <span class="math inline">\(t &gt; 0\)</span>. To see this, notice, on the one hand <span class="math inline">\(S_n \leq t\)</span> means that the <span class="math inline">\(n\)</span>th arrival occurs by epoch <span class="math inline">\(t\)</span>. On the other hand, <span class="math inline">\(N(t) \geq n\)</span> means that at least <span class="math inline">\(n\)</span> arrivals occurs by epoch <span class="math inline">\(t\)</span>.</p>
 <p>In short, an arrival process can be specified by one of the following stochastic processes:</p>
 <ul>
 <li>Arrival epochs <span class="math inline">\(\{S_n\}\)</span></li>
 <li>Interarrival times <span class="math inline">\(\{X_i\}\)</span></li>
 <li>Counting variables <span class="math inline">\(\{N(t)\}\)</span>.</li>
 </ul>
-<blockquote>
-<p>In the Bernoulli process and the Poisson process, <span class="math inline">\(\{X_n\}\)</span> is an IID sequence and a lot easier to handle than <span class="math inline">\(\{S_n\}\)</span> and <span class="math inline">\(\{N(t)\}\)</span>.</p>
-</blockquote>
+<p>In the Bernoulli process and the Poisson process, <span class="math inline">\(\{X_n\}\)</span> is an IID sequence and a lot easier to handle than <span class="math inline">\(\{S_n\}\)</span> or <span class="math inline">\(\{N(t)\}\)</span>.</p>
 </div>
 <div id="discrete-time-arrival-process" class="section level1">
 <h1>Discrete-time arrival process</h1>
@@ -332,15 +330,19 @@ N(\tau) \geq N(t) \enspace\text{for}\enspace \tau&gt;t&gt;0.
 <ul>
 <li>Indices correspond to integer epochs <span class="math inline">\(t\in\{1,2,\dots\}\)</span> and represents time slots of equal length.</li>
 <li>At each slot, <span class="math inline">\(\text{Bernoulli}(p)\)</span> trial takes place.</li>
-<li><span class="math inline">\(B_t=1\)</span> represents “arrival” (previously, “success”).</li>
+<li><span class="math inline">\(B_t=1\)</span> represents an arrival (previously, “success”).</li>
 </ul>
 <p>The corresponding stochastic processes are:</p>
 <ul>
 <li><span class="math inline">\(S_n\)</span> : the total number of slots until the <span class="math inline">\(n\)</span>th arrival.</li>
-<li><span class="math inline">\(X_i\)</span> : the number of slots taken between the <span class="math inline">\(i-1\)</span>th and <span class="math inline">\(i\)</span>th arrivals.</li>
+<li><span class="math inline">\(X_i\)</span> : the number of slots taken between the <span class="math inline">\(i\)</span>th and <span class="math inline">\((i-1)\)</span>th arrivals.</li>
 <li><span class="math inline">\(N(t)\)</span> : the number of arrivals over <span class="math inline">\(t\)</span> slots.</li>
 </ul>
-<p>It is straightforward to derive <span class="math inline">\(S_n\sim\text{nbinom}(n,p)\)</span>, <span class="math inline">\(X_i\sim\text{geom}(p)\)</span>, and <span class="math inline">\(N(t)\sim\text{binom}(t,p)\)</span>.</p>
+<p>It is straightforward to derive: <span class="math display">\[\begin{align}
+S_n &amp;\sim \text{nbinom}(n,p)\\
+X_i &amp;\sim \text{geom}(p)\\
+N(t) &amp;\sim \text{binom}(t,p)
+\end{align}\]</span></p>
 <blockquote>
 <p>N.B. Here, <span class="math inline">\(\text{geom}(p)\)</span> and <span class="math inline">\(\text{nbinom}(n,p)\)</span> are based on the number of <strong>trials</strong> instead of <strong>failures</strong>.</p>
 </blockquote>
