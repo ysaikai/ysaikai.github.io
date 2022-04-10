@@ -743,19 +743,14 @@ P(X&gt;t+s | X&gt;t) &amp;= \frac{P(X&gt;t+s, X&gt;t)}{P(X&gt;t)}\\
 <p><span class="math inline">\(\mathrm{weibull}(m,\lambda)\)</span> generalises the <strong>constant</strong> rate <span class="math inline">\(\lambda\)</span> used in <span class="math inline">\(\mathrm{exp}(\lambda)\)</span> to a <strong>function</strong> <span class="math inline">\(\lambda(x) = m\lambda x^{m-1}\)</span>, which covers the constant case at <span class="math inline">\(m=1\)</span>. This time-varying rate <span class="math inline">\(\lambda(x)\)</span> is commonly referred to as a <strong>hazard function</strong>.</p>
 <div id="hazard-function" class="section level3">
 <h3>Hazard function</h3>
-<p>To familiarise ourselves with the hazard function and Weibull distribution, let’s make an explicit connection with <span class="math inline">\(\mathrm{exp}(\lambda)\)</span>. For <span class="math inline">\(\mathrm{exp}(\lambda)\)</span>, the rate parameter <span class="math inline">\(\lambda\)</span> is assumed to be constant. What if our experience suggests that the arrival/survival rate in a specific problem is not constant but depends on <span class="math inline">\(x\)</span>? We begin with the CDF of <span class="math inline">\(\mathrm{exp}(\lambda)\)</span>: <span class="math display">\[
-F(x) = 1-e^{-\lambda x}.
-\]</span> Recall that <span class="math inline">\(\lambda\)</span> captures a <strong>rate</strong> (e.g., a derivative or a change over infinitesimal time), and <span class="math inline">\(F(x)\)</span> is the probability of occurrence by the time <span class="math inline">\(x\)</span>, which goes to <span class="math inline">\(1\)</span> as <span class="math inline">\(x\to\infty\)</span>. This observation suggests that <span class="math inline">\(\lambda x\)</span> may be seen as the result of integration, <span class="math display">\[
-\lambda x = \int_0^x \lambda dt.
-\]</span></p>
-<p>Now, let’s explicitly write <span class="math inline">\(\lambda(x)\)</span> as a function of <span class="math inline">\(x\)</span>. As long as we ensure that <span class="math inline">\(\int_0^x \lambda(t) dt\)</span> is an increasing function of <span class="math inline">\(x\)</span>, we have a legitimate <span class="math inline">\(F(x)\)</span> such that <span class="math display">\[ \lim_{x\to\infty}F(x) = \lim_{x\to\infty}\left[1-\exp\left(-\int_0^x \lambda(t)dt\right)\right] = 1 .\]</span></p>
-<p>With this CDF, the PDF can be derived using the chain rule and the fundamental theorem of calculus.</p>
-<p><span class="math display">\[\begin{align}
-  f(x) &amp;= F&#39;(x)\\
-       &amp;= \frac{d}{dx}\left[1-\exp\left(-\int_0^x \lambda(t)dt\right)\right]\\
-       &amp;= \lambda(x)\exp\left(-\int_0^x \lambda(t)dt\right),
-\end{align}\]</span></p>
-<p>which is the PDF of <span class="math inline">\(\mathrm{weibull}(m,\lambda)\)</span> if the hazard function is in the form of <span class="math inline">\(\lambda(x) = m\lambda x^{m-1}\)</span>.</p>
+<p>The hazard function characterises a probabilistic model used in survival analysis, and can be defined as follows. <span class="math display">\[\lambda(x) = \lim_{\Delta x \to 0} \frac{P(x&lt;X\leq x+\Delta x|X&gt;x)}{\Delta x}.\]</span> It is a rate of failure <strong>given that it survived until x</strong>. It is similar to PDF, which is not conditioned on the survival until <span class="math inline">\(x\)</span>. Observe, <span class="math display">\[\begin{align}
+\lambda(x) &amp;= \lim_{\Delta x \to 0} \frac{P(x&lt;X\leq x+\Delta x|X&gt;x)}{\Delta x}\\
+           &amp;= \lim_{\Delta x \to 0} \frac{P(x&lt;X\leq x+\Delta x, X&gt;x)}{\Delta x P(X&gt;x)}\\
+           &amp;= \lim_{\Delta x \to 0} \frac{P(x&lt;X\leq x+\Delta x)}{\Delta x}\frac{1}{P(X&gt;x)}\\
+           &amp;= \lim_{\Delta x \to 0} \frac{F(x+\Delta x)-F(x)}{\Delta x}\frac{1}{1-F(x)}\\
+           &amp;= \frac{F&#39;(x)}{1-F(x)}\\
+           &amp;= \frac{f(x)}{1-F(x)}.
+\end{align}\]</span> If <span class="math inline">\(\lambda(x) = m\lambda x^{m-1}\)</span>, we have the following differential equation <span class="math display">\[m\lambda x^{m-1} = \frac{F&#39;(x)}{1-F(x)}.\]</span> As you can see, the CDF for Weibull distribution is a solution.</p>
 </div>
 <div id="r-parameterisation" class="section level3">
 <h3>R parameterisation</h3>
