@@ -539,6 +539,7 @@ P(X_1+X_2=x) &amp;= \sum_{y=0}^x P(X_1=y)P(X_2=x-y)\\
 </div>
 <div id="continuous-distributions" class="section level1">
 <h1>Continuous distributions</h1>
+<p>R recognises common distributions by short names and specifies them by parameters.</p>
 <table>
 <thead>
 <tr class="header">
@@ -581,7 +582,7 @@ P(X_1+X_2=x) &amp;= \sum_{y=0}^x P(X_1=y)P(X_2=x-y)\\
 </tr>
 </tbody>
 </table>
-<p>Suppose that a distribution is recognised by name <code>xyz</code> and specified by parameters <code>p1</code> and <code>p2</code>, then R provides the following four functions to help you work with the distribution.</p>
+<p>R built-in functions for common distributions follow a certain pattern. Suppose that a distribution is recognised by name <code>xyz</code> and specified by parameters <code>p1</code> and <code>p2</code>, then R provides the following four functions to help you work with the distribution.</p>
 <ul>
 <li><code>dxyz(x, p1, p2, ...)</code> returns <span class="math inline">\(f(x)\)</span>, the value of <a href="probability_theory.html#continuous">PDF</a> at <span class="math inline">\(x\)</span>.</li>
 <li><code>pxyz(q, p1, p2, ...)</code> returns <span class="math inline">\(F(q)\)</span>, the value of <a href="probability_theory.html#cumulative-distribution-function">CDF</a> at <span class="math inline">\(q\)</span>.</li>
@@ -624,9 +625,8 @@ f(x) =
        &amp;= \int_0^x \lambda e^{-\lambda t} dt\\
        &amp;= 1-e^{-\lambda x}
 \end{align}\]</span></p>
-<p>In practice, <span class="math inline">\(\mathrm{exp}(\lambda)\)</span> is often used to model <strong>waiting time</strong>.</p>
+<p>Often used to model <strong>waiting time</strong>.</p>
 <p>For given waiting time <span class="math inline">\(x\)</span>, large <span class="math inline">\(\lambda\)</span> implies fast arrival rate and high probability of arrival, indicated by <span class="math inline">\(F(x)\)</span> as an increasing function of <span class="math inline">\(\lambda\)</span>.</p>
-<p>In contrast, given any arrival rate <span class="math inline">\(\lambda\)</span>, if we wait forever (<span class="math inline">\(x\to\infty\)</span>), it almost surely arrives as indicated by <span class="math inline">\(F(x)\to 1\)</span>.</p>
 <div id="memoryless-property" class="section level3">
 <h3>Memoryless property</h3>
 <p>Unique to <span class="math inline">\(\mathrm{exp}(\lambda)\)</span> is the so-called momoryless property, which can be expressed as follows. <span class="math display">\[ P(X&gt;t+s | X&gt;t) = P(X&gt;s) \;\text{ for } s,t&gt;0 .\]</span></p>
@@ -637,15 +637,16 @@ P(X&gt;t+s | X&gt;t) &amp;= \frac{P(X&gt;t+s, X&gt;t)}{P(X&gt;t)}\\
                &amp;= e^{-\lambda s}\\
                &amp;= P(X&gt;s)
 \end{align}\]</span></p>
-<p>To illustrate, let’s use <span class="math inline">\(\mathrm{exp}(\lambda)\)</span> to model the waiting time for an elevator. Suppose <span class="math inline">\(\lambda = 0.5\)</span>. Then, the probability that an elevator arrives within 4 minutes, is <span class="math inline">\(F(4) = 0.86\)</span>. Today is your bad day, and it has not come after waiting for 4 minutes. Now, you wonder “Since I already waited for so long and I know <span class="math inline">\(F(5) = 0.92\)</span>, it will very likely come within a minute.” The memoryless property says “Not really. It will come only with <span class="math inline">\(F(1) = 0.39\)</span> chance.” In other words, if your mental model relies on <span class="math inline">\(\mathrm{exp}(\lambda)\)</span>, the fact that you have already waited for so long is totally irrelevant.</p>
+<p>[A model of the waiting time for an elevator]</p>
+<p>Suppose <span class="math inline">\(\lambda = 0.5\)</span>. Then, the probability that an elevator arrives within 4 minutes, is <span class="math inline">\(F(4) = 0.86\)</span>. Today is your bad day, and it has not come after waiting for 4 minutes. Now, you wonder “Since I already waited for so long and I know <span class="math inline">\(F(5) = 0.92\)</span>, it will very likely come within a minute.” The memoryless property says “Not really. It will come only with <span class="math inline">\(F(1) = 0.39\)</span> chance.” In other words, if your mental model relies on <span class="math inline">\(\mathrm{exp}(\lambda)\)</span>, the fact that you have already waited for so long is totally irrelevant.</p>
 </div>
 </div>
 <div id="weibull" class="section level2">
 <h2>Weibull</h2>
-<p>When modelling arrival of bad things, we often phrase it as <strong>survival</strong>, simply meaning the negation of arrival.</p>
+<p>When modelling arrival of bad things (e.g., mechanical failure or disaster), we often phrase it as <strong>survival</strong>, simply meaning the negation of arrival.</p>
 <p>If <span class="math inline">\(F(x)\)</span> is the probability that a failure happens by the time <span class="math inline">\(x\)</span>, <span class="math inline">\(1-F(x)\)</span> is the probability of survival until the time <span class="math inline">\(x\)</span>.</p>
 <p><span class="math inline">\(\mathrm{weibull}(m,\lambda)\)</span> provides more general models, which are often more suitable for survival analysis.</p>
-<p>The PDF <span class="math inline">\(f(x)\)</span> and CDF <span class="math inline">\(F(x)\)</span> are given below.</p>
+<p>PDF <span class="math inline">\(f(x)\)</span> and CDF <span class="math inline">\(F(x)\)</span>.</p>
 <p><span class="math display">\[\begin{align}
   f(x) &amp;= 
   \begin{cases}
@@ -659,26 +660,22 @@ P(X&gt;t+s | X&gt;t) &amp;= \frac{P(X&gt;t+s, X&gt;t)}{P(X&gt;t)}\\
     0 &amp; \text{otherwise}
   \end{cases}\\\\
 \end{align}\]</span></p>
-<p><span class="math inline">\(\mathrm{weibull}(m,\lambda)\)</span> generalises the <strong>constant</strong> rate <span class="math inline">\(\lambda\)</span> in <span class="math inline">\(\mathrm{exp}(\lambda)\)</span> to a <strong>function</strong> <span class="math inline">\(\lambda(x) = m\lambda x^{m-1}\)</span>, which covers the constant case at <span class="math inline">\(m=1\)</span>.</p>
-<p>This time-varying rate <span class="math inline">\(\lambda(x)\)</span> is commonly referred to as a <strong>hazard function</strong>.</p>
+<p>An arrival rate is now a <strong>function</strong> <span class="math inline">\(\lambda(x) = m\lambda x^{m-1}\)</span>, which covers the constant case at <span class="math inline">\(m=1\)</span>.</p>
+<p><span class="math inline">\(\lambda(x)\)</span> is commonly referred to as a <strong>hazard function</strong>.</p>
 <div id="hazard-function" class="section level3">
 <h3>Hazard function</h3>
-<p>What if our experience suggests that the arrival/survival rate in a specific problem is not constant but depends on <span class="math inline">\(x\)</span>?</p>
-<p>We begin with the CDF of <span class="math inline">\(\mathrm{exp}(\lambda)\)</span>: <span class="math display">\[
-F(x) = 1-e^{-\lambda x}.
-\]</span> Recall that <span class="math inline">\(\lambda\)</span> captures a <strong>rate</strong> (e.g., a derivative or a change over infinitesimal time), and <span class="math inline">\(F(x)\)</span> is the probability of occurrence by the time <span class="math inline">\(x\)</span>, which goes to <span class="math inline">\(1\)</span> as <span class="math inline">\(x\to\infty\)</span>.</p>
-<p>This observation suggests that <span class="math inline">\(\lambda x\)</span> may be seen as the result of integration, <span class="math display">\[
-\lambda x = \int_0^x \lambda dt.
-\]</span></p>
-<p>Now, let’s explicitly write <span class="math inline">\(\lambda(x)\)</span> as a function of <span class="math inline">\(x\)</span>.</p>
-<p>As long as we ensure that <span class="math inline">\(\int_0^x \lambda(t) dt\)</span> is an increasing function of <span class="math inline">\(x\)</span>, we have a legitimate <span class="math inline">\(F(x)\)</span> such that <span class="math display">\[ \lim_{x\to\infty}F(x) = \lim_{x\to\infty}\left[1-\exp\left(-\int_0^x \lambda(t)dt\right)\right] = 1 .\]</span></p>
-<p>With this CDF, the PDF can be derived using the chain rule and the fundamental theorem of calculus.</p>
+<p><span class="math display">\[\lambda(x) = \lim_{\Delta x \to 0} \frac{P(x&lt;X\leq x+\Delta x|X&gt;x)}{\Delta x}.\]</span> A rate of failure <strong>given that it survived until <span class="math inline">\(x\)</span></strong>.</p>
+<p>Similar to PDF, which is not conditioned on the survival until <span class="math inline">\(x\)</span>.</p>
 <p><span class="math display">\[\begin{align}
-  f(x) &amp;= F&#39;(x)\\
-       &amp;= \frac{d}{dx}\left[1-\exp\left(-\int_0^x \lambda(t)dt\right)\right]\\
-       &amp;= \lambda(x)\exp\left(-\int_0^x \lambda(t)dt\right),
+\lambda(x) &amp;= \lim_{\Delta x \to 0} \frac{P(x&lt;X\leq x+\Delta x|X&gt;x)}{\Delta x}\\
+           &amp;= \lim_{\Delta x \to 0} \frac{P(x&lt;X\leq x+\Delta x, X&gt;x)}{\Delta x P(X&gt;x)}\\
+           &amp;= \lim_{\Delta x \to 0} \frac{P(x&lt;X\leq x+\Delta x)}{\Delta x}\frac{1}{P(X&gt;x)}\\
+           &amp;= \lim_{\Delta x \to 0} \frac{F(x+\Delta x)-F(x)}{\Delta x}\frac{1}{1-F(x)}\\
+           &amp;= \frac{F&#39;(x)}{1-F(x)}\\
+           &amp;= \frac{f(x)}{1-F(x)}.
 \end{align}\]</span></p>
-<p>which is the PDF of <span class="math inline">\(\mathrm{weibull}(m,\lambda)\)</span> if the hazard function is in the form of <span class="math inline">\(\lambda(x) = m\lambda x^{m-1}\)</span>.</p>
+<p>If <span class="math inline">\(\lambda(x) = m\lambda x^{m-1}\)</span>, we have the following differential equation <span class="math display">\[m\lambda x^{m-1} = \frac{F&#39;(x)}{1-F(x)}.\]</span> As you can check, the CDF for Weibull distribution is a solution.</p>
+<p>Think about chance of death in life. When we are born, the rate of arrival is captured by a PDF. In contrast, as we get older, the rate of arrival is captured by a hazard function. As you can imagine, a constant hazard function used in <span class="math inline">\(\mathrm{exp}(\lambda)\)</span> is restrictive in many applications of survival analysis.</p>
 </div>
 <div id="r-parameterisation" class="section level3">
 <h3>R parameterisation</h3>
@@ -693,27 +690,23 @@ F(x) = 1-e^{-\lambda x}.
 </div>
 <div id="gamma" class="section level2">
 <h2>Gamma</h2>
-<p>As seen in <a href="#exponential">Exponential</a>, <span class="math inline">\(\text{exp}(\lambda)\)</span> is commonly used to model waiting time over the <strong>continuous time</strong> line.</p>
-<p>Suppose instead we divide the continuous time line into small intervals of equal length. Then, model waiting-time problems using <span class="math inline">\(\text{geom}(p)\)</span>, which is a sequence of independent <span class="math inline">\(\text{Bernoulli}(p)\)</span>.</p>
-<p>At each interval, an arrival occurs with probability <span class="math inline">\(p\)</span>.</p>
-<p>Remember that if we add <span class="math inline">\(r\)</span> number of independent <span class="math inline">\(\text{geom}(p)\)</span>, we get <span class="math inline">\(\text{nbinom}(r,p)\)</span>.</p>
-<p>It is natural to wonder what if we add <span class="math inline">\(m\)</span> number of independent <span class="math inline">\(\text{exp}(\lambda)\)</span>.</p>
-<p>The answer is <span class="math inline">\(\text{gamma}(m,\lambda)\)</span>. Now, let <span class="math display">\[
+<p>Due to the memoryless property of <span class="math inline">\(\mathrm{exp}(\lambda)\)</span>, we may simply add <span class="math inline">\(m\)</span> <span class="math inline">\(\mathrm{exp}(\lambda)\)</span>s to model <span class="math inline">\(m\)</span>th arrival time.</p>
+<p><span class="math display">\[
 X = Y_1+\dots+Y_m
 \]</span> where <span class="math display">\[
 Y_i\sim\text{exp}(\lambda),\; \forall i\in\{1,\dots,m\}.
 \]</span> Then, <span class="math display">\[
-X \sim \text{gamma}(m,\lambda).
+X \sim \mathrm{gamma}(m,\lambda).
 \]</span></p>
-<p>These interesting interconnections are discussed more in <a href="poisson_process.html">Poisson Process</a>.</p>
+<p>These interesting interconnections are discussed in greater depth in <a href="poisson_process.html">Poisson Process</a>.</p>
+<p>Including more general cases of <span class="math inline">\(m\in\mathbb{R}_{&gt;0}\)</span>, the PDF <span class="math inline">\(f(x)\)</span> is: <span class="math display">\[f(x) = \frac{\lambda^m}{\Gamma(m)}x^{m-1}e^{-\lambda x} \mathbb{1}_{x&gt;0}(x),\]</span> where <span class="math inline">\(\Gamma\)</span> denotes the <a href="https://en.wikipedia.org/wiki/Gamma_function">gamma function</a>, which has a property of <span class="math inline">\(\Gamma(m) = (m-1)!\)</span> for <span class="math inline">\(m\in\mathbb{Z}_{&gt;0}\)</span>.</p>
 </div>
 <div id="normal" class="section level2">
 <h2>Normal</h2>
-<p>Largely because of its incredible analytical properties, normal distribution is arguably the most important probability distribution.</p>
-<p>Let <span class="math inline">\(\mathbf{X}\)</span> be a random vector jointly distributed as normal with:</p>
+<p>Arguably the most important probability distribution due to its incredible analytical properties. Below are just two of them.</p>
 <ul>
-<li>the mean vector <span class="math inline">\(\boldsymbol{\mu}\)</span> and</li>
-<li>the <span class="math inline">\(n\times n\)</span> covariance matrix <span class="math inline">\(\mathbf{\Sigma}\)</span>.</li>
+<li><span class="math inline">\(\boldsymbol{\mu}\)</span> : the mean vector of length <span class="math inline">\(n\)</span>.</li>
+<li><span class="math inline">\(\mathbf{\Sigma}\)</span> : denote the <span class="math inline">\(n\times n\)</span> covariance matrix (hence, positive-semidefinite).</li>
 </ul>
 <div id="property-1" class="section level3">
 <h3>Property 1</h3>
@@ -728,13 +721,13 @@ X \sim \text{gamma}(m,\lambda).
 </div>
 <div id="property-2" class="section level3">
 <h3>Property 2</h3>
-<p>The second property is, in words, a linear transformation of <span class="math inline">\(\mathbf{X}\)</span> is also normal. Let <span class="math inline">\(\mathbf{C}\)</span> be a <span class="math inline">\(m\times n\)</span> matrix. Then, <span class="math display">\[\mathbf{C}\mathbf{X} \sim \mathbf{N}(\mathbf{C}\boldsymbol{\mu}, \mathbf{C}\mathbf{\Sigma}\mathbf{C}&#39;) .\]</span></p>
-<p>For example, if <span class="math inline">\(\mathbf{C} = (c_1\;c_2\;\dots\;c_n)\)</span> is a <span class="math inline">\(1\times n\)</span> matrix, then we have the sum <span class="math inline">\(\mathbf{C}\mathbf{X} = c_1X_1+c_2X_2+\dots+c_nX_n\)</span>.</p>
+<p>The second property is, in words, a linear transformation of <span class="math inline">\(\mathbf{X}\)</span> is also normal. Let <span class="math inline">\(\mathbf{C}\)</span> be a <span class="math inline">\(m\times n\)</span> matrix. Then, <span class="math display">\[\mathbf{C}\mathbf{X} \sim \mathrm{N}(\mathbf{C}\boldsymbol{\mu}, \mathbf{C}\mathbf{\Sigma}\mathbf{C}&#39;) .\]</span></p>
+<p>For example, if <span class="math inline">\(\mathbf{C} = (c_1\;c_2\;\dots\;c_n)\)</span> is a <span class="math inline">\(1\times n\)</span> matrix, then we have the sum <span class="math display">\[\mathbf{C}\mathbf{X} = c_1X_1+c_2X_2+\dots+c_nX_n.\]</span></p>
 <p>Furthermore, if <span class="math inline">\(\mathbf{\Sigma}\)</span> is a diagonal or <span class="math inline">\(\mathbf{X}\)</span> is formed by stacking <span class="math inline">\(n\)</span> independent <span class="math inline">\(\mathrm{N}(\mu_i,\sigma_i^2)\)</span>, then we have a common statement — <em>the sum of independent normals is normal</em>.</p>
 </div>
 <div id="joint-pdf" class="section level3">
 <h3>Joint PDF</h3>
-<p>If <span class="math inline">\(\mathbf{\Sigma}\)</span> is a <span class="math inline">\(n\times n\)</span> positive-definite covariance matrix, then normal random vector <span class="math inline">\(\mathbf{X} \sim \mathrm{N}(\boldsymbol{\mu},\mathbf{\Sigma})\)</span> has a joint PDF: <span class="math display">\[f(\mathbf{x}) = (2\pi)^{-\frac{n}{2}}|\mathbf{\Sigma}|^{-\frac{1}{2}}\exp\left(-\frac{1}{2}(\mathbf{x}-\boldsymbol{\mu})&#39;\mathbf{\Sigma}^{-1}(\mathbf{x}-\boldsymbol{\mu})\right)\]</span> where <span class="math inline">\(|\mathbf{\Sigma}|\)</span> is the determinant of <span class="math inline">\(\mathbf{\Sigma}\)</span>.</p>
+<p>If <span class="math inline">\(\mathbf{\Sigma}\)</span> is a <span class="math inline">\(n\times n\)</span> positive-definite, then normal random vector <span class="math inline">\(\mathbf{X} \sim \mathrm{N}(\boldsymbol{\mu},\mathbf{\Sigma})\)</span> has a joint PDF: <span class="math display">\[f(\mathbf{x}) = (2\pi)^{-\frac{n}{2}}|\mathbf{\Sigma}|^{-\frac{1}{2}}\exp\left(-\frac{1}{2}(\mathbf{x}-\boldsymbol{\mu})&#39;\mathbf{\Sigma}^{-1}(\mathbf{x}-\boldsymbol{\mu})\right)\]</span> where <span class="math inline">\(|\mathbf{\Sigma}|\)</span> is the determinant of <span class="math inline">\(\mathbf{\Sigma}\)</span>.</p>
 </div>
 </div>
 </div>
