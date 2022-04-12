@@ -703,11 +703,12 @@ X \sim \mathrm{gamma}(m,\lambda).
 </div>
 <div id="normal" class="section level2">
 <h2>Normal</h2>
-<p>Arguably the most important probability distribution due to its incredible analytical properties. Below are just two of them.</p>
+<p>Arguably the most important probability distribution due to its incredible analytical properties. The distribution is specified by</p>
 <ul>
-<li><span class="math inline">\(\boldsymbol{\mu}\)</span> : the mean vector of length <span class="math inline">\(n\)</span>.</li>
-<li><span class="math inline">\(\mathbf{\Sigma}\)</span> : denote the <span class="math inline">\(n\times n\)</span> covariance matrix (hence, positive-semidefinite).</li>
+<li><span class="math inline">\(\boldsymbol{\mu}\)</span>, a mean vector of length <span class="math inline">\(n\)</span>, and</li>
+<li><span class="math inline">\(\mathbf{\Sigma}\)</span>, a <span class="math inline">\(n\times n\)</span> covariance matrix (hence, positive-semidefinite).</li>
 </ul>
+<p>Below are just two of them.</p>
 <div id="property-1" class="section level3">
 <h3>Property 1</h3>
 <p>Let <span class="math inline">\(\mathbf{Z}\)</span> be the standardised <span class="math inline">\(\mathbf{X}\)</span>, namely, <span class="math inline">\(\mathbf{Z}\sim \mathrm{N}(\mathbf{0},\mathbf{I}_m)\)</span> where <span class="math inline">\(\mathbf{I}_m\)</span> is the <span class="math inline">\(m\times m\)</span> identity matrix. Then, there exists a <span class="math inline">\(n\times m\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> such that <span class="math inline">\(\mathbf{A}\mathbf{A}&#39;=\mathbf{\Sigma}\)</span> and <span class="math display">\[\mathbf{X} = \mathbf{A}\mathbf{Z}+\boldsymbol{\mu} .\]</span></p>
