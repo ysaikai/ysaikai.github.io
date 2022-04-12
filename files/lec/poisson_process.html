@@ -367,17 +367,17 @@ P(N(t)=n)
 <li>Randomly assign to each arrival female with probability <span class="math inline">\(p\)</span> and male with probability <span class="math inline">\(1-p\)</span>.</li>
 </ol>
 <p>Interestingly, both female and male arrival processes are again Poisson processes with rate <span class="math inline">\(p\lambda\)</span> and <span class="math inline">\((1-p)\lambda\)</span> respectively, and they are <strong>independent</strong>.</p>
-<p>Notice, if the splitting were conditioned on <span class="math inline">\(N(t)=n\)</span>, it would be simply <span class="math inline">\(\text{binom}(n,p)\)</span> so definitely dependent. Doesn’t this come as a surprise?</p>
-<p>Let’s examine both counting processes <span class="math inline">\(\{N_f(t)\}\)</span> and <span class="math inline">\(\{N_m(t)\}\)</span>. Here, we use three properties to show they are Poisson processes.</p>
-<p><strong><em>Proof</em></strong>. First, the independent increments property implies that pairs of increments <span class="math display">\[\left(N_f(t_i)-N_f(t_{i-1}),\; N_m(t_i)-N_m(t_{i-1})\right),\quad 1\leq i\leq n\]</span> are independent of each other. Second, by definition, <span class="math inline">\(N_f(0) = N_m(0) = 0\)</span>. Hence, we only need to show that <span class="math inline">\(X_f = N_f(s+t)-N_f(t)\)</span> and <span class="math inline">\(X_m = N_m(s+t)-N_m(t)\)</span> both follow correct Poisson distributions and are independent of each other.</p>
-<p>Let <span class="math inline">\(Y = N(s+t)-N(t)\)</span> and <span class="math inline">\(n\)</span> be the number of arrivals between epoch <span class="math inline">\(t\)</span> and <span class="math inline">\(s+t\)</span>, i.e. <span class="math inline">\(Y = n\)</span>. Also let <span class="math inline">\(k\)</span> be the number of female customers over the same period, i.e. <span class="math inline">\(X_f = k\)</span> and <span class="math inline">\(X_m = n-k\)</span>. Then, <span class="math display">\[\begin{align}
-P(X_f=k, X_m=n-k)
-  &amp;= P(X_f=k, X_m=n-k, Y = n)\\
-  &amp;= P(X_f=k, X_m=n-k | Y = n)P(Y = n)\\
-  &amp;= \binom{n}{k}p^k(1-p)^{n-k}\cdot \frac{e^{-\lambda s}(\lambda s)^n}{n!}\\
-  &amp;= \frac{n!}{k!(n-k)!}p^k(1-p)^{n-k}\cdot \frac{e^{-\lambda s}(\lambda s)^n}{n!}\\
-  &amp;= \frac{e^{-p\lambda s}(p\lambda s)^k}{k!} \frac{e^{-(1-p)\lambda s} ((1-p)\lambda s)^{(n-k)}}{(n-k)!} ,
-\end{align}\]</span> which implies independent <span class="math inline">\(X_f \sim \text{pois}(p\lambda)\)</span> and <span class="math inline">\(X_m \sim \text{pois}((1-p)\lambda)\)</span>.</p>
+<p>Notice, if the splitting is conditioned on <span class="math inline">\(N(t)=n\)</span>, it will be simply <span class="math inline">\(N_w(t) \sim \text{binom}(n,p)\)</span>, and <span class="math inline">\(N_m(t)=n-N_w(t)\)</span> is clearly dependent on <span class="math inline">\(N_w(t)\)</span>. Doesn’t this come as a surprise?</p>
+<p>Let’s examine both counting processes <span class="math inline">\(\{N_w(t)\}\)</span> and <span class="math inline">\(\{N_m(t)\}\)</span>. Here, we use three properties to show they are Poisson processes.</p>
+<p><strong><em>Proof</em></strong>. First, since the random assignment is independent of any other randomness, the independent increments property of the original process implies that the increments <span class="math display">\[N_s(t_n)-N_s(t_{n-1}), N_s(t_{n-1})-N_s(t_{n-2}), \dots, N_s(t_1)-N_s(t_0)\]</span> are independent of each other for <span class="math inline">\(s\in\{w,m\}\)</span>. Second, by definition, <span class="math inline">\(N_w(0) = N_m(0) = 0\)</span>. Hence, we only need to show that <span class="math inline">\(N_w(t+\tau)-N_w(t)\)</span> and <span class="math inline">\(N_m(t+\tau)-N_m(t)\)</span> both follow correct Poisson distributions and are independent of each other.</p>
+<p>Let <span class="math inline">\(Z_w = N_w(t+\tau)-N_w(t)\)</span>, <span class="math inline">\(Z_m = N_m(t+\tau)-N_m(t)\)</span>, and <span class="math inline">\(Z=Z_w+Z_m\)</span>.Then, <span class="math display">\[\begin{align}
+P(Z_w=z_w, Z_m=z_m)
+  &amp;= P(Z_w=z_w, Z_m=z_m, Z=z)\\
+  &amp;= P(Z_w=z_w, Z_m=z_m | Z=z)P(Z=z)\\
+  &amp;= \binom{z}{z_w}p^{z_w}(1-p)^{z_m}\cdot \frac{e^{-\lambda \tau}(\lambda \tau)^z}{z!}\\
+  &amp;= \frac{z!}{z_w!z_m!}p^{z_w}(1-p)^{z_m}\cdot \frac{e^{-\lambda \tau}(\lambda \tau)^z}{z!}\\
+  &amp;= \frac{e^{-p\lambda \tau}(p\lambda \tau)^{z_w}}{z_w!} \frac{e^{-(1-p)\lambda \tau} ((1-p)\lambda \tau)^{z_m}}{z_m!} ,
+\end{align}\]</span> which implies independent <span class="math inline">\(Z_w \sim \text{pois}(p\lambda)\)</span> and <span class="math inline">\(Z_m \sim \text{pois}((1-p)\lambda)\)</span>.</p>
 </div>
 </div>
 
