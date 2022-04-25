@@ -57,7 +57,7 @@ Some topics are heavier than others, taking more than a week.
 ## Machine Learning in Applied Economic Analysis (Summer 2019)
 
 * AAE 722, The University of Wisconsin-Madison
-* Instructor: [Dr. Sheldon Du](https://aae.wisc.edu/faculty/xdu23/)
+* Instructor: Dr. Sheldon Du
 
 ### Lecture
 
@@ -76,8 +76,8 @@ Some topics are heavier than others, taking more than a week.
 
 ## Applied Risk Analysis (Spring 2019)
 
-* [AAE 706](https://aae.wisc.edu/aae706/), The University of Wisconsin-Madison
-* Instructor: [Dr. Jean-Paul Chavas](https://aae.wisc.edu/faculty/jchavas/)
+* AAE 706, The University of Wisconsin-Madison
+* Instructor: Dr. Jean-Paul Chavas
 
 ### Discussion session
 
