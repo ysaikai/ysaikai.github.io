@@ -48,7 +48,8 @@ Some topics are heavier than others, taking more than a week.
 | 8 | [Poisson process](/files/poisson_process.html){:target="_blank" rel="noopener"} |
 | 9 | [Monte Carlo integration](/files/mc_integration.html){:target="_blank" rel="noopener"} |
 | 10 | [Sampling methods](/files/sampling_methods.html){:target="_blank" rel="noopener"} |
-| 11 | [Bayesian optimisation](/files/bo.html){:target="_blank" rel="noopener"} |
+| 11 | [Markov chain Monte Carlo](/files/mcmc.html){:target="_blank" rel="noopener"} |
+| 12 | [Bayesian optimisation](/files/bo.html){:target="_blank" rel="noopener"} |
 
 
 <br/>
