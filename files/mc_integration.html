@@ -1847,11 +1847,10 @@ issue, inefficiency in particular, to motivate <a href="#importance-sampling">Im
 <div id="visual-demos" class="section level1">
 <h1>Visual demos</h1>
 <p>To simplify problems and highlight key features, let’s consider the
-uniform distribution over some rectangle <span class="math inline">\([x_1,x_2]\times[y_1,y_2]\subset\mathbb{R}^2\)</span>,
-which is also the integration range, i.e., <span class="math inline">\(\mathcal{X} = \mathcal{S} =
-[x_1,x_2]\times[y_1,y_2]\)</span>. Recall that the uniform distribution
-over <span class="math inline">\(\mathcal{S}\in\mathbb{R}^d\)</span> is
-equivalent to having the following PDF of <span class="math inline">\(X\)</span> <span class="math display">\[
+uniform distribution over some rectangle <span class="math inline">\(\mathcal{S}=[x_1,x_2]\times[y_1,y_2]\subset\mathbb{R}^2\)</span>.
+Recall that the uniform distribution over <span class="math inline">\(\mathcal{S}\in\mathbb{R}^d\)</span> is equivalent
+to having the following PDF of <span class="math inline">\(X\)</span>
+<span class="math display">\[
 f(x) =
 \begin{cases}
   \frac{1}{|\mathcal{S}|} &amp; x\in\mathcal{S}\\
@@ -1864,8 +1863,7 @@ constant to make the PDF integrates to <span class="math inline">\(1\)</span>.</
 <h2>Estimating <span class="math inline">\(\pi\)</span></h2>
 <p>A canonical problem is to use MC integration to estimate <span class="math inline">\(\pi\)</span>. First, define <span class="math display">\[ \mathcal{X} = \{x\in\mathbb{R}^2 : \|x\|\leq1,
 x\geq0\},\]</span> a quarter disk in the positive orthant whose area is
-<span class="math inline">\(\pi/4\)</span>. Using the support <span class="math inline">\(\mathcal{S} = \mathcal{X} = [0,1]^2\)</span> with
-<span class="math inline">\(|\mathcal{S}|=1\)</span>, we have <span class="math display">\[\begin{align}
+<span class="math inline">\(\pi/4\)</span>. Using the support <span class="math inline">\(\mathcal{S} = [0,1]^2\)</span> with <span class="math inline">\(|\mathcal{S}|=1\)</span>, we have <span class="math display">\[\begin{align}
 \frac{\pi}{4} &amp;= \int_\mathcal{X}1dx\\
               &amp;= \int_\mathcal{S} \mathbb{1}_\mathcal{X}(x)dx\\
               &amp;= \int_\mathcal{S}
