@@ -1,6 +1,8 @@
 ---
-layout: home
-image: "banner.jpg"
+layout: single
+author_profile: true
+header:
+  image: "/images/shore.jpg"
 ---
 
 **Welcome to Yuji Saikai's website!**
@@ -10,7 +12,6 @@ I work for [School of Mathematics and Statistics](https://ms.unimelb.edu.au) at 
 I am currently on Melbourne Early Career Academic Fellowships (MECAF) and will be in the job market in 2022-23.
 
 In this website, you can find the following:
-- [About Me](./about/)
-- [Teaching](./teaching/)
-- [Research](./research/)
-
+- [About Me](/about/)
+- [Teaching](/teaching/)
+- [Research](/research/)
