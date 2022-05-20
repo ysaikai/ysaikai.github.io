@@ -72,7 +72,6 @@ Teaching makes me both humble and thrilled. In the classroom, watching students 
 
 <br/>
 
-
 ## Applied Risk Analysis (Spring 2019)
 
 * AAE 706, The University of Wisconsin-Madison
@@ -97,3 +96,4 @@ Teaching makes me both humble and thrilled. In the classroom, watching students 
 <a href="/files/solver_tutorial.xlsx">Solver demo</a>
 <a href="/files/aae706_disc_20190201.pdf">notes</a>
 -->
+
