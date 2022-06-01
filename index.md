@@ -2,7 +2,7 @@
 image: "banner.jpg"
 ---
 
-<div style="text-align: center; font-style: italic; font-size: larger; font-weight: bold; color: DimGray">
+<div style="padding: 0px 0px 5px 0px; text-align: center; font-style: italic; font-size: larger; font-weight: bold; color: DimGray">
 From suffering to wisdom to service,
 </div>
 where am I on this journey?
