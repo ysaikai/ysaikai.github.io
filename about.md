@@ -3,7 +3,9 @@ title: "About Me"
 permalink: /about/
 ---
 
+<!--
 [Curriculum Vitae](cv.pdf)
+-->
 
 I grew up digital in Japan. While turning to physics and mathematics in high school and college, computers had never ceased to fascinate me. Circa 2000, when starting tech businesses was ever so cool, as a natural course of action, I dropped out, became a software engineer, and eventually started my own business. As I developed resource management software for small-scale farmers and interacted with them, I found growing plants fascinating and much room for improving food systems. The idea of local food system began to dawn on me. To test my hunch, I developed an online service that delivered fresh produce to local people and facilitated interactions among them. I grew most vegetable by myself and directly communicate with a number of consumers --- firsthand experience of local food.
 
@@ -13,7 +15,7 @@ I enjoy cooking, playing pool, and a simple life in general. [Kanan](https://ksa
 
 
 ## Training
-* PhD in Agricultural and Applied Economics with minor in Computer Science, [the University of Wisconsin-Madison](https://aae.wisc.edu), 2020
+* PhD, [the University of Wisconsin-Madison](https://aae.wisc.edu), 2020
 * Santa Fe Institute [Complex Systems Summer School](https://www.santafe.edu/engage/learn/schools/sfi-complex-systems-summer-school), 2017
 * Bachelor of Economics (Honours), [the Australian National University](https://www.rse.anu.edu.au), Australia, 2014
 * Bachelor of AgriCommerce, [Massey University](https://www.massey.ac.nz), New Zealand, 2013
