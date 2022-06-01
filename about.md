@@ -15,8 +15,7 @@ I enjoy cooking, playing pool, and a simple life in general. [Kanan](https://ksa
 
 
 ## Training
-* PhD, [the University of Wisconsin-Madison](https://aae.wisc.edu), 2020
-* Santa Fe Institute [Complex Systems Summer School](https://www.santafe.edu/engage/learn/schools/sfi-complex-systems-summer-school), 2017
+* PhD, [the University of Wisconsin-Madison](https://aae.wisc.edu), USA, 2020
 * Bachelor of Economics (Honours), [the Australian National University](https://www.rse.anu.edu.au), Australia, 2014
 * Bachelor of AgriCommerce, [Massey University](https://www.massey.ac.nz), New Zealand, 2013
 
