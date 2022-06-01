@@ -3,7 +3,7 @@ image: "banner.jpg"
 ---
 
 On the journey
-<div style="padding: 10px 0px 10px 0px; text-align: center; font-size: 16px; font-weight: bold; color: DimGray">
+<div style="padding: 5px 0px 5px 0px; text-align: center; font-size: 24px; font-weight: bold; color: DimGray">
 from suffering to wisdom to service
 </div>
 where am I now?
