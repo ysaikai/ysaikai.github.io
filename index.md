@@ -2,7 +2,7 @@
 image: "banner.jpg"
 ---
 
-<div style="padding: 0px 0px 5px 0px; text-align: center; font-style: italic; font-size: larger; font-weight: bold; color: DimGray">
+<div style="padding: 0px 0px 8px 0px; text-align: center; font-style: italic; font-size: larger; font-weight: bold; color: DimGray">
 From suffering to wisdom to service,
 </div>
 where am I on this journey?
@@ -11,7 +11,6 @@ Jambo, Jambo! My name is Yuji Saikai. I work for [School of Mathematics and Stat
 
 I am currently on Melbourne Early Career Academic Fellowships (MECAF) and will be in the job market in 2022-23.
 
-In this website, you can find the following:
 - [About Me](./about/)
 - [Teaching](./teaching/)
 - [Research](./research/)
