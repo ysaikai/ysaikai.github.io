@@ -361,7 +361,7 @@ The University of Melbourne</div></h4>
 <li>Each evaluation of <span class="math inline">\(h\)</span> is expensive.</li>
 <li>No direct access to the gradient <span class="math inline">\(\nabla h\)</span>.</li>
 </ul>
-<p>Just like other numerical optimisation techniques, BO searches for an optimum point <span class="math inline">\(x^*\)</span> by sequentially evaluating <span class="math inline">\(h\)</span>. However, without closed-form expression, each evaluation tends to be too slow for standard techniques, which often requires hundreds or thousands of evaluations. BO addresses the challenge by maintaining and utilising statistical estimates of <span class="math inline">\(h\)</span>, for which a close-form expression is available. The machinery of BO consists of:</p>
+<p>Just like other numerical optimisation techniques, BO searches for an optimum point <span class="math inline">\(x^*\)</span> by sequentially evaluating <span class="math inline">\(h\)</span>. However, without closed-form expression, each evaluation tends to be too slow for standard techniques, which often require hundreds or thousands of evaluations. BO addresses the challenge by maintaining and utilising statistical estimates of <span class="math inline">\(h\)</span>, for which a close-form expression is available. The machinery of BO consists of:</p>
 <ul>
 <li><a href="#gaussian-process">Gaussian process</a> surrogate models for estimating <span class="math inline">\(h\)</span>, and</li>
 <li><a href="#acquisition-function">Acquisition function</a> for prescribing the next evaluation point.</li>
