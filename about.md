@@ -15,72 +15,9 @@ I enjoy cooking, playing pool, and a simple life in general. [Kanan](https://ksa
 
 
 ## Training
-* PhD, [the University of Wisconsin-Madison](https://aae.wisc.edu), USA, 2020
-* Bachelor of Economics (Honours), [the Australian National University](https://www.rse.anu.edu.au), Australia, 2014
-* Bachelor of AgriCommerce, [Massey University](https://www.massey.ac.nz), New Zealand, 2013
+- PhD in Agricultural & Applied Economics, the University of Wisconsin-Madison, USA, 2020
+- Complex Systems Summer School, Santa Fe Institute, USA, 2017
+- Bachelor of Economics (Honours), the Australian National University, Australia, 2014
+- Bachelor of AgriCommerce, Massey University, New Zealand, 2013
 
 Because of the professional background, I am competent in software design and coding. I like Python but also feel comfortable with others (e.g. R, Julia and C#). Aside from software engineering, I am trained in economics, machine learning, and statistics at graduate levels, and mathematics at an undergraduate level.
-
-<!---
-Being a PhD student was luxury in my life, and I enjoyed myself in the following classes at UW-Madison.
-<table>
-  <tr>
-    <td>
-      <strong>Economics</strong>
-      <ul>
-        <li>ECON 709: Economic Statistics and Econometrics I</li>
-        <li>ECON 710: Economic Statistics and Econometrics II</li>
-        <li>ECON 711: Economic Theory - Microeconomics Sequence</li>
-        <li>ECON 712: Economic Theory - Macroeconomics Sequence</li>
-        <li>ECON 713: Economic Theory - Microeconomics Sequence</li>
-        <li>AAE 641: Foundations of Agricultural Economics</li>
-        <li>AAE 706: Applied Risk Analysis</li>
-        <li>AAE 731: Frontiers in Development Economics 2</li>
-        <li>AAE 520: Community Economic Analysis</li>
-        <li>REAL EST 720: Urban Economics</li>
-      </ul>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <strong>Mathematics</strong>
-      <ul>
-        <li>MATH 415: Applied Dynamical Systems, Chaos, and Modeling</li>
-        <li>MATH 521: Analysis I</li>
-        <li>MATH 531: Probability Theory</li>
-        <li>MATH 541: Modern Algebra</li>
-        <li>MATH 629: Introduction to Measure and Integration</li>
-        <li>MATH 632: Introduction to Stochastic Processes</li>
-      </ul>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <strong>Machine learning</strong>
-      <ul>
-        <li>CS 532: Theory and Applications of Pattern Recognition</li>
-        <li>CS 540: Introduction to Artificial Intelligence</li>
-        <li>CS 761: Mathematical Foundations of Machine Learning</li>
-        <li>CS 861: Theoretical Foundations of Machine Learning</li>
-      </ul>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <strong>Optimization</strong>
-      <ul>
-        <li>CS 524: Introduction to Optimization</li>
-        <li>CS 723: Dynamic Programming and Associated Topics</li>
-      </ul>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <strong>Sociology</strong>
-      <ul>
-        <li>SOC 901: Social Network Analysis</li>
-      </ul>
-    </td>
-  </tr>
-</table>
--->
