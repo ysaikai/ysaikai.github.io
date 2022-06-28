@@ -1,2 +1,5 @@
 
 .DS_Store
+MAST90045/*.Rmd
+MAST90045/images/
+MAST90045/*.css
