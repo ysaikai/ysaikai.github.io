@@ -23,9 +23,10 @@ Agent-based modeling has become one of the standard approaches to studying compl
 
 
 ## Papers
+- The case for fully Bayesian optimisation in small-sample trials
+- APSIM meets TensorFlow: Optimising sequential management decisions via deep reinforcement learning
 - Deep reinforcement learning for irrigation scheduling using high-dimensional sensor feedback
   - with Allan Peake and [Karine Chenu](https://researchers.uq.edu.au/researcher/1740)
-- APSIM meets TensorFlow: Optimising sequential management decisions via deep reinforcement learning
 - [An agent-based model of insect resistance management and mitigation for Bt maize: A social science perspective](https://github.com/ysaikai/BTABM)
   - with [Paul Mitchell](https://aae.wisc.edu/faculty/pdmitchell/) and [Terrance Hurley](https://www.apec.umn.edu/people/terrance-hurley)
   - Published at [Pest Management Science](https://doi.org/10.1002/ps.6016)
