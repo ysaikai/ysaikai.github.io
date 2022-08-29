@@ -39,7 +39,9 @@ Agent-based modeling has become one of the standard approaches to studying compl
 - [A bandit algorithm for efficient on-farm research](https://github.com/ysaikai/MABPS)
   - with [Paul Mitchell](https://aae.wisc.edu/faculty/pdmitchell/)
   - Presented at [2018 AAEA Annual Meeting](https://www.aaea.org/meetings/2018-aaea-annual-meeting)
-- [An agent-based model for promoting modest technologies](https://github.com/ysaikai/TechAdoption)
+
+<!-- - [An agent-based model for promoting modest technologies](https://github.com/ysaikai/TechAdoption)
   - Based on the course project (AAE731 "Frontiers in Development Economics 2", Spring 2016) at UW-Madison
 - [An impure public good model of local food systems: Aggregative games of four locals](https://github.com/ysaikai/LFSGames)
   - Based on the honours thesis (2014) at the Australian National University
+-->
