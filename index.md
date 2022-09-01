@@ -2,9 +2,13 @@
 image: "banner.jpg"
 ---
 
-<div style="padding: 0px 0px 10px 0px; text-align: center; font-style: italic; font-size: larger; font-weight: bold; color: DimGray">
-“Life is either a daring adventure or nothing at all.” —Helen Keller
+<div style="padding: 0px 0px 15px 0px; text-align: center; color: DimGray">
+<span style="font-style: italic; font-size: larger; font-weight: bold; ">
+“Life is either a daring adventure or nothing at all.”
+</span>
+&nbsp; —Helen Keller
 </div>
+
 
 Jambo, Jambo! I am Yuji Saikai from, no longer Nairobi, Melbourne. I work for [School of Mathematics and Statistics](https://ms.unimelb.edu.au) at the University of Melbourne. I am passionate about both teaching and research in Maths & Stats. It is an honour to be part of [Mathematics and Statistics Learning Centre](https://ms.unimelb.edu.au/study/mslc) and [Melbourne Centre for Data Science](https://science.unimelb.edu.au/mcds). My research interest lies in data-driven optimisation and reinforcement learning as well as their applications to precision agriculture.
 
@@ -13,4 +17,3 @@ I am currently on Melbourne Early Career Academic Fellowships (MECAF) and will b
 - [About Me](./about/)
 - [Teaching](./teaching/)
 - [Research](./research/)
-
