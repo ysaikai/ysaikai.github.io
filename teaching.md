@@ -33,7 +33,7 @@ Teaching makes me both humble and thrilled. In the classroom, watching students 
   - Communication is significantly emphasised—cogent arguments and clear explanation of models, solutions, and code in plain English.
 - Many of the techniques covered in the subject are widely used in statistics and machine learning.
 
-### Topics
+### Class notes
 
 | | Topic |
 | :--- | :--- |
