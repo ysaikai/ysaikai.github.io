@@ -7,6 +7,7 @@ As a data-driven approach to optimal control, reinforcement learning (RL) has tr
 
 For applied work, I am interested in precision agriculture, a form of agriculture that exploits advanced farming technologies for increased productivity. Modern sensor devices and actuators provide high spatiotemporal granularity of management units. To fully exploit the technologies and achieve right management at the right place at the right time, it is necessary to discover good policies that process high-dimensional sensor feedback and prescribe right management for each parcel of a field anytime farmers make decisions. I tackle this challenging spatiotemporal control problem using RL and Bayesian optimisation.
 
+<br/>
 
 ## Bayesian optimisation
 An optimization technique with two appealing features: sample efficiency and flexibility for complex objective functions. It has a lot of potential for applications to agricultural production, which usually takes time due to the seasonal production cycle. In other words, evaluating an agricultural production function or input response function is expensive, and therefore Bayesian optimizaton is a cost-efficient technique to identify good input combinations for profitability.
@@ -16,11 +17,13 @@ Bayesian optimization is still a novel technique in most scientific disciplines.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/vz3D36VXefI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+<br/>
 
 ## Agent-based modeling
 Agent-based modeling has become one of the standard approaches to studying complex systems and emergent behavior. In agent-based models, an observed macroscopic phenomenon emerges as a result of interaction among heterogeneous agents in a dynamically evolving environment. Agents typically follow simple decision rules and influence each other either directly or indirectly through the environment, which itself evolves according to its own rules and agent actions. Because the processes being explicitly modeled are complex, researchers use computer simulations to examine outcomes over a wide range of parameter values. In short, agent-based models are laboratory experiments conducted *in silico*. The idea is nicely captured by the following video (though we usually don't have physical robot agents).
 <iframe width="560" height="315" src="https://www.youtube.com/embed/dDsmbwOrHJs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+<br/>
 
 ## Papers
 - APSIM meets TensorFlow: Optimising sequential management decisions via deep reinforcement learning
