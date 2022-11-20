@@ -2,7 +2,7 @@
 title: "Teaching"
 permalink: /teaching/
 ---
-Teaching makes me both humble and thrilled. In the classroom, watching students taking notes of what I just say creates a strong sense of responsibility. At the same time, joy is witnessing students absorbing what I believe is important and useful. Teaching takes time yet immensely fulfilling.
+Teaching makes me both humble and thrilled. Watching students taking notes of what I just say creates a strong sense of responsibility. At the same time, witnessing students absorbing what I explain is a joy. Teaching takes time yet immensely fulfilling.
 
 **Instructor**
 - [Systems Modelling and Simulation](#systems-modelling-and-simulation)
