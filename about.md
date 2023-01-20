@@ -15,9 +15,11 @@ I enjoy cooking, playing pool, and a simple life in general.
 
 
 ## Training
-- PhD in Agricultural & Applied Economics, the University of Wisconsin-Madison, USA, 2020
+- PhD, The University of Wisconsin-Madison, USA, 2020
 - Complex Systems Summer School, Santa Fe Institute, USA, 2017
-- Bachelor of Economics (Honours), the Australian National University, Australia, 2014
+- Bachelor of Economics (Honours), The Australian National University, Australia, 2014
 - Bachelor of AgriCommerce, Massey University, New Zealand, 2013
 
 Because of the professional background, I am competent in software design and coding. I like Python but also feel comfortable with others (e.g. R, Julia and C#). Aside from software engineering, I am trained in economics, machine learning, and statistics at graduate levels, and mathematics at an undergraduate level.
+
+<br />
