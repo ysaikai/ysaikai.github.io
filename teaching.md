@@ -97,3 +97,5 @@ Teaching makes me both humble and thrilled. Watching students taking notes of wh
 <a href="./UW/solver_tutorial.xlsx">Solver demo</a>
 <a href="./UW/aae706_disc_20190201.pdf">notes</a>
 -->
+
+<br />
