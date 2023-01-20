@@ -51,3 +51,5 @@ Agent-based modeling has become one of the standard approaches to studying compl
 - [An impure public good model of local food systems: Aggregative games of four locals](https://github.com/ysaikai/LFSGames)
   - Based on the honours thesis (2014) at the Australian National University
 -->
+
+<br />
