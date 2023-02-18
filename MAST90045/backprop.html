@@ -1461,23 +1461,17 @@ overflow-y: auto;
 border: 1px solid #ddd;
 border-radius: 4px;
 }
-.tabset-dropdown > .nav-tabs > li.active:before {
-content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+content: "\e259";
 font-family: 'Glyphicons Halflings';
 display: inline-block;
 padding: 10px;
 border-right: 1px solid #ddd;
 }
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-content: "";
-border: none;
-}
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-content: "";
+content: "\e258";
 font-family: 'Glyphicons Halflings';
-display: inline-block;
-padding: 10px;
-border-right: 1px solid #ddd;
+border: none;
 }
 .tabset-dropdown > .nav-tabs > li.active {
 display: block;
@@ -1609,8 +1603,8 @@ optimisation problems.</p>
 <p>In statistics and machine learning, we often want to minimise the
 following objective function<span class="math display">\[ \mathcal{C}:
 \mathbb{R}^d\to\mathbb{R};\; w \mapsto
-\sum_{j=1}^m(y_j-f(x_j;w))^2,\]</span> where <span class="math inline">\(f\)</span> is a statistical model parameterised
-parameterised by <span class="math inline">\(w\)</span> and <span class="math inline">\(\{(x_j,y_j)\}_{j=1}^m\)</span> is data to which we
+\sum_{j=1}^m(y_j-f(x_j;w))^2,\]</span> where <span class="math inline">\(f\)</span> is a statistical model parameterised by
+<span class="math inline">\(w\)</span> and <span class="math inline">\(\{(x_j,y_j)\}_{j=1}^m\)</span> is data to which we
 fit <span class="math inline">\(f\)</span>. It is a least-squares
 problem: <span class="math display">\[\min_{w\in\mathbb{R}^d}
 \mathcal{C}(w) = \min_{w\in\mathbb{R}^d}
