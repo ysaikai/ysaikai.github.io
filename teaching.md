@@ -39,7 +39,7 @@ Teaching makes me both humble and thrilled. Watching students taking notes of wh
 | :--- | :--- |
 | 1 | [R, RStudio and R Markdown](./MAST90045/r_rstudio_rmarkdown.html){:target="_blank" rel="noopener"} |
 | 2 | [Root finding](./MAST90045/root_finding.html){:target="_blank" rel="noopener"} |
-| 3 | [Optimisation](./MAST90045/optimisation.html){:target="_blank" rel="noopener"}<br /> [Backpropagation](./MAST90045/backprop.html){:target="_blank" rel="noopener"} |
+| 3 | [Optimisation](./MAST90045/optimisation.html){:target="_blank" rel="noopener"} |
 | 4 | [Numerical integration](./MAST90045/numerical_integration.html){:target="_blank" rel="noopener"} |
 | 5 | [Ordinary differential equations](./MAST90045/ode.html){:target="_blank" rel="noopener"} |
 | 6 | [Probability theory](./MAST90045/probability_theory.html){:target="_blank" rel="noopener"} |
