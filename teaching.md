@@ -26,7 +26,7 @@ Teaching makes me both humble and thrilled. Watching students taking notes of wh
   - Not required, but basic understanding of probability is very helpful.
 - Textbook
   - Jones, O., Maillardet, R., & Robinson, A. (2009). *Introduction to scientific programming and simulation using R*. CRC Press.
-  - [Available](http://cat.lib.unimelb.edu.au:80/record=b5904690~S15) for UniMelb students
+  - [Available](https://cat2.lib.unimelb.edu.au/search~S30?/Xintroduction+to+scientific+programming+and+simulation+using+R&searchscope=30&SORT=D/Xintroduction+to+scientific+programming+and+simulation+using+R&searchscope=30&SORT=D&SUBKEY=introduction+to+scientific+programming+and+simulation+using+R/1%2C10%2C10%2CB/frameset&FF=Xintroduction+to+scientific+programming+and+simulation+using+R&searchscope=30&SORT=D&2%2C2%2C) for UniMelb students
 - The subject is, broadly speaking, **computational science**.
   - *Numerical analysis* and *stochastic simulation*
   - Large amounts of coding using R, RStudio, and R Markdown
