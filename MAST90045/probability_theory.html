@@ -1717,13 +1717,14 @@ theory starts with the axioms of mathematical structure that allows us
 to model experiments with random outcomes and quantify the likelihood of
 each result of the experiments.</p>
 <blockquote>
-<p>In these notes, to minimise distractions, I avoid measure-theoretic
-notions, which are fundamental to the rigorous probability theory. For
-our purpose, benefits are much bigger than costs. For example,
-technically speaking, not all subsets of the unit interval <span class="math inline">\([0,1]\)</span> qualify as events, because the
-power set is too large to assign a probability to each element. The most
-common collection, which is somewhat smaller but not too small to be
-useful, is called the Borel <span class="math inline">\(\sigma\)</span>-algebra.</p>
+<p>Albeit fundamental to the probability theory, in these notes,
+measure-theoretic notions are mostly avoided. For our purpose, benefits
+are much bigger than costs. For example, technically speaking, not all
+subsets of the unit interval <span class="math inline">\([0,1]\)</span>
+qualify as events, because the power set is too large to assign a
+probability to each element. The most common collection, which is
+somewhat smaller but not too small to be useful, is called the Borel
+<span class="math inline">\(\sigma\)</span>-algebra.</p>
 </blockquote>
 <div id="sample-space-events" class="section level2">
 <h2>Sample space &amp; events</h2>
@@ -2101,9 +2102,9 @@ function</strong> (PDF) for <span class="math inline">\(X\)</span>. A
 random variable <span class="math inline">\(X\)</span> is said to be
 (absolutely) <strong>continuous</strong> if <span class="math inline">\(X\)</span> has a PDF.</p>
 <blockquote>
-<p>Technically speaking, a PDF for <span class="math inline">\(X\)</span> is not unique, because integral is
-insensitive to a countable set of points in the integration range. For
-example, <span class="math inline">\(f_1(x) =
+<p>Technically speaking, a PDF for <span class="math inline">\(X\)</span> is not unique, because an integral is
+insensitive to changes in the function over a null set (i.e., a set of
+measure zero). For example, <span class="math inline">\(f_1(x) =
 \mathbb{1}_{[0,1]}(x)\)</span> and <span class="math inline">\(f_2(x) =
 \mathbb{1}_{[0,1]\setminus\{0.5\}}(x)\)</span> are both legitimate PDFs
 for the uniform distribution over <span class="math inline">\([0,1]\)</span>. In practice, however, we often say
