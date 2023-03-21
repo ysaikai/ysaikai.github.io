@@ -384,7 +384,7 @@ The University of Melbourne</div></h4>
 </ul>
 <p>The system is known to have periodic solutions, which do not allow simple expressions. Fortunately, it is still easy to obtain an implicit equation of <span class="math inline">\(y_1\)</span> and <span class="math inline">\(y_2\)</span>. Eliminating <span class="math inline">\(dt\)</span> from the above system of ODEs, we have: <span class="math display">\[\begin{alignat}{2}
   &amp;&amp;(ay_1-by_1y_2)dy_2 &amp;= (gby_1y_2-ey_2)dy_1\\
-&amp;\Leftrightarrow\quad &amp;\int \frac{a-by_2}{y_2}dy_2 &amp;= \int \frac{gby_1-e}{y_1}dy_1\\
+&amp;\Rightarrow\quad &amp;\int \frac{a-by_2}{y_2}dy_2 &amp;= \int \frac{gby_1-e}{y_1}dy_1\\
 &amp;\Leftrightarrow\quad &amp; c &amp;= gby_1-e\log(y_1)+by_2-a\log(y_2)
 \end{alignat}\]</span> where <span class="math inline">\(c\)</span> is a constant. With <span class="math inline">\(a=0.05\)</span>, <span class="math inline">\(b=0.0002\)</span>, <span class="math inline">\(g=0.8\)</span>, <span class="math inline">\(e=0.03\)</span>, and <span class="math inline">\(c=-0.3\)</span>, we have the following orbit in a phase space.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r fold-hide"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="fl">0.05</span></span>
