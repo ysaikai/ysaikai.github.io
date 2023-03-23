@@ -2215,38 +2215,34 @@ possible value has its own associated probability, it is more reasonable
 to use the <strong>weighted average</strong> with <span class="math inline">\(p(x)\)</span> as a weight for <span class="math inline">\(x\)</span>. Mathematical expectation formalises
 this intuition. For our purpose, it suffices to see expectation as a
 weighted average.</p>
+<p>In general, given the probability measure <span class="math inline">\(P_X\)</span>, the expected value of <span class="math inline">\(X\)</span> is <span class="math display">\[
+\mathbb{E}X = \int_\mathbb{R} x dP_X(x),
+\]</span> the weighted sum of <span class="math inline">\(x\)</span>
+with <span class="math inline">\(dP_X(x) = P_X(dx)\)</span> as a weight.
+Since <span class="math inline">\(\int dP_X(x)=1\)</span>, as a result,
+it is the weighted average.</p>
+<p>For discrete <span class="math inline">\(X\)</span>, <span class="math display">\[\mathbb{E}X = \int_\mathbb{R} x dP_X(x) = \sum_x
+xp(x).\]</span> For continuous <span class="math inline">\(X\)</span>,
+<span class="math display">\[\mathbb{E}X = \int_\mathbb{R} x dP_X(x) =
+\int_\mathbb{R} xf(x)dx.\]</span></p>
 <blockquote>
-<p>In these notes, when discussing expectation, we implicitly assume it
-exists.</p>
+<p>Note that the first integral is with respect to the probability
+measure <span class="math inline">\(P_X\)</span> and common for both
+discrete and continuous random variables, while the second integral is
+the standard one (with respect to Lebesgue measure) and relevant only
+for continuous random variables.</p>
 </blockquote>
-<div id="mean" class="section level3">
-<h3>Mean</h3>
-<p>The expectation <span class="math inline">\(\mathbb{E}X\)</span> of a
-discrete random variable <span class="math inline">\(X\)</span> is
-defined by <span class="math display">\[\mathbb{E}X = \sum_x xP(X=x)
-.\]</span> This is precisely the weighted average — each value <span class="math inline">\(x\)</span> is weighted by <span class="math inline">\(p(x)\)</span> and summed up while each weight
-<span class="math inline">\(p(x)\)</span> sums to <span class="math inline">\(1\)</span>.</p>
-<p>In the case of continuous <span class="math inline">\(X\)</span>,
-summation over a countable set becomes integral over an uncountable set.
-In addition, each weight is provided by PDF <span class="math inline">\(f(x)\)</span>, as it rightly “sums” (well,
-integrates) to <span class="math inline">\(1\)</span>. Hence, <span class="math display">\[\mathbb{E}X = \int_{-\infty}^\infty xf(x)dx
-.\]</span></p>
 <p>When there is no transformation of <span class="math inline">\(X\)</span>, <span class="math inline">\(\mathbb{E}X\)</span> is called the
 <strong>mean</strong> of <span class="math inline">\(X\)</span>.</p>
-</div>
 <div id="transformation" class="section level3">
 <h3>Transformation</h3>
 <p>We are often interested in <span class="math inline">\(h(X)\)</span>,
 a transformation of <span class="math inline">\(X\)</span> using a
 deterministic function <span class="math inline">\(h\)</span>, and its
-expectation <span class="math inline">\(\mathbb{E}h(X)\)</span>. Here is
-the formula. <span class="math display">\[
-\mathbb{E}h(X) =
-  \begin{cases}
-    \sum_x h(x)p(x), &amp; \text{if } X \text{ is discrete}\\
-    \int_{-\infty}^\infty h(x)f(x)dx, &amp; \text{if } X \text{ is
-continuous}
-  \end{cases}
+expectation <span class="math inline">\(\mathbb{E}h(X)\)</span>. The
+expectation of <span class="math inline">\(h(X)\)</span> is pleasantly
+simple: <span class="math display">\[
+\mathbb{E}h(X) = \int_\mathbb{R} h(x) dP_X(x).
 \]</span></p>
 <p>Remember the <a href="#definition">definition</a> of random variable
 — a function mapping <span class="math inline">\(\omega\in\Omega\)</span> to <span class="math inline">\(x\in\mathbb{R}\)</span>. Since a function of a
@@ -2276,7 +2272,7 @@ permutations.</p>
 <div id="linearity" class="section level3">
 <h3>Linearity</h3>
 <p>Due to the <a href="https://en.wikipedia.org/wiki/Linear_map">linearity</a> of
-summation and integration, expectation is linear: <span class="math display">\[\mathbb{E}(aX+bY) = a\mathbb{E}X + b\mathbb{E}Y
+integration, expectation is linear: <span class="math display">\[\mathbb{E}(aX+bY) = a\mathbb{E}X + b\mathbb{E}Y
 .\]</span></p>
 <p>Thus, we can also do the following to compute <span class="math inline">\(\mathbb{E}h_1(X_1,X_2)\)</span>: <span class="math display">\[\mathbb{E}h_1(X_1,X_2) = \mathbb{E}(X_1+X_2) =
 \mathbb{E}X_1+\mathbb{E}X_2 = \sum_{i=1}^6 x_i\frac{1}{6} + \sum_{i=j}^6
