@@ -1703,11 +1703,6 @@ The University of Melbourne</div></h4>
 </div>
 
 
-<div style="padding: 30px 0px 0px 0px;">
-<p>These notes are based on Chapter 13 &amp; 14 of JMR — Jones, O.,
-Maillardet, R., &amp; Robinson, A. (2009). <em>Introduction to
-scientific programming and simulation using R</em>. CRC Press.</p>
-</div>
 <div id="probability" class="section level1">
 <h1>Probability</h1>
 <p>Probability is an essential tool for developing and interpreting
@@ -1720,17 +1715,16 @@ each result of the experiments.</p>
 <p>Albeit fundamental to the probability theory, in these notes,
 measure-theoretic notions are mostly avoided. For our purpose, benefits
 are much bigger than costs. For example, technically speaking, not all
-subsets of the unit interval <span class="math inline">\([0,1]\)</span>
-qualify as events, because the power set is too large to assign a
-probability to each element. The most common collection, which is
-somewhat smaller but not too small to be useful, is called the Borel
-<span class="math inline">\(\sigma\)</span>-algebra.</p>
+subsets of the real line qualify as events, because the power set is too
+large to assign a probability to each element. The most common
+collection, which is somewhat smaller but not too small to be useful, is
+called the Borel <span class="math inline">\(\sigma\)</span>-algebra.</p>
 </blockquote>
 <div id="sample-space-events" class="section level2">
 <h2>Sample space &amp; events</h2>
 <ul>
 <li>Sample space : the set of all possible outcomes</li>
-<li>Sample point : an element of sample space</li>
+<li>Sample point/outcome : an element of sample space</li>
 <li>Event : a subset of sample space</li>
 </ul>
 <p>For example, imagine an experiment in which we roll a die. The sample
@@ -1748,8 +1742,9 @@ depends on how we model problems of interest.</p>
 <p>Notations:</p>
 <ul>
 <li><span class="math inline">\(\Omega\)</span> : sample space</li>
-<li><span class="math inline">\(\omega\)</span> : sample point</li>
-<li><span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, … : events (or sets)</li>
+<li><span class="math inline">\(\omega\)</span> : sample
+point/outcome</li>
+<li><span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, … : events/sets</li>
 <li><span class="math inline">\(\emptyset\)</span> : empty set</li>
 <li><span class="math inline">\(|A|\)</span> : size/measure of <span class="math inline">\(A\)</span> (e.g., volume of <span class="math inline">\(A\)</span> and number of elements in <span class="math inline">\(A\)</span>)</li>
 </ul>
@@ -2348,8 +2343,10 @@ the weak law of large number: <span class="math display">\[
 <p>An interpretation is that the sample average, in some sense,
 converges to the population mean.</p>
 <blockquote>
-<p>It is “weak” because of the type of convergence, namely “convergence
-in probability”, which is silent on whether <span class="math inline">\(\overline{X}\)</span> itself converges to <span class="math inline">\(\mu\)</span>.</p>
+<p>It is “weak” because of the type of convergence, namely
+<strong>convergence in probability</strong>, which is silent on whether
+<span class="math inline">\(\overline{X}\)</span> itself converges to
+<span class="math inline">\(\mu\)</span>.</p>
 </blockquote>
 <p>The theorem provides the basis and allows us to justify arguments
 based on stochastic simulations. Specifically, we run many stochastic
