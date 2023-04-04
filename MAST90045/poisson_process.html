@@ -1797,17 +1797,23 @@ distribution of the first arrival <strong>after <span class="math inline">\(t\)<
 that <span class="math inline">\(X_{n+2}, X_{n+3},\dots\)</span> are
 independent of <span class="math inline">\(S_1,\dots,S_n\)</span> and
 <span class="math inline">\(X_{n+1}\)</span>. Consequently, a sequence
-of interarrival times after <span class="math inline">\(t\)</span> is an
-IID <span class="math inline">\(\text{exp}(\lambda)\)</span> and forms a
-Poisson process. Hence, the claim.</p>
+of interarrival times after <span class="math inline">\(t\)</span> is
+IID <span class="math inline">\(\text{exp}(\lambda)\)</span> and thereby
+forming a Poisson process. Hence, the claim.</p>
 </div>
 <div id="property-3" class="section level2">
 <h2>Property 3</h2>
 <p><span class="math inline">\(N(t)\)</span> has independent increments;
-i.e., for <span class="math inline">\(t_0&lt;t_1&lt;\dots&lt;t_n\)</span>, <span class="math display">\[N(t_n)-N(t_{n-1}), N(t_{n-1})-N(t_{n-2}), \dots,
-N(t_1)-N(t_0)\]</span> are independent.</p>
-<p><em>Proof</em>. Property 2 implies that <span class="math inline">\(N(t_n)-N(t_{n-1})\)</span> is independent of <span class="math inline">\(N(s)\)</span> for <span class="math inline">\(s\leq t_{n-1}\)</span> and therefore independent
-of <span class="math inline">\(N(t_{n-1})-N(t_{n-2}), \dots,
+i.e., for <span class="math inline">\(t_0&lt;t_1&lt;\dots&lt;t_{n-1}&lt;t_n\)</span>,
+<span class="math display">\[N(t_n)-N(t_{n-1}), N(t_{n-1})-N(t_{n-2}),
+\dots, N(t_1)-N(t_0)\]</span> are independent.</p>
+<p><em>Proof</em>. This is essentially a corollary of Property 2. As
+explained above, after <span class="math inline">\(t_{n-1}\)</span>, we
+have a fresh Poisson process, which is independent of all the random
+variables associated with the past, <span class="math inline">\(N(t_{n-1}),\dots,N(t_{0})\)</span>. Thus, the new
+counting process <span class="math inline">\(N(t_n)-N(t_{n-1})\)</span>
+expressed as an increment is independent of <span class="math inline">\(N(t_{n-1}),\dots,N(t_{0})\)</span> and therefore
+independent of their particular transformation <span class="math inline">\(N(t_{n-1})-N(t_{n-2}), \dots,
 N(t_1)-N(t_0).\)</span></p>
 <blockquote>
 <p>As is often the case in mathematics, we have a choice of definitions
@@ -1859,14 +1865,14 @@ makes.</li>
 rate <span class="math inline">\(\lambda\)</span>, then <span class="math inline">\(\operatorname{Var} S =
 \lambda\mathbb{E}(Y_n)^2\)</span>.</li>
 </ol>
-<p><strong><em>Proof for (i).</em></strong> <span class="math display">\[\begin{align}
+<p><em>Proof for (i).</em> <span class="math display">\[\begin{align}
   \mathbb{E}S &amp;= \sum_{n=0}^\infty \mathbb{E}[S|N=n]\cdot P(N=n)\\
               &amp;= \sum_{n=0}^\infty
 \mathbb{E}[Y_1+\dots+Y_n|N=n]\cdot P(N=n)\\
               &amp;= \sum_{n=0}^\infty n\mathbb{E}Y_n \cdot P(N=n)\\
               &amp;= \mathbb{E}N \cdot \mathbb{E}Y_n
 \end{align}\]</span></p>
-<p><strong><em>Proof for (ii).</em></strong> First, for given <span class="math inline">\(N=n\)</span>, <span class="math display">\[\begin{align}
+<p><em>Proof for (ii).</em> First, for given <span class="math inline">\(N=n\)</span>, <span class="math display">\[\begin{align}
 \mathbb{E}[S^2|N=n] &amp;= \operatorname{Var}[S|N=n] +
 (\mathbb{E}[S|N=n])^2\\
                     &amp;= n\operatorname{Var}Y_n + n^2(\mathbb{E}Y_n)^2
@@ -1887,11 +1893,12 @@ n^2(\mathbb{E}Y_n)^2\right) \cdot P(N=n)\\
                     &amp;= \mathbb{E}N\cdot\operatorname{Var}Y_n +
 \operatorname{Var}N \cdot (\mathbb{E}Y_n)^2
 \end{align}\]</span></p>
-<p><strong><em>Proof for (iii)</em></strong>. We are interested in the
-Poisson counting process for <span class="math inline">\(t=1\)</span>.
-Thus, we have <span class="math inline">\(N \sim
-\text{pois}(\lambda)\)</span>, which implies <span class="math inline">\(\mathbb{E}N = \lambda\)</span> and <span class="math inline">\(\operatorname{Var}N = \lambda\)</span>. Now, the
-result follows from (ii).</p>
+<p><em>Proof for (iii)</em>. We are interested in the Poisson counting
+process for <span class="math inline">\(t=1\)</span>. Thus, we have
+<span class="math inline">\(N \sim \text{pois}(\lambda)\)</span>, which
+implies <span class="math inline">\(\mathbb{E}N = \lambda\)</span> and
+<span class="math inline">\(\operatorname{Var}N = \lambda\)</span>. Now,
+the result follows from (ii).</p>
 </div>
 <div id="splitting" class="section level2">
 <h2>Splitting</h2>
@@ -1915,9 +1922,9 @@ simply <span class="math inline">\(N_w(t) \sim
 surprise?</p>
 <p>Let’s examine both counting processes <span class="math inline">\(\{N_w(t)\}\)</span> and <span class="math inline">\(\{N_m(t)\}\)</span>. Here, we use three properties
 to show they are Poisson processes.</p>
-<p><strong><em>Proof</em></strong>. First, since the random assignment
-is independent of any other randomness, the independent increments
-property of the original process implies that the increments <span class="math display">\[N_s(t_n)-N_s(t_{n-1}), N_s(t_{n-1})-N_s(t_{n-2}),
+<p><em>Proof</em>. First, since the random assignment is independent of
+any other randomness, the independent increments property of the
+original process implies that the increments <span class="math display">\[N_s(t_n)-N_s(t_{n-1}), N_s(t_{n-1})-N_s(t_{n-2}),
 \dots, N_s(t_1)-N_s(t_0)\]</span> are independent of each other for
 <span class="math inline">\(s\in\{w,m\}\)</span>. Second, by definition,
 <span class="math inline">\(N_w(0) = N_m(0) = 0\)</span>. Hence, we only
