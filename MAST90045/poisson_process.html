@@ -1761,11 +1761,10 @@ terms of the sequence of IID interarrival times <span class="math inline">\(X_1,
 <div id="property-1" class="section level2">
 <h2>Property 1</h2>
 <p>In the Poisson counting process <span class="math inline">\(\{N(t) :
-t&gt;0\}\)</span>, the number of arrivals over <span class="math inline">\((0,t]\)</span> follows <a href="named_distributions.html#poisson"><span class="math inline">\(\text{pois}(\lambda t)\)</span></a> with the PMF
-of <span class="math display">\[
+t&gt;0\}\)</span>, the number of arrivals over <span class="math inline">\((0,t]\)</span> follows <span class="math inline">\(\text{pois}(\lambda t)\)</span> whose PMF is <span class="math display">\[
 P(N(t)=n) = \frac{e^{-\lambda t}(\lambda t)^n}{n!}.
 \]</span></p>
-<p><strong><em>Proof</em></strong>. A key observation is that <span class="math inline">\(N(t)=n\)</span> if and only if <span class="math inline">\(S_n \leq t &lt; S_{n+1}\)</span> because the <span class="math inline">\(n\)</span>th arrival occurs before time <span class="math inline">\(t\)</span> but the <span class="math inline">\((n+1)\)</span>th occurs after <span class="math inline">\(t\)</span>. Also remember that, by definition,
+<p><em>Proof</em>. A key observation is that <span class="math inline">\(N(t)=n\)</span> if and only if <span class="math inline">\(S_n \leq t &lt; S_{n+1}\)</span> because the <span class="math inline">\(n\)</span>th arrival occurs before time <span class="math inline">\(t\)</span> but the <span class="math inline">\((n+1)\)</span>th occurs after <span class="math inline">\(t\)</span>. Also remember that, by definition,
 <span class="math inline">\(X_{n+1}\)</span> is independent of <span class="math inline">\(X_1,\dots,X_n\)</span> and therefore independent
 of <span class="math inline">\(S_n=X_1+\dots+X_n\)</span>.</p>
 <p><span class="math display">\[\begin{align}
@@ -1774,9 +1773,9 @@ P(N(t)=n)
   &amp;= P(S_n \leq t, S_{n+1} &gt; t)\\
   &amp;= P(S_n \leq t, X_{n+1} &gt; t-S_n)\\
   &amp;= \int_0^t\int_{t-s}^\infty f(s,x)dxds\\
-  &amp;= \int_0^t\int_{t-s}^\infty f_{S_n}(s)f_X(x)dxds \quad (\because
-X_{n+1} \perp\!\!\!\perp S_n)\\
-  &amp;= \int_0^t f_{S_n}(s)\left[\int_{t-s}^\infty f_X(x)dx\right]ds\\
+  &amp;= \int_0^t\int_{t-s}^\infty f(s)f(x)dxds \quad (\because X_{n+1}
+\perp\!\!\!\perp S_n)\\
+  &amp;= \int_0^t f(s)\left[\int_{t-s}^\infty f(x)dx\right]ds\\
   &amp;= \int_0^t \lambda e^{-\lambda s}\frac{(\lambda
 s)^{n-1}}{(n-1)!}\cdot e^{-\lambda(t-s)}ds\\
   &amp;= \frac{(\lambda)^{n}}{(n-1)!}e^{-\lambda t} \int_0^t s^{n-1}ds\\
@@ -1790,7 +1789,7 @@ s)^{n-1}}{(n-1)!}\cdot e^{-\lambda(t-s)}ds\\
 <div id="property-2" class="section level2">
 <h2>Property 2</h2>
 <p>For <span class="math inline">\(\tau\geq0\)</span>, <span class="math inline">\(N(t+\tau)-N(t)\)</span> follows <span class="math inline">\(\text{pois}(\lambda \tau)\)</span>.</p>
-<p><strong><em>Proof</em></strong>. Suppose that, by time <span class="math inline">\(t\)</span>, there have been <span class="math inline">\(n\)</span> arrivals at time <span class="math inline">\(s_1, \dots, s_n\)</span>. We know <span class="math inline">\(X_{n+1}&gt;t-s_n\)</span>. In addition, by the <a href="named_distributions.html#memoryless-property">memoryless
+<p><em>Proof</em>. Suppose that, by time <span class="math inline">\(t\)</span>, there have been <span class="math inline">\(n\)</span> arrivals at time <span class="math inline">\(s_1, \dots, s_n\)</span>. We know <span class="math inline">\(X_{n+1}&gt;t-s_n\)</span>. In addition, by the <a href="named_distributions.html#memoryless-property">memoryless
 property</a> of <span class="math inline">\(\text{exp}(\lambda)\)</span>, <span class="math display">\[P(X_{n+1}&gt;t-s_n+\tau | X_{n+1}&gt;t-s_n) =
 P(X_{n+1}&gt;\tau) = e^{-\lambda \tau}.\]</span> This implies that the
 distribution of the first arrival <strong>after <span class="math inline">\(t\)</span></strong> also follows <span class="math inline">\(\text{exp}(\lambda)\)</span> and independent of
@@ -1807,7 +1806,7 @@ Poisson process. Hence, the claim.</p>
 <p><span class="math inline">\(N(t)\)</span> has independent increments;
 i.e., for <span class="math inline">\(t_0&lt;t_1&lt;\dots&lt;t_n\)</span>, <span class="math display">\[N(t_n)-N(t_{n-1}), N(t_{n-1})-N(t_{n-2}), \dots,
 N(t_1)-N(t_0)\]</span> are independent.</p>
-<p><strong><em>Proof</em></strong>. Property 2 implies that <span class="math inline">\(N(t_n)-N(t_{n-1})\)</span> is independent of <span class="math inline">\(N(s)\)</span> for <span class="math inline">\(s\leq t_{n-1}\)</span> and therefore independent
+<p><em>Proof</em>. Property 2 implies that <span class="math inline">\(N(t_n)-N(t_{n-1})\)</span> is independent of <span class="math inline">\(N(s)\)</span> for <span class="math inline">\(s\leq t_{n-1}\)</span> and therefore independent
 of <span class="math inline">\(N(t_{n-1})-N(t_{n-2}), \dots,
 N(t_1)-N(t_0).\)</span></p>
 <blockquote>
