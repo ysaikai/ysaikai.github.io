@@ -688,7 +688,7 @@ f(x) =
 \end{cases}
 \]</span> It follows:</p>
 <p><span class="math display">\[\begin{alignat}{2}
-    &amp; &amp; \int_{-\infty}^\infty f(x)dx &amp;= 1\\
+  &amp; &amp; \int_\mathbb{R} f(x)dx &amp;= 1\\
   &amp;\Leftrightarrow\quad &amp; \int_a^b cdx &amp;= 1\\
   &amp;\Leftrightarrow\quad &amp; c(b-a) &amp;= 1\\
   &amp;\Leftrightarrow\quad &amp; c &amp;= \frac{1}{b-a}
@@ -739,7 +739,7 @@ P(X&gt;t+s | X&gt;t) &amp;= \frac{P(X&gt;t+s, X&gt;t)}{P(X&gt;t)}\\
     0 &amp; \text{otherwise}
   \end{cases}\\\\
 \end{align}\]</span></p>
-<p><span class="math inline">\(\mathrm{weibull}(m,\lambda)\)</span> generalises the <strong>constant</strong> rate <span class="math inline">\(\lambda\)</span> used in <span class="math inline">\(\mathrm{exp}(\lambda)\)</span> to a <strong>function</strong> <span class="math inline">\(\lambda(x) = m\lambda x^{m-1}\)</span>, which covers the constant case at <span class="math inline">\(m=1\)</span>. This time-varying rate <span class="math inline">\(\lambda(x)\)</span> is commonly referred to as a <strong>hazard function</strong>.</p>
+<p><span class="math inline">\(\mathrm{weibull}(m,\lambda)\)</span> generalises <span class="math inline">\(\mathrm{exp}(\lambda)\)</span> to model waiting time with a time-varying arrival rate. Weibull distribution can also be specified by the <strong>hazard function</strong> <span class="math inline">\(\lambda(x) = m\lambda x^{m-1}\)</span>.</p>
 <div id="hazard-function" class="section level3">
 <h3>Hazard function</h3>
 <p>The hazard function characterises probabilistic models used in <a href="https://en.wikipedia.org/wiki/Survival_analysis">survival analysis</a>, and can be defined as follows. <span class="math display">\[\lambda(x) = \lim_{\Delta x \to 0} \frac{P(x&lt;X\leq x+\Delta x|X&gt;x)}{\Delta x}.\]</span> It is a rate of failure <strong>given that it survived until <span class="math inline">\(x\)</span></strong>. It is similar to the PDF, which is not conditioned on the survival until <span class="math inline">\(x\)</span>. Observe, <span class="math display">\[\begin{align}
