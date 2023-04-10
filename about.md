@@ -15,7 +15,7 @@ I enjoy cooking, playing pool, and simple life in general.
 
 
 ## Training
-- PhD, The University of Wisconsin-Madison, USA, 2020
+- PhD, The University of Wisconsin–Madison, USA, 2020
 - Complex Systems Summer School, Santa Fe Institute, USA, 2017
 - Bachelor of Economics (Honours), The Australian National University, Australia, 2014
 - Bachelor of AgriCommerce, Massey University, New Zealand, 2013
