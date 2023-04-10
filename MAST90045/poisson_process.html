@@ -1722,7 +1722,7 @@ place.</li>
 <p>The corresponding stochastic processes are:</p>
 <ul>
 <li><span class="math inline">\(S_n\)</span> : Total number of slots
-until the <span class="math inline">\(n\)</span>th arrival.</li>
+taken for the <span class="math inline">\(n\)</span>th arrival.</li>
 <li><span class="math inline">\(X_i\)</span> : Number of slots taken
 between the <span class="math inline">\(i\)</span>th and <span class="math inline">\((i-1)\)</span>th arrivals.</li>
 <li><span class="math inline">\(N(t)\)</span> : Number of arrivals over
@@ -1793,13 +1793,10 @@ s)^{n-1}}{(n-1)!}\cdot e^{-\lambda(t-s)}ds\\
 property</a> of <span class="math inline">\(\text{exp}(\lambda)\)</span>, <span class="math display">\[P(X_{n+1}&gt;t-s_n+\tau | X_{n+1}&gt;t-s_n) =
 P(X_{n+1}&gt;\tau) = e^{-\lambda \tau}.\]</span> This implies that the
 distribution of the first arrival <strong>after <span class="math inline">\(t\)</span></strong> also follows <span class="math inline">\(\text{exp}(\lambda)\)</span> and independent of
-<span class="math inline">\(S_1,\dots,S_n\)</span>. It is also the case
-that <span class="math inline">\(X_{n+2}, X_{n+3},\dots\)</span> are
-independent of <span class="math inline">\(S_1,\dots,S_n\)</span> and
-<span class="math inline">\(X_{n+1}\)</span>. Consequently, a sequence
-of interarrival times after <span class="math inline">\(t\)</span> is
-IID <span class="math inline">\(\text{exp}(\lambda)\)</span> and thereby
-forming a Poisson process. Hence, the claim.</p>
+<span class="math inline">\(S_1,\dots,S_n\)</span>. Since <span class="math inline">\(X_{n+2}, X_{n+3},\dots\)</span> are already
+independent <span class="math inline">\(\text{exp}(\lambda)\)</span>, a
+sequence of interarrival times <strong>after <span class="math inline">\(t\)</span></strong> is IID <span class="math inline">\(\text{exp}(\lambda)\)</span> and thereby forming a
+Poisson process. Hence, the claim.</p>
 </div>
 <div id="property-3" class="section level2">
 <h2>Property 3</h2>
