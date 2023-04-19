@@ -19,16 +19,15 @@ Teaching makes me both humble and thrilled. Watching students taking notes of wh
 <br/>
 
 
-## Systems Modelling and Simulation
-- [MAST90045](https://handbook.unimelb.edu.au/subjects/mast90045/print), The University of Melbourne
+## Systems Modelling and Simulation (Semester 1, 2021-2023)
+- [MAST90045](https://handbook.unimelb.edu.au/2023/subjects/mast90045/print), The University of Melbourne
 - Prerequisites
   - [Calculus 2](https://handbook.unimelb.edu.au/subjects/mast10006/print)
   - Not required, but basic understanding of probability is very helpful.
 - Textbook
   - Jones, O., Maillardet, R., & Robinson, A. (2009). *Introduction to scientific programming and simulation using R*. CRC Press.
-  - [Available](https://cat2.lib.unimelb.edu.au/search~S30?/Xintroduction+to+scientific+programming+and+simulation+using+R&searchscope=30&SORT=D/Xintroduction+to+scientific+programming+and+simulation+using+R&searchscope=30&SORT=D&SUBKEY=introduction+to+scientific+programming+and+simulation+using+R/1%2C10%2C10%2CB/frameset&FF=Xintroduction+to+scientific+programming+and+simulation+using+R&searchscope=30&SORT=D&2%2C2%2C) for UniMelb students
 - The subject is, broadly speaking, **computational science**.
-  - *Numerical analysis* and *stochastic simulation*
+  - Numerical analysis and stochastic simulation
   - Large amounts of coding using R, RStudio, and R Markdown
   - Communication is significantly emphasised—cogent arguments and clear explanation of models, solutions, and code in plain English.
 - Many of the techniques covered in the subject are widely used in statistics and machine learning.
@@ -51,7 +50,7 @@ Teaching makes me both humble and thrilled. Watching students taking notes of wh
 <br/>
 
 
-## Machine Learning in Applied Economic Analysis (Summer 2019)
+## Machine Learning in Applied Economic Analysis (Summer, 2019)
 
 * AAE 722, The University of Wisconsin-Madison
 * Instructor: Dr. Sheldon Du
@@ -71,7 +70,7 @@ Teaching makes me both humble and thrilled. Watching students taking notes of wh
 <br/>
 
 
-## Applied Risk Analysis (Spring 2019)
+## Applied Risk Analysis (Spring, 2019)
 
 * AAE 706, The University of Wisconsin-Madison
 * Instructor: Dr. Jean-Paul Chavas
