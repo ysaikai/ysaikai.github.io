@@ -23,9 +23,6 @@ Teaching makes me both humble and thrilled. Watching students taking notes of wh
 - [MAST90045](https://handbook.unimelb.edu.au/2023/subjects/mast90045/print), The University of Melbourne
 - Prerequisites
   - [Calculus 2](https://handbook.unimelb.edu.au/subjects/mast10006/print)
-  - Not required, but basic understanding of probability is very helpful.
-- Textbook
-  - Jones, O., Maillardet, R., & Robinson, A. (2009). *Introduction to scientific programming and simulation using R*. CRC Press.
 - The subject is, broadly speaking, **computational science**.
   - Numerical analysis and stochastic simulation
   - Large amounts of coding using R, RStudio, and R Markdown
