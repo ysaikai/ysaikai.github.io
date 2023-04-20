@@ -19,7 +19,8 @@ Teaching makes me both humble and thrilled. Watching students taking notes of wh
 <br/>
 
 
-## Systems Modelling and Simulation (Semester 1, 2021-2023)
+## Systems Modelling and Simulation
+- Semester 1, 2021-2023
 - [MAST90045](https://handbook.unimelb.edu.au/2023/subjects/mast90045/print), The University of Melbourne
 - Prerequisites
   - [Calculus 2](https://handbook.unimelb.edu.au/subjects/mast10006/print)
