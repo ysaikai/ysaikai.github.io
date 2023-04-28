@@ -30,7 +30,7 @@ Agent-based modeling has become one of the standard approaches to studying compl
 ## Papers
 - Mixtures of Gaussian process experts based on kernel stick-breaking processes
   - with [Khue-Dung Dang](https://scholar.google.com.au/citations?user=lg56IkAAAAAJ&hl=en)
-  - Paper, [Code](https://github.com/ysaikai/GPKSBP)
+  - [Paper](https://arxiv.org/abs/2304.13833), [Code](https://github.com/ysaikai/GPKSBP)
 - Deep reinforcement learning for irrigation scheduling using high-dimensional sensor feedback
   - with Allan Peake and [Karine Chenu](https://researchers.uq.edu.au/researcher/1740)
   - [Paper](https://arxiv.org/abs/2301.00899), [Code](https://github.com/ysaikai/RLIR)
