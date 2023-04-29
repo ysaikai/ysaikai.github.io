@@ -5,19 +5,18 @@ permalink: /research/
 
 As a data-driven approach to optimal control, reinforcement learning (RL) has tremendous potential to optimise a wide variety of real-world systems that were previously unamenable to mathematical optimisation due to the lack of explicit models of dynamics. Among the key challenges of real-world RL, I am interested in sample efficient learning and offline learning.
 
-For applied work, I am interested in precision agriculture, a form of agriculture that exploits advanced farming technologies for increased productivity. Modern sensor devices and actuators provide high spatiotemporal granularity of management units. To fully exploit the technologies and achieve right management at the right place at the right time, it is necessary to discover good policies that process high-dimensional sensor feedback and prescribe right management for each parcel of a field anytime farmers make decisions. I tackle this challenging spatiotemporal control problem using RL and Bayesian optimisation.
+For applied work, I am interested in precision agriculture, a form of agriculture that exploits advanced farming technologies for increased productivity. Modern sensor devices and applicators provide high spatiotemporal granularity of management units. To fully exploit the technologies and achieve right management at the right place at the right time, it is necessary to discover good policies that process high-dimensional sensor feedback and prescribe right management for each parcel of a field each time farmers make decisions. I tackle this challenging spatiotemporal control problem using RL and Bayesian optimisation.
 
 <br/>
 
+<!--
 ## Bayesian optimisation
 An optimization technique with two appealing features: sample efficiency and flexibility for complex objective functions. It has a lot of potential for applications to agricultural production, which usually takes time due to the seasonal production cycle. In other words, evaluating an agricultural production function or input response function is expensive, and therefore Bayesian optimizaton is a cost-efficient technique to identify good input combinations for profitability.
 
-<!--
 Bayesian optimization is still a novel technique in most scientific disciplines. The following videos may give you some idea.<br>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/WkZueBgKFYM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/vz3D36VXefI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
--->
 
 <br/>
 
@@ -26,13 +25,17 @@ Agent-based modeling has become one of the standard approaches to studying compl
 <iframe width="560" height="315" src="https://www.youtube.com/embed/dDsmbwOrHJs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <br/>
+-->
 
 ## Papers
-- The case for fully Bayesian optimisation in small-sample trials
-  - [Paper](https://arxiv.org/abs/2208.13960), [Code](https://github.com/ysaikai/case4fbo)
+- Mixtures of Gaussian process experts based on kernel stick-breaking processes
+  - with [Khue-Dung Dang](https://scholar.google.com.au/citations?user=lg56IkAAAAAJ&hl=en)
+  - [Paper](https://arxiv.org/abs/2304.13833), [Code](https://github.com/ysaikai/GPKSBP)
 - Deep reinforcement learning for irrigation scheduling using high-dimensional sensor feedback
   - with Allan Peake and [Karine Chenu](https://researchers.uq.edu.au/researcher/1740)
   - [Paper](https://arxiv.org/abs/2301.00899), [Code](https://github.com/ysaikai/RLIR)
+- The case for fully Bayesian optimisation in small-sample trials
+  - [Paper](https://arxiv.org/abs/2208.13960), [Code](https://github.com/ysaikai/case4fbo)
 - [An agent-based model of insect resistance management and mitigation for Bt maize: A social science perspective](https://github.com/ysaikai/BTABM)
   - with [Paul Mitchell](https://aae.wisc.edu/faculty/pdmitchell/) and [Terrance Hurley](https://www.apec.umn.edu/people/terrance-hurley)
   - Published at [Pest Management Science](https://doi.org/10.1002/ps.6016)
