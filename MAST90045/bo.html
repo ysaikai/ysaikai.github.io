@@ -2053,7 +2053,7 @@ partitioned into <span class="math inline">\(z_1\)</span> and <span class="math 
 \bar{\mu} = \Sigma_{12}\Sigma_{22}^{-1}z_2 \quad\text{and}\quad
 \bar{\Sigma} = \Sigma_{11} - \Sigma_{12} \Sigma_{22}^{-1} \Sigma_{21}.
 \]</span></p>
-<p>We use the property to obtain a GP <strong>posterior</strong>. First,
+<p>We use this property to obtain a GP <strong>posterior</strong>. First,
 assume that the <strong>likelihood</strong> of <span class="math inline">\(y\)</span> at <span class="math inline">\(x\)</span> given <span class="math inline">\(g(x)\)</span> is the conditional PDF <span class="math inline">\(f(y|g(x))\)</span> specified by <span class="math inline">\(\text{N}(g(x),\sigma^2)\)</span>. That is, <span class="math display">\[y = g(x) + \epsilon,\]</span> where <span class="math inline">\(\epsilon \sim \text{N}(0,\sigma^2)\)</span>.</p>
 <p>In GP regression, new <span class="math inline">\(\tilde{y}\)</span>
 at <span class="math inline">\(\tilde{x}\)</span> is predicted using the
