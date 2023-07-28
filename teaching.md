@@ -30,7 +30,7 @@ Teaching makes me both humble and thrilled. Watching students taking notes of wh
   - Communication is significantly emphasised—cogent arguments and clear explanation of models, solutions, and code in plain English.
 - Many of the techniques covered in the subject are widely used in statistics and machine learning.
 
-| | Notes |
+| | Topic |
 | :--- | :--- |
 | 1 | [R, RStudio and R Markdown](./MAST90045/r_rstudio_rmarkdown.html){:target="_blank" rel="noopener"} |
 | 2 | [Root finding](./MAST90045/root_finding.html){:target="_blank" rel="noopener"} |
