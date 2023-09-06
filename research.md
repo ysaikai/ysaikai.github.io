@@ -30,12 +30,13 @@ Agent-based modeling has become one of the standard approaches to studying compl
 ## Papers
 - Mixtures of Gaussian process experts based on kernel stick-breaking processes
   - with [Khue-Dung Dang](https://scholar.google.com.au/citations?user=lg56IkAAAAAJ&hl=en)
-  - [Paper](https://arxiv.org/abs/2304.13833), [Code](https://github.com/ysaikai/GPKSBP)
+  - [Preprint](https://arxiv.org/abs/2304.13833), [Code](https://github.com/ysaikai/GPKSBP)
 - Deep reinforcement learning for irrigation scheduling using high-dimensional sensor feedback
   - with Allan Peake and [Karine Chenu](https://researchers.uq.edu.au/researcher/1740)
-  - [Paper](https://arxiv.org/abs/2301.00899), [Code](https://github.com/ysaikai/RLIR)
+  - [Preprint](https://arxiv.org/abs/2301.00899), [Code](https://github.com/ysaikai/RLIR)
+  - Published at [PLOS Water](https://journals.plos.org/water/article?id=10.1371/journal.pwat.0000169)
 - The case for fully Bayesian optimisation in small-sample trials
-  - [Paper](https://arxiv.org/abs/2208.13960), [Code](https://github.com/ysaikai/case4fbo)
+  - [Preprint](https://arxiv.org/abs/2208.13960), [Code](https://github.com/ysaikai/case4fbo)
   - Presented at [2022 Artificial Intelligence and Cloud Computing Conference](https://dl.acm.org/doi/fullHtml/10.1145/3582099.3582100)
 - [An agent-based model of insect resistance management and mitigation for Bt maize: A social science perspective](https://github.com/ysaikai/BTABM)
   - with [Paul Mitchell](https://aae.wisc.edu/faculty/pdmitchell/) and [Terrance Hurley](https://www.apec.umn.edu/people/terrance-hurley)
