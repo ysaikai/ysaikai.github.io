@@ -11,7 +11,7 @@ I grew up digital in Japan. While turning to physics and mathematics in high sch
 
 In 2010, being convinced of its potential and seeking systematic knowledge, I went to New Zealand to study agribusiness. However, as my interests drifted from entrepreneurship to teaching & research, I decided to pursue an academic career that, I believed, could make me more useful for society. In 2020, I earned my PhD and fortunately got a job at [School of Mathematics and Statistics](https://ms.unimelb.edu.au), the University of Melbourne.
 
-I enjoy cooking, playing pool, and simple life in general.
+I enjoy cooking, motorcycling, and simple life in general.
 
 
 ## Training
