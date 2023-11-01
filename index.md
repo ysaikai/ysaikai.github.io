@@ -9,7 +9,7 @@ image: "banner.jpg"
 &nbsp; —Helen Keller
 </div>
 
-Hello, World! I am Yuji Saikai from Melbourne, Australia. I work for [School of Mathematics and Statistics](https://ms.unimelb.edu.au) at the University of Melbourne. I am really interested in computational approaches to complex real-world problems. My current research focuses on Bayesian nonparametrics, reinforcement learning, and their applications to agricultural systems.
+Hello, World! I am Yuji Saikai from Adelaide, Australia. I work for [School of Agriculture, Food & Wine](https://set.adelaide.edu.au/agriculture-food-wine/) at the University of Adelaide. I am really interested in computational approaches to complex real-world problems. My current research focuses on Bayesian nonparametrics, reinforcement learning, and their applications to agricultural systems.
 
 - [About Me](./about/)
 - [Teaching](./teaching/)
