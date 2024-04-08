@@ -28,6 +28,8 @@ Agent-based modeling has become one of the standard approaches to studying compl
 -->
 
 ## Papers
+- Generative weather for improved crop model simulations
+  - [Preprint](https://arxiv.org/abs/2404.00528), [Code](https://github.com/ysaikai/GenWeather)
 - Mixtures of Gaussian process experts based on kernel stick-breaking processes
   - with [Khue-Dung Dang](https://scholar.google.com.au/citations?user=lg56IkAAAAAJ&hl=en)
   - [Preprint](https://arxiv.org/abs/2304.13833), [Code](https://github.com/ysaikai/GPKSBP)
