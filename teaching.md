@@ -5,7 +5,7 @@ permalink: /teaching/
 Teaching makes me both humble and thrilled. Watching students taking notes of what I just say creates a strong sense of responsibility. At the same time, witnessing students absorbing what I explain is a joy. Teaching takes time yet immensely fulfilling.
 
 **Instructor**
-- [Systems Modelling and Simulation](#systems-modelling-and-simulation)
+- [Systems Modelling and Simulation](#systems-modelling-and-simulation-semester-1-2021-2023)
 
 **Tutor**
 - [Vector Calculus](https://handbook.unimelb.edu.au/subjects/mast20009/print)
