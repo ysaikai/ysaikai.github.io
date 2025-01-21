@@ -11,7 +11,7 @@ image: "banner.jpg"
 
 Hello, World! I am Yuji Saikai. My active research areas are Bayesian nonparametrics, reinforcement learning, and their applications to agricultural systems.
 
-I am currently a digital/motorcycle nomad, both exploring different parts of Australia and preparing for a new local food initiative. The initiative’s vision is a community of pick-your-own farms managed by AI-assisted gardeners. I am developing an iOS app that bakes in learning algorithms for gardening assistance.
+I am currently a digital/motorcycle nomad, both exploring New Zealand and preparing for a new local food initiative. The initiative’s vision is a community of pick-your-own farms managed by AI-assisted gardeners. I am developing an iOS app that bakes in learning algorithms for gardening assistance.
 
 - [About Me](./about/)
 - [Teaching](./teaching/)
