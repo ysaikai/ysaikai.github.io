@@ -7,7 +7,7 @@ I grew up digital in Japan. While turning to physics and mathematics in high sch
 
 In 2010, being convinced of its potential and seeking systematic knowledge, I returned to school. Ten years after, in the midst of COVID-19, I earned my PhD and began work for [School of Mathematics and Statistics](https://ms.unimelb.edu.au), the University of Melbourne. I did research in computational methods for solving real-world problems and passed them on to students. Meanwhile, I also felt that it was time to apply the techniques and tackle problems I cared about for myself. In 2024, I left academia and began work for another local food initiative.
 
-I enjoy cooking, motorcycling and simple life in general. Recently, I extensively motorcycled off-road in [Australia and New Zealand](https://www.google.com/maps/contrib/104357355138825046047/reviews/).
+I enjoy cooking, motorcycling and simple life in general. Recently, I extensively motorcycled off-road in [Australia and New Zealand](https://maps.google.com/maps/contrib/104357355138825046047).
 
 
 ## Training
