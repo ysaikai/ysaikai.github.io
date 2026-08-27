@@ -9,7 +9,7 @@ image: "banner.jpg"
 &nbsp; —Helen Keller
 </div>
 
-Hello, World! I am Yuji Saikai the introverted nerdy foodie. I develop an AI system that learns from gardeners’ experience and feedback in order to assist them in everyday decision making. At the same time, I spend a good amount of time gardening on a half acre of land. It gives me opportunities to test the AI system in the real world, produce a wide variety of fruits & vegetables, and share fresh produce with people in a local community.
+Hello, World! I am Yuji Saikai the introverted nerdy foodie. I develop an AI system that learns from user’s experience and feedback to offer personalized guidance for everyday gardening activities. I try to release an app as soon as iOS 27 is out! I also devote substantial time to gardening for myself on a half acre of land. This allows me to test the AI system in the real world, play with soil, and share fresh produce with lovely people in a local community.
 
 - [About Me](./about/)
 - [Teaching](./teaching/)
